@@ -17,6 +17,9 @@
             font-weight: 700;
             max-width: 50vw;
         }
+        .single-list-wrap li i:before{
+            color:white;
+        }
 
         #curriculum-section .single-faq-inner .card-header button {
             padding: 1rem;
@@ -75,6 +78,13 @@
             overflow: hidden;
             /* Contain shadows */
         }
+        
+        @media screen and (max-width: 540px)
+        {
+            .curriculum-section{
+                padding-bottom:0px;
+            }
+        }
 
         /* --- Section Header --- */
         .section-header {
@@ -122,6 +132,7 @@
 
         .btn-download:hover {
             background-color: var(--primary-color-dark);
+            color:white;
             transform: translateY(-2px);
         }
 
@@ -892,6 +903,193 @@
         }
 
         /* Who can apply section end  */
+        
+        
+        
+        
+        /* --- Degree Highlight Section --- */
+.degree-highlight-section {
+    padding: 80px 0;
+    background-color: #fff; /* Clean white background */
+    position: relative; /* For potential pseudo-elements later if needed */
+}
+
+.degree-content-wrapper {
+    display: flex;
+    align-items: center; /* Vertically align columns */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 50px; /* Space between text and image columns */
+}
+
+.degree-benefits-col {
+    flex: 1 1 45%; /* Takes slightly less space than image */
+    min-width: 320px; /* Prevent text column from getting too narrow */
+}
+
+.degree-image-col {
+    flex: 1 1 50%; /* Image takes slightly more space */
+    min-width: 320px;
+}
+
+.degree-main-title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--text-color, #343A40);
+    line-height: 1.4;
+    margin-bottom: 45px; /* Space below main heading */
+}
+
+.highlight-underline {
+    position: relative;
+    white-space: nowrap; /* Prevent breaking if possible */
+}
+
+/* Underline effect using ::after */
+.highlight-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; /* Adjust vertical position */
+    left: 0;
+    width: 100%;
+    height: 4px; /* Thickness */
+    background-color: var(--primary-color, #FF6B00); /* Use theme color */
+    border-radius: 2px;
+}
+
+.benefits-list {
+    margin-top: 20px; /* Space above the first item */
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start; /* Align icon with top of text */
+    gap: 20px; /* Space between icon and text block */
+    margin-bottom: 35px; /* Space between benefit items */
+}
+
+.benefit-item:last-child {
+    margin-bottom: 0; /* No margin below the last item */
+}
+
+.benefit-icon {
+    flex-shrink: 0; /* Prevent icon wrapper from shrinking */
+    width: 55px; /* Icon circle size */
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--primary-color, #FF6B00);
+    color: #fff; /* White icon color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(var(--primary-rgb, 255, 107, 0), 0.3); /* Subtle glow */
+}
+
+.benefit-icon i {
+    font-size: 1.6rem; /* Icon size */
+}
+
+.benefit-text h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color, #343A40);
+    margin-bottom: 8px; /* Space below title */
+}
+
+.benefit-text p {
+    font-size: 0.95rem;
+    color: var(--light-text-color, #6C757D);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.sample-degree-image {
+    display: block;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: var(--shadow-medium, 0 10px 30px rgba(0, 0, 0, 0.1)); /* Clear shadow */
+    border: 1px solid var(--border-color, #E9ECEF); /* Subtle border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Optional hover effect for the degree image */
+.sample-degree-image:hover {
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Responsive Adjustments for Degree Highlight --- */
+@media (max-width: 992px) {
+    .degree-main-title {
+        font-size: 2.2rem;
+    }
+    .degree-content-wrapper {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .degree-highlight-section {
+        padding: 60px 0;
+    }
+     .degree-main-title {
+        font-size: 1.9rem;
+        margin-bottom: 35px;
+        text-align: center; /* Center heading when stacked */
+    }
+     .highlight-underline::after {
+         bottom: -6px;
+         height: 3px;
+     }
+
+    .degree-content-wrapper {
+        flex-direction: column; /* Stack columns */
+    }
+
+    .degree-benefits-col {
+       order: 2; /* Show text below image when stacked */
+       width: 100%;
+       flex-basis: auto; /* Reset flex basis */
+       max-width: 600px; /* Limit width of text block */
+       margin: 0 auto; /* Center the text block */
+    }
+
+    .degree-image-col {
+        order: 1; /* Show image first when stacked */
+        width: 100%;
+        flex-basis: auto;
+        max-width: 650px; /* Limit width of landscape image */
+        margin: 0 auto; /* Center the image */
+    }
+    .benefit-item {
+       gap: 15px;
+       margin-bottom: 30px;
+    }
+    .benefit-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .benefit-icon i {
+        font-size: 1.4rem;
+    }
+     .benefit-text h4 {
+        font-size: 1.1rem;
+     }
+      .benefit-text p {
+         font-size: 0.9rem;
+      }
+}
+
+@media (max-width: 480px) {
+     .degree-main-title {
+        font-size: 1.7rem;
+     }
+     .sample-degree-image {
+        box-shadow: var(--shadow-light, 0 4px 15px rgba(0, 0, 0, 0.07)); /* Less shadow on mobile */
+     }
+      .sample-degree-image:hover {
+         transform: none; /* Disable hover scale on small devices */
+         box-shadow: var(--shadow-light, 0 4px 15px rgba(0, 0, 0, 0.07));
+      }
+}
     </style>
     <!-- breadcrumb start -->
     <div class="programme-banner">
@@ -959,6 +1157,12 @@
                             </div>
                         </div>
                     </div>
+                    
+                    
+                      <div class="container-fluid">
+    <img src="{{ asset('assets/img/programmes/5-reason-desktop.jpg') }}" alt="" class="d-none d-lg-block w-100" />
+    <img src="{{ asset('assets/img/programmes/5-reason-mobile.jpg') }}" alt="" class="d-block d-lg-none w-100" />
+  </div>
 
                     {{-- Section 2: Curriculum --}}
                     <section class="curriculum-section">
@@ -1141,6 +1345,67 @@
 
                         </div> <!-- End Container -->
                     </section>
+                    
+                    
+                    
+                    <!-- ========== Degree Highlight Section Start ========== -->
+<section class="degree-highlight-section">
+    <div class="container-fluid px-4 px-md-5">
+        <div class="degree-content-wrapper">
+
+            <!-- Left Column: Benefits Text -->
+            <div class="degree-benefits-col">
+                <h2 class="degree-main-title">
+                    Get a UGC Entitled Online MBA Degree from a <span class="highlight-underline">NAAC A University</span>
+                </h2>
+
+                <div class="benefits-list">
+                    <!-- Benefit 1 -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h4>Degree from Top Ranked University</h4>
+                            <p>Get high-stature degree on completion of your Online MBA course from India's top most University recognised for excellence.</p>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 2 -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-globe-americas"></i> 
+                        </div>
+                        <div class="benefit-text">
+                            <h4>Universally Accepted & Recognized</h4>
+                            <p>The Degree is duly Entitled by UGC - Distance Education Bureau and is also recognized by World Education Services (WES) for study in Canada and USA.</p>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 3 -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-equals"></i> 
+                        </div>
+                        <div class="benefit-text">
+                            <h4>No Difference From Campus Program Degree</h4>
+                            <p>The degree is recognized by regulatory bodies and treated at par with regular campus-based program degrees.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Degree Image -->
+            <div class="degree-image-col">
+                <img src="{{ asset('assets/img/degree.webp') }}"
+                     alt="Sample Online MBA Degree Certificate (Landscape)"
+                     class="sample-degree-image">
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ========== Degree Highlight Section End ========== -->
 
 
 

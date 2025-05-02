@@ -59,17 +59,17 @@
             <div class="dropdown">
                 <a href="#">Programmes</a>
                 <ul class="submenu">
-                    <li><a href="/mba-finance">MBA Finance</a></li>
-                    <li><a href="/mba-hr">MBA HR Management</a></li>
-                    <li><a href="/mba-marketing">MBA Marketing</a></li>
+                    <li><a href="{{route('finance.programme') }}">MBA Finance</a></li>
+                    <li><a href="{{route('hr.programme') }}">MBA HR Management</a></li>
+                    <li><a href="{{route('marketing.programme') }}">MBA Marketing</a></li>
                 </ul>
             </div>
 
             <div class="dropdown">
                 <a href="#">Admissions</a>
                 <ul class="submenu">
-                    <li><a href="/admission-rules">Admission Rules</a></li>
-                    <li><a href="/how-to-apply">How to Apply</a></li>
+                    <li><a href="{{route('admissions.rules') }}">Admission Rules</a></li>
+                    <li><a href="{{route('how.to.apply') }}">How to Apply</a></li>
                 </ul>
             </div>
 
