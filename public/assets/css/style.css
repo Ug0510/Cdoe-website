@@ -4993,15 +4993,15 @@ ul {
 
 .custom-lightbox-caption {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   right: 20px;
   color: white;
-  font-size: 1rem;
+  font-size: 0.8rem;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px 10px;
+  padding: 5px;
   border-radius: 5px;
-  max-width: 250px;
-  text-align: right;
+  min-width: 380px;
+  text-align: left;
 }
 
 .custom-prev, .custom-next {
