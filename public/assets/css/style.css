@@ -4941,7 +4941,7 @@ ul {
 
 .custom-caption {
   position: absolute;
-  bottom: -50px;
+  bottom: -70px;
   left: 0;
   width: 100%;
   text-align: center;
@@ -4994,7 +4994,7 @@ ul {
 .custom-lightbox-caption {
   position: absolute;
   bottom: 0px;
-  right: 20px;
+  margin: 0 20px;
   color: white;
   font-size: 0.8rem;
   background-color: rgba(0, 0, 0, 0.5);
