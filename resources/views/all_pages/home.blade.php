@@ -5,7 +5,148 @@
 @section('content')
    
    
-   
+   <style>
+    /* Recruiter Section */
+    /* --- Recruiters Section --- */
+    .recruiters-section {
+        padding: 60px 0 80px 0;
+        /* Add spacing above and below */
+        background-color: #fff;
+        /* Optional: Set a background if needed, or keep body default */
+    }
+
+    .recruiter-title-container {
+        text-align: center;
+        margin-bottom: 50px;
+        /* Space below title block */
+    }
+
+    .recruiter-title {
+        font-size: 2.2rem;
+        /* Adjust size as needed */
+        font-weight: 600;
+        color: var(--text-color);
+        /* Use variable from accordion section if defined */
+        margin-bottom: 15px;
+        /* Space between text and underline */
+        line-height: 1.4;
+    }
+
+    .title-underline {
+        display: block;
+        /* Make it a block element */
+        width: 70px;
+        /* Width of the underline */
+        height: 4px;
+        /* Thickness of the underline */
+        background-color: var(--primary-color);
+        /* Use orange color variable */
+        margin: 0 auto;
+        /* Center the underline */
+        border-radius: 2px;
+        /* Slightly rounded ends */
+    }
+
+    .recruiter-logo-grid {
+        display: grid;
+        /* Responsive Grid: Adjust minmax for desired logo size */
+        /* Creates as many columns as fit, each at least 160px wide */
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 25px;
+        /* Space between logo items */
+        align-items: center;
+        /* Align items vertically if rows have different heights (less likely here) */
+    }
+
+    .recruiter-item {
+        background-color: var(--card-bg, #FFFFFF);
+        /* Use card background variable or default white */
+        padding: 25px 20px;
+        /* Padding inside the card */
+        border-radius: var(--border-radius, 10px);
+        /* Use border-radius variable or default */
+        border: 1px solid var(--border-color, #E9ECEF);
+        /* Use border color variable or default */
+        box-shadow: var(--shadow-light, 0 4px 15px rgba(0, 0, 0, 0.05));
+        /* Use shadow variable or default */
+        display: flex;
+        /* Use flexbox to center logo inside */
+        align-items: center;
+        justify-content: center;
+        min-height: 100px;
+        /* Ensure a minimum height for visual consistency */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Smooth hover effect */
+    }
+
+    .recruiter-item:hover {
+        transform: translateY(-5px);
+        /* Lift effect on hover */
+        box-shadow: var(--shadow-medium, 0 8px 25px rgba(0, 0, 0, 0.08));
+        /* Stronger shadow on hover */
+    }
+
+    .recruiter-logo {
+        display: block;
+        /* Remove extra space below image */
+        max-width: 100%;
+        /* Prevent logo from exceeding card width */
+        /* --- Key for uniform sizing --- */
+        max-height: 55px;
+        /* Set a maximum height for all logos */
+        height: auto;
+        /* Maintain aspect ratio while respecting max-height */
+        object-fit: contain;
+        /* Scale down image to fit within bounds without cropping/stretching */
+    }
+
+    /* Responsive adjustments for Recruiters section if needed */
+    @media (max-width: 768px) {
+        .recruiter-title {
+            font-size: 1.8rem;
+        }
+
+        .recruiter-logo-grid {
+            /* Adjust minmax if needed for smaller screens */
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 20px;
+        }
+
+        .recruiter-item {
+            min-height: 90px;
+            padding: 20px 15px;
+        }
+
+        .recruiter-logo {
+            max-height: 50px;
+            /* Slightly smaller max-height on mobile */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .recruiter-title {
+            font-size: 1.6rem;
+        }
+
+        .recruiter-logo-grid {
+            /* Go to 2 columns on very small screens */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .recruiter-item {
+            min-height: 80px;
+            padding: 10px;
+        }
+
+        .recruiter-logo {
+            max-height: 45px;
+        }
+    }
+
+    /* Recruiter Section CSS End */
+
+    </style>
    
    <!-- Hero Carousel -->
    <div id="heroCarousel" class="carousel slide carousel-fade carousel-dark" data-bs-ride="carousel">
@@ -621,6 +762,80 @@
         </div>
     </div> -->
 
+    <!-- ========== Recruiters Section Start ========== -->
+    <section class="recruiters-section">
+                    <div class="container">
+
+                        <!-- Section Title -->
+                        <div class="recruiter-title-container">
+                            <div class="section-header">
+                                <h2>Teerthanker Mahaveer University Online, <br><span class="highlight">Open Doors.
+                                        World Wide.</span></h2>
+                                <p>Our top-class recruiters list gives you the assurance that you'll get placed in
+                                    leading MNCs and work with renowned brands.</p>
+                                <span class="title-underline"></span>
+                            </div>
+
+                        </div>
+
+                        <!-- Recruiter Logos Grid -->
+                        <div class="recruiter-logo-grid">
+
+                            {{-- Loop from 1 to 32 assuming images 1.jpg to 32.jpg exist --}}
+                            @php
+                            // Define alt texts - you might want a more dynamic way to fetch these
+                            // Or just use generic ones if specific names aren't readily available
+                            $altTexts = [
+                            1 => 'Wipro Logo',
+                            2 => 'Vistara Logo',
+                            3 => 'Videocon Logo',
+                            4 => 'VFS Global Logo',
+                            5 => 'Pantaloons Logo',
+                            6 => 'Amazon India Logo',
+                            7 => 'Tata Strive Logo',
+                            8 => 'Tally Logo',
+                            9 => 'Skyway Communications Logo',
+                            10 => 'Safety Circle Logo',
+                            11 => 'Royal Bank of Scotland Logo',
+                            12 => 'Paytm Logo',
+                            13 => 'OM Logistics Ltd Logo',
+                            14 => 'OYO Logo',
+                            15 => 'Neva Clothing Logo',
+                            16 => 'Max Life Insurance Logo',
+                            17 => 'Overseas Logo',
+                            18 => 'Tripat Infoways Logo',
+                            19 => 'LIC Logo',
+                            20 => 'Kotak Mahindra Bank Logo',
+                            21 => 'Karvy Stock Broking Logo',
+                            22 => 'Indigo Logo',
+                            23 => 'Globe Toyota Logo',
+                            24 => 'Recruiter Logo 24', // Add more specific Alts if you have them
+                            25 => 'Recruiter Logo 25',
+                            26 => 'Recruiter Logo 26',
+                            27 => 'Recruiter Logo 27',
+                            28 => 'Recruiter Logo 28',
+                            29 => 'Recruiter Logo 29',
+                            30 => 'Recruiter Logo 30',
+                            31 => 'Recruiter Logo 31',
+                            32 => 'Recruiter Logo 32',
+                            ];
+                            @endphp
+
+                            @for ($i = 1; $i <= 32; $i++)
+                                <div class="recruiter-item">
+                                <img src="{{ asset('assets/img/recruiters/' . $i . '.jpg') }}"
+                                    alt="{{ $altTexts[$i] ?? 'Recruiter Logo ' . $i }}" class="recruiter-logo"
+                                    onerror="this.style.display='none'; this.parentElement.style.display='none';"
+                                    {{-- Hide item if image fails to load --}}>
+                        </div>
+                        @endfor
+
+                    </div> <!-- End Recruiter Logos Grid -->
+
+            </div> <!-- End Container -->
+            </section>
+            <!-- ========== Recruiters Section End ========== -->
+
 
 
 
@@ -638,9 +853,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="content">Have ipsum dolor sit amet, elitr, sed diam nonumy eirmod tempor invidunt
-                                ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo et ea rebum.</p>
+                            <p class="content">Centre for Distance and Online Education (CDOE), Teerthanker Mahaveer University (TMU)</p>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <ul class="single-list-wrap">
@@ -683,16 +896,14 @@
                                 <h5 class="mb-0">
                                     <button class="btn-link" data-toggle="collapse" data-target="#f-one"
                                         aria-expanded="true" aria-controls="f-one">
-                                        01. What does you simply dummy in do ?
+                                        Is TMU CDOE UGC-approved?
                                         <i class="fa fa-eye"></i>
                                     </button>
                                 </h5>
                             </div>
                             <div id="f-one" class="show collapse" aria-labelledby="ff-one" data-parent="#accordion">
                                 <div class="card-body">
-                                    What does you dummy text of free available in market printing has industry been
-                                    industry's standard dummy text ever.
-                                </div>
+                                Yes. All distance and online education programmes offered by TMU’s CDOE are recognized and approved by the University Grants Commission (UGC) and other relevant regulatory bodies, ensuring validity and credibility.</div>
                             </div>
                         </div>
                         <div class="card single-faq-inner">
@@ -700,15 +911,14 @@
                                 <h5 class="mb-0">
                                     <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-two"
                                         aria-expanded="true" aria-controls="f-two">
-                                        02. What graphics dummy of free design ?
+                                        02. What is the eligibility for an Online MBA?
                                         <i class="fa fa-eye"></i>
                                     </button>
                                 </h5>
                             </div>
                             <div id="f-two" class="collapse" aria-labelledby="ff-two" data-parent="#accordion">
                                 <div class="card-body">
-                                    What graphics simply dummy text of free available in market printing industry has
-                                    been industry's standard dummy text ever.
+                                A bachelor’s degree in any discipline from a recognized university is required.
                                 </div>
                             </div>
                         </div>
@@ -717,15 +927,14 @@
                                 <h5 class="mb-0">
                                     <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-three"
                                         aria-expanded="true" aria-controls="f-three">
-                                        03. Why we are the best ?
+                                        03. How can I apply for admission to TMU CDOE?
                                         <i class="fa fa-eye"></i>
                                     </button>
                                 </h5>
                             </div>
                             <div id="f-three" class="collapse" aria-labelledby="ff-three" data-parent="#accordion">
                                 <div class="card-body">
-                                    Why we are dummy text of free available in market printing industry has been
-                                    industry's standard dummy text ever.
+                                You can apply online via the official TMU CDOE website <a href="https://www.cdoe.tmu.ac.in/">https://www.cdoe.tmu.ac.in/</a>. The process involves filling out the application form, uploading the required documents, and paying the application fee online.
                                 </div>
                             </div>
                         </div>
@@ -734,15 +943,30 @@
                                 <h5 class="mb-0">
                                     <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-four"
                                         aria-expanded="true" aria-controls="f-four">
-                                        04. What industries dummy covered ?
+                                        04. Can I pursue an Online MBA while working?
                                         <i class="fa fa-eye"></i>
                                     </button>
                                 </h5>
                             </div>
                             <div id="f-four" class="collapse" aria-labelledby="ff-four" data-parent="#accordion">
                                 <div class="card-body">
-                                    What industries text of free available in market printing industry has been
-                                    industry's standard dummy text ever.
+                                Yes, the programme is designed for working professionals and offers flexible learning options.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card single-faq-inner">
+                            <div class="card-header" id="ff-four">
+                                <h5 class="mb-0">
+                                    <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-four"
+                                        aria-expanded="true" aria-controls="f-four">
+                                        05. What specialisations does TMU Online MBA offer?
+                                        <i class="fa fa-eye"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="f-four" class="collapse" aria-labelledby="ff-four" data-parent="#accordion">
+                                <div class="card-body">
+                                TMU CDOE offers specialisations in marketing, finance, and human resources management.
                                 </div>
                             </div>
                         </div>
