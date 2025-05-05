@@ -753,28 +753,35 @@ nav.shrink {
   }
 }
 
-#heroCarousel .carousel-inner .carousel-item:nth-child(1){
-  background-image: url('../img/banner24.jpg');
-}
 
-#heroCarousel .carousel-inner .carousel-item:nth-child(2){
-  background-image: url('../img/banner22.jpg');
-}
-
-#heroCarousel .carousel-inner .carousel-item:nth-child(3){
-  background-image: url('../img/desktop-banner1.jpg');
-}
-
-@media screen and (max-width:992px) {
-  #heroCarousel .carousel-inner .carousel-item:nth-child(1){
-    background-image: url('../img/tab-banner1.jpg');
-  }
-}
 
 @media screen and (max-width:540px) {
   #heroCarousel .carousel-inner .carousel-item:nth-child(1){
-    background-image: url('../img/mobile-banner1.jpg');
+    background-image: url('../img/banner/hero-banner1-mobile.webp');
   }
+
+  #heroCarousel .carousel-inner .carousel-item:nth-child(1){
+    background-image: url('../img/banner/hero-banner2-mobile.webp');
+  }
+}
+
+@media screen and (min-width:540px) and (max-width:992px) {
+  #heroCarousel .carousel-inner .carousel-item:nth-child(1){
+    background-image: url('../img/banner/hero-banner1-tab.webp');
+  }
+  #heroCarousel .carousel-inner .carousel-item:nth-child(1){
+    background-image: url('../img/banner/hero-banner2-tab.webp');
+  }
+}
+
+@media screen and (min-width:992px) {
+  #heroCarousel .carousel-inner .carousel-item:nth-child(1){
+    background-image: url('../img/banner/hero-banner1.webp');
+  }
+  #heroCarousel .carousel-inner .carousel-item:nth-child(2){
+    background-image: url('../img/banner/hero-banner2.webp');
+  }
+  
 }
 
 
