@@ -765,7 +765,7 @@ nav.shrink {
   }
 
   #heroCarousel .carousel-inner .carousel-item:nth-child(3){
-    background-image: url('../img/banner/hero-banner3.jpg');
+    background-image: url('../img/banner/hero-banner3.webp');
   }
 }
 
@@ -787,7 +787,7 @@ nav.shrink {
     background-image: url('../img/banner/hero-banner2.webp');
   }
   #heroCarousel .carousel-inner .carousel-item:nth-child(3){
-    background-image: url('../img/banner/hero-banner3.jpg');
+    background-image: url('../img/banner/hero-banner3.webp');
   }
   
 }
