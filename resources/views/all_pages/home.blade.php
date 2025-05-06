@@ -370,18 +370,6 @@
             <img src="{{ asset('/assets/img/gallery/15.webp') }}" alt="Image 1" onclick="openLightbox(14)">
             <div class="custom-caption">Gurudev Sri Sri Ravi Shankar at the Special Convocation 2024</div>
           </div>
-          <div class="custom-gallery-item d-none d-sm-block">
-            <img src="{{ asset('/assets/img/gallery/16.webp') }}" alt="Image 2" onclick="openLightbox(15)">
-            <div class="custom-caption">Meet Bros Light Up the Night at Rock-on 2024</div>
-          </div>
-          <div class="custom-gallery-item d-none d-sm-block">
-            <img src="{{ asset('/assets/img/gallery/17.webp') }}" alt="Image 1" onclick="openLightbox(16)">
-            <div class="custom-caption">Renowned Poets Share Verses at Kavi Sammelan 2023</div>
-          </div>
-          <div class="custom-gallery-item d-none d-sm-block">
-            <img src="{{ asset('/assets/img/gallery/18.webp') }}" alt="Image 2" onclick="openLightbox(17)">
-            <div class="custom-caption">The Journey Begins: Graduates of 2012</div>
-          </div>
           <!-- Add more items as needed -->
         </div>
       
@@ -404,7 +392,7 @@
     <!-- work area start -->
     <div class="work-area">
         <div class="container">
-            <div class="section-title style-white text-center mb-4 mb-md-5">
+            <div class="section-title style-white text-center mb-4 mb-md-5 mt-3 mt-lg-5">
                 <h2 class="title">Why Choose TMU?</h2>
             </div>
             <div class="row">
@@ -516,7 +504,7 @@
             </p>
 
             <!-- Optional CTA -->
-            <a href="#" class="btn btn-dark mt-3 px-4 ">Explore Our MBA Program</a>
+            {{-- <a href="#" class="btn btn-dark mt-3 px-4 ">Explore Our MBA Program</a> --}}
         </div>
     </section>
 

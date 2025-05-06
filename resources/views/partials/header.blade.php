@@ -83,8 +83,8 @@
     <nav class="flourish-navbar-container" id="flourishNavbar">
         <div class="flourish-navbar-visible-area">
             <!-- Logo -->
-            <a href="/" class="flourish-navbar-logo"> <!-- Changed href to "/" for homepage -->
-                <img src="./logo.png" alt="Logo" class="logo"> <!-- Ensure alt text -->
+            <a href="/" class="flourish-navbar-logo">
+                <img src="{{ asset('/assets/img/logos/logo.png') }}" alt="TMU Logo" class="logo"> 
             </a>
 
             <!-- Toggle Button -->
