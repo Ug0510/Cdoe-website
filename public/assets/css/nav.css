@@ -412,7 +412,7 @@ nav.shrink {
   }
 
   .degree-showcase .degree-card {
-    max-width: 450px;
+    max-width: 650px;
     transition: transform 0.3s ease;
     border: 1px solid #ddd;
     overflow: hidden;
