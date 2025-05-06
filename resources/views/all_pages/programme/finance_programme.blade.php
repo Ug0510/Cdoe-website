@@ -8,15 +8,22 @@
     <style>
         .banner-title {
             position: absolute;
-            top: 40%;
+            top: 55%;
             left: 5%;
             transform: translateY(-50%);
-            color: #fff;
             text-align: start;
-            font-size: 2.4rem;
             font-weight: 700;
             max-width: 50vw;
         }
+        .banner-title p:first-child{
+            font-size: 4.2rem;
+            color: #FE831B;
+            line-height: 4.8rem; 
+        }
+        .banner-title span{
+            color: #001055;
+        }
+       
 
         .single-list-wrap li i:before {
             color: white;
@@ -1142,10 +1149,11 @@
     </style>
     <!-- breadcrumb start -->
     <div class="programme-banner">
-        <img src="{{ asset('assets/img/programmes/programme-banner.webp') }}" alt="Programme Banner">
+        <img src="{{ asset('assets/img/programmes/finance-banner.jpg') }}" alt="Programme Banner">
         <div class="banner-title">
-            Master of Business Administration in Human Resource Management
-        </div>
+            <p>Online MBA in <br> <span>Human Resource Management</span></p>
+             <p>The digital landscape is dynamic, and marketing has evolved into a sophisticated blend of art and science. For ambitious professionals aiming to carve a leadership role in this exciting domain, this is the right place for you.</p>
+         </div>
     </div>
     <!-- breadcrumb end -->
 

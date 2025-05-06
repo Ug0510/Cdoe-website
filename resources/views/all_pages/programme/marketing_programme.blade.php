@@ -8,14 +8,24 @@
     <style>
         .banner-title {
             position: absolute;
-            top: 40%;
+            top: 55%;
             left: 5%;
             transform: translateY(-50%);
-            color: #fff;
             text-align: start;
-            font-size: 2.4rem;
             font-weight: 700;
-            max-width: 50vw;
+            max-width: 40vw;
+        }
+        .banner-title p:first-child{
+            font-size: 4.2rem;
+            color: #FE831B;
+            line-height: 4.8rem;
+        }
+        .banner-title span{
+            color: #001055;
+        }
+        .banner-title p:last-child{
+            line-height: 1.4rem;
+            margin-top: 20px;
         }
 
         .single-list-wrap li i:before {
@@ -1142,10 +1152,12 @@
     </style>
     <!-- breadcrumb start -->
     <div class="programme-banner">
-        <img src="{{ asset('assets/img/programmes/programme-banner.webp') }}" alt="Programme Banner">
+        <img src="{{ asset('assets/img/programmes/management-banner.jpg') }}" alt="Programme Banner">
         <div class="banner-title">
-            Online MBA in Marketing
+           <p>Online MBA <br> <span>in Marketing</span></p>
+            <p>The digital landscape is dynamic, and marketing has evolved into a sophisticated blend of art and science. For ambitious professionals aiming to carve a leadership role in this exciting domain, this is the right place for you. TMU offer you an Online MBA in Marketing. TMU's Centre for Distance and Online Education delivers this program that seamlessly integrates rigorous academic theory with practical, industry-relevant skills, all within a flexible learning environment that adapts to your busy life.</p>
         </div>
+        
     </div>
     <!-- breadcrumb end -->
 
