@@ -1652,25 +1652,7 @@ $altTexts = [
 
                                     <!-- Decorative Graphic -->
                                     <div class="eligibility-graphic">
-                                        <svg class="plus-graphic" viewBox="0 0 100 100"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <defs>
-                                                <linearGradient id="plusGradient" x1="0%" y1="0%"
-                                                    x2="100%" y2="100%">
-                                                    <!-- Use your theme's primary color and a variation -->
-                                                    <stop offset="0%"
-                                                        style="stop-color:var(--primary-color, #FF6B00); stop-opacity:1" />
-                                                    <stop offset="100%"
-                                                        style="stop-color:var(--primary-color-dark, #E05A00); stop-opacity:1" />
-                                                </linearGradient>
-                                            </defs>
-                                            <!-- Horizontal Bar -->
-                                            <line x1="10" y1="50" x2="90" y2="50"
-                                                stroke="url(#plusGradient)" />
-                                            <!-- Vertical Bar -->
-                                            <line x1="50" y1="10" x2="50" y2="90"
-                                                stroke="url(#plusGradient)" />
-                                        </svg>
+                                        <img src="{{ asset('assets/img/programmes/who-can-apply.png') }}" alt="" style="margin-top:-3rem;">
                                     </div>
 
                                 </div>
