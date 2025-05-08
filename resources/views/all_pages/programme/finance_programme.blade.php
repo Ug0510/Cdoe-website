@@ -1772,16 +1772,16 @@ $altTexts = [
                                 </div>
 
                                 <div class="card single-faq-inner style-header-bg">
-                                    <div class="card-header" id="ff-eight">
+                                    <div class="card-header" id="ff-nine">
                                         <h5 class="mb-0">
                                             <button class="btn-link collapsed" data-toggle="collapse"
-                                                data-target="#f-eight" aria-expanded="false" aria-controls="f-eight">
+                                                data-target="#f-nine" aria-expanded="false" aria-controls="f-nine">
                                                 05. Is an MBA worth it for finance?
                                                 <i class="fa fa-eye"></i>
                                             </button>
                                         </h5>
                                     </div>
-                                    <div id="f-eight" class="collapse" aria-labelledby="ff-eight"
+                                    <div id="f-nine" class="collapse" aria-labelledby="ff-eight"
                                         data-parent="#faq-accordion">
                                         <div class="card-body">
                                             High-level finance positions require significant expertise and specific technical skills. One way to gain those skills and obtain the qualifications you need for a well-paying position in this field is to earn a Master of Business Administration (MBA) with a specialisation in finance.
