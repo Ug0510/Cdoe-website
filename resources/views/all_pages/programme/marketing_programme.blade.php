@@ -1838,40 +1838,43 @@ $altTexts = [
                                                 However, here are some general salary ranges in the Indian context:
                                             </p>
 
-                                            <table border="1" cellpadding="8" cellspacing="0">
-                                                <thead>
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered table-striped align-middle text-center">
+                                                  <thead class="table-dark">
                                                     <tr>
-                                                        <th>Job Title</th>
-                                                        <th>Average Salary (INR)</th>
+                                                      <th scope="col">Job Title</th>
+                                                      <th scope="col">Average Salary (INR)</th>
                                                     </tr>
-                                                </thead>
-                                                <tbody>
+                                                  </thead>
+                                                  <tbody>
                                                     <tr>
-                                                        <td>Marketing Executive</td>
-                                                        <td>₹3–6 LPA</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Marketing Manager</td>
-                                                        <td>₹7–15 LPA</td>
+                                                      <td>Marketing Executive</td>
+                                                      <td>₹3–6 LPA</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Brand Manager</td>
-                                                        <td>₹8–16 LPA</td>
+                                                      <td>Marketing Manager</td>
+                                                      <td>₹7–15 LPA</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Digital Marketing Manager</td>
-                                                        <td>₹8–18 LPA</td>
+                                                      <td>Brand Manager</td>
+                                                      <td>₹8–16 LPA</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Marketing Director</td>
-                                                        <td>₹15–30 LPA+</td>
+                                                      <td>Digital Marketing Manager</td>
+                                                      <td>₹8–18 LPA</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Chief Marketing Officer (CMO)</td>
-                                                        <td>₹30 LPA and above</td>
+                                                      <td>Marketing Director</td>
+                                                      <td>₹15–30 LPA+</td>
                                                     </tr>
-                                                </tbody>
-                                            </table>
+                                                    <tr>
+                                                      <td>Chief Marketing Officer (CMO)</td>
+                                                      <td>₹30 LPA and above</td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                              
 
                                             <p>
                                                 With increasing experience, specialised skills (e.g., in marketing
