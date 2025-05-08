@@ -1554,7 +1554,7 @@ $altTexts = [
 
                             <!-- Section Header -->
                             <div class="career-paths-header">
-                                <h2>CCareer Opportunities After <span>Online MBA in Finance
+                                <h2>Career Opportunities After <span>Online MBA in Finance
                                 </span></h2>
                                 <p>An Online MBA in Finance opens doors to a multitude of impactful and lucrative career opportunities across various sectors. With businesses increasingly relying on sophisticated financial strategies for growth and stability, professionals with advanced financial qualifications are in high demand.</p>
                                 <p>Here are several prominent career paths you can pursue after earning your Online MBA in Finance:</p>
