@@ -1142,7 +1142,7 @@
     </style>
     <!-- breadcrumb start -->
     <div class="programme-banner">
-        <img src="{{ asset('assets/img/programmes/ht-banner.webp') }}" alt="Programme Banner">
+        <img src="{{ asset('assets/img/programmes/hr-banner.jpg') }}" alt="Programme Banner">
         {{-- <div class="banner-title">
             Online MBA in HR
         </div> --}}
