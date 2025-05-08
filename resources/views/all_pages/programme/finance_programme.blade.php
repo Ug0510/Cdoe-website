@@ -1172,42 +1172,43 @@
                     {{-- Section 1: Description --}}
                     <div class="course-section container" id="description-section">
                         <div class="course-details-content">
-                            <p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog.
-                                Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz,
-                                bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz
-                                whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting
-                                zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew
-                                my junk TV quiz. How quickly daft jumping zebras vex. Two driven jocks help fax
-                                my big quiz. Quick, Baz, get my woven flax jodhpurs! "Now fax quiz Jack!" my
-                                brave ghost pled. Five quacking zephyrs jolt my wax bed. Flummoxed by job,
-                                kvetching W. zaps Iraq. Cozy sphinx waves quart jug of bad milk. A very bad
-                                quack might jinx zippy fowls. Few quips galvanized the mock jury box. Quick
-                                brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves
-                                quack! Blowzy red vixens fight for a quick jump.</p>
+                            <p>In today's complex and rapidly evolving global economy, financial expertise is more critical than ever. For ambitious professionals seeking to ascend to leadership roles in the financial sector, an Online MBA in Finance from Teerthanker Mahaveer University (TMU) provides a robust and flexible pathway. TMU's Centre for Distance and Online Education provides rigorous financial theory with practical application, empowering you to navigate the intricacies of financial markets and drive strategic financial decisions, all while accommodating your professional and personal commitments.</p>
+
+                            <p>This comprehensive programme equips you with the analytical prowess, strategic thinking, and leadership skills necessary to excel in diverse financial roles and contribute significantly to organisational success.</p>
                             <div class="row pt-4">
                                 <div class="col-sm-6">
+                                    Empower your financial future with us as we provide you:
                                     <ul class="single-list-wrap">
                                         <li class="single-list-inner style-check-box">
-                                            <i class="fa fa-check"></i> Metus interdum metus
+                                            <i class="fa fa-check"></i> Flexible Learning
                                         </li>
                                         <li class="single-list-inner style-check-box">
-                                            <i class="fa fa-check"></i> Ligula cur maecenas
+                                            <i class="fa fa-check"></i> In-Demand Skills
                                         </li>
                                         <li class="single-list-inner style-check-box">
-                                            <i class="fa fa-check"></i> Fringilla nulla
+                                            <i class="fa fa-check"></i> Business & Finance Expertise Combined
+                                        </li>
+                                        <li class="single-list-inner style-check-box">
+                                            <i class="fa fa-check"></i> Practical Learning Approach
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="col-sm-6 mt-3 mt-sm-0">
                                     <ul class="single-list-wrap">
                                         <li class="single-list-inner style-check-box">
-                                            <i class="fa fa-check"></i> Metus interdum metus
+                                            <i class="fa fa-check"></i> Globally Recognised Qualification
                                         </li>
                                         <li class="single-list-inner style-check-box">
-                                            <i class="fa fa-check"></i> Ligula cur maecenas
+                                            <i class="fa fa-check"></i> Enhance Leadership Abilities
                                         </li>
                                         <li class="single-list-inner style-check-box">
-                                            <i class="fa fa-check"></i> Fringilla nulla
+                                            <i class="fa fa-check"></i> Diverse Career Opportunities
+                                        </li>
+                                        <li class="single-list-inner style-check-box">
+                                            <i class="fa fa-check"></i> Networking Opportunities
+                                        </li>
+                                        <li class="single-list-inner style-check-box">
+                                            <i class="fa fa-check"></i> Affordable & Accessible
                                         </li>
                                     </ul>
                                 </div>
@@ -1553,10 +1554,10 @@ $altTexts = [
 
                             <!-- Section Header -->
                             <div class="career-paths-header">
-                                <h2>Career Paths After Online MBA <span>in Data Science and AI</span></h2>
-                                <p>Transform your future at the nexus of data and innovation with Our Online MBA with
-                                    Data Science specialisation. Discover varied career trajectories and spearhead
-                                    change as a leader in data science and AI strategy as -</p>
+                                <h2>CCareer Opportunities After <span>Online MBA in Finance
+                                </span></h2>
+                                <p>An Online MBA in Finance opens doors to a multitude of impactful and lucrative career opportunities across various sectors. With businesses increasingly relying on sophisticated financial strategies for growth and stability, professionals with advanced financial qualifications are in high demand.</p>
+                                <p>Here are several prominent career paths you can pursue after earning your Online MBA in Finance:</p>
                             </div>
 
                             <!-- Content Grid (Image + List) -->
@@ -1574,55 +1575,38 @@ $altTexts = [
                                 <div class="career-paths-list-col">
                                     <ul class="career-path-list pl-3">
                                         <li class="career-path-item">
-                                            <i class="fas fa-check-circle"></i> Data Science Manager
+                                            <i class="fas fa-check-circle"></i> Financial Analyst
                                         </li>
                                         <li class="career-path-item">
-                                            <i class="fas fa-check-circle"></i> Business Intelligence Director
+                                            <i class="fas fa-check-circle"></i> Investment Banker
                                         </li>
                                         <li class="career-path-item">
-                                            <i class="fas fa-check-circle"></i> Analytics Solutions Architect
+                                            <i class="fas fa-check-circle"></i> Portfolio Manager
                                         </li>
                                         <li class="career-path-item">
-                                            <i class="fas fa-check-circle"></i> Data Science Team Lead
+                                            <i class="fas fa-check-circle"></i> Corporate Finance Manager
                                         </li>
                                         <li class="career-path-item">
-                                            <i class="fas fa-check-circle"></i> Data Analytics Consultant
+                                            <i class="fas fa-check-circle"></i> Risk Manager
                                         </li>
                                         <li class="career-path-item">
-                                            <i class="fas fa-check-circle"></i> Data Governance Specialist
+                                            <i class="fas fa-check-circle"></i> Hedge Fund Manager
                                         </li>
                                         <li class="career-path-item">
-                                            <i class="fas fa-check-circle"></i> Chief Analytics Officer
+                                            <i class="fas fa-check-circle"></i> Financial Consultant
                                         </li>
                                         <li class="career-path-item">
-                                            <i class="fas fa-check-circle"></i> Data Engineering Manager
+                                            <i class="fas fa-check-circle"></i> Treasury Manager
                                         </li>
                                         <li class="career-path-item">
-                                            <i class="fas fa-check-circle"></i> AI Strategy Consultant
+                                            <i class="fas fa-check-circle"></i> Credit Analyst
                                         </li>
                                         <li class="career-path-item">
-                                            <i class="fas fa-check-circle"></i> Machine Learning Engineer
-                                        </li>
-                                        <li class="career-path-item">
-                                            <i class="fas fa-check-circle"></i> Chief Data Officer
-                                        </li>
-                                        <li class="career-path-item">
-                                            <i class="fas fa-check-circle"></i> AI Product Manager
-                                        </li>
-                                        <li class="career-path-item">
-                                            <i class="fas fa-check-circle"></i> Director of Data Strategy
-                                        </li>
-                                        <li class="career-path-item">
-                                            <i class="fas fa-check-circle"></i> Predictive Analytics Manager
-                                        </li>
-                                        <li class="career-path-item">
-                                            <i class="fas fa-check-circle"></i> AI Ethics Consultant
-                                        </li>
-                                        <li class="career-path-item">
-                                            <i class="fas fa-check-circle"></i> Business Analytics Manager
+                                            <i class="fas fa-check-circle"></i> Chief Financial Officer (CFO)
                                         </li>
                                     </ul>
                                 </div>
+                                
 
                             </div> <!-- End Content Grid -->
 
@@ -1696,10 +1680,6 @@ $altTexts = [
                     <div class="course-section mt-5 container" id="faq-section">
                         <h2 class="section-title text-center">FAQ</h2>
                         <div class="course-details-content mt-3">
-                            <p class="text-justify">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax
-                                quiz prog.
-                                Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz,
-                                bad nymph, for quick jigs vex! Fox nymphs grab</p>
                             {{-- Make sure accordion IDs are unique --}}
                             <div id="faq-accordion" class="accordion-area mt-4">
                                 <div class="card single-faq-inner style-header-bg">
@@ -1707,7 +1687,7 @@ $altTexts = [
                                         <h5 class="mb-0">
                                             <button class="btn-link" data-toggle="collapse" data-target="#f-five"
                                                 aria-expanded="false" aria-controls="f-five">
-                                                01. What does you simply dummy in do ?
+                                                01.What is an Online MBA in Finance Programme?
                                                 <i class="fa fa-eye"></i>
                                             </button>
                                         </h5>
@@ -1716,8 +1696,7 @@ $altTexts = [
                                     <div id="f-five" class="collapse" aria-labelledby="ff-five"
                                         data-parent="#faq-accordion">
                                         <div class="card-body">
-                                            What does you dummy text of free available in market printing has
-                                            industry been industry's standard dummy text ever.
+                                            An Online MBA in Finance is a postgraduate degree programme, typically lasting two years, designed to provide students with advanced knowledge and skills in the principles and practices of finance, delivered through online learning platforms. It offers flexibility, allowing students to balance their studies with their professional and personal lives. The curriculum typically covers areas such as financial management, investments, financial markets, corporate valuation, and international finance.
                                         </div>
                                     </div>
                                 </div>
@@ -1726,7 +1705,7 @@ $altTexts = [
                                         <h5 class="mb-0">
                                             <button class="btn-link collapsed" data-toggle="collapse"
                                                 data-target="#f-six" aria-expanded="false" aria-controls="f-six">
-                                                02. What graphics dummy of free design ?
+                                                02. What are the eligibility criteria for pursuing an Online MBA in Finance?
                                                 <i class="fa fa-eye"></i>
                                             </button>
                                         </h5>
@@ -1734,8 +1713,14 @@ $altTexts = [
                                     <div id="f-six" class="collapse" aria-labelledby="ff-six"
                                         data-parent="#faq-accordion">
                                         <div class="card-body">
-                                            What graphics simply dummy text of free available in market printing
-                                            industry has been industry's standard dummy text ever.
+                                            <p>The general eligibility criteria for an Online MBA in Finance programme usually include:</p>
+                                            <ul>
+                                                <li>Educational Qualification: A bachelor's degree from a recognised university in any discipline. A minimum aggregate score of 50% is often preferred.</li>
+                                                <li>Work Experience (Optional but Preferred): While not always mandatory, some institutions may prefer candidates with 1-2 years of relevant professional experience, particularly in finance-related roles.</li>
+                                                <li>Entrance Exams: Some universities might require scores from national-level entrance exams like CAT, MAT, GMAT, or their entrance tests. However, many online MBA programs are now waiving these requirements.</li>
+                                                <li>English Proficiency: For international students, proof of English language proficiency (e.g., TOEFL or IELTS) may be necessary.</li>
+                                            </ul>
+                                            <p>It is essential to verify the specific eligibility requirements of the institution you are interested in.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1745,7 +1730,7 @@ $altTexts = [
                                         <h5 class="mb-0">
                                             <button class="btn-link collapsed" data-toggle="collapse"
                                                 data-target="#f-seven" aria-expanded="false" aria-controls="f-seven">
-                                                03. Why we are the best ?
+                                                03. What is the duration of the Online MBA in Finance?
                                                 <i class="fa fa-eye"></i>
                                             </button>
                                         </h5>
@@ -1753,8 +1738,7 @@ $altTexts = [
                                     <div id="f-seven" class="collapse" aria-labelledby="ff-seven"
                                         data-parent="#faq-accordion">
                                         <div class="card-body">
-                                            Why we are dummy text of free available in market printing industry
-                                            has been industry's standard dummy text ever.
+                                            The typical duration of an Online MBA in Finance is 2 years, generally structured into four semesters.
                                         </div>
                                     </div>
                                 </div>
@@ -1763,7 +1747,7 @@ $altTexts = [
                                         <h5 class="mb-0">
                                             <button class="btn-link collapsed" data-toggle="collapse"
                                                 data-target="#f-eight" aria-expanded="false" aria-controls="f-eight">
-                                                04. What industries dummy covered ?
+                                                04. What is the scope of an Online MBA in Finance?
                                                 <i class="fa fa-eye"></i>
                                             </button>
                                         </h5>
@@ -1771,8 +1755,36 @@ $altTexts = [
                                     <div id="f-eight" class="collapse" aria-labelledby="ff-eight"
                                         data-parent="#faq-accordion">
                                         <div class="card-body">
-                                            What industries text of free available in market printing industry
-                                            has been industry's standard dummy text ever.
+                                           <p>The scope of an Online MBA in Finance is extensive and highly relevant in today's globalised economy. Graduates can pursue careers across a wide array of industries, including banking, investment management, insurance, corporate finance, consulting, and financial technology (FinTech). The program equips individuals for both analytical and strategic roles, such as:</p>
+                                            <ul>
+                                                <li>Financial Planner</li>
+                                                <li>Equity Analyst</li>
+                                                <li>Mergers and Acquisitions Analyst</li>
+                                                <li>Fixed Income Analyst</li>
+                                                <li>Financial Controller</li>
+                                                <li>International Finance Manager</li>
+                                                <li>Quantitative Analyst (Quant)</li>
+                                                <li>FinTech Specialist</li>
+                                            </ul>
+                                            <p>Moreover, with the increasing sophistication of financial markets and the growing importance of data-driven financial decision-making, professionals with an MBA in Finance are becoming increasingly valuable assets for organizations seeking sustainable growth and financial stability.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card single-faq-inner style-header-bg">
+                                    <div class="card-header" id="ff-eight">
+                                        <h5 class="mb-0">
+                                            <button class="btn-link collapsed" data-toggle="collapse"
+                                                data-target="#f-eight" aria-expanded="false" aria-controls="f-eight">
+                                                05. Is an MBA worth it for finance?
+                                                <i class="fa fa-eye"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="f-eight" class="collapse" aria-labelledby="ff-eight"
+                                        data-parent="#faq-accordion">
+                                        <div class="card-body">
+                                            High-level finance positions require significant expertise and specific technical skills. One way to gain those skills and obtain the qualifications you need for a well-paying position in this field is to earn a Master of Business Administration (MBA) with a specialisation in finance.
                                         </div>
                                     </div>
                                 </div>
