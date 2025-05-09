@@ -49,7 +49,7 @@
     <nav class="cus-nav d-none d-lg-flex">
         <div class="logo">
             <div class="logo-wrapper">
-                <img src="{{ asset('/assets/img/logos/logo.png') }}" alt="">
+            <a href="{{route('home') }}"><img src="{{ asset('/assets/img/logos/logo.png') }}" alt=""></a>
             </div>
         </div>
         <div class="logo-space"></div>
