@@ -1,0 +1,1139 @@
+
+    .banner-title {
+        position: absolute;
+        top: 55%;
+        left: 5%;
+        transform: translateY(-50%);
+        text-align: start;
+        font-weight: 700;
+        max-width: 50vw;
+    }
+    .banner-title p:first-child{
+        font-size: 4.2rem;
+        color: #FE831B;
+        line-height: 4.8rem; 
+    }
+    .banner-title span{
+        color: #001055;
+    }
+   
+
+    .single-list-wrap li i:before {
+        color: white;
+    }
+
+    #curriculum-section .single-faq-inner .card-header button {
+        padding: 1rem;
+        border-radius: 30px;
+        background-color: #c2c2c230;
+    }
+
+    .single-faq-inner .card-header button i {
+        right: 20px;
+    }
+
+    .single-faq-inner .card-body {
+        padding: 0.5rem 1.5rem 0;
+    }
+
+    /* --- Global Styles & Variables --- */
+    :root {
+        --primary-color: #FF7900;
+        --primary-color-dark: #E05A00;
+        --secondary-color: #F8F9FA;
+        --text-color: #343A40;
+        --light-text-color: #6C757D;
+        --border-color: #E9ECEF;
+        --card-bg: #FFFFFF;
+        --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.05);
+        --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.08);
+        --border-radius: 12px;
+        --transition-speed: 0.3s;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.7;
+        color: var(--text-color);
+        background-color: #fdfdff;
+        /* Very light off-white background */
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* --- Curriculum Section --- */
+    .curriculum-section {
+        padding: 80px 0;
+        overflow: hidden;
+        /* Contain shadows */
+    }
+
+    @media screen and (max-width: 540px) {
+        .curriculum-section {
+            padding-bottom: 0px;
+        }
+    }
+
+    /* --- Section Header --- */
+    .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: var(--text-color);
+    }
+
+    .section-header h2 .highlight {
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+
+    .section-header p {
+        font-size: 1.1rem;
+        color: var(--light-text-color);
+        max-width: 600px;
+        margin: 0 auto 25px auto;
+        /* Center the paragraph */
+    }
+
+    .btn-download {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 50px;
+        /* Pill shape */
+        text-decoration: none;
+        font-weight: 500;
+        transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+        box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3);
+        /* Orange glow */
+    }
+
+    .btn-download i {
+        margin-right: 8px;
+    }
+
+    .btn-download:hover {
+        background-color: var(--primary-color-dark);
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    /* --- Stats Grid --- */
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 30px;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    .stat-item {
+        background-color: var(--card-bg);
+        padding: 25px 15px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-light);
+        transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    }
+
+    .stat-item:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-medium);
+    }
+
+    .stat-icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        line-height: 1;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--text-color);
+        line-height: 1.2;
+    }
+
+    .stat-label {
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 6px;
+        color: var(--light-text-color);
+        font-weight: 400;
+    }
+
+    /* --- Curriculum Accordion --- */
+    .curriculum-accordion {
+        max-width: 900px;
+        /* Slightly narrower than container */
+        margin: 0 auto;
+    }
+
+    .accordion-item {
+        background-color: var(--card-bg);
+        margin-bottom: 20px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-medium);
+        /* Shadow from Image 2 */
+        overflow: hidden;
+        /* Important for max-height transition */
+        border: 1px solid var(--border-color);
+        /* Subtle border */
+    }
+
+    .accordion-header {
+        background-color: transparent;
+        /* Keep card background */
+        border: none;
+        width: 100%;
+        padding: 20px 25px;
+        text-align: left;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-color);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color var(--transition-speed) ease;
+        font-family: 'Poppins', sans-serif;
+        /* Ensure font consistency */
+    }
+
+    .accordion-header:hover {
+        background-color: #f8f9fa;
+        /* Very subtle hover */
+    }
+
+    .toggle-icon {
+        font-size: 1rem;
+        color: var(--primary-color);
+        transition: transform var(--transition-speed) ease;
+    }
+
+    /* Rotate icon when active */
+    .accordion-item.active .toggle-icon {
+        transform: rotate(180deg);
+    }
+
+    .accordion-content {
+        max-height: 0;
+        /* Initially hidden */
+        overflow: hidden;
+        transition: max-height var(--transition-speed) ease-out, padding var(--transition-speed) ease-out;
+        /* Smooth transition */
+        padding: 0 25px;
+        /* No padding when closed */
+        background-color: var(--card-bg);
+        /* Ensure bg matches header */
+    }
+
+    /* Style for when content is shown */
+    .accordion-item.active .accordion-content {
+        /* max-height is set dynamically by JS */
+        padding: 25px 25px 30px 25px;
+        /* Add padding when open */
+        border-top: 1px solid var(--border-color);
+    }
+
+    .course-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        /* Responsive grid */
+        gap: 20px;
+        padding: 1rem 0 2rem;
+    }
+
+    .course-card {
+        background-color: var(--secondary-color);
+        /* Slightly different background for cards */
+        padding: 15px 20px;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        /* Subtle card border */
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .course-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .course-code {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    .course-name {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text-color);
+        margin: 0;
+        /* Override default p margin */
+        line-height: 1.5;
+    }
+
+    .coming-soon {
+        font-style: italic;
+        color: var(--light-text-color);
+        padding: 10px 0;
+        /* Add some space */
+    }
+
+
+    /* --- Responsive Adjustments --- */
+    @media (max-width: 768px) {
+        .section-header h2 {
+            font-size: 2rem;
+        }
+
+        .stats-grid {
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+        }
+
+        .accordion-header {
+            font-size: 1.1rem;
+            padding: 18px 20px;
+        }
+
+        .accordion-item.active .accordion-content {
+            padding: 20px;
+        }
+
+        .course-grid {
+            grid-template-columns: 1fr;
+            /* Stack cards on smaller screens */
+            gap: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .section-header h2 {
+            font-size: 1.8rem;
+        }
+
+        .section-header p {
+            font-size: 1rem;
+        }
+
+        .stats-grid {
+            grid-template-columns: repeat(2, 1fr);
+            /* 2 columns on smallest screens */
+            gap: 15px;
+        }
+
+        .stat-item {
+            padding: 20px 10px;
+        }
+
+        .btn-download {
+            padding: 10px 25px;
+            font-size: 0.9rem;
+        }
+
+        .accordion-header {
+            font-size: 1rem;
+            padding: 15px;
+        }
+    }
+
+
+
+    /* Recruiter Section */
+    /* --- Recruiters Section --- */
+    .recruiters-section {
+        padding: 60px 0 80px 0;
+        /* Add spacing above and below */
+        background-color: #fff;
+        /* Optional: Set a background if needed, or keep body default */
+    }
+
+    .recruiter-title-container {
+        text-align: center;
+        margin-bottom: 50px;
+        /* Space below title block */
+    }
+
+    .recruiter-title {
+        font-size: 2.2rem;
+        /* Adjust size as needed */
+        font-weight: 600;
+        color: var(--text-color);
+        /* Use variable from accordion section if defined */
+        margin-bottom: 15px;
+        /* Space between text and underline */
+        line-height: 1.4;
+    }
+
+    .title-underline {
+        display: block;
+        /* Make it a block element */
+        width: 70px;
+        /* Width of the underline */
+        height: 4px;
+        /* Thickness of the underline */
+        background-color: var(--primary-color);
+        /* Use orange color variable */
+        margin: 0 auto;
+        /* Center the underline */
+        border-radius: 2px;
+        /* Slightly rounded ends */
+    }
+
+    .recruiter-logo-grid {
+        display: grid;
+        /* Responsive Grid: Adjust minmax for desired logo size */
+        /* Creates as many columns as fit, each at least 160px wide */
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 25px;
+        /* Space between logo items */
+        align-items: center;
+        /* Align items vertically if rows have different heights (less likely here) */
+    }
+
+    .recruiter-item {
+        background-color: var(--card-bg, #FFFFFF);
+        /* Use card background variable or default white */
+        padding: 25px 20px;
+        /* Padding inside the card */
+        border-radius: var(--border-radius, 10px);
+        /* Use border-radius variable or default */
+        border: 1px solid var(--border-color, #E9ECEF);
+        /* Use border color variable or default */
+        box-shadow: var(--shadow-light, 0 4px 15px rgba(0, 0, 0, 0.05));
+        /* Use shadow variable or default */
+        display: flex;
+        /* Use flexbox to center logo inside */
+        align-items: center;
+        justify-content: center;
+        min-height: 100px;
+        /* Ensure a minimum height for visual consistency */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Smooth hover effect */
+    }
+
+    .recruiter-item:hover {
+        transform: translateY(-5px);
+        /* Lift effect on hover */
+        box-shadow: var(--shadow-medium, 0 8px 25px rgba(0, 0, 0, 0.08));
+        /* Stronger shadow on hover */
+    }
+
+    .recruiter-logo {
+        display: block;
+        /* Remove extra space below image */
+        max-width: 100%;
+        /* Prevent logo from exceeding card width */
+        /* --- Key for uniform sizing --- */
+        max-height: 55px;
+        /* Set a maximum height for all logos */
+        height: auto;
+        /* Maintain aspect ratio while respecting max-height */
+        object-fit: contain;
+        /* Scale down image to fit within bounds without cropping/stretching */
+    }
+
+    /* Responsive adjustments for Recruiters section if needed */
+    @media (max-width: 768px) {
+        .recruiter-title {
+            font-size: 1.8rem;
+        }
+
+        .recruiter-logo-grid {
+            /* Adjust minmax if needed for smaller screens */
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 20px;
+        }
+
+        .recruiter-item {
+            min-height: 90px;
+            padding: 20px 15px;
+        }
+
+        .recruiter-logo {
+            max-height: 50px;
+            /* Slightly smaller max-height on mobile */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .recruiter-title {
+            font-size: 1.6rem;
+        }
+
+        .recruiter-logo-grid {
+            /* Go to 2 columns on very small screens */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .recruiter-item {
+            min-height: 80px;
+            padding: 10px;
+        }
+
+        .recruiter-logo {
+            max-height: 45px;
+        }
+    }
+
+    /* Recruiter Section CSS End */
+
+
+
+    /* Carreer Path Section Start   */
+    /* --- Career Paths Section --- */
+    .career-paths-section {
+        padding: 80px 0;
+        background-color: var(--secondary-color, #F8F9FA);
+        /* Light background */
+        overflow: hidden;
+        /* Prevent potential horizontal scroll */
+    }
+
+    .career-paths-header {
+        text-align: center;
+        margin-bottom: 60px;
+        max-width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .career-paths-header h2 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+
+    .career-paths-header h2 span {
+        color: var(--primary-color, #FF6B00);
+        font-weight: 700;
+    }
+
+    .career-paths-header p {
+        font-size: 1.05rem;
+        color: var(--light-text-color, #6C757D);
+        line-height: 1.8;
+    }
+
+    .career-paths-content {
+        display: flex;
+        flex-wrap: wrap;
+        /* Allow wrapping on smaller screens */
+        align-items: center;
+        /* Vertically align items */
+        gap: 40px;
+        /* Space between image and list */
+    }
+
+    .career-paths-image-col {
+        flex: 1 1 40%;
+        /* Flex basis 40%, allow grow/shrink */
+        min-width: 300px;
+        /* Prevent image column from getting too small */
+    }
+
+    .career-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: var(--border-radius, 12px);
+        /* Use theme radius */
+        box-shadow: var(--shadow-medium, 0 8px 25px rgba(0, 0, 0, 0.08));
+        /* Use theme shadow */
+        object-fit: cover;
+        /* Crop image nicely if aspect ratio differs */
+        max-height: 450px;
+        /* Optional: constrain image height */
+    }
+
+    .career-paths-list-col {
+        flex: 1 1 55%;
+        /* Flex basis 55%, allow grow/shrink */
+    }
+
+    .career-path-list {
+        list-style: none;
+        /* Remove default bullets */
+        padding: 0;
+        margin: 0;
+        /* Create two columns using CSS Columns */
+        column-count: 2;
+        column-gap: 30px;
+        /* Space between columns */
+    }
+
+    .career-path-item {
+        display: flex;
+        align-items: flex-start;
+        /* Align icon with top of text line */
+        margin-bottom: 18px;
+        /* Space between list items */
+        font-size: 1rem;
+        color: var(--text-color, #343A40);
+        font-weight: 500;
+        break-inside: avoid-column;
+        /* Prevent items from breaking across columns */
+        padding: 5px 0;
+        /* Add a little vertical padding */
+        transition: color 0.3s ease;
+    }
+
+    .career-path-item i {
+        color: var(--primary-color, #FF6B00);
+        /* Use theme primary color */
+        font-size: 1.1em;
+        /* Slightly larger icon */
+        margin-right: 12px;
+        /* Space between icon and text */
+        margin-top: 2px;
+        /* Fine-tune vertical alignment */
+    }
+
+    /* Optional: Subtle hover effect */
+    .career-path-item:hover {
+        color: var(--primary-color, #FF6B00);
+    }
+
+    .career-path-item:hover i {
+        transform: scale(1.1);
+        /* Slightly grow icon on hover */
+        transition: transform 0.2s ease;
+    }
+
+    /* --- Responsive Adjustments for Career Paths --- */
+    @media (max-width: 992px) {
+        .career-paths-header h2 {
+            font-size: 2.1rem;
+        }
+
+        .career-paths-content {
+            gap: 30px;
+        }
+
+        /* Optionally adjust flex-basis if needed */
+    }
+
+
+    @media (max-width: 768px) {
+        .career-paths-header h2 {
+            font-size: 1.8rem;
+        }
+
+        .career-paths-header p {
+            font-size: 1rem;
+        }
+
+        .career-paths-header {
+            margin-bottom: 40px;
+        }
+
+        /* Stack image and list on medium screens */
+        .career-paths-image-col,
+        .career-paths-list-col {
+            flex: 1 1 100%;
+            /* Make both take full width */
+        }
+
+        .career-paths-image-col {
+            margin-bottom: 30px;
+            /* Add space below image when stacked */
+            text-align: center;
+            /* Center image if needed */
+        }
+
+        .career-image {
+            max-width: 80%;
+            /* Don't let image stretch full width */
+            margin: 0 auto;
+            /* Center it */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .career-path-list {
+            column-count: 1;
+            /* Go to a single column list on small screens */
+        }
+
+        .career-image {
+            max-width: 95%;
+            /* Allow image slightly wider */
+        }
+
+        .career-path-item {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .career-path-item i {
+            margin-right: 10px;
+        }
+
+        .career-paths-section {
+            padding: 40px 0;
+        }
+    }
+
+    /* Carrer path section end */
+
+
+
+    /* Who can apply Section start */
+    /* --- Eligibility Section --- */
+    .eligibility-section {
+        padding: 80px 0;
+        /* Optional: Add a subtle background gradient or texture if desired */
+        /* background: linear-gradient(180deg, #fff 80%, var(--secondary-color, #f8f9fa) 100%); */
+        background-color: #fff;
+        /* Keep it clean by default */
+    }
+
+    .eligibility-card {
+        background-color: var(--card-bg, #FFFFFF);
+        border-radius: var(--border-radius, 12px);
+        box-shadow: var(--shadow-medium, 0 8px 25px rgba(0, 0, 0, 0.08));
+        overflow: hidden;
+        /* Important for graphic positioning later if needed */
+        position: relative;
+        /* Context for absolute positioning if graphic overlaps */
+        border: 1px solid var(--border-color, #E9ECEF);
+    }
+
+    .eligibility-content {
+        display: flex;
+        flex-wrap: wrap;
+        /* Wrap on smaller screens */
+        align-items: center;
+        /* Align items vertically */
+    }
+
+    .eligibility-text {
+        flex: 1 1 60%;
+        /* Takes up more space */
+        padding: 40px 45px;
+        /* Generous padding */
+        min-width: 300px;
+        /* Ensure text area doesn't get too cramped */
+    }
+
+    .eligibility-title {
+        font-size: 2.2rem;
+        /* Slightly smaller than section headers */
+        font-weight: 700;
+        color: var(--text-color, #343A40);
+        margin-bottom: 8px;
+    }
+
+    .eligibility-subtitle {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--light-text-color, #6C757D);
+        margin-bottom: 30px;
+    }
+
+    .eligibility-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .eligibility-list li {
+        display: flex;
+        align-items: flex-start;
+        /* Align icon with top of text */
+        margin-bottom: 20px;
+        /* Space between criteria */
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--text-color, #343A40);
+    }
+
+    .eligibility-list li i {
+        font-size: 1.2em;
+        /* Icon size */
+        color: var(--primary-color, #FF6B00);
+        /* Use theme color */
+        margin-right: 15px;
+        /* Space icon from text */
+        margin-top: 3px;
+        /* Fine-tune vertical align */
+        flex-shrink: 0;
+        /* Prevent icon from shrinking */
+    }
+
+    .eligibility-graphic {
+        flex: 1 1 35%;
+        /* Takes up less space */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        /* Optional: Add a subtle background pattern or different bg color here */
+        /* background-color: var(--secondary-color, #f8f9fa); */
+        min-height: 250px;
+        /* Ensure space for graphic */
+    }
+
+    .plus-graphic {
+        width: 120px;
+        /* Adjust size as needed */
+        height: 120px;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+        /* Soft shadow on graphic */
+    }
+
+    .plus-graphic line {
+        stroke-width: 12;
+        /* Thickness of the plus sign lines */
+        stroke-linecap: round;
+        /* Rounded ends */
+    }
+
+
+    /* --- Responsive Adjustments for Eligibility --- */
+
+    @media (max-width: 992px) {
+        .eligibility-text {
+            padding: 35px 40px;
+        }
+
+        .plus-graphic {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        .eligibility-content {
+            flex-direction: column-reverse;
+            /* Stack: Graphic *above* text on mobile */
+        }
+
+        .eligibility-text,
+        .eligibility-graphic {
+            flex: 1 1 100%;
+            /* Full width for both */
+        }
+
+        .eligibility-text {
+            padding: 30px 25px 40px 25px;
+            /* Adjust padding */
+            text-align: center;
+            /* Center text content */
+        }
+
+        .eligibility-title {
+            font-size: 1.9rem;
+        }
+
+        .eligibility-subtitle {
+            font-size: 1rem;
+            margin-bottom: 25px;
+        }
+
+        .eligibility-list li {
+            text-align: left;
+            /* Keep list items left-aligned */
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .eligibility-list li i {
+            margin-right: 10px;
+        }
+
+        .eligibility-graphic {
+            padding: 30px 20px;
+            /* Reduce padding */
+            min-height: auto;
+            /* Remove min-height */
+        }
+
+        .plus-graphic {
+            width: 80px;
+            /* Smaller graphic */
+            height: 80px;
+            margin-bottom: 10px;
+            /* Add space below graphic when stacked */
+            filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1));
+        }
+
+        .plus-graphic line {
+            stroke-width: 10;
+        }
+    }
+
+    /* Who can apply section end  */
+
+
+
+
+    /* --- Degree Highlight Section --- */
+    .degree-highlight-section {
+        padding: 80px 0;
+        background-color: #fff;
+        /* Clean white background */
+        position: relative;
+        /* For potential pseudo-elements later if needed */
+    }
+
+    .degree-content-wrapper {
+        display: flex;
+        align-items: center;
+        /* Vertically align columns */
+        flex-wrap: wrap;
+        /* Allow wrapping */
+        gap: 50px;
+        /* Space between text and image columns */
+    }
+
+    .degree-benefits-col {
+        flex: 1 1 45%;
+        /* Takes slightly less space than image */
+        min-width: 320px;
+        /* Prevent text column from getting too narrow */
+    }
+
+    .degree-image-col {
+        flex: 1 1 50%;
+        /* Image takes slightly more space */
+        min-width: 320px;
+    }
+
+    .degree-main-title {
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: var(--text-color, #343A40);
+        line-height: 1.4;
+        margin-bottom: 45px;
+        /* Space below main heading */
+    }
+
+    .highlight-underline {
+        position: relative;
+        white-space: nowrap;
+        /* Prevent breaking if possible */
+    }
+
+    /* Underline effect using ::after */
+    .highlight-underline::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        /* Adjust vertical position */
+        left: 0;
+        width: 100%;
+        height: 4px;
+        /* Thickness */
+        background-color: var(--primary-color, #FF6B00);
+        /* Use theme color */
+        border-radius: 2px;
+    }
+
+    .benefits-list {
+        margin-top: 20px;
+        /* Space above the first item */
+    }
+
+    .benefit-item {
+        display: flex;
+        align-items: flex-start;
+        /* Align icon with top of text */
+        gap: 20px;
+        /* Space between icon and text block */
+        margin-bottom: 35px;
+        /* Space between benefit items */
+    }
+
+    .benefit-item:last-child {
+        margin-bottom: 0;
+        /* No margin below the last item */
+    }
+
+    .benefit-icon {
+        flex-shrink: 0;
+        /* Prevent icon wrapper from shrinking */
+        width: 55px;
+        /* Icon circle size */
+        height: 55px;
+        border-radius: 50%;
+        background-color: var(--primary-color, #FF6B00);
+        color: #fff;
+        /* White icon color */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(var(--primary-rgb, 255, 107, 0), 0.3);
+        /* Subtle glow */
+    }
+
+    .benefit-icon i {
+        font-size: 1.6rem;
+        /* Icon size */
+    }
+
+    .benefit-text h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--text-color, #343A40);
+        margin-bottom: 8px;
+        /* Space below title */
+    }
+
+    .benefit-text p {
+        font-size: 0.95rem;
+        color: var(--light-text-color, #6C757D);
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    .sample-degree-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        /* Maintain aspect ratio */
+        box-shadow: var(--shadow-medium, 0 10px 30px rgba(0, 0, 0, 0.1));
+        /* Clear shadow */
+        border: 1px solid var(--border-color, #E9ECEF);
+        /* Subtle border */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Optional hover effect for the degree image */
+    .sample-degree-image:hover {
+        transform: scale(1.02) translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    /* --- Responsive Adjustments for Degree Highlight --- */
+    @media (max-width: 992px) {
+        .degree-main-title {
+            font-size: 2.2rem;
+        }
+
+        .degree-content-wrapper {
+            gap: 40px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .degree-highlight-section {
+            padding: 60px 0;
+        }
+
+        .degree-main-title {
+            font-size: 1.9rem;
+            margin-bottom: 35px;
+            text-align: center;
+            /* Center heading when stacked */
+        }
+
+        .highlight-underline::after {
+            bottom: -6px;
+            height: 3px;
+        }
+
+        .degree-content-wrapper {
+            flex-direction: column;
+            /* Stack columns */
+        }
+
+        .degree-benefits-col {
+            order: 2;
+            /* Show text below image when stacked */
+            width: 100%;
+            flex-basis: auto;
+            /* Reset flex basis */
+            max-width: 600px;
+            /* Limit width of text block */
+            margin: 0 auto;
+            /* Center the text block */
+        }
+
+        .degree-image-col {
+            order: 1;
+            /* Show image first when stacked */
+            width: 100%;
+            flex-basis: auto;
+            max-width: 650px;
+            /* Limit width of landscape image */
+            margin: 0 auto;
+            /* Center the image */
+        }
+
+        .benefit-item {
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .benefit-icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        .benefit-icon i {
+            font-size: 1.4rem;
+        }
+
+        .benefit-text h4 {
+            font-size: 1.1rem;
+        }
+
+        .benefit-text p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .degree-main-title {
+            font-size: 1.7rem;
+        }
+
+        .sample-degree-image {
+            box-shadow: var(--shadow-light, 0 4px 15px rgba(0, 0, 0, 0.07));
+            /* Less shadow on mobile */
+        }
+
+        .sample-degree-image:hover {
+            transform: none;
+            /* Disable hover scale on small devices */
+            box-shadow: var(--shadow-light, 0 4px 15px rgba(0, 0, 0, 0.07));
+        }
+    }
