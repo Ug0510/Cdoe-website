@@ -5,11 +5,15 @@
 @section('content')
 
 
-    <!-- breadcrumb start -->
-    <div class="programme-banner">
-        <img src="{{ asset('assets/img/programmes/programme-banner.webp') }}" alt="Programme Banner">
-
+    <!-- Breadcrumb Section -->
+  <section class="breadcrumb-section">
+    <div class="mt-5">
+      <h1>How to apply</h1>
+      <p class="breadcrumbs" style="color: #ffffff;">
+        <a href="#">Home </a> &gt; How to Apply
+      </p>
     </div>
+  </section>
     <!-- breadcrumb end -->
 
     <div class="container mt-5">

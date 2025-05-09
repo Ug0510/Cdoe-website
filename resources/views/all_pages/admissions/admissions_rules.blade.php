@@ -4,13 +4,17 @@
 
 @section('content')
 
-    <!-- breadcrumb start -->
-    <div class="programme-banner">
-        <img src="{{ asset('assets/img/programmes/programme-banner.webp') }}" alt="Programme Banner">
-
+    <!-- Breadcrumb Section -->
+  <section class="breadcrumb-section">
+    <div class="mt-5">
+      <h1>Admissions Rule</h1>
+      <p class="breadcrumbs" style="color: #ffffff;">
+        <a href="#">Home </a> &gt; Admissions Rule
+      </p>
     </div>
+  </section>
     <!-- breadcrumb end -->
-    <div class="bg-gray-100 min-h-screen py-10">
+    <div class="bg-gray-100 min-h-screen py-10 mt-5">
         <div class="container mx-auto px-4">
             <h1 class="text-4xl font-bold text-dark-blue text-center mb-5">Admission Rules & Regulations</h1>
             <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-6">
