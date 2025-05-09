@@ -54,10 +54,10 @@
         </div>
         <div class="logo-space"></div>
         <div class="nav-options">
-            <a href="#">Home</a>
+            <a href="/">Home</a>
 
             <div class="dropdown">
-                <a href="#">Programmes</a>
+                <a >Programmes</a>
                 <ul class="submenu">
                     <li><a href="{{route('finance.programme') }}">MBA Finance</a></li>
                     <li><a href="{{route('hr.programme') }}">MBA HR Management</a></li>
