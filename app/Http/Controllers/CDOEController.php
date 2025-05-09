@@ -46,4 +46,9 @@ class CDOEController extends Controller
     {
         return view('all_pages.admissions.how_to_apply');
     }
+
+    public function facilities()
+    {
+        return view('all_pages.facilities');
+    }
 }
