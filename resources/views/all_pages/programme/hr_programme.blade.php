@@ -8,9 +8,9 @@
     <!-- breadcrumb start -->
     <div class="programme-banner">
         <img src="{{ asset('assets/img/programmes/hr-banner.webp') }}" alt="Programme Banner">
-        {{-- <div class="banner-title">
+        <div class="banner-title">
             Online MBA in HR
-        </div> --}}
+        </div>
     </div>
     <!-- breadcrumb end -->
 

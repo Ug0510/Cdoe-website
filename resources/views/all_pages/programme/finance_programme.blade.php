@@ -8,10 +8,10 @@
     <!-- breadcrumb start -->
     <div class="programme-banner">
         <img src="{{ asset('assets/img/programmes/finance-banner.webp') }}" alt="Programme Banner">
-        {{-- <div class="banner-title">
+        <div class="banner-title">
             <p>Online MBA in <br> <span>Human Resource Management</span></p>
              <p>The digital landscape is dynamic, and marketing has evolved into a sophisticated blend of art and science. For ambitious professionals aiming to carve a leadership role in this exciting domain, this is the right place for you.</p>
-         </div> --}}
+         </div>
     </div>
     <!-- breadcrumb end -->
 
