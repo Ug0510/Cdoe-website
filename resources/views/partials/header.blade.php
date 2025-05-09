@@ -73,7 +73,7 @@
                 </ul>
             </div>
 
-            <a href="#">Facilities</a>
+            <a href="{{route('facilities') }}">Facilities</a>
             <a href="#" class="apply-btn">Apply Now</a>
         </div>
     </nav>

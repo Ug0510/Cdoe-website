@@ -2964,9 +2964,11 @@ ul {
 }
 
 .single-intro-inner.style-icon-bg {
-  padding: 40px 15px 30px 15px;
-  border: 3px solid #F0F4F9;
+  padding: 20px 10px;
+  border: 1px solid #6969692b;
+  box-shadow: 2px 2px 8px #2020201f;
   margin-bottom: 30px;
+  min-height: 250px;
 }
 
 .single-intro-inner.style-icon-bg .thumb {
@@ -2999,7 +3001,7 @@ ul {
 }
 
 .single-intro-inner.style-icon-bg:hover {
-  border: 3px solid var(--main-color);
+  box-shadow: 5px 5px 12px #0000004f;
 }
 
 .single-intro-inner.style-thumb {
@@ -4263,7 +4265,7 @@ ul {
 
 .course-details-nav-tab ul li {
   margin-bottom: 0 !important;
-  width: 25%;
+  width: 50%;
 }
 
 .course-details-nav-tab ul li a {
@@ -5327,4 +5329,126 @@ ul {
   background-color: var(--main-color);  /* Darker green */
   color: var(--white-color);
   transform: scale(1.1); /* Slightly increase the size of the button */
+}
+
+
+/* Breadcrumb Section */
+.breadcrumb-section {
+  background-image: url('/assets/img/bread-crum.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.breadcrumb-section h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.breadcrumb-section .breadcrumbs {
+  font-size: 1.2rem;
+  border: 1px solid #ffffff;
+  border-radius: .3rem;
+  padding: .75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.breadcrumb-section .breadcrumb a {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb-section .breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Video Section */
+.video-section {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.video-section iframe {
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  border: none;
+}
+
+/* Gallery Section */
+.gallery-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 5%;
+}
+
+.gallery-item {
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox Styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  z-index: 1;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-close:hover {
+  background-color: rgba(255, 255, 255, 1);
 }

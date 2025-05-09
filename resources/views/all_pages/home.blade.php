@@ -396,10 +396,9 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-6 col-md-6">
-                    <div class="single-intro-inner style-icon-bg bg-gray text-center">
+                    <div class="single-intro-inner style-icon-bg text-center">
                         <div class="thumb">
                             <img src="{{ asset('/assets/img/icon/i-1.svg') }}" class="why-icon" alt="img">
-                            <div class="intro-count">1</div>
                         </div>
                         <div class="details">
                             <h5>Online Sessions by Industry Experts</h5>
@@ -409,10 +408,9 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-6 col-md-6">
-                    <div class="single-intro-inner style-icon-bg bg-gray text-center">
+                    <div class="single-intro-inner style-icon-bg text-center">
                         <div class="thumb">
                             <img src="{{ asset('/assets/img/icon/i-2.svg') }}" class="why-icon" alt="img">
-                            <div class="intro-count">2</div>
                         </div>
                         <div class="details">
                             <h5>Internship Opportunities</h5>
@@ -422,10 +420,9 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-6 col-md-6">
-                    <div class="single-intro-inner style-icon-bg bg-gray text-center">
+                    <div class="single-intro-inner style-icon-bg text-center">
                         <div class="thumb">
                             <img src="{{ asset('/assets/img/icon/i-3.svg') }}" class="why-icon" alt="img">
-                            <div class="intro-count">3</div>
                         </div>
                         <div class="details">
                             <h5>Flexible Examination Options</h5>
@@ -435,10 +432,9 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-6 col-md-6">
-                    <div class="single-intro-inner style-icon-bg bg-gray text-center">
+                    <div class="single-intro-inner style-icon-bg text-center">
                         <div class="thumb">
                             <img src="{{ asset('/assets/img/icon/i-4.svg') }}" class="why-icon" alt="img">
-                            <div class="intro-count">4</div>
                         </div>
                         <div class="details">
                             <h5>User-Friendly LMS</h5>
@@ -449,10 +445,9 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-6 col-md-6">
-                    <div class="single-intro-inner style-icon-bg bg-gray text-center">
+                    <div class="single-intro-inner style-icon-bg text-center">
                         <div class="thumb">
                             <img src="{{ asset('/assets/img/icon/i-5.svg') }}" class="why-icon" alt="img">
-                            <div class="intro-count">5</div>
                         </div>
                         <div class="details">
                             <h5>24/7 Access to Digital Library</h5>
@@ -463,10 +458,9 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-6 col-md-6">
-                    <div class="single-intro-inner style-icon-bg bg-gray text-center">
+                    <div class="single-intro-inner style-icon-bg text-center">
                         <div class="thumb">
                             <img src="{{ asset('/assets/img/icon/i-6.svg') }}" class="why-icon" alt="img">
-                            <div class="intro-count">6</div>
                         </div>
                         <div class="details">
                             <h5>Budget-Friendly Fee Structure</h5>
