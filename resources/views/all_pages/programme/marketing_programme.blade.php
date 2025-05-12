@@ -368,9 +368,7 @@
                                             </div>
                                             <div class="benefit-text">
                                                 <h4>Universally Accepted & Recognized</h4>
-                                                <p>The Degree is duly Entitled by UGC - Distance Education Bureau and is
-                                                    also recognized by World Education Services (WES) for study in Canada
-                                                    and USA.</p>
+                                                <p>The Degree is duly Entitled by UGC - Distance Education Bureau.</p>
                                             </div>
                                         </div>
 
@@ -498,7 +496,7 @@ $altTexts = [
                                 <div class="career-paths-image-col">
                                     {{-- Make sure this image path is correct in your public/assets folder --}}
                                     {{-- <img src="{{ asset('assets/img/career-paths-image.jpg') }}" alt="Professionals discussing data science career paths" class="career-image"> --}}
-                                    <img src="https://thumbs.dreamstime.com/b/businessman-climbing-career-ladder-success-businessman-climbing-career-ladder-success-104912053.jpg"
+                                    <img src="{{ asset('assets/img/programmes/prog-img-4.jpg') }}"
                                         alt="Professionals discussing data science career paths" class="career-image">
                                 </div>
 
