@@ -18,15 +18,10 @@
     <!-- breadcrumb end -->
 
     <!-- course-single area start -->
-    <div class="course-single-area pd-top-160 pd-bottom-90">
-        <div class="row justify-content-center mb-5">
-            <div class="col-xl-8 col-lg-10 col-md-11">
-                <div class="section-title style-white text-center">
-                    <h2 class="title">Become a Market Leader with a UGC-Approved Online MBA in Marketing</h2>
-                </div>
-            </div>
+    <div class="course-single-area pd-top-60 pd-bottom-90">
+        <div class="career-paths-header">
+            <h2>Become a Market Leader with a UGC-Approved <span>Online MBA in Marketing</span></h2>
         </div>
-
         <div class="row">
             <div class="col-lg-12">
                 <div class="course-course-detaila-inner">
