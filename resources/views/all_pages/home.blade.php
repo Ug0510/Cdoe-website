@@ -189,111 +189,118 @@
 
 
     <!-- course area start -->
-    <div class="course-area mt-3 mb-3">
+    <section class="featured-courses py-5 pt-0">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-8 col-lg-10 col-md-11 my-3">
-                    <div class="section-title style-white text-center">
-                        <h2 class="title">Top Featured Courses</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-course-inner">
-                                <div class="thumb">
-                                    <img src="https://test.cdoeadmissions.tmu.ac.in/images/m1.png" alt="img">
-                                </div>
-                                <div class="details">
-                                    <div class="details-inner">
-                                        <h6><a href="./mba-finance.php">Master of Business Administration in Finance</a>
-                                        </h6>
-                                        <p>The Master of Business Administration in Finance provides advanced knowledge
-                                            in financial management</p>
-                                    </div>
-                                    <div class="emt-course-meta">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="rating">
-                                                    <i class="fa fa-star"></i> Management
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="price text-right">
-                                                    Duration: <span>2Years</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-course-inner">
-                                <div class="thumb">
-                                    <img src="https://test.cdoeadmissions.tmu.ac.in/images/m2.png" alt="img">
-                                </div>
-                                <div class="details">
-                                    <div class="details-inner">
-                                        <h6><a href="course-details.html">Master of Business Administration in Human
-                                                Resource Management</a></h6>
-                                        <p>The Master of Business Administration in Human Resource Management equips
-                                            students with skills in talent management, organizational development</p>
-                                    </div>
-                                    <div class="emt-course-meta">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="rating">
-                                                    <i class="fa fa-star"></i> Management
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="price text-right">
-                                                    Duration: <span>2Years</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-course-inner">
-                                <div class="thumb">
-                                    <img src="https://test.cdoeadmissions.tmu.ac.in/images/m3.png" alt="img">
-                                </div>
-                                <div class="details">
-                                    <div class="details-inner">
-                                        <h6><a href="course-details.html">Master of Business Administration in
-                                                Marketing</a></h6>
-                                        <p>The Master of Business Administration in Marketing and International Business
-                                            combines advanced marketing strategies with global business expertise,
-                                            focusing</p>
-                                    </div>
-                                    <div class="emt-course-meta">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="rating">
-                                                    <i class="fa fa-star"></i> Management
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="price text-right">
-                                                    Duration: <span>2Years</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <!-- Section Header -->
+          {{-- <div class="text-center mb-4 mb-md-5">
+            <h2 class="section-title-fc">
+              Explore Our Online MBA Specialisations
+            </h2>
+            <p class="section-subtitle-fc">
+              Choose a specialisation that aligns with your career aspirations and
+              industry demands.
+            </p>
+          </div> --}}
+
+          <div class="section-title style-white text-center mt-4">
+            <h2 class="title">Explore Our Online MBA Specialisations</h2>
+            <p class="section-subtitle-fc">
+                Choose a specialisation that aligns with your career aspirations and
+                industry demands.
+              </p>
         </div>
-    </div>
+  
+          <!-- Course Cards -->
+          <div class="row g-4 justify-content-center">
+            <!-- Card 1: Finance -->
+            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+              <div class="course-card-fc">
+                <div class="course-card-fc-img-container">
+                  <img
+                    src="{{ asset('/assets/img/programmes/m1.webp')}}"
+                    alt="Online MBA in Finance Specialisation"
+                    class="course-card-fc-img"
+                  />
+                </div>
+                <div class="course-card-fc-body">
+                  <h3 class="course-card-fc-title">
+                    MBA in Finance
+                  </h3>
+                  <p class="course-card-fc-text">
+                    Gain advanced knowledge in financial management, investment
+                    strategies, and corporate finance to excel in the dynamic
+                    world of finance.
+                  </p>
+                  <div class="course-card-fc-meta">
+                    <span class="duration-tag-fc"
+                      >Duration: <strong>2 Years</strong></span
+                    >
+                  </div>
+                  <!-- <a href="#finance-details" class="btn btn-primary-fc btn-sm mt-auto" aria-label="Learn more about MBA in Finance">Learn More</a> -->
+                </div>
+              </div>
+            </div>
+  
+            <!-- Card 2: Human Resource Management -->
+            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+              <div class="course-card-fc">
+                <div class="course-card-fc-img-container">
+                  <img
+                    src="{{ asset('/assets/img/programmes/m2.webp')}}"
+                    alt="Online MBA in Human Resource Management Specialisation"
+                    class="course-card-fc-img"
+                  />
+                </div>
+                <div class="course-card-fc-body">
+                  <h3 class="course-card-fc-title">
+                    MBA in Human Resource Management
+                  </h3>
+                  <p class="course-card-fc-text">
+                    Equip yourself with essential skills in talent acquisition,
+                    employee relations, performance management, and strategic HR
+                    planning.
+                  </p>
+                  <div class="course-card-fc-meta">
+                    <span class="duration-tag-fc"
+                      >Duration: <strong>2 Years</strong></span
+                    >
+                  </div>
+                  <!-- <a href="#hr-details" class="btn btn-primary-fc btn-sm mt-auto" aria-label="Learn more about MBA in Human Resource Management">Learn More</a> -->
+                </div>
+              </div>
+            </div>
+  
+            <!-- Card 3: Marketing -->
+            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+              <div class="course-card-fc">
+                <div class="course-card-fc-img-container">
+                  <img
+                    src="{{ asset('/assets/img/programmes/m3.webp')}}"
+                    alt="Online MBA in Marketing Specialisation"
+                    class="course-card-fc-img"
+                  />
+                </div>
+                <div class="course-card-fc-body">
+                  <h3 class="course-card-fc-title">
+                    MBA in Marketing
+                  </h3>
+                  <p class="course-card-fc-text">
+                    Master modern marketing strategies, digital marketing,
+                    consumer behavior, and brand management to lead in a
+                    competitive global market.
+                  </p>
+                  <div class="course-card-fc-meta">
+                    <span class="duration-tag-fc"
+                      >Duration: <strong>2 Years</strong></span
+                    >
+                  </div>
+                  <!-- <a href="#marketing-details" class="btn btn-primary-fc btn-sm mt-auto" aria-label="Learn more about MBA in Marketing">Learn More</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     <!-- course area End -->
 
 
@@ -301,8 +308,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-8 col-lg-10 col-md-11">
-                <div class="section-title style-white text-center">
-                    <h2 class="title">Gallery</h2>
+                <div class="section-title style-white text-center mt-4">
+                    <h2 class="title">Convocation & Events Gallery</h2>
                 </div>
             </div>
         </div>
@@ -491,11 +498,6 @@
                     class="img-fluid" />
             </div>
 
-            <p class="mt-4 degree-caption">
-                Master of Business Administration<br />
-                <span class="badge bg-primary-subtle text-primary-emphasis mt-2">Online Mode | First Division with
-                    Distinction</span>
-            </p>
 
             <!-- Optional CTA -->
             {{-- <a href="#" class="btn btn-dark mt-3 px-4 ">Explore Our MBA Program</a> --}}
@@ -504,104 +506,6 @@
 
 
 
-    <div class="work-area pd-top-60">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-8 col-lg-10 col-md-11">
-                    <div class="section-title style-white text-center">
-                        <h2 class="title">Admission Process</h2>
-                    </div>
-                </div>
-            </div>
-            <section class="m-5 d-none d-sm-block">
-                <div class="admiossion-container ">
-                    <img src="{{ asset('/assets/img/admission-process.png') }}" class="admission-img" alt="">
-                </div>
-            </section>
-
-            <section class="m-5 d-block d-sm-none">
-                <div class="admiossion-container">
-                    <img src="{{ asset('/assets/img/admission-process-mobile.png') }}" class="admission-img"
-                        alt="">
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <!--events-area start-->
-    <!-- <div class="events-area pd-top-110 pd-bottom-120">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-6 col-lg-7 col-md-11">
-                            <div class="section-title text-center">
-                                <h6 class="sub-title double-line">EVENTS</h6>
-                                <h2 class="title">Latest Blogs</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <ul class="single-blog-list-wrap style-white" style="background-color: var(--heading-color);">
-                                <li>
-                                    <div class="media single-blog-list-inner style-white">
-                                        <div class="media-left date">
-                                            <span>JAN</span>
-                                            20
-                                        </div>
-                                        <div class="media-body details">
-                                            <ul class="blog-meta">
-                                                <li><i class="fa fa-user"></i> BY ADMIN</li>
-                                                <li><i class="fa fa-folder-open-o"></i> Air transport</li>
-                                            </ul>
-                                            <h5><a href="blog-details.html">Clone sit amet, consec tetur elit</a></h5>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="media single-blog-list-inner">
-                                        <div class="media-left date">
-                                            <span>FEB</span>
-                                            26
-                                        </div>
-                                        <div class="media-body details">
-                                            <ul class="blog-meta">
-                                                <li><i class="fa fa-user"></i> BY ADMIN</li>
-                                                <li><i class="fa fa-folder-open-o"></i> Air transport</li>
-                                            </ul>
-                                            <h5><a href="blog-details.html">Maecenas interdum lorem eleifend</a></h5>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="media single-blog-list-inner">
-                                        <div class="media-left date">
-                                            <span>JAN</span>
-                                            28
-                                        </div>
-                                        <div class="media-body details">
-                                            <ul class="blog-meta">
-                                                <li><i class="fa fa-user"></i> BY ADMIN</li>
-                                                <li><i class="fa fa-folder-open-o"></i> Air transport</li>
-                                            </ul>
-                                            <h5><a href="blog-details.html">Nunc scelerisque tincidunt elit. </a></h5>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <button class="hover-button">View all</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 align-self-center">
-                            <div class="event-thumb">
-                                <img src="{{ asset('/assets/img/other/events.png') }}" alt="img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-    <!--events-area end-->
-
 
     <!-- ============================ Reel Showcase Section Start ============================ -->
     <section class="tmu-reel-showcase py-5 position-relative">
@@ -609,7 +513,7 @@
         <div class="tmu-reel-background-element tmu-reel-bg-el-2"></div>
 
         <div class="container position-relative">
-            <h2 class="tmu-reel-showcase__title text-center mb-5">Student Stories & Campus Life</h2>
+            <h2 class="tmu-reel-showcase__title text-center mb-5">Why TMU Online? Watch & Discover</h2>
 
             <div class="tmu-reel-swiper-container position-relative">
 
@@ -678,74 +582,7 @@
     <!-- ============================ Reel Showcase Section End ============================ -->
 
 
-    <!-- <div class="faq-area recruiter-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-7">
-                            <section class="recruiter-section">
-                                <div class="container">
-                                    <h2>Our Recruiters</h2>
-                                    <div id="logo-container" class="semi-circle-container"></div>
-                                    <div class="controls">
-                                        <button id="prev">Prev</button>
-                                        <button id="next">Next</button>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="about-area-inner">
-                                <div class="section-title mb-0">
-                                    <div class="row justify-content-center">
-                                        <div class="col-xl-8 col-lg-10 col-md-11">
-                                            <div class="section-title style-white text-center">
-                                                <h2 class="title"></h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="content">Have ipsum dolor sit amet, elitr, sed diam nonumy eirmod tempor invidunt
-                                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                        justo duo et ea rebum.</p>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <ul class="single-list-wrap">
-                                                <li class="single-list-inner style-check-box bg-light-blue p-3 b-radius-5">
-                                                    <div class="media">
-                                                        <div class="media-left mr-0">
-                                                            <i class="fa fa-check"></i>
-                                                        </div>
-                                                        <div class="media-body">
-                                                            <h5>1200+</h5>
-                                                            <p>Learners & counting</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <ul class="single-list-wrap">
-                                                <li class="single-list-inner style-check-box bg-light-blue p-3 b-radius-5">
-                                                    <div class="media">
-                                                        <div class="media-left mr-0">
-                                                            <i class="fa fa-check"></i>
-                                                        </div>
-                                                        <div class="media-body">
-                                                            <h5>350+</h5>
-                                                            <p>Learners & counting</p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-    <!-- ========== Recruiters Section Start ========== -->
+ 
     <section class="recruiters-section">
         <div class="container">
 
@@ -823,57 +660,13 @@ $altTexts = [
 
 
     <!-- faq area start -->
-    <div class="faq-area mt-5">
+    <div class="faq-area mt-3">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
-                    <div class="about-area-inner">
-                        <div class="section-title mb-0">
-                            <div class="row justify-content-center">
-                                <div class="col-xl-8 col-lg-10 col-md-11">
-                                    <div class="section-title style-white text-center">
-                                        <h2 class="title">FAQ</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="content">Centre for Distance and Online Education (CDOE), Teerthanker Mahaveer
-                                University (TMU)</p>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <ul class="single-list-wrap">
-                                        <li class="single-list-inner style-check-box bg-light-blue p-3 b-radius-5">
-                                            <div class="media">
-                                                <div class="media-left mr-0">
-                                                    <i class="fa fa-check"></i>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h5>1200+</h5>
-                                                    <p>Learners & counting</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-6">
-                                    <ul class="single-list-wrap">
-                                        <li class="single-list-inner style-check-box bg-light-blue p-3 b-radius-5">
-                                            <div class="media">
-                                                <div class="media-left mr-0">
-                                                    <i class="fa fa-check"></i>
-                                                </div>
-                                                <div class="media-body">
-                                                    <h5>350+</h5>
-                                                    <p>Learners & counting</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-12">
+                    <h2 class="title text-center mb-4">FAQ</h2>
                 </div>
-                <div class="col-lg-7 mt-5 mt-lg-0">
+                <div class="col-12 mt-5 mt-lg-0">
                     <div id="accordion" class="accordion-area">
                         <div class="card single-faq-inner">
                             <div class="card-header" id="ff-one">
