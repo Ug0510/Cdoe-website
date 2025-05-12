@@ -5331,7 +5331,6 @@ ul {
   transform: scale(1.1); /* Slightly increase the size of the button */
 }
 
-<<<<<<< Updated upstream
 
 /* Breadcrumb Section */
 .breadcrumb-section {
@@ -5453,7 +5452,7 @@ ul {
 .lightbox-close:hover {
   background-color: rgba(255, 255, 255, 1);
 }
-=======
+
 /*--------------------------------------------------------------
 # Featured Courses Section (Improved)
 --------------------------------------------------------------*/
@@ -5569,4 +5568,4 @@ ul {
   color: #1A237E; /* Brand's primary blue for emphasis */
   font-weight: 600;
 }
->>>>>>> Stashed changes
+
