@@ -4,7 +4,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('/assets/css/programme.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/programme.css') }}">
     <!-- breadcrumb start -->
     <div class="programme-banner">
         <img src="{{ asset('assets/img/programmes/hr-banner.webp') }}" alt="Programme Banner">
@@ -16,20 +16,16 @@
 
     <!-- course-single area start -->
     <div class="course-single-area pd-top-60 pd-bottom-90">
-        <div class="row justify-content-center mb-5">
-            <div class="col-xl-8 col-lg-10 col-md-11">
-                <div class="section-title style-white text-center">
-                    <h2 class="title">Lead the Workforce with India's Best Online MBA in Human Resource Management</h2>
-                </div>
-            </div>
+        <div class="career-paths-header">
+            <h2>Lead the Workforce with India's Best <span>Online MBA in Human Resource Management</span></h2>
         </div>
-
         <div class="row">
             <div class="col-lg-12">
                 <div class="course-course-detaila-inner">
 
                     {{-- REMOVED: Tab navigation structure --}}
-                    {{-- <div class="course-details-nav-tab text-center"> ... </ul> </div> --}}
+                    {{-- <div class="course-details-nav-tab text-center"> ... </ul>
+                    </div> --}}
 
                     {{-- Start Sequential Content --}}
 
@@ -266,7 +262,8 @@
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">MBAH302</span>
-                                                <p class="course-name">Organizational Change and Organizational Development</p>
+                                                <p class="course-name">Organizational Change and Organizational Development
+                                                </p>
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">MBAH303</span>
@@ -286,7 +283,8 @@
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">MBAH307</span>
-                                                <p class="course-name">MOOC decided and identified from the platform prescribed by the College and University</p>
+                                                <p class="course-name">MOOC decided and identified from the platform
+                                                    prescribed by the College and University</p>
                                             </div>
                                         </div>
                                     </div>
@@ -302,7 +300,8 @@
                                         <div class="course-grid">
                                             <div class="course-card">
                                                 <span class="course-code">MBAVV451</span>
-                                                <p class="course-name">Dissertation Report Evaluation (Based on OJT /Start-up Engagements/ Family Business Exposure)</p>
+                                                <p class="course-name">Dissertation Report Evaluation (Based on OJT
+                                                    /Start-up Engagements/ Family Business Exposure)</p>
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">MBAH401</span>
@@ -322,7 +321,8 @@
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">MBAH405</span>
-                                                <p class="course-name">MOOC decided and identified from the platform prescribed by the College and University</p>
+                                                <p class="course-name">MOOC decided and identified from the platform
+                                                    prescribed by the College and University</p>
                                             </div>
                                         </div>
                                     </div>
@@ -388,8 +388,7 @@
                                 <!-- Right Column: Degree Image -->
                                 <div class="degree-image-col">
                                     <img src="{{ asset('assets/img/degree.webp') }}"
-                                        alt="Sample Online MBA Degree Certificate (Landscape)"
-                                        class="sample-degree-image">
+                                        alt="Sample Online MBA Degree Certificate (Landscape)" class="sample-degree-image">
                                 </div>
 
                             </div>
@@ -422,39 +421,39 @@
                                 @php
                                     // Define alt texts - you might want a more dynamic way to fetch these
                                     // Or just use generic ones if specific names aren't readily available
-$altTexts = [
-    1 => 'Wipro Logo',
-    2 => 'Vistara Logo',
-    3 => 'Videocon Logo',
-    4 => 'VFS Global Logo',
-    5 => 'Pantaloons Logo',
-    6 => 'Amazon India Logo',
-    7 => 'Tata Strive Logo',
-    8 => 'Tally Logo',
-    9 => 'Skyway Communications Logo',
-    10 => 'Safety Circle Logo',
-    11 => 'Royal Bank of Scotland Logo',
-    12 => 'Paytm Logo',
-    13 => 'OM Logistics Ltd Logo',
-    14 => 'OYO Logo',
-    15 => 'Neva Clothing Logo',
-    16 => 'Max Life Insurance Logo',
-    17 => 'Overseas Logo',
-    18 => 'Tripat Infoways Logo',
-    19 => 'LIC Logo',
-    20 => 'Kotak Mahindra Bank Logo',
-    21 => 'Karvy Stock Broking Logo',
-    22 => 'Indigo Logo',
-    23 => 'Globe Toyota Logo',
-    24 => 'Recruiter Logo 24', // Add more specific Alts if you have them
-    25 => 'Recruiter Logo 25',
-    26 => 'Recruiter Logo 26',
-    27 => 'Recruiter Logo 27',
-    28 => 'Recruiter Logo 28',
-    29 => 'Recruiter Logo 29',
-    30 => 'Recruiter Logo 30',
-    31 => 'Recruiter Logo 31',
-    32 => 'Recruiter Logo 32',
+                                    $altTexts = [
+                                        1 => 'Wipro Logo',
+                                        2 => 'Vistara Logo',
+                                        3 => 'Videocon Logo',
+                                        4 => 'VFS Global Logo',
+                                        5 => 'Pantaloons Logo',
+                                        6 => 'Amazon India Logo',
+                                        7 => 'Tata Strive Logo',
+                                        8 => 'Tally Logo',
+                                        9 => 'Skyway Communications Logo',
+                                        10 => 'Safety Circle Logo',
+                                        11 => 'Royal Bank of Scotland Logo',
+                                        12 => 'Paytm Logo',
+                                        13 => 'OM Logistics Ltd Logo',
+                                        14 => 'OYO Logo',
+                                        15 => 'Neva Clothing Logo',
+                                        16 => 'Max Life Insurance Logo',
+                                        17 => 'Overseas Logo',
+                                        18 => 'Tripat Infoways Logo',
+                                        19 => 'LIC Logo',
+                                        20 => 'Kotak Mahindra Bank Logo',
+                                        21 => 'Karvy Stock Broking Logo',
+                                        22 => 'Indigo Logo',
+                                        23 => 'Globe Toyota Logo',
+                                        24 => 'Recruiter Logo 24', // Add more specific Alts if you have them
+                                        25 => 'Recruiter Logo 25',
+                                        26 => 'Recruiter Logo 26',
+                                        27 => 'Recruiter Logo 27',
+                                        28 => 'Recruiter Logo 28',
+                                        29 => 'Recruiter Logo 29',
+                                        30 => 'Recruiter Logo 30',
+                                        31 => 'Recruiter Logo 31',
+                                        32 => 'Recruiter Logo 32',
                                     ];
                                 @endphp
 
@@ -462,8 +461,8 @@ $altTexts = [
                                     <div class="recruiter-item">
                                         <img src="{{ asset('assets/img/recruiters/' . $i . '.jpg') }}"
                                             alt="{{ $altTexts[$i] ?? 'Recruiter Logo ' . $i }}" class="recruiter-logo"
-                                            onerror="this.style.display='none'; this.parentElement.style.display='none';"
-                                            {{-- Hide item if image fails to load --}}>
+                                            onerror="this.style.display='none'; this.parentElement.style.display='none';" {{--
+                                            Hide item if image fails to load --}}>
                                     </div>
                                 @endfor
 
@@ -485,7 +484,8 @@ $altTexts = [
                                     businesses placing increasing value on effective people management and strategic
                                     workforce planning, HR professionals with advanced qualifications are in high demand.
                                     <br> Here are some of the most popular career paths you can pursue after earning an
-                                    online MBA in HR : </p>
+                                    online MBA in HR :
+                                </p>
                             </div>
 
                             <!-- Content Grid (Image + List) -->
@@ -494,7 +494,8 @@ $altTexts = [
                                 <!-- Image Column -->
                                 <div class="career-paths-image-col">
                                     {{-- Make sure this image path is correct in your public/assets folder --}}
-                                    {{-- <img src="{{ asset('assets/img/career-paths-image.jpg') }}" alt="Professionals discussing data science career paths" class="career-image"> --}}
+                                    {{-- <img src="{{ asset('assets/img/career-paths-image.jpg') }}"
+                                        alt="Professionals discussing data science career paths" class="career-image"> --}}
                                     <img src="{{ asset('assets/img/programmes/prog-img-4.jpg') }}"
                                         alt="Professionals discussing data science career paths" class="career-image">
                                 </div>
@@ -577,7 +578,8 @@ $altTexts = [
 
                                     <!-- Decorative Graphic -->
                                     <div class="eligibility-graphic">
-                                        <img src="{{ asset('assets/img/programmes/who-can-apply.png') }}" alt="" style="margin-top:-3rem;">
+                                        <img src="{{ asset('assets/img/programmes/who-can-apply.png') }}" alt=""
+                                            style="margin-top:-3rem;">
                                     </div>
 
                                 </div>
@@ -619,15 +621,14 @@ $altTexts = [
                                 <div class="card single-faq-inner style-header-bg">
                                     <div class="card-header" id="ff-six">
                                         <h5 class="mb-0">
-                                            <button class="btn-link collapsed" data-toggle="collapse"
-                                                data-target="#f-six" aria-expanded="false" aria-controls="f-six">
+                                            <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-six"
+                                                aria-expanded="false" aria-controls="f-six">
                                                 02. What are the eligibility criteria for pursuing an Online MBA in HR?
                                                 <i class="fa fa-eye"></i>
                                             </button>
                                         </h5>
                                     </div>
-                                    <div id="f-six" class="collapse" aria-labelledby="ff-six"
-                                        data-parent="#faq-accordion">
+                                    <div id="f-six" class="collapse" aria-labelledby="ff-six" data-parent="#faq-accordion">
                                         <div class="card-body">
                                             The general eligibility criteria for enrolling in an Online MBA in HR programme
                                             include:
@@ -661,8 +662,8 @@ $altTexts = [
                                 <div class="card single-faq-inner style-header-bg">
                                     <div class="card-header" id="ff-seven">
                                         <h5 class="mb-0">
-                                            <button class="btn-link collapsed" data-toggle="collapse"
-                                                data-target="#f-seven" aria-expanded="false" aria-controls="f-seven">
+                                            <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-seven"
+                                                aria-expanded="false" aria-controls="f-seven">
                                                 03. What is the duration of the Online MBA in Human Resources?
                                                 <i class="fa fa-eye"></i>
                                             </button>
@@ -679,8 +680,8 @@ $altTexts = [
                                 <div class="card single-faq-inner style-header-bg">
                                     <div class="card-header" id="ff-eight">
                                         <h5 class="mb-0">
-                                            <button class="btn-link collapsed" data-toggle="collapse"
-                                                data-target="#f-eight" aria-expanded="false" aria-controls="f-eight">
+                                            <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-eight"
+                                                aria-expanded="false" aria-controls="f-eight">
                                                 04. What is the scope of an Online MBA in Human Resource Management?
                                                 <i class="fa fa-eye"></i>
                                             </button>
@@ -716,8 +717,8 @@ $altTexts = [
                                 <div class="card single-faq-inner style-header-bg">
                                     <div class="card-header" id="ff-nine">
                                         <h5 class="mb-0">
-                                            <button class="btn-link collapsed" data-toggle="collapse"
-                                                data-target="#f-nine" aria-expanded="false" aria-controls="f-nine">
+                                            <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-nine"
+                                                aria-expanded="false" aria-controls="f-nine">
                                                 05. What is the salary of an online MBA in HR?
                                                 <i class="fa fa-eye"></i>
                                             </button>
