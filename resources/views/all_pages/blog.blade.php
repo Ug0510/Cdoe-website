@@ -4,8 +4,8 @@
 
 @section('content')
 
- <!-- breadcrumb start -->
- <div class="breadcrumb-area bg-overlay" style="background-image:url('assets/img/bg/3.png')">
+    <!-- breadcrumb start -->
+    <div class="breadcrumb-area bg-overlay" style="background-image:url('assets/img/bg/3.png')">
         <div class="container">
             <div class="breadcrumb-inner">
                 <div class="section-title mb-0 text-center">
@@ -34,7 +34,28 @@
                                 <li><i class="fa fa-user"></i> MBA</li>
                                 <li><i class="fa fa-calendar-check-o"></i> 28 JANUARY, 2020</li>
                             </ul>
-                            <h5 class="title"><a href="blog-details.html">Flock by when MTV ax quiz prog quiz graced</a>
+                            <h5 class="title"><a href="blog-details.html">Flock by when MTV ax quiz prog quiz graced and
+                                    more words that should be limited to thirty two words in this example text</a></h5>
+                            <p>Lorem ipsum dolor sit amet sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                            </p>
+                            <!-- <a class="read-more-text" href="blog-details.html">READ MORE <i
+                        class="fa fa-angle-right"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog-inner style-border">
+                        <div class="thumb">
+                            <img src="{{asset('assets/img/blog/1.jpg')}}" alt="img">
+                        </div>
+                        <div class="details">
+                            <ul class="blog-meta">
+                                <li><i class="fa fa-user"></i> MBA</li>
+                                <li><i class="fa fa-calendar-check-o"></i> 28 JANUARY, 2020</li>
+                            </ul>
+                            <h5 class="title"><a href="blog-details.html">Flock by when MTV ax quiz prog quiz graced and
+                                    more word</a>
                             </h5>
                             <p>Lorem ipsum dolor sit amet sed diam nonumy eirmod tempor invidunt ut labore et dolore
                                 magna</p>
@@ -43,6 +64,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog-inner style-border">
                         <div class="thumb">
@@ -58,7 +80,7 @@
                             <p>Lorem ipsum dolor sit amet sed diam nonumy eirmod tempor invidunt ut labore et dolore
                                 magna</p>
                             <!-- <a class="read-more-text" href="blog-details.html">READ MORE <i
-                                    class="fa fa-angle-right"></i></a> -->
+                                        class="fa fa-angle-right"></i></a> -->
                         </div>
                     </div>
                 </div>
@@ -76,7 +98,7 @@
                             <p>Lorem ipsum dolor sit amet sed diam nonumy eirmod tempor invidunt ut labore et dolore
                                 magna</p>
                             <!-- <a class="read-more-text" href="blog-details.html">READ MORE <i
-                                    class="fa fa-angle-right"></i></a> -->
+                                        class="fa fa-angle-right"></i></a> -->
                         </div>
                     </div>
                 </div>
@@ -95,7 +117,7 @@
                             <p>Lorem ipsum dolor sit amet sed diam nonumy eirmod tempor invidunt ut labore et dolore
                                 magna</p>
                             <!-- <a class="read-more-text" href="blog-details.html">READ MORE <i
-                                    class="fa fa-angle-right"></i></a> -->
+                                        class="fa fa-angle-right"></i></a> -->
                         </div>
                     </div>
                 </div>
@@ -114,7 +136,7 @@
                             <p>Lorem ipsum dolor sit amet sed diam nonumy eirmod tempor invidunt ut labore et dolore
                                 magna</p>
                             <!-- <a class="read-more-text" href="blog-details.html">READ MORE <i
-                                    class="fa fa-angle-right"></i></a> -->
+                                        class="fa fa-angle-right"></i></a> -->
                         </div>
                     </div>
                 </div>
@@ -132,7 +154,7 @@
                             <p>Lorem ipsum dolor sit amet sed diam nonumy eirmod tempor invidunt ut labore et dolore
                                 magna</p>
                             <!-- <a class="read-more-text" href="blog-details.html">READ MORE <i
-                                    class="fa fa-angle-right"></i></a> -->
+                                        class="fa fa-angle-right"></i></a> -->
                         </div>
                     </div>
                 </div>
@@ -152,5 +174,21 @@
         </div>
     </div>
     <!-- blog area end -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var title = document.querySelector('.title a');
+            var text = title.innerText || title.textContent;
+
+            // Check if the text length is more than 32 characters
+            if (text.length > 32) {
+                // Truncate to 32 characters and add ellipsis
+                text = text.substring(0, 32) + '...';
+            }
+
+            // Update the text content of the h5 title
+            title.innerText = text;
+        });
+    </script>
 
 @endsection

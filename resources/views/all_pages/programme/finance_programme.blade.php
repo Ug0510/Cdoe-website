@@ -9,14 +9,21 @@
     <div class="programme-banner">
         <img src="{{ asset('assets/img/programmes/finance-banner.webp') }}" alt="Programme Banner">
         <div class="banner-title">
-            <p>Online MBA in <br> <span>Human Resource Management</span></p>
+            <p>Online MBA in <br> <span>Finance</span></p>
              <p>The digital landscape is dynamic, and marketing has evolved into a sophisticated blend of art and science. For ambitious professionals aiming to carve a leadership role in this exciting domain, this is the right place for you.</p>
          </div>
     </div>
     <!-- breadcrumb end -->
 
     <!-- course-single area start -->
-    <div class="course-single-area pd-top-120 pd-bottom-90">
+    <div class="course-single-area pd-top-60 pd-bottom-90">
+        <div class="row justify-content-center mb-5">
+            <div class="col-xl-8 col-lg-10 col-md-11">
+                <div class="section-title style-white text-center">
+                    <h2 class="title">Elevate Your Career with a UGC-Certified Online MBA in Finance</h2>
+                </div>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-lg-12">
@@ -135,25 +142,44 @@
                                     <div class="accordion-content">
                                         <div class="course-grid">
                                             <div class="course-card">
-                                                <span class="course-code">EACC506</span>
-                                                <p class="course-name">Financial Reporting, Statements and Analysis</p>
+                                                <span class="course-code">MBACC101</span>
+                                                <p class="course-name">Management Concepts & Practices</p>
                                             </div>
                                             <div class="course-card">
-                                                <span class="course-code">EECO515</span>
+                                                <span class="course-code">MBACC102</span>
+                                                <p class="course-name">Accounting for Managers</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">MBACC103</span>
+                                                <p class="course-name">Business Environment</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">MBACC104</span>
+                                                <p class="course-name">Organizational Behavior</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">MBAAE101</span>
+                                                <p class="course-name">Business Communication</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">MBAAE102</span>
+                                                <p class="course-name">Human Values & Professional Ethics</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">MBCSE101</span>
+                                                <p class="course-name">Computer Fundamental & Information system</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">TPC 101</span>
+                                                <p class="course-name">Self-Development for Managers</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">Generic Elective Courses</span>
                                                 <p class="course-name">Managerial Economics</p>
                                             </div>
                                             <div class="course-card">
-                                                <span class="course-code">EMGN578</span>
-                                                <p class="course-name">International Business Environment</p>
-                                            </div>
-                                            <div class="course-card">
-                                                <span class="course-code">EMKT503</span>
-                                                <p class="course-name">Marketing Management</p>
-                                            </div>
-                                            <div class="course-card">
-                                                <span class="course-code">EMGN581</span>
-                                                <p class="course-name">Organisational Behaviour and Human Resource
-                                                    Dynamics</p>
+                                                <span class="course-code">Generic Elective Courses</span>
+                                                <p class="course-name">Quantitative Techniques for Managers</p>
                                             </div>
                                         </div>
                                     </div>
@@ -168,25 +194,40 @@
                                     <div class="accordion-content">
                                         <div class="course-grid">
                                             <div class="course-card">
-                                                <span class="course-code">EACC506</span>
-                                                <p class="course-name">Financial Reporting, Statements and Analysis</p>
-                                            </div>
-                                            <div class="course-card">
-                                                <span class="course-code">EECO515</span>
-                                                <p class="course-name">Managerial Economics</p>
-                                            </div>
-                                            <div class="course-card">
-                                                <span class="course-code">EMGN578</span>
-                                                <p class="course-name">International Business Environment</p>
-                                            </div>
-                                            <div class="course-card">
-                                                <span class="course-code">EMKT503</span>
+                                                <span class="course-code">MBACC201</span>
                                                 <p class="course-name">Marketing Management</p>
                                             </div>
                                             <div class="course-card">
-                                                <span class="course-code">EMGN581</span>
-                                                <p class="course-name">Organisational Behaviour and Human Resource
-                                                    Dynamics</p>
+                                                <span class="course-code">MBACC202</span>
+                                                <p class="course-name">Financial Management</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">MBACC203</span>
+                                                <p class="course-name">Human Resource Management</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">MBACC204</span>
+                                                <p class="course-name">Production and Operations Management</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">MBASE201</span>
+                                                <p class="course-name">Managerial Communication</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">MBASE201</span>
+                                                <p class="course-name">Business Research Methods</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">Generic Elective Courses</span>
+                                                <p class="course-name">Legal Aspects of Business</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">Generic Elective Courses</span>
+                                                <p class="course-name">Innovation & Entrepreneurship Development</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">MBAVV251</span>
+                                                <p class="course-name">Comprehensive Viva- Voce</p>
                                             </div>
                                         </div>
                                     </div>
@@ -201,25 +242,44 @@
                                     <div class="accordion-content">
                                         <div class="course-grid">
                                             <div class="course-card">
-                                                <span class="course-code">EACC506</span>
-                                                <p class="course-name">Financial Reporting, Statements and Analysis</p>
+                                                <span class="course-code">MBACC301</span>
+                                                <p class="course-name">Strategic Management</p>
                                             </div>
                                             <div class="course-card">
-                                                <span class="course-code">EECO515</span>
-                                                <p class="course-name">Managerial Economics</p>
+                                                <span class="course-code">MBACC302</span>
+                                                <p class="course-name">International Business Management</p>
                                             </div>
                                             <div class="course-card">
-                                                <span class="course-code">EMGN578</span>
-                                                <p class="course-name">International Business Environment</p>
+                                                <span class="course-code">MBACC303</span>
+                                                <p class="course-name">Project Management</p>
                                             </div>
                                             <div class="course-card">
-                                                <span class="course-code">EMKT503</span>
-                                                <p class="course-name">Marketing Management</p>
+                                                <span class="course-code">MBAF301</span>
+                                                <p class="course-name">Security Analysis and Portfolio Management</p>
                                             </div>
                                             <div class="course-card">
-                                                <span class="course-code">EMGN581</span>
-                                                <p class="course-name">Organisational Behaviour and Human Resource
-                                                    Dynamics</p>
+                                                <span class="course-code">MBAF302</span>
+                                                <p class="course-name">Financial Markets and Services</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">MBAF303</span>
+                                                <p class="course-name">Income Tax Law and Practice</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">MBAF304</span>
+                                                <p class="course-name">Financial Modeling using Excel</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">MBAF305</span>
+                                                <p class="course-name">Financial Derivatives</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">MBAF306</span>
+                                                <p class="course-name">International Financial Management</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">MBAF307</span>
+                                                <p class="course-name">MOOC decided and identified from the platform prescribed by the College and University</p>
                                             </div>
                                         </div>
                                     </div>
@@ -234,25 +294,28 @@
                                     <div class="accordion-content">
                                         <div class="course-grid">
                                             <div class="course-card">
-                                                <span class="course-code">EACC506</span>
-                                                <p class="course-name">Financial Reporting, Statements and Analysis</p>
+                                                <span class="course-code">MBAVV451</span>
+                                                <p class="course-name">Dissertation Report Evaluation (Based on OJT /Start-up Engagements/ Family Business Exposure)</p>
                                             </div>
                                             <div class="course-card">
-                                                <span class="course-code">EECO515</span>
-                                                <p class="course-name">Managerial Economics</p>
+                                                <span class="course-code">MBAF401</span>
+                                                <p class="course-name">Mergers and Acquisitions</p>
                                             </div>
                                             <div class="course-card">
-                                                <span class="course-code">EMGN578</span>
-                                                <p class="course-name">International Business Environment</p>
+                                                <span class="course-code">MBAF402</span>
+                                                <p class="course-name">Goods and Services Tax</p>
                                             </div>
                                             <div class="course-card">
-                                                <span class="course-code">EMKT503</span>
-                                                <p class="course-name">Marketing Management</p>
+                                                <span class="course-code">MBAF403</span>
+                                                <p class="course-name">Behavioral Finance</p>
                                             </div>
                                             <div class="course-card">
-                                                <span class="course-code">EMGN581</span>
-                                                <p class="course-name">Organisational Behaviour and Human Resource
-                                                    Dynamics</p>
+                                                <span class="course-code">MBAF404</span>
+                                                <p class="course-name">Business Analysis and Valuation</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <span class="course-code">MBAF405</span>
+                                                <p class="course-name">MOOC decided and identified from the platform prescribed by the College and University</p>
                                             </div>
                                         </div>
                                     </div>
@@ -473,7 +536,7 @@ $altTexts = [
                     <!-- ========== Career Paths Section End ========== -->
 
                     <!-- ========== Eligibility Section Start ========== -->
-                    <section class="eligibility-section">
+                    <section class="career-paths-section px-1 px-lg-5">
                         <div class="container-fluid px-3 px-lg-5">
                             <div class="eligibility-card">
                                 <div class="eligibility-content">
