@@ -392,6 +392,12 @@
     </div>
 
 
+    <div class="container">
+        <img src="{{ asset('/assets/img/5-reason.webp') }}" alt="" class="d-none d-lg-block">
+        <img src="{{ asset('/assets/img/5-reason-mobile.webp') }}" alt="" class="d-block d-lg-none">
+    </div>
+
+
 
 
 
@@ -399,7 +405,7 @@
     <div class="work-area">
         <div class="container">
             <div class="section-title style-white text-center mb-4 mb-md-5 mt-3 mt-lg-5">
-                <h2 class="title">Why Choose TMU?</h2>
+                <h2 class="title">Why TMU Online?</h2>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-6 col-md-6">
