@@ -4,16 +4,20 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('/assets/css/programme.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/programme.css') }}">
     <!-- breadcrumb start -->
     <div class="programme-banner">
         <img src="{{ asset('assets/img/programmes/marketing-banner.webp') }}" alt="Programme Banner">
         <div class="banner-title">
-           <p>Online MBA in<br> <span>in Marketing</span></p>
-            <p>The digital landscape is dynamic, and marketing has evolved into a sophisticated blend of art and science. For ambitious professionals aiming to carve a leadership role in this exciting domain, this is the right place for you. TMU offer you an Online MBA in Marketing. TMU's Centre for Distance and Online Education delivers this program that seamlessly integrates rigorous academic theory with practical, industry-relevant skills, all within a flexible learning environment that adapts to your busy life.</p>
+            <p>Online MBA in<br> <span>in Marketing</span></p>
+            <p>The digital landscape is dynamic, and marketing has evolved into a sophisticated blend of art and science.
+                For ambitious professionals aiming to carve a leadership role in this exciting domain, this is the right
+                place for you. TMU offer you an Online MBA in Marketing. TMU's Centre for Distance and Online Education
+                delivers this program that seamlessly integrates rigorous academic theory with practical, industry-relevant
+                skills, all within a flexible learning environment that adapts to your busy life.</p>
             <p></p>
         </div>
-        
+
     </div>
     <!-- breadcrumb end -->
 
@@ -27,7 +31,8 @@
                 <div class="course-course-detaila-inner">
 
                     {{-- REMOVED: Tab navigation structure --}}
-                    {{-- <div class="course-details-nav-tab text-center"> ... </ul> </div> --}}
+                    {{-- <div class="course-details-nav-tab text-center"> ... </ul>
+                    </div> --}}
 
                     {{-- Start Sequential Content --}}
 
@@ -281,7 +286,8 @@
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">MBAM307</span>
-                                                <p class="course-name">MOOC decided and identified from the platform prescribed by the College and University</p>
+                                                <p class="course-name">MOOC decided and identified from the platform
+                                                    prescribed by the College and University</p>
                                             </div>
                                         </div>
                                     </div>
@@ -297,7 +303,8 @@
                                         <div class="course-grid">
                                             <div class="course-card">
                                                 <span class="course-code">MBAVV451</span>
-                                                <p class="course-name">Dissertation Report Evaluation (Based on OJT /Start-up Engagements/ Family Business Exposure)</p>
+                                                <p class="course-name">Dissertation Report Evaluation (Based on OJT
+                                                    /Start-up Engagements/ Family Business Exposure)</p>
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">MBAM401</span>
@@ -317,7 +324,8 @@
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">MBAM405</span>
-                                                <p class="course-name">MOOC decided and identified from the platform prescribed by the College and University</p>
+                                                <p class="course-name">MOOC decided and identified from the platform
+                                                    prescribed by the College and University</p>
                                             </div>
                                         </div>
                                     </div>
@@ -384,8 +392,7 @@
                                 <!-- Right Column: Degree Image -->
                                 <div class="degree-image-col">
                                     <img src="{{ asset('assets/img/degree.webp') }}"
-                                        alt="Sample Online MBA Degree Certificate (Landscape)"
-                                        class="sample-degree-image">
+                                        alt="Sample Online MBA Degree Certificate (Landscape)" class="sample-degree-image">
                                 </div>
 
                             </div>
@@ -418,39 +425,39 @@
                                 @php
                                     // Define alt texts - you might want a more dynamic way to fetch these
                                     // Or just use generic ones if specific names aren't readily available
-$altTexts = [
-    1 => 'Wipro Logo',
-    2 => 'Vistara Logo',
-    3 => 'Videocon Logo',
-    4 => 'VFS Global Logo',
-    5 => 'Pantaloons Logo',
-    6 => 'Amazon India Logo',
-    7 => 'Tata Strive Logo',
-    8 => 'Tally Logo',
-    9 => 'Skyway Communications Logo',
-    10 => 'Safety Circle Logo',
-    11 => 'Royal Bank of Scotland Logo',
-    12 => 'Paytm Logo',
-    13 => 'OM Logistics Ltd Logo',
-    14 => 'OYO Logo',
-    15 => 'Neva Clothing Logo',
-    16 => 'Max Life Insurance Logo',
-    17 => 'Overseas Logo',
-    18 => 'Tripat Infoways Logo',
-    19 => 'LIC Logo',
-    20 => 'Kotak Mahindra Bank Logo',
-    21 => 'Karvy Stock Broking Logo',
-    22 => 'Indigo Logo',
-    23 => 'Globe Toyota Logo',
-    24 => 'Recruiter Logo 24', // Add more specific Alts if you have them
-    25 => 'Recruiter Logo 25',
-    26 => 'Recruiter Logo 26',
-    27 => 'Recruiter Logo 27',
-    28 => 'Recruiter Logo 28',
-    29 => 'Recruiter Logo 29',
-    30 => 'Recruiter Logo 30',
-    31 => 'Recruiter Logo 31',
-    32 => 'Recruiter Logo 32',
+                                    $altTexts = [
+                                        1 => 'Wipro Logo',
+                                        2 => 'Vistara Logo',
+                                        3 => 'Videocon Logo',
+                                        4 => 'VFS Global Logo',
+                                        5 => 'Pantaloons Logo',
+                                        6 => 'Amazon India Logo',
+                                        7 => 'Tata Strive Logo',
+                                        8 => 'Tally Logo',
+                                        9 => 'Skyway Communications Logo',
+                                        10 => 'Safety Circle Logo',
+                                        11 => 'Royal Bank of Scotland Logo',
+                                        12 => 'Paytm Logo',
+                                        13 => 'OM Logistics Ltd Logo',
+                                        14 => 'OYO Logo',
+                                        15 => 'Neva Clothing Logo',
+                                        16 => 'Max Life Insurance Logo',
+                                        17 => 'Overseas Logo',
+                                        18 => 'Tripat Infoways Logo',
+                                        19 => 'LIC Logo',
+                                        20 => 'Kotak Mahindra Bank Logo',
+                                        21 => 'Karvy Stock Broking Logo',
+                                        22 => 'Indigo Logo',
+                                        23 => 'Globe Toyota Logo',
+                                        24 => 'Recruiter Logo 24', // Add more specific Alts if you have them
+                                        25 => 'Recruiter Logo 25',
+                                        26 => 'Recruiter Logo 26',
+                                        27 => 'Recruiter Logo 27',
+                                        28 => 'Recruiter Logo 28',
+                                        29 => 'Recruiter Logo 29',
+                                        30 => 'Recruiter Logo 30',
+                                        31 => 'Recruiter Logo 31',
+                                        32 => 'Recruiter Logo 32',
                                     ];
                                 @endphp
 
@@ -458,8 +465,8 @@ $altTexts = [
                                     <div class="recruiter-item">
                                         <img src="{{ asset('assets/img/recruiters/' . $i . '.jpg') }}"
                                             alt="{{ $altTexts[$i] ?? 'Recruiter Logo ' . $i }}" class="recruiter-logo"
-                                            onerror="this.style.display='none'; this.parentElement.style.display='none';"
-                                            {{-- Hide item if image fails to load --}}>
+                                            onerror="this.style.display='none'; this.parentElement.style.display='none';" {{--
+                                            Hide item if image fails to load --}}>
                                     </div>
                                 @endfor
 
@@ -490,7 +497,8 @@ $altTexts = [
                                 <!-- Image Column -->
                                 <div class="career-paths-image-col">
                                     {{-- Make sure this image path is correct in your public/assets folder --}}
-                                    {{-- <img src="{{ asset('assets/img/career-paths-image.jpg') }}" alt="Professionals discussing data science career paths" class="career-image"> --}}
+                                    {{-- <img src="{{ asset('assets/img/career-paths-image.jpg') }}"
+                                        alt="Professionals discussing data science career paths" class="career-image"> --}}
                                     <img src="{{ asset('assets/img/programmes/prog-img-4.jpg') }}"
                                         alt="Professionals discussing data science career paths" class="career-image">
                                 </div>
@@ -573,7 +581,8 @@ $altTexts = [
 
                                     <!-- Decorative Graphic -->
                                     <div class="eligibility-graphic">
-                                        <img src="{{ asset('assets/img/programmes/who-can-apply.png') }}" alt="" style="margin-top:-3rem;">
+                                        <img src="{{ asset('assets/img/programmes/who-can-apply.png') }}" alt=""
+                                            style="margin-top:-3rem;">
                                     </div>
 
                                 </div>
@@ -616,16 +625,15 @@ $altTexts = [
                                 <div class="card single-faq-inner style-header-bg">
                                     <div class="card-header" id="ff-six">
                                         <h5 class="mb-0">
-                                            <button class="btn-link collapsed" data-toggle="collapse"
-                                                data-target="#f-six" aria-expanded="false" aria-controls="f-six">
+                                            <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-six"
+                                                aria-expanded="false" aria-controls="f-six">
                                                 02. What are the eligibility criteria for pursuing an Online MBA in
                                                 Marketing?
                                                 <i class="fa fa-eye"></i>
                                             </button>
                                         </h5>
                                     </div>
-                                    <div id="f-six" class="collapse" aria-labelledby="ff-six"
-                                        data-parent="#faq-accordion">
+                                    <div id="f-six" class="collapse" aria-labelledby="ff-six" data-parent="#faq-accordion">
                                         <div class="card-body">
                                             <ul>
                                                 <li>
@@ -660,8 +668,8 @@ $altTexts = [
                                 <div class="card single-faq-inner style-header-bg">
                                     <div class="card-header" id="ff-seven">
                                         <h5 class="mb-0">
-                                            <button class="btn-link collapsed" data-toggle="collapse"
-                                                data-target="#f-seven" aria-expanded="false" aria-controls="f-seven">
+                                            <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-seven"
+                                                aria-expanded="false" aria-controls="f-seven">
                                                 03. What is the duration of the Online MBA in Marketing?
                                                 <i class="fa fa-eye"></i>
                                             </button>
@@ -678,8 +686,8 @@ $altTexts = [
                                 <div class="card single-faq-inner style-header-bg">
                                     <div class="card-header" id="ff-eight">
                                         <h5 class="mb-0">
-                                            <button class="btn-link collapsed" data-toggle="collapse"
-                                                data-target="#f-eight" aria-expanded="false" aria-controls="f-eight">
+                                            <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-eight"
+                                                aria-expanded="false" aria-controls="f-eight">
                                                 04. What is the scope of an Online MBA in Marketing?
                                                 <i class="fa fa-eye"></i>
                                             </button>
@@ -714,8 +722,8 @@ $altTexts = [
                                 <div class="card single-faq-inner style-header-bg">
                                     <div class="card-header" id="ff-nine">
                                         <h5 class="mb-0">
-                                            <button class="btn-link collapsed" data-toggle="collapse"
-                                                data-target="#f-nine" aria-expanded="false" aria-controls="f-nine">
+                                            <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-nine"
+                                                aria-expanded="false" aria-controls="f-nine">
                                                 05. What is the salary outlook after an Online MBA in Marketing?
                                                 <i class="fa fa-eye"></i>
                                             </button>
@@ -733,41 +741,41 @@ $altTexts = [
 
                                             <div class="table-responsive">
                                                 <table class="table table-bordered table-striped align-middle text-center">
-                                                  <thead class="table-dark">
-                                                    <tr>
-                                                      <th scope="col">Job Title</th>
-                                                      <th scope="col">Average Salary (INR)</th>
-                                                    </tr>
-                                                  </thead>
-                                                  <tbody>
-                                                    <tr>
-                                                      <td>Marketing Executive</td>
-                                                      <td>₹3–6 LPA</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>Marketing Manager</td>
-                                                      <td>₹7–15 LPA</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>Brand Manager</td>
-                                                      <td>₹8–16 LPA</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>Digital Marketing Manager</td>
-                                                      <td>₹8–18 LPA</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>Marketing Director</td>
-                                                      <td>₹15–30 LPA+</td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>Chief Marketing Officer (CMO)</td>
-                                                      <td>₹30 LPA and above</td>
-                                                    </tr>
-                                                  </tbody>
+                                                    <thead class="table-dark">
+                                                        <tr>
+                                                            <th scope="col">Job Title</th>
+                                                            <th scope="col">Average Salary (INR)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Marketing Executive</td>
+                                                            <td>₹3–6 LPA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Marketing Manager</td>
+                                                            <td>₹7–15 LPA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Brand Manager</td>
+                                                            <td>₹8–16 LPA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Digital Marketing Manager</td>
+                                                            <td>₹8–18 LPA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Marketing Director</td>
+                                                            <td>₹15–30 LPA+</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Chief Marketing Officer (CMO)</td>
+                                                            <td>₹30 LPA and above</td>
+                                                        </tr>
+                                                    </tbody>
                                                 </table>
-                                              </div>
-                                              
+                                            </div>
+
 
                                             <p>
                                                 With increasing experience, specialised skills (e.g., in marketing
@@ -782,60 +790,61 @@ $altTexts = [
                                 </div>
                             </div>
                         </div>
-
-                        {{-- End Sequential Content --}}
-
                     </div>
+
+                    {{-- End Sequential Content --}}
+
                 </div>
             </div>
         </div>
-        <!-- course-single area end -->
+    </div>
+    <!-- course-single area end -->
 
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const accordionItems = document.querySelectorAll('.accordion-item');
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionItems = document.querySelectorAll('.accordion-item');
 
-                accordionItems.forEach(item => {
-                    const header = item.querySelector('.accordion-header');
-                    const content = item.querySelector('.accordion-content');
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
 
-                    header.addEventListener('click', () => {
-                        // Check if the clicked item is already active
-                        const isActive = item.classList.contains('active');
+                header.addEventListener('click', () => {
+                    // Check if the clicked item is already active
+                    const isActive = item.classList.contains('active');
 
-                        // Close all other accordion items first
-                        accordionItems.forEach(otherItem => {
-                            if (otherItem !== item) {
-                                otherItem.classList.remove('active');
-                                otherItem.querySelector('.accordion-content').style.maxHeight =
-                                    '0px';
-                                otherItem.querySelector('.accordion-content').style.paddingTop =
-                                    '0';
-                                otherItem.querySelector('.accordion-content').style
-                                    .paddingBottom = '0';
-                            }
-                        });
-
-                        // Toggle the clicked item
-                        if (isActive) {
-                            // Close the clicked item
-                            item.classList.remove('active');
-                            content.style.maxHeight = '0px';
-                        } else {
-                            // Open the clicked item
-                            item.classList.add('active');
-                            content.style.maxHeight = (content.scrollHeight + 2) + 'px';
+                    // Close all other accordion items first
+                    accordionItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.accordion-content').style.maxHeight =
+                                '0px';
+                            otherItem.querySelector('.accordion-content').style.paddingTop =
+                                '0';
+                            otherItem.querySelector('.accordion-content').style
+                                .paddingBottom = '0';
                         }
                     });
+
+                    // Toggle the clicked item
+                    if (isActive) {
+                        // Close the clicked item
+                        item.classList.remove('active');
+                        content.style.maxHeight = '0px';
+                    } else {
+                        // Open the clicked item
+                        item.classList.add('active');
+                        content.style.maxHeight = (content.scrollHeight + 2) + 'px';
+                    }
                 });
-
-                // Optional: Open the first semester by default
-                const firstItem = document.querySelector('.accordion-item');
-                if (firstItem) {
-                    // Simulate a click to open it using the defined logic
-                    firstItem.querySelector('.accordion-header').click();
-                }
             });
-        </script>
 
-    @endsection
+            // Optional: Open the first semester by default
+            const firstItem = document.querySelector('.accordion-item');
+            if (firstItem) {
+                // Simulate a click to open it using the defined logic
+                firstItem.querySelector('.accordion-header').click();
+            }
+        });
+    </script>
+
+@endsection
