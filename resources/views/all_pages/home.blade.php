@@ -670,7 +670,7 @@ $altTexts = [
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="title text-center mb-4">FAQ</h2>
+                    <h2 class="title text-center mb-2 mb-lg-4">FAQ</h2>
                 </div>
                 <div class="col-12 mt-5 mt-lg-0">
                     <div id="accordion" class="accordion-area">
