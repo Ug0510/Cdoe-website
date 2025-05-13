@@ -10,14 +10,15 @@
         <img src="{{ asset('assets/img/programmes/hr-banner.webp') }}" alt="Programme Banner">
         <div class="banner-title">
             <p>Online MBA <br> <span>Human Resource Management</span></p>
+            <p>TMU’s Online MBA in HRM builds leadership and people management skills. Gain expertise in recruitment, talent development, and organisational behaviour—Suitable  for advancing careers in HR roles.</p>
         </div>
     </div>
     <!-- breadcrumb end -->
 
     <!-- course-single area start -->
     <div class="course-single-area pd-top-60 pd-bottom-90">
-        <div class="career-paths-header">
-            <h2>Lead the Workforce with India's Best <span>Online MBA in Human Resource Management</span></h2>
+        <div class="section-header">
+            <h2>Lead the Workforce with India's Best <br><span class="highlight">Online MBA in Human Resource Management</span></h2>
         </div>
         <div class="row">
             <div class="col-lg-12">

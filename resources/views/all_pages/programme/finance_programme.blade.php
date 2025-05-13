@@ -10,15 +10,15 @@
         <img src="{{ asset('assets/img/programmes/finance-banner.webp') }}" alt="Programme Banner">
         <div class="banner-title">
             <p>Online MBA in <br> <span>Finance</span></p>
-             <p>The digital landscape is dynamic, and marketing has evolved into a sophisticated blend of art and science. For ambitious professionals aiming to carve a leadership role in this exciting domain, this is the right place for you.</p>
+             <p>Enhance your financial acumen with TMU’s Online MBA in Finance. Learn investment strategies, financial planning, and risk management through flexible, industry-relevant modules tailored for working professionals.</p>
          </div>
     </div>
     <!-- breadcrumb end -->
 
     <!-- course-single area start -->
     <div class="course-single-area pd-top-60 pd-bottom-90">
-        <div class="career-paths-header">
-            <h2>Elevate Your Career with a UGC-Certified <span>Online MBA in Finance</span></h2>
+        <div class="section-header">
+            <h2>Elevate Your Career with a UGC-Certified <br><span class="highlight">Online MBA in Finance</span></h2>
         </div>
         <div class="row">
             <div class="col-lg-12">
