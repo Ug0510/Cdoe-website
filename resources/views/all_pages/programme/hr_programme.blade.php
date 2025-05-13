@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="{{ asset('/assets/css/programme.css') }}">
     <!-- breadcrumb start -->
     <div class="programme-banner">
-        <img src="{{ asset('assets/img/programmes/hr-banner.webp') }}" alt="Programme Banner">
+        <img src="{{ asset('assets/img/programmes/hr-banner.webp') }}" alt="Programme Banner" class="d-none d-lg-block">
+        <img src="{{ asset('assets/img/programmes/mobile-banner.webp') }}" alt="Programme Banner" class="d-block d-md-none">
+        <img src="{{ asset('assets/img/programmes/tab-banner.webp') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
         <div class="banner-title">
             <p>Online MBA <br> <span>Human Resource Management</span></p>
             <p>TMU’s Online MBA in HRM builds leadership and people management skills. Gain expertise in recruitment, talent development, and organisational behaviour—Suitable  for advancing careers in HR roles.</p>

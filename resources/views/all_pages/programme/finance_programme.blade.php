@@ -7,7 +7,9 @@
 <link rel="stylesheet" href="{{ asset('/assets/css/programme.css') }}">
     <!-- breadcrumb start -->
     <div class="programme-banner">
-        <img src="{{ asset('assets/img/programmes/finance-banner.webp') }}" alt="Programme Banner">
+        <img src="{{ asset('assets/img/programmes/finance-banner.webp') }}" alt="Programme Banner" class="d-none d-lg-block">
+        <img src="{{ asset('assets/img/programmes/mobile-banner.webp') }}" alt="Programme Banner" class="d-block d-md-none">
+        <img src="{{ asset('assets/img/programmes/tab-banner.webp') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
         <div class="banner-title">
             <p>Online MBA in <br> <span>Finance</span></p>
              <p>Enhance your financial acumen with TMU’s Online MBA in Finance. Learn investment strategies, financial planning, and risk management through flexible, industry-relevant modules tailored for working professionals.</p>

@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="{{ asset('/assets/css/programme.css') }}">
     <!-- breadcrumb start -->
     <div class="programme-banner">
-        <img src="{{ asset('assets/img/programmes/marketing-banner.webp') }}" alt="Programme Banner">
+        <img src="{{ asset('assets/img/programmes/marketing-banner.webp') }}" alt="Programme Banner" class="d-none d-lg-block">
+        <img src="{{ asset('assets/img/programmes/mobile-banner.webp') }}" alt="Programme Banner" class="d-block d-md-none">
+        <img src="{{ asset('assets/img/programmes/tab-banner.webp') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
         <div class="banner-title">
             <p>Online MBA in<br> <span>in Marketing</span></p>
             <p>Master brand strategy, digital marketing, and consumer behaviour with TMU’s Online MBA in Marketing. Flexible, career-focused learning prepares you for dynamic marketing leadership roles across industries.</p>
