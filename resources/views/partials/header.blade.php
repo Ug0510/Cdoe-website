@@ -78,7 +78,7 @@
             </div>
 
             <a href="{{route('facilities') }}">Facilities</a>
-            <a href="#" class="apply-btn">Apply Now</a>
+            <a href="https://cdoeadmissions.tmu.ac.in/" class="apply-btn">Apply Now</a>
         </div>
     </nav>
 
@@ -127,7 +127,7 @@
                 </li>
 
                 <li><a href="{{route('facilities') }}">Facilities</a></li>
-                <li><a href="#">Apply Now</a></li>
+                <li><a href="https://cdoeadmissions.tmu.ac.in/">Apply Now</a></li>
 
             </ul>
         </div>
