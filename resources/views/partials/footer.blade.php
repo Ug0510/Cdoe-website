@@ -18,7 +18,7 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="col-lg-5 col-6 mb-5">
+                    <div class="col-lg-5 col-12 mb-5">
                         <a href="index.html"><img class="mb-3" src="{{ asset('/assets/img/logos/logo-footer.png') }}" width="60%" alt="img"></a>
                         <div class="details">
                             <p style="font-size: 14px;">Edumint tetur sadipscing elitr tempor invidunt ut <br>labore et dolore magna aliquyam
@@ -31,7 +31,7 @@
                                     </ul>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-6">
+                    <div class="col-lg-2 col-md-6 col-6">
                         <div class="widget widget_nav_menu">
                             <h4 class="widget-title">Course</h4>
                             <ul>
@@ -41,7 +41,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-6">
+                    <div class="col-lg-2 col-md-6 col-6">
                         <div class="widget widget_nav_menu">
                             <h4 class="widget-title">Quick Links</h4>
                             <ul>
