@@ -738,16 +738,16 @@ $altTexts = [
                             </div>
                         </div>
                         <div class="card single-faq-inner">
-                            <div class="card-header" id="ff-four">
+                            <div class="card-header" id="ff-five">
                                 <h5 class="mb-0">
-                                    <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-four"
-                                        aria-expanded="true" aria-controls="f-four">
+                                    <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-five"
+                                        aria-expanded="true" aria-controls="f-five">
                                         05. What specialisations does TMU Online MBA offer?
                                         <i class="fa fa-eye"></i>
                                     </button>
                                 </h5>
                             </div>
-                            <div id="f-four" class="collapse" aria-labelledby="ff-four" data-parent="#accordion">
+                            <div id="f-five" class="collapse" aria-labelledby="ff-five" data-parent="#accordion">
                                 <div class="card-body">
                                     TMU CDOE offers specialisations in marketing, finance, and human resources management.
                                 </div>
