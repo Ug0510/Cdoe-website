@@ -565,7 +565,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < itemsPerPage; i++) {
       const img = document.createElement('img');
       img.className = 'semi-circle-logo';
-      container.appendChild(img);
+      container?.appendChild(img);
       imgElements.push(img);
     }
 
