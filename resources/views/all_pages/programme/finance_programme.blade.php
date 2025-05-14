@@ -12,7 +12,7 @@
         <img src="{{ asset('assets/img/programmes/tab-banner.webp') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
         <div class="banner-title">
             <p>Online MBA in <br> <span>Finance</span></p>
-             <p>Enhance your financial acumen with TMU’s Online MBA in Finance. Learn investment strategies, financial planning, and risk management through flexible, industry-relevant modules tailored for working professionals.</p>
+            <p class="d-none d-lg-block">Enhance your financial acumen with TMU’s Online MBA in Finance. Learn investment strategies, financial planning, and risk management through flexible, industry-relevant modules tailored for working professionals.</p>
          </div>
     </div>
     <!-- breadcrumb end -->

@@ -12,7 +12,7 @@
         <img src="{{ asset('assets/img/programmes/tab-banner.webp') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
         <div class="banner-title">
             <p>Online MBA <br> <span>Human Resource Management</span></p>
-            <p>TMU’s Online MBA in HRM builds leadership and people management skills. Gain expertise in recruitment, talent development, and organisational behaviour—Suitable  for advancing careers in HR roles.</p>
+            <p class="d-none d-lg-block">TMU’s Online MBA in HRM builds leadership and people management skills. Gain expertise in recruitment, talent development, and organisational behaviour—Suitable  for advancing careers in HR roles.</p>
         </div>
     </div>
     <!-- breadcrumb end -->

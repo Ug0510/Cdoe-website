@@ -16,6 +16,21 @@
     .banner-title span{
         color: #001055;
     }
+
+    @media screen and (max-width:992px) {
+        .banner-title p:first-child{
+            font-size: 3.8rem;
+            color: #FE831B;
+            line-height: 4rem; 
+        }
+    }
+    @media screen and (max-width:540px) {
+        .banner-title p:first-child{
+            font-size: 3.2rem;
+            color: #FE831B;
+            line-height: 3.8rem; 
+        }
+    }
    
 
     .single-list-wrap li i:before {

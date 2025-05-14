@@ -12,7 +12,7 @@
         <img src="{{ asset('assets/img/programmes/tab-banner.webp') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
         <div class="banner-title">
             <p>Online MBA in<br> <span>in Marketing</span></p>
-            <p>Master brand strategy, digital marketing, and consumer behaviour with TMU’s Online MBA in Marketing. Flexible, career-focused learning prepares you for dynamic marketing leadership roles across industries.</p>
+            <p class="d-none d-lg-block">Master brand strategy, digital marketing, and consumer behaviour with TMU’s Online MBA in Marketing. Flexible, career-focused learning prepares you for dynamic marketing leadership roles across industries.</p>
         </div>
 
     </div>
