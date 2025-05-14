@@ -5391,6 +5391,9 @@ ul {
 .gallery-item {
   width: 48%;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gallery-item img {
@@ -5403,6 +5406,25 @@ ul {
 
 .gallery-item img:hover {
   transform: scale(1.05);
+}
+
+.gallery-download {
+  margin-top: 10px;
+  background-color: #ff6600;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.gallery-download:hover {
+  background-color: #001055;
+  color: #ffffff;
 }
 
 /* Lightbox Styles */
