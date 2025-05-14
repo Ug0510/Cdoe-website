@@ -100,7 +100,7 @@
                             </div>
 
                             <!-- Stats Grid -->
-                            <div class="stats-grid">
+                            <div class="stats-grid d-none">
                                 <div class="stat-item">
                                     <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
                                     <div class="stat-number">102</div>
