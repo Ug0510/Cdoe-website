@@ -22,7 +22,8 @@
             max-width: 80vw;
             text-align: center;
             top:25%;
-            left:15%;
+            right:15%;
+            left:auto;
         }
         .banner-title p:first-child{
             font-size: 3.8rem;
@@ -35,6 +36,11 @@
             font-size: 3.2rem;
             color: #FE831B;
             line-height: 3.8rem; 
+        }
+        .banner-title{
+            top:30%;
+            left:18%;
+            right:auto;
         }
     }
    
