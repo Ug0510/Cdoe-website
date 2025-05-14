@@ -31,72 +31,78 @@
   </section>
 
   <!-- Gallery Section -->
-  <section class="container gallery-section">
-    <!-- Image 1 -->
-    <div class="gallery-item">
+<section class="container gallery-section">
+  <!-- Image 1 -->
+  <div class="gallery-item">
     <a href="#lightbox1">
-      <img src="https://www.cdoe.tmu.ac.in/img/20231227_115921AMByGPSMapCamera.jpg" alt="Gallery Image 1">
+      <img src="{{ asset('assets/img/geotag/compressgeotag/1.jpg') }}" alt="Gallery Image 1">
     </a>
-    </div>
-    <div id="lightbox1" class="lightbox">
+    <button class="gallery-download" onclick="downloadImage('{{ asset('assets/img/geotag/20231227_120444PMByGPSMapCamera.jpg') }}')">Download geotag image</button>
+  </div>
+  <div id="lightbox1" class="lightbox">
     <button class="lightbox-close" onclick="window.location.hash=''">×</button>
-    <img src="https://www.cdoe.tmu.ac.in/img/20231227_115921AMByGPSMapCamera.jpg" alt="Gallery Image 1">
-    </div>
+    <img src="{{ asset('assets/img/geotag/compressgeotag/1.jpg') }}" alt="Gallery Image 1">
+  </div>
 
-    <!-- Image 2 -->
-    <div class="gallery-item">
+  <!-- Image 2 -->
+  <div class="gallery-item">
     <a href="#lightbox2">
-      <img src="https://www.cdoe.tmu.ac.in/img/20231227_120444PMByGPSMapCamera.jpg" alt="Gallery Image 2">
+      <img src="{{ asset('assets/img/geotag/compressgeotag/2.jpg') }}" alt="Gallery Image 2">
     </a>
-    </div>
-    <div id="lightbox2" class="lightbox">
+    <button class="gallery-download" onclick="downloadImage('{{ asset('assets/img/geotag/20231227_125147PMByGPSMapCamera.jpg') }}')">Download geotag image</button>
+  </div>
+  <div id="lightbox2" class="lightbox">
     <button class="lightbox-close" onclick="window.location.hash=''">×</button>
-    <img src="https://www.cdoe.tmu.ac.in/img/20231227_120444PMByGPSMapCamera.jpg" alt="Gallery Image 2">
-    </div>
+    <img src="{{ asset('assets/img/geotag/compressgeotag/2.jpg') }}" alt="Gallery Image 2">
+  </div>
 
-    <!-- Image 3 -->
-    <div class="gallery-item">
+  <!-- Image 3 -->
+  <div class="gallery-item">
     <a href="#lightbox3">
-      <img src="https://www.cdoe.tmu.ac.in/img/20231227_120828PMByGPSMapCamera.jpg" alt="Gallery Image 3">
+      <img src="{{ asset('assets/img/geotag/compressgeotag/3.jpg') }}" alt="Gallery Image 3">
     </a>
-    </div>
-    <div id="lightbox3" class="lightbox">
+    <button class="gallery-download" onclick="downloadImage('{{ asset('assets/img/geotag/20231227_124942PMByGPSMapCamera.jpg') }}')">Download geotag image</button>
+  </div>
+  <div id="lightbox3" class="lightbox">
     <button class="lightbox-close" onclick="window.location.hash=''">×</button>
-    <img src="https://www.cdoe.tmu.ac.in/img/20231227_120828PMByGPSMapCamera.jpg" alt="Gallery Image 3">
-    </div>
+    <img src="{{ asset('assets/img/geotag/compressgeotag/3.jpg') }}" alt="Gallery Image 3">
+  </div>
 
-    <!-- Image 4 -->
-    <div class="gallery-item">
+  <!-- Image 4 -->
+  <div class="gallery-item">
     <a href="#lightbox4">
-      <img src="https://www.cdoe.tmu.ac.in/img/20231227_122403PMByGPSMapCamera.jpg" alt="Gallery Image 4">
+      <img src="{{ asset('assets/img/geotag/compressgeotag/4.jpg') }}" alt="Gallery Image 4">
     </a>
-    </div>
-    <div id="lightbox4" class="lightbox">
+    <button class="gallery-download" onclick="downloadImage('{{ asset('assets/img/geotag/20231227_122403PMByGPSMapCamera.jpg') }}')">Download geotag image</button>
+  </div>
+  <div id="lightbox4" class="lightbox">
     <button class="lightbox-close" onclick="window.location.hash=''">×</button>
-    <img src="https://www.cdoe.tmu.ac.in/img/20231227_122403PMByGPSMapCamera.jpg" alt="Gallery Image 4">
-    </div>
+    <img src="{{ asset('assets/img/geotag/compressgeotag/4.jpg') }}" alt="Gallery Image 4">
+  </div>
 
-    <!-- Image 5 -->
-    <div class="gallery-item">
+  <!-- Image 5 -->
+  <div class="gallery-item">
     <a href="#lightbox5">
-      <img src="https://www.cdoe.tmu.ac.in/img/20231227_124942PMByGPSMapCamera.jpg" alt="Gallery Image 5">
+      <img src="{{ asset('assets/img/geotag/compressgeotag/5.jpg') }}" alt="Gallery Image 5">
     </a>
-    </div>
-    <div id="lightbox5" class="lightbox">
+    <button class="gallery-download" onclick="downloadImage('{{ asset('assets/img/geotag/20231227_120828PMByGPSMapCamera.jpg') }}')">Download geotag image</button>
+  </div>
+  <div id="lightbox5" class="lightbox">
     <button class="lightbox-close" onclick="window.location.hash=''">×</button>
-    <img src="https://www.cdoe.tmu.ac.in/img/20231227_124942PMByGPSMapCamera.jpg" alt="Gallery Image 5">
-    </div>
+    <img src="{{ asset('assets/img/geotag/compressgeotag/5.jpg') }}" alt="Gallery Image 5">
+  </div>
 
-    <!-- Image 6 -->
-    <div class="gallery-item">
+  <!-- Image 6 -->
+  <div class="gallery-item">
     <a href="#lightbox6">
-      <img src="https://www.cdoe.tmu.ac.in/img/20231227_125147PMByGPSMapCamera.jpg" alt="Gallery Image 6">
+      <img src="{{ asset('assets/img/geotag/compressgeotag/6.jpg') }}" alt="Gallery Image 6">
     </a>
-    </div>
-    <div id="lightbox6" class="lightbox">
+    <button class="gallery-download" onclick="downloadImage('{{ asset('assets/img/geotag/20231227_115921AMByGPSMapCamera.jpg') }}')">Download geotag image</button>
+  </div>
+  <div id="lightbox6" class="lightbox">
     <button class="lightbox-close" onclick="window.location.hash=''">×</button>
-    <img src="https://www.cdoe.tmu.ac.in/img/20231227_125147PMByGPSMapCamera.jpg" alt="Gallery Image 6">
-    </div>
-  </section>
+    <img src="{{ asset('assets/img/geotag/compressgeotag/6.jpg') }}" alt="Gallery Image 6">
+  </div>
+</section>
 
 @endsection

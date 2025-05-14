@@ -625,3 +625,22 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // recruiter section JS end
+
+  async function downloadImage(url) {
+  try {
+    const response = await fetch(url, { mode: 'cors' });
+    if (!response.ok) throw new Error('Network response was not ok');
+    const blob = await response.blob();
+    const filename = url.split('/').pop();
+    const link = document.createElement('a');
+    link.href = window.URL.createObjectURL(blob);
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(link.href);
+  } catch (error) {
+    console.error('Download failed:', error);
+    alert('Failed to download the image. Please try again or check the image URL.');
+  }
+}
