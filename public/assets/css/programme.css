@@ -18,6 +18,12 @@
     }
 
     @media screen and (max-width:992px) {
+        .banner-title{
+            max-width: 80vw;
+            text-align: center;
+            top:25%;
+            left:15%;
+        }
         .banner-title p:first-child{
             font-size: 3.8rem;
             color: #FE831B;
