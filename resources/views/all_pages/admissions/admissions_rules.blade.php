@@ -35,7 +35,7 @@
                         <span>
                             If you have appeared in a qualifying examination and the result is awaited, you can take
                             provisional admission. However, in all circumstances, you shall have to submit the result in the
-                            university latest by October 31, except where the Regulatory Council’s norms prescribe
+                            university latest by the date given by Admission cell, except where the Regulatory Council’s norms prescribe
                             otherwise.
                         </span>
                     </li>
@@ -129,7 +129,7 @@
                 </div>
                 <div class="bg-light-pink p-4 rounded-lg mb-6">
                     <p class="text-gray-700">
-                        In case of any inconvenience in the Admission Process, please contact the Joint Director
+                        In case of any inconvenience in the Admission Process, please contact the Director
                         (Admissions) in his office at Admission Cell, Administrative Block, Moradabad (Mob: <span
                             class="font-bold text-orange-500">+91-9837848862</span>).
                     </p>

@@ -2,10 +2,23 @@
 <html lang="zxx">
 
 <head>
-    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>@yield('title', 'Edumint - Edumint LMS & Online Courses Template')</title>
+    <title>@yield('title', 'Edumint - Edumint LMS & Online Courses Template')</title> -->
+    <title>{{ $meta->meta_title ?? 'CDOE | TMU' }}</title>
+    <meta name="description" content="{{ $meta->meta_description ?? 'CDOE website' }}">
+    <meta name="keywords" content="{{ $meta->meta_keywords ?? '' }}">
+    <link rel="canonical" href="{{ $meta->canonical_tag ?? url()->current() }}">
+    @if(isset($meta) && $meta->no_index_status === 'Y')
+        <meta name="robots" content="noindex, nofollow">
+    @else
+        <meta name="robots" content="index, follow">
+    @endif
+
+
+
+
 
     <link rel="icon" href="{{ asset('assets/img/favicon.png') }}" sizes="20x20" type="image/png">
 
