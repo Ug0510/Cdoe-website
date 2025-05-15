@@ -595,8 +595,7 @@
             <!-- Section Title -->
             <div class="recruiter-title-container">
                 <div class="section-title style-white text-center mb-4 mb-md-5 mt-3 mt-lg-5">
-                    <h2 class="title">Teerthanker Mahaveer University Online, <br><span class="highlight">Open Doors.
-                        World Wide.</span></h2>
+                    <h2 class="title">Teerthanker Mahaveer University Online, <br><span class="highlight">Opens Doors World Wide.</span></h2>
                         <p>Our top-class recruiters list gives you the assurance that you'll get placed in
                             leading MNCs and work with renowned brands.</p>
                         <span class="title-underline"></span>
