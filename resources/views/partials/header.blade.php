@@ -10,11 +10,15 @@
     <meta name="description" content="{{ $meta->meta_description ?? 'CDOE website' }}">
     <meta name="keywords" content="{{ $meta->meta_keywords ?? '' }}">
     <link rel="canonical" href="{{ $meta->canonical_tag ?? url()->current() }}">
-    @if(isset($meta) && $meta->no_index_status === 'Y')
+   @if(isset($meta))
+    @if($meta->no_index_status === 'Y')
         <meta name="robots" content="noindex, nofollow">
     @else
         <meta name="robots" content="index, follow">
     @endif
+@else
+    <meta name="robots" content="noindex, nofollow">
+@endif
 
 
 
