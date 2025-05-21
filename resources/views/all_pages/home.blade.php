@@ -188,6 +188,11 @@
     <div class="body-overlay" id="body-overlay"></div>
 
 
+
+    {{-- accreditation area start --}}
+    <img src="{{ asset('/assets/img/other/accred1.png')}}" alt="">
+
+
     <!-- course area start -->
     <section class="featured-courses py-5 pt-0">
         <div class="container">
