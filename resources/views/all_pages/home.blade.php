@@ -190,7 +190,7 @@
 
 
     {{-- accreditation area start --}}
-    <img src="{{ asset('/assets/img/other/accred1.png')}}" alt="">
+    <img src="{{ asset('/assets/img/other/accred1.png')}}" alt="" class="w-75 mx-auto my-4 d-none d-lg-block">
 
 
     <!-- course area start -->
