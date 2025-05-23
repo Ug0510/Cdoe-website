@@ -435,8 +435,8 @@ document.addEventListener('DOMContentLoaded', () => {
         /*-----------------
             preloader
         ------------------*/
-        var preLoder = $("#preloader");
-        preLoder.fadeOut(0);
+        // var preLoder = $("#preloader");
+        // preLoder.fadeOut(0);
 
         /*-----------------
             back to top
