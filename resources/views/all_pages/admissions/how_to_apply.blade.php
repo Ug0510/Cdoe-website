@@ -17,13 +17,13 @@
     <!-- breadcrumb end -->
 
     <div class="container mt-5">
-        <div class="row justify-content-center mb-3">
+        <!-- <div class="row justify-content-center mb-3">
             <div class="col-xl-8 col-lg-10 col-md-11">
                 <div class="section-title style-white text-center">
                     <h2 class="title">How to Apply</h2>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="course-course-detaila-inner">
             <div class="course-details-nav-tab text-center">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
