@@ -7,22 +7,22 @@
     <!-- Breadcrumb Section -->
     <section class="breadcrumb-section">
         <div class="mt-5">
-            <h1 style="color: #ffffff;">Admissions Rule</h1>
+            <h1 style="color: #ffffff;">Admissions Rules</h1>
             <p class="breadcrumbs" style="color: #ffffff;">
-                <a href="#">Home </a> &gt; Admissions Rule
+                <a href="#">Home </a> &gt; Admissions Rules
             </p>
         </div>
     </section>
     <!-- breadcrumb end -->
     <div class="bg-gray-100 min-h-screen py-10 mt-5">
         <div class="container mx-auto px-4">
-            <div class="row justify-content-center mb-3">
+            <!-- <div class="row justify-content-center mb-3">
                 <div class="col-xl-8 col-lg-10 col-md-11">
                     <div class="section-title style-white text-center">
                         <h2 class="title">Admission Rules & Regulations</h2>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-6">
                 <p class="text-gray-600 mb-6 leading-relaxed">
                     The University invites applications from eligible candidates for admission to different professional
