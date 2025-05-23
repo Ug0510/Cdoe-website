@@ -784,7 +784,7 @@ ul {
   left: 0;
   top: 0;
   z-index: 999999999999;
-  background-color: #030724;
+  background-color: #ffffff;
   width: 100%;
   height: 100%;
   display: flex;
@@ -818,13 +818,13 @@ ul {
 }
 
 .spinner {
-  margin: 120px auto;
-  width: 60px;
-  height: 60px;
-  position: relative;
-  text-align: center;
-  animation: sk-rotate 2s infinite linear;
-}
+            width: 50px;
+            height: 50px;
+            border: 5px solid #ccc;
+            border-top: 5px solid #030724;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
 
 .dot1,
 .dot2 {
