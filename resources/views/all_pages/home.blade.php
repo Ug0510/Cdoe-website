@@ -518,79 +518,6 @@
 
 
 
-    <!-- ============================ Reel Showcase Section Start ============================ -->
-    <section class="tmu-reel-showcase py-5 position-relative">
-        <div class="tmu-reel-background-element tmu-reel-bg-el-1"></div>
-        <div class="tmu-reel-background-element tmu-reel-bg-el-2"></div>
-
-        <div class="container position-relative">
-            <h2 class="tmu-reel-showcase__title text-center mb-5">Why TMU Online? Watch & Discover</h2>
-
-            <div class="tmu-reel-swiper-container position-relative">
-
-                <div class="swiper tmu-reel-swiper">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="tmu-reel-item">
-                                <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DHtGgTsJLRi/embed/"
-                                    frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
-                                    loading="lazy" title="Instagram Reel 1">
-                                </iframe>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="tmu-reel-item">
-                                <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DHn57DfSTzI/embed/"
-                                    frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
-                                    loading="lazy" title="Instagram Reel 2">
-                                </iframe>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="tmu-reel-item">
-                                <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DCT49FeOt6x/embed/"
-                                    frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
-                                    loading="lazy" title="Instagram Reel 3">
-                                </iframe>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="tmu-reel-item">
-                                <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DCJR2JQIgOX/embed/"
-                                    frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
-                                    loading="lazy" title="Instagram Reel 4">
-                                </iframe>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="tmu-reel-item">
-                                <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DCEuwZbJT2H/embed/"
-                                    frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
-                                    loading="lazy" title="Instagram Reel 5">
-                                </iframe>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="tmu-swiper-nav tmu-swiper-button-prev">
-                    <i class="bi bi-chevron-left"></i>
-                </div>
-                <div class="tmu-swiper-nav tmu-swiper-button-next">
-                    <i class="bi bi-chevron-right"></i>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- ============================ Reel Showcase Section End ============================ -->
 
 
  
@@ -665,6 +592,82 @@ $altTexts = [
         </div> <!-- End Container -->
     </section>
     <!-- ========== Recruiters Section End ========== -->
+
+
+        <!-- ============================ Reel Showcase Section Start ============================ -->
+        <section class="tmu-reel-showcase py-5 position-relative">
+            <div class="tmu-reel-background-element tmu-reel-bg-el-1"></div>
+            <div class="tmu-reel-background-element tmu-reel-bg-el-2"></div>
+    
+            <div class="container position-relative">
+                {{-- <h2 class="tmu-reel-showcase__title text-center mb-5">Why TMU Online? Watch & Discover</h2> --}}
+    
+                <div class="tmu-reel-swiper-container position-relative">
+    
+                    <div class="swiper tmu-reel-swiper">
+                        <div class="swiper-wrapper">
+    
+                            <div class="swiper-slide">
+                                <div class="tmu-reel-item">
+                                    <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DHtGgTsJLRi/embed/"
+                                        frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
+                                        loading="lazy" title="Instagram Reel 1">
+                                    </iframe>
+                                </div>
+                            </div>
+    
+                            <div class="swiper-slide">
+                                <div class="tmu-reel-item">
+                                    <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DHn57DfSTzI/embed/"
+                                        frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
+                                        loading="lazy" title="Instagram Reel 2">
+                                    </iframe>
+                                </div>
+                            </div>
+    
+                            <div class="swiper-slide">
+                                <div class="tmu-reel-item">
+                                    <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DCT49FeOt6x/embed/"
+                                        frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
+                                        loading="lazy" title="Instagram Reel 3">
+                                    </iframe>
+                                </div>
+                            </div>
+    
+                            <div class="swiper-slide">
+                                <div class="tmu-reel-item">
+                                    <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DCJR2JQIgOX/embed/"
+                                        frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
+                                        loading="lazy" title="Instagram Reel 4">
+                                    </iframe>
+                                </div>
+                            </div>
+    
+                            <div class="swiper-slide">
+                                <div class="tmu-reel-item">
+                                    <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DCEuwZbJT2H/embed/"
+                                        frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
+                                        loading="lazy" title="Instagram Reel 5">
+                                    </iframe>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                    <div class="tmu-swiper-nav tmu-swiper-button-prev">
+                        <i class="bi bi-chevron-left"></i>
+                    </div>
+                    <div class="tmu-swiper-nav tmu-swiper-button-next">
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+        <!-- ============================ Reel Showcase Section End ============================ -->
+    
 
 
 
