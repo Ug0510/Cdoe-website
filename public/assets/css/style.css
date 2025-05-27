@@ -5438,6 +5438,12 @@ ul {
   display: inline-block;
 }
 
+@media screen and (max-width:540px) {
+  .gallery-download{
+    font-size: 12px;
+  }
+}
+
 .gallery-download:hover {
   background-color: #001055;
   color: #ffffff;
