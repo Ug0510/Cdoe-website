@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <!-- <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>@yield('title', 'Edumint - Edumint LMS & Online Courses Template')</title> -->
+    <title>@yield('title', 'CDOE TMU Website')</title> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
     <title>{{ $meta->meta_title ?? 'CDOE | TMU' }}</title>
     <meta name="description" content="{{ $meta->meta_description ?? 'CDOE website' }}">
     <meta name="keywords" content="{{ $meta->meta_keywords ?? '' }}">
@@ -146,7 +148,7 @@ body.preloading {
 
 <body>
 
-    <div id="preloader">
+    <div id="preloader" role="status" aria-live="polite" aria-hidden="false">
         <div class="loader-animation-container">
             <div class="loader-bar"></div>
             <div class="loader-bar"></div>
@@ -165,6 +167,7 @@ window.addEventListener('load', function() {
     if (preloader) {
         body.classList.remove('preloading');
         preloader.classList.add('hidden');
+        preloader.setAttribute('aria-hidden', 'true');
     }
 });
 
