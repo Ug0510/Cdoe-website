@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{{ asset('/assets/css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/css/nav.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/css/reel.css') }}">
+    <link rel="preload" as="image" href="{{ asset('/assets/img/logos/logo.webp') }}">
 
     <!-- External Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -223,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="flourish-navbar-visible-area">
             <!-- Logo -->
             <a href="/" class="flourish-navbar-logo">
-                <img src="{{ asset('/assets/img/logos/logo.png') }}" alt="TMU Logo" class="logo">
+                <img src="{{ asset('/assets/img/logos/logo.webp') }}" alt="TMU Logo" class="logo">
             </a>
 
             <!-- Toggle Button -->
