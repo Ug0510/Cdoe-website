@@ -5368,7 +5368,7 @@ ul {
 .breadcrumb-section .breadcrumbs a {
   color: #ffffff; /* Link is bright white */
   text-decoration: none;
-  font-weight: 500; /* Slightly bolder than current page text */
+  font-weight: 700; /* Slightly bolder than current page text */
   transition: color 0.3s ease, text-decoration-color 0.3s ease;
   position: relative; /* For potential pseudo-element underlines */
 }

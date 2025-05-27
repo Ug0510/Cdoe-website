@@ -7,7 +7,7 @@
     <!-- Breadcrumb Section -->
     <section class="breadcrumb-section">
         <div class="mt-5">
-            <h1 style="color: #ffffff;">Admissions Rules</h1>
+            <h1 style="color: #ffffff;" class="mt-5">Admissions Rules</h1>
             <p class="breadcrumbs" style="color: #ffffff;">
                 <a href="#">Home </a> &gt; Admissions Rules
             </p>

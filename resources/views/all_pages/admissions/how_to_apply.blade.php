@@ -8,7 +8,7 @@
     <!-- Breadcrumb Section -->
     <section class="breadcrumb-section">
         <div class="mt-5">
-            <h1 style="color: #ffffff;">How to apply</h1>
+            <h1 style="color: #ffffff;" class="mt-5">How to apply</h1>
             <p class="breadcrumbs" style="color: #ffffff;">
                 <a href="#">Home </a> &gt; How to Apply
             </p>
