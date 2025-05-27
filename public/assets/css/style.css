@@ -5332,39 +5332,53 @@ ul {
 }
 
 
-/* Breadcrumb Section */
+/* Breadcrumb Section - General Styles (mostly unchanged, but cleaner) */
 .breadcrumb-section {
-  background-image: url('/assets/img/bread-crum.jpg');
+  background-image: url('/assets/img/bread-crum.jpg'); /* Make sure this path is correct */
   background-size: cover;
   background-position: center;
-  height: 400px;
+  min-height: 350px; /* Using min-height can be more flexible than fixed height */
+  padding: 60px 20px; /* Add some padding for content breathing room */
   display: flex;
+  flex-direction: column; /* Stack title and breadcrumbs vertically */
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #ffffff; /* Default text color for the section */
   text-align: center;
 }
 
 .breadcrumb-section h1 {
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 3.5rem; /* Slightly larger for more impact */
+  font-weight: 700; /* Bolder */
+  margin-bottom: 15px; /* Space between title and breadcrumbs */
+  color: #ffffff; /* Explicitly white */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
+/* --- NEW SEXY BREADCRUMBS --- */
 .breadcrumb-section .breadcrumbs {
-  font-size: 1.2rem;
-  border: 1px solid #ffffff;
-  border-radius: .3rem;
-  padding: .75rem 1rem;
-  margin-bottom: 1rem;
+  font-size: 1.1rem; /* Adjusted for better hierarchy */
+  font-weight: 400;
+  padding: 8px 0; /* Remove horizontal padding, vertical for spacing */
+  margin: 0; /* Reset margin, spacing handled by h1 margin-bottom */
+  color: rgba(255, 255, 255, 0.75); /* Current page & separator slightly less prominent */
+  /* Removed border and border-radius */
 }
 
-.breadcrumb-section .breadcrumb a {
-  color: white;
+.breadcrumb-section .breadcrumbs a {
+  color: #ffffff; /* Link is bright white */
   text-decoration: none;
+  font-weight: 500; /* Slightly bolder than current page text */
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+  position: relative; /* For potential pseudo-element underlines */
 }
 
-.breadcrumb-section .breadcrumb a:hover {
+.breadcrumb-section .breadcrumbs a:hover,
+.breadcrumb-section .breadcrumbs a:focus {
+  color: #a0eaff; /* A vibrant, light blue for hover - adjust to your theme */
   text-decoration: underline;
+  text-decoration-color: rgba(160, 234, 255, 0.7); /* Underline color matches hover color with some transparency */
+  outline: none; /* Remove focus outline if you have custom focus styles */
 }
 
 /* Video Section */
