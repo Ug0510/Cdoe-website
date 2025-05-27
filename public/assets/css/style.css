@@ -5355,30 +5355,32 @@ ul {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
-/* --- NEW SEXY BREADCRUMBS --- */
+/* --- NEW BREADCRUMBS --- */
 .breadcrumb-section .breadcrumbs {
-  font-size: 1.1rem; /* Adjusted for better hierarchy */
+  font-size: 1.1rem;
   font-weight: 400;
-  padding: 8px 0; /* Remove horizontal padding, vertical for spacing */
-  margin: 0; /* Reset margin, spacing handled by h1 margin-bottom */
-  color: rgba(255, 255, 255, 0.75); /* Current page & separator slightly less prominent */
-  /* Removed border and border-radius */
+  padding: 8px 0;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75); 
+  border: 1px dashed white;
+  width: fit-content;
+  margin: auto;
 }
 
 .breadcrumb-section .breadcrumbs a {
-  color: #ffffff; /* Link is bright white */
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 700; /* Slightly bolder than current page text */
+  font-weight: 700;
   transition: color 0.3s ease, text-decoration-color 0.3s ease;
-  position: relative; /* For potential pseudo-element underlines */
+  position: relative;
 }
 
 .breadcrumb-section .breadcrumbs a:hover,
 .breadcrumb-section .breadcrumbs a:focus {
-  color: #a0eaff; /* A vibrant, light blue for hover - adjust to your theme */
+  color: #a0eaff;
   text-decoration: underline;
-  text-decoration-color: rgba(160, 234, 255, 0.7); /* Underline color matches hover color with some transparency */
-  outline: none; /* Remove focus outline if you have custom focus styles */
+  text-decoration-color: rgba(160, 234, 255, 0.7);
+  outline: none;
 }
 
 /* Video Section */

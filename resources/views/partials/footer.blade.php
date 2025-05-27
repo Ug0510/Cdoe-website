@@ -18,7 +18,7 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="col-lg-5 col-12 mb-5">
+                    {{-- <div class="col-lg-5 col-12 mb-5">
                         <a href="index.html"><img class="mb-3" src="{{ asset('/assets/img/logos/logo-footer.png') }}" width="60%" alt="img"></a>
                         <div class="details">
                             <p class="text-justify" style="font-size: 14px;">Teerthanker Mahaveer University offers UGC and DEB-approved online programmes, combining academic rigour with flexibility. Pursue accredited online education with TMU Online and start your future-ready journey today.</p>
@@ -29,14 +29,14 @@
                                         <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/128/4494/4494497.png" alt="Pinterest"></a></li>
                                     </ul>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="col-lg-2 col-md-6 col-6">
                         <div class="widget widget_nav_menu">
                             <h4 class="widget-title">Course</h4>
                             <ul>
-                                <li><a href="course.html">MBA in Finance</a></li>
-                                <li><a href="course.html">MBA in HR Management </a></li>
-                                <li><a href="course.html">MBA in Marketing</a></li>
+                                <li><a href="/online-mba-finance">MBA in Finance</a></li>
+                                <li><a href="/online-mba-hr">MBA in HR Management </a></li>
+                                <li><a href="/online-mba-marketing">MBA in Marketing</a></li>
                             </ul>
                         </div>
                     </div>
@@ -44,9 +44,9 @@
                         <div class="widget widget_nav_menu">
                             <h4 class="widget-title">Quick Links</h4>
                             <ul>
-                                <li><a href="course.html">How to Apply</a></li>
-                                <li><a href="course.html">Admission Rules</a></li>
-                                <li><a href="course.html">Facilities</a></li>
+                                <li><a href="/how-to-apply">How to Apply</a></li>
+                                <li><a href="/admissions-rules">Admission Rules</a></li>
+                                <li><a href="/facilities">Facilities</a></li>
                             </ul>
                         </div>
                     </div>
