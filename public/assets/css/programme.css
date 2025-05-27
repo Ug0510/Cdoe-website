@@ -33,7 +33,7 @@
     }
     @media screen and (max-width:540px) {
         .banner-title p:first-child{
-            font-size: 3.2rem;
+            font-size: 2.2rem;
             color: #FE831B;
             line-height: 3.8rem; 
         }
