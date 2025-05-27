@@ -94,9 +94,9 @@
                             <div class="section-header">
                                 <h2>Hands-on Curriculum <span class="highlight">Designed for Real Results</span></h2>
                                 <p>Explore the comprehensive structure of our program.</p>
-                                <a href="#" class="btn-download">
+                                {{-- <a href="#" class="btn-download">
                                     <i class="fas fa-download"></i> Download Program Guide
-                                </a>
+                                </a> --}}
                             </div>
 
                             <!-- Stats Grid -->
