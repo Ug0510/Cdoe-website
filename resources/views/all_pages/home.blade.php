@@ -319,70 +319,69 @@
             </div>
         </div>
 
-        <!-- Custom Gallery -->
         <div class="custom-gallery">
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/1.webp') }}" alt="Image 1" onclick="openLightbox(0)">
+                <img src="{{ asset('/assets/img/gallery/1.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(0)">
                 <div class="custom-caption">Dr APJ Abdul Kalam at the 1st Convocation 2012</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/2.webp') }}" alt="Image 2" onclick="openLightbox(1)">
+                <img src="{{ asset('/assets/img/gallery/2.webp') }}" alt="Image 2" loading="lazy" onclick="openLightbox(1)">
                 <div class="custom-caption">2012 Graduates Celebrating Success</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/3.webp') }}" alt="Image 1" onclick="openLightbox(2)">
+                <img src="{{ asset('/assets/img/gallery/3.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(2)">
                 <div class="custom-caption">Shri Akhilesh Yadav with Shri Suresh Jain at the 2nd Convocation</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/4.webp') }}" alt="Image 2" onclick="openLightbox(3)">
+                <img src="{{ asset('/assets/img/gallery/4.webp') }}" alt="Image 2" loading="lazy" onclick="openLightbox(3)">
                 <div class="custom-caption">Graduates of 2023 Mark a Milestone</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/5.webp') }}" alt="Image 1" onclick="openLightbox(4)">
+                <img src="{{ asset('/assets/img/gallery/5.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(4)">
                 <div class="custom-caption">Distinguished Guests at Convocation 2024</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/6.webp') }}" alt="Image 2" onclick="openLightbox(5)">
+                <img src="{{ asset('/assets/img/gallery/6.webp') }}" alt="Image 2" loading="lazy" onclick="openLightbox(5)">
                 <div class="custom-caption">Students at the 3rd Convocation Ceremony</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/7.webp') }}" alt="Image 1" onclick="openLightbox(6)">
+                <img src="{{ asset('/assets/img/gallery/7.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(6)">
                 <div class="custom-caption">Dinesh Sharma Addresses Graduates at Convocation 2021</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/8.webp') }}" alt="Image 2" onclick="openLightbox(7)">
+                <img src="{{ asset('/assets/img/gallery/8.webp') }}" alt="Image 2" loading="lazy" onclick="openLightbox(7)">
                 <div class="custom-caption">Guru Randhawa Performs Live at Rock-on 2023</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/9.webp') }}" alt="Image 1" onclick="openLightbox(8)">
+                <img src="{{ asset('/assets/img/gallery/9.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(8)">
                 <div class="custom-caption">TMU’s 2023 Graduates</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/10.webp') }}" alt="Image 2" onclick="openLightbox(9)">
+                <img src="{{ asset('/assets/img/gallery/10.webp') }}" alt="Image 2" loading="lazy" onclick="openLightbox(9)">
                 <div class="custom-caption">A Glimpse into Convocation 2024 Celebrations</div>
             </div>
             <div class="custom-gallery-item d-none d-sm-block">
-                <img src="{{ asset('/assets/img/gallery/11.webp') }}" alt="Image 1" onclick="openLightbox(10)">
+                <img src="{{ asset('/assets/img/gallery/11.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(10)">
                 <div class="custom-caption">Students Enjoying the Rock-on Fest</div>
             </div>
             <div class="custom-gallery-item d-none d-sm-block">
-                <img src="{{ asset('/assets/img/gallery/12.webp') }}" alt="Image 2" onclick="openLightbox(11)">
+                <img src="{{ asset('/assets/img/gallery/12.webp') }}" alt="Image 2" loading="lazy" onclick="openLightbox(11)">
                 <div class="custom-caption">Dr Kalam Graces Convocation 2012 with Wisdom</div>
             </div>
             <div class="custom-gallery-item d-none d-sm-block">
-                <img src="{{ asset('/assets/img/gallery/13.webp') }}" alt="Image 1" onclick="openLightbox(12)">
+                <img src="{{ asset('/assets/img/gallery/13.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(12)">
                 <div class="custom-caption">Shaaz Sets the Stage Ablaze at Rock-on 2023</div>
             </div>
             <div class="custom-gallery-item d-none d-sm-block">
-                <img src="{{ asset('/assets/img/gallery/14.webp') }}" alt="Image 2" onclick="openLightbox(13)">
+                <img src="{{ asset('/assets/img/gallery/14.webp') }}" alt="Image 2" loading="lazy" onclick="openLightbox(13)">
                 <div class="custom-caption">Memorable Moments from Convocation 2024</div>
             </div>
             <div class="custom-gallery-item d-none d-sm-block">
-                <img src="{{ asset('/assets/img/gallery/15.webp') }}" alt="Image 1" onclick="openLightbox(14)">
+                <img src="{{ asset('/assets/img/gallery/15.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(14)">
                 <div class="custom-caption">Gurudev Sri Sri Ravi Shankar at the Special Convocation 2024</div>
             </div>
-            <!-- Add more items as needed -->
         </div>
+        
 
         <!-- Lightbox -->
         <div id="custom-lightbox" onclick="closeLightbox(event)">
@@ -415,8 +414,8 @@
             <div class="row">
                 <div class="col-lg-4 col-6 col-md-6">
                     <div class="single-intro-inner style-icon-bg text-center">
-                        <div class="thumb">
-                            <img src="{{ asset('/assets/img/icon/i-1.svg') }}" class="why-icon" alt="img">
+                        <div class="thumb"> 
+                            <img src="{{ asset('/assets/img/icon/i-1.svg') }}" loading="lazy" class="why-icon" alt="img">
                         </div>
                         <div class="details">
                             <h5>Online Sessions by Industry Experts</h5>
@@ -428,7 +427,7 @@
                 <div class="col-lg-4 col-6 col-md-6">
                     <div class="single-intro-inner style-icon-bg text-center">
                         <div class="thumb">
-                            <img src="{{ asset('/assets/img/icon/i-2.svg') }}" class="why-icon" alt="img">
+                            <img src="{{ asset('/assets/img/icon/i-2.svg') }}" loading="lazy" class="why-icon" alt="img">
                         </div>
                         <div class="details">
                             <h5>Internship Opportunities</h5>
@@ -440,7 +439,7 @@
                 <div class="col-lg-4 col-6 col-md-6">
                     <div class="single-intro-inner style-icon-bg text-center">
                         <div class="thumb">
-                            <img src="{{ asset('/assets/img/icon/i-3.svg') }}" class="why-icon" alt="img">
+                            <img src="{{ asset('/assets/img/icon/i-3.svg') }}" loading="lazy" class="why-icon" alt="img">
                         </div>
                         <div class="details">
                             <h5>Flexible Examination Options</h5>
@@ -452,7 +451,7 @@
                 <div class="col-lg-4 col-6 col-md-6">
                     <div class="single-intro-inner style-icon-bg text-center">
                         <div class="thumb">
-                            <img src="{{ asset('/assets/img/icon/i-4.svg') }}" class="why-icon" alt="img">
+                            <img src="{{ asset('/assets/img/icon/i-4.svg') }}" loading="lazy" class="why-icon" alt="img">
                         </div>
                         <div class="details">
                             <h5>User-Friendly LMS</h5>
@@ -465,7 +464,7 @@
                 <div class="col-lg-4 col-6 col-md-6">
                     <div class="single-intro-inner style-icon-bg text-center">
                         <div class="thumb">
-                            <img src="{{ asset('/assets/img/icon/i-5.svg') }}" class="why-icon" alt="img">
+                            <img src="{{ asset('/assets/img/icon/i-5.svg') }}" loading="lazy" class="why-icon" alt="img">
                         </div>
                         <div class="details">
                             <h5>24/7 Access to Digital Library</h5>
@@ -478,7 +477,7 @@
                 <div class="col-lg-4 col-6 col-md-6">
                     <div class="single-intro-inner style-icon-bg text-center">
                         <div class="thumb">
-                            <img src="{{ asset('/assets/img/icon/i-6.svg') }}" class="why-icon" alt="img">
+                            <img src="{{ asset('/assets/img/icon/i-6.svg') }}" loading="lazy" class="why-icon" alt="img">
                         </div>
                         <div class="details">
                             <h5>Budget-Friendly Fee Structure</h5>
@@ -505,7 +504,7 @@
             <p class="university-name mb-4"><span>Proudly Earned at</span> Teerthanker Mahaveer University</p>
 
             <div class="degree-card shadow mx-auto">
-                <img src="{{ asset('/assets/img/degree.webp') }}" alt="TMU Degree Certificate"
+                <img src="{{ asset('/assets/img/degree.webp') }}" loading="lazy" alt="TMU Degree Certificate"
                     class="img-fluid" />
             </div>
 
@@ -580,7 +579,7 @@ $altTexts = [
 
                 @for ($i = 1; $i <= 32; $i++)
                     <div class="recruiter-item">
-                        <img src="{{ asset('assets/img/recruiters/' . $i . '.jpg') }}"
+                        <img src="{{ asset('assets/img/recruiters/' . $i . '.jpg') }}" loading="lazy"
                             alt="{{ $altTexts[$i] ?? 'Recruiter Logo ' . $i }}" class="recruiter-logo"
                             onerror="this.style.display='none'; this.parentElement.style.display='none';"
                             {{-- Hide item if image fails to load --}}>
