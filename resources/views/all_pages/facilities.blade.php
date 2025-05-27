@@ -4,6 +4,24 @@
 
 @section('content')
 
+<style>
+
+  .video-section iframe{
+    width:560px;
+    height:315px;
+  }
+
+  @media screen and (max-width:540px)
+  {
+    .video-section iframe{
+      width:100%;
+      padding: 0 0.5rem;
+      height:210px;
+    }
+  }
+
+</style>
+
   <!-- Breadcrumb Section -->
   <section class="breadcrumb-section">
     <div class="mt-5">
@@ -24,7 +42,7 @@
     </div>
   </div>
   <section class="video-section">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/5Z7qEEcWy5g?si=bW-l032sUhtaW78S"
+    <iframe src="https://www.youtube.com/embed/5Z7qEEcWy5g?si=bW-l032sUhtaW78S"
     title="YouTube video player" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
