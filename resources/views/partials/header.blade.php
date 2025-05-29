@@ -11,7 +11,9 @@
     <title>{{ $meta->meta_title ?? 'CDOE | TMU' }}</title>
     <meta name="description" content="{{ $meta->meta_description ?? 'CDOE website' }}">
     <meta name="keywords" content="{{ $meta->meta_keywords ?? '' }}">
+    <meta name="google-site-verification" content="CFrZUzA2qgbjobzI08wjz2oeMroTswGtiT3jJo0vPzw" />
     <link rel="canonical" href="{{ $meta->canonical_tag ?? url()->current() }}">
+
    @if(isset($meta))
     @if($meta->no_index_status === 'Y')
         <meta name="robots" content="noindex, nofollow">
