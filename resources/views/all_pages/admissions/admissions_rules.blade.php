@@ -35,14 +35,14 @@
                         <span>
                             If you have appeared in a qualifying examination and the result is awaited, you can take
                             provisional admission. However, in all circumstances, you shall have to submit the result in the
-                            university latest by the date given by Admission Cell, except where the Regulatory Council’s norms prescribe
+                            university latest by the date given by admission cell, except where the regulatory council’s norms prescribe
                             otherwise.
                         </span>
                     </li>
                     <li class="flex items-start ml-6">
 
                         <span class="text-sm text-gray-500">
-                            Attach self-certified copies of your mark sheets/testimonials with the Application Form. At this
+                            Attach self-certified copies of your mark sheets/testimonials with the application form. At this
                             stage, do not send any original copies of mark sheets/testimonials.
                         </span>
                     </li>
@@ -68,7 +68,7 @@
 
                         <span class="text-gray-600">
                             If any document/declaration submitted by the candidate is found to be false/forged at any stage,
-                            his or her admission shall be cancelled and they may be liable for prosecution under law.
+                            his or her admission shall be cancelled.
                         </span>
                     </li>
                     <li class="flex items-start">
