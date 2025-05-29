@@ -41,7 +41,7 @@
                 <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
                     <div class="ratings-list-inner mb-4">
                         <div class="course-details-content text-center">
-                            <h4 class="title">For Online Application follow the Steps below</h4>
+                            <h4 class="title">For Online Application, follow the steps below</h4>
                             <img src="{{ asset('assets/img/admission2.png') }}" alt="img" class="img-fluid mb-4"
                                 style="width: 100%; height: auto;">
                         </div>

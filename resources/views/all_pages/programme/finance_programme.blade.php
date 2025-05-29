@@ -164,7 +164,7 @@
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">MBCSE101</span>
-                                                <p class="course-name">Computer Fundamental & Information system</p>
+                                                <p class="course-name">Computer Fundamental & Information systems</p>
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">TPC 101</span>
