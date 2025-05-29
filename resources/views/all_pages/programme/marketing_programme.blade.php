@@ -171,7 +171,7 @@
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">MBCSE101</span>
-                                                <p class="course-name">Computer Fundamental & Information system</p>
+                                                <p class="course-name">Computer Fundamental & Information systems</p>
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">TPC 101</span>
@@ -275,7 +275,7 @@
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">MBAM305</span>
-                                                <p class="course-name">Advertisement Management</p>
+                                                <p class="course-name">Advertising Management</p>
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">MBAM306</span>
@@ -283,7 +283,7 @@
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">MBAM307</span>
-                                                <p class="course-name">MOOC decided and identified from the platform
+                                                <p class="course-name">MOOC selected from the platform
                                                     prescribed by the College and University</p>
                                             </div>
                                         </div>
@@ -300,8 +300,7 @@
                                         <div class="course-grid">
                                             <div class="course-card">
                                                 <span class="course-code">MBAVV451</span>
-                                                <p class="course-name">Dissertation Report Evaluation (Based on OJT
-                                                    /Start-up Engagements/ Family Business Exposure)</p>
+                                                <p class="course-name">Dissertation Report Evaluation (Based on OJT, Start-up Engagements, or Family Business Exposure)</p>
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">MBAM401</span>

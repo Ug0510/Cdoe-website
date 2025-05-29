@@ -35,7 +35,7 @@
                         <span>
                             If you have appeared in a qualifying examination and the result is awaited, you can take
                             provisional admission. However, in all circumstances, you shall have to submit the result in the
-                            university latest by the date given by Admission cell, except where the Regulatory Council’s norms prescribe
+                            university latest by the date given by Admission Cell, except where the Regulatory Council’s norms prescribe
                             otherwise.
                         </span>
                     </li>
@@ -43,20 +43,19 @@
 
                         <span class="text-sm text-gray-500">
                             Attach self-certified copies of your mark sheets/testimonials with the Application Form. At this
-                            stage, do not send any original copies of mark-sheets/testimonials.
+                            stage, do not send any original copies of mark sheets/testimonials.
                         </span>
                     </li>
                     <li class="flex items-start ml-6">
 
                         <span class="text-sm text-gray-500">
-                            Paste your latest photograph in the space provided in the Application Form.
+                            Affix your latest photograph in the designated space in the Application Form.
                         </span>
                     </li>
                     <li class="flex items-start ml-6">
 
                         <span class="text-sm text-gray-500">
-                            Before submitting/mailing the duly filled-up application form, go through all the points
-                            contained in the form.
+                            Before submitting/mailing the duly filled-up application form, review all the instructions provided in the form.
                         </span>
                     </li>
                     <li class="flex items-start ml-6">
@@ -69,7 +68,7 @@
 
                         <span class="text-gray-600">
                             If any document/declaration submitted by the candidate is found to be false/forged at any stage,
-                            his or her admission shall be cancelled and he/she may be liable for prosecution under law.
+                            his or her admission shall be cancelled and they may be liable for prosecution under law.
                         </span>
                     </li>
                     <li class="flex items-start">
@@ -107,9 +106,9 @@
                     <li class="flex items-start">
 
                         <span class="text-gray-600">
-                            At the time of admission, students are required to submit an affidavit duly signed by him/her
+                            At the time of admission, students are required to submit an affidavit duly signed by them
                             along with their parents/guardians with regard to disciplinary behaviour during the entire
-                            period of the programme. If any violation is found, he/she shall be subject to the
+                            period of the programme. If any violation is found, they shall be subject to the
                             punishment/suspension/rustication as per the University rules and regulations.
                         </span>
                     </li>
@@ -122,7 +121,7 @@
                 </ul>
                 <div class="bg-light-blue p-4 rounded-lg mb-6">
                     <p class="italic text-gray-700">
-                        Note: Payment of fee in ‘Cash’ is accepted only at the designated cash counter(s) at the university
+                        Note: Payment of fees in ‘Cash’ is accepted only at the designated cash counters at the university
                         campus. Students are advised to obtain the receipt for the same from the cash counter immediately
                         after making the cash payment.
                     </p>
