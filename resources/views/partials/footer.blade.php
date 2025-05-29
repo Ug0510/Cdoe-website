@@ -76,7 +76,7 @@
                                 </li>
                                 <li><i class="fa fa-envelope"></i>director.cdoe@tmu.ac.in</li>
                                 <li><i class="fa fa-phone"></i> +91 9520932111</li>
-                                <li><i class="fa fa-phone"></i> +91 9520942111</li>
+                                <li><i class="fa fa-phone"></i> +91 9917200216</li>
                             </ul>
                         </div>
                     </div>
