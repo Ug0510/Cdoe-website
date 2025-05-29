@@ -722,7 +722,7 @@
                                         <h5 class="mb-0">
                                             <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-nine"
                                                 aria-expanded="false" aria-controls="f-nine">
-                                                05. What is the salary of an online MBA in HR?
+                                                05. What is the salary outlook after an online MBA in HR?
                                                 <i class="fa fa-eye"></i>
                                             </button>
                                         </h5>
