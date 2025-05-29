@@ -320,7 +320,7 @@
                                             </div>
                                             <div class="course-card">
                                                 <span class="course-code">MBAM405</span>
-                                                <p class="course-name">MOOC decided and identified from the platform
+                                                <p class="course-name">MOOC selected from the platform
                                                     prescribed by the College and University</p>
                                             </div>
                                         </div>

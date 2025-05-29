@@ -49,7 +49,7 @@
                     <li class="flex items-start ml-6">
 
                         <span class="text-sm text-gray-500">
-                            Affix your latest photograph in the designated space in the Application Form.
+                            Affix your latest photograph in the designated space on the Application Form.
                         </span>
                     </li>
                     <li class="flex items-start ml-6">
@@ -107,7 +107,7 @@
 
                         <span class="text-gray-600">
                             At the time of admission, students are required to submit an affidavit duly signed by them
-                            along with their parents/guardians with regard to disciplinary behaviour during the entire
+                            and their parents/guardians with regard to disciplinary behaviour during the entire
                             period of the programme. If any violation is found, they shall be subject to the
                             punishment/suspension/rustication as per the University rules and regulations.
                         </span>
@@ -121,7 +121,7 @@
                 </ul>
                 <div class="bg-light-blue p-4 rounded-lg mb-6">
                     <p class="italic text-gray-700">
-                        Note: Payment of fees in ‘Cash’ is accepted only at the designated cash counters at the university
+                        Note: Payment of fees in cash is accepted only at the designated cash counters at the university
                         campus. Students are advised to obtain the receipt for the same from the cash counter immediately
                         after making the cash payment.
                     </p>
