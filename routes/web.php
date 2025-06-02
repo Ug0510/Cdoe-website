@@ -13,6 +13,7 @@ Route::get('/blog', [CDOEController::class, 'blog'])->name('blog');
 Route::get('/blog-details', [CDOEController::class, 'blog_details'])->name('blog.details');
 Route::get('/online-mba-hr', [CDOEController::class, 'hr_programme'])->name('hr.programme');
 Route::get('/online-mba-finance', [CDOEController::class, 'finance_programme'])->name('finance.programme');
+Route::get('/online-mba-international-business', [CDOEController::class, 'ib_programme'])->name('ib.programme');
 Route::get('/online-mba-marketing', [CDOEController::class, 'marketing_programme'])->name('marketing.programme');
 Route::get('/admissions-rules', [CDOEController::class, 'admissions_rules'])->name('admissions.rules');
 Route::get('/how-to-apply', [CDOEController::class, 'how_to_apply'])->name('how.to.apply');
