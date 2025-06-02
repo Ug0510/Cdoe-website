@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('CDOE', 'Online MBA in International Business Admission 2025: Fees, Eligibility and Career [cite: 1]')
+@section('CDOE', 'Online MBA in International Business Admission 2025: Fees, Eligibility and Career')
 
 @section('content')
 
@@ -11,7 +11,7 @@
         <img src="{{ asset('assets/img/programmes/tab-banner.webp') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
         <div class="banner-title">
             <p>Online MBA <br> <span>International Business</span></p>
-            <p class="d-none d-lg-block">Enrol in an Online MBA in International Business to gain global leadership skills, master international trade, and advance your career in multinational companies. [cite: 1]</p>
+            <p class="d-none d-lg-block">Enrol in an Online MBA in International Business to gain global leadership skills, master international trade, and advance your career in multinational companies.</p>
         </div>
     </div>
     <div class="course-single-area pd-top-60 pd-bottom-90">
@@ -27,41 +27,41 @@
                     {{-- Section 1: Description --}}
                     <div class="course-section container" id="description-section">
                         <div class="course-details-content">
-                            <p>Online MBA in International Business is a postgraduate degree programme designed for ambitious professionals who aspire to lead and manage businesses on a global scale. [cite: 2] This specialised MBA combines advanced business education with in-depth knowledge of international markets, global trade practices, and cross-cultural management. [cite: 3] It is ideal for individuals seeking to enhance their leadership skills, broaden their global perspective, and accelerate their careers in international business environments. [cite: 4]
+                            <p>Online MBA in International Business is a postgraduate degree programme designed for ambitious professionals who aspire to lead and manage businesses on a global scale. This specialised MBA combines advanced business education with in-depth knowledge of international markets, global trade practices, and cross-cultural management. It is ideal for individuals seeking to enhance their leadership skills, broaden their global perspective, and accelerate their careers in international business environments.
                             </p>
                             <div class="row pt-4">
                                 <div class="col-sm-6">
                                     <ul class="single-list-wrap">
                                         <li class="single-list-inner style-check-box">
-                                            <i class="fa fa-check"></i> Global Business Perspective [cite: 5]
+                                            <i class="fa fa-check"></i> Global Business Perspective
                                         </li>
                                         <li class="single-list-inner style-check-box">
-                                            <i class="fa fa-check"></i> Flexible Learning Schedule [cite: 5]
+                                            <i class="fa fa-check"></i> Flexible Learning Schedule
                                         </li>
                                         <li class="single-list-inner style-check-box">
-                                            <i class="fa fa-check"></i> Diverse Networking Opportunities [cite: 5]
+                                            <i class="fa fa-check"></i> Diverse Networking Opportunities
                                         </li>
                                         <li class="single-list-inner style-check-box">
-                                            <i class="fa fa-check"></i> Access to International Job Markets [cite: 5]
+                                            <i class="fa fa-check"></i> Access to International Job Markets
                                         </li>
                                         <li class="single-list-inner style-check-box">
-                                            <i class="fa fa-check"></i> Real-World Global Business Skills [cite: 5]
+                                            <i class="fa fa-check"></i> Real-World Global Business Skills
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="col-sm-6 mt-3 mt-sm-0">
                                     <ul class="single-list-wrap">
                                         <li class="single-list-inner style-check-box">
-                                            <i class="fa fa-check"></i> Enhanced Leadership & Strategic Thinking [cite: 5]
+                                            <i class="fa fa-check"></i> Enhanced Leadership & Strategic Thinking
                                         </li>
                                         <li class="single-list-inner style-check-box">
-                                            <i class="fa fa-check"></i> Improved Cross-Cultural Communication [cite: 5]
+                                            <i class="fa fa-check"></i> Improved Cross-Cultural Communication
                                         </li>
                                         <li class="single-list-inner style-check-box">
-                                            <i class="fa fa-check"></i> Comprehensive Curriculum [cite: 5]
+                                            <i class="fa fa-check"></i> Comprehensive Curriculum
                                         </li>
                                         <li class="single-list-inner style-check-box">
-                                            <i class="fa fa-check"></i> Alumni Network Support [cite: 5]
+                                            <i class="fa fa-check"></i> Alumni Network Support
                                         </li>
                                     </ul>
                                 </div>
@@ -75,7 +75,7 @@
                             <h2>Online MBA in International Business <span class="highlight">Admissions Open 2025</span></h2>
                         </div>
                         <div class="course-details-content">
-                            <p>Admissions open for the 2025 batch of the TMU Online MBA in International Business—a dynamic program designed to prepare professionals for global leadership. [cite: 8] TMU Online offers a flexible, 100% online learning experience that combines academic excellence with practical insights into international markets. [cite: 8] With admissions open, now is the perfect time to advance your career through a globally recognised MBA program that fits your schedule and empowers you to lead in the evolving world of international business. [cite: 9]</p>
+                            <p>Admissions open for the 2025 batch of the TMU Online MBA in International Business—a dynamic program designed to prepare professionals for global leadership. TMU Online offers a flexible, 100% online learning experience that combines academic excellence with practical insights into international markets. With admissions open, now is the perfect time to advance your career through a globally recognised MBA program that fits your schedule and empowers you to lead in the evolving world of international business.</p>
                         </div>
                     </div>
 
@@ -189,7 +189,7 @@
 
                             <div class="career-paths-header">
                                 <h2>Career Paths After Online MBA <span>in International Business</span></h2>
-                                <p>An online MBA in international business is well-suited to pursue high-level roles across a wide range of industries and global markets. [cite: 5] This postgraduate degree provides opportunities for leadership roles in multinational corporations, international trade, finance, marketing, logistics, and other related fields. [cite: 6] <br> Here are some prominent career paths you can pursue after completing your Online MBA in International Business : [cite: 7]
+                                <p>An online MBA in international business is well-suited to pursue high-level roles across a wide range of industries and global markets. This postgraduate degree provides opportunities for leadership roles in multinational corporations, international trade, finance, marketing, logistics, and other related fields. <br> Here are some prominent career paths you can pursue after completing your Online MBA in International Business :
                                 </p>
                             </div>
 
@@ -202,21 +202,21 @@
 
                                 <div class="career-paths-list-col">
                                     <ul class="career-path-list pl-3">
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> International Marketing Manager [cite: 7]</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Global Business Development Manager [cite: 7]</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> International Trade and Export Manager [cite: 7]</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Foreign Investment Analyst [cite: 7]</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> International Finance Manager [cite: 7]</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Global Supply Chain Manager [cite: 7]</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Country or Regional Manager [cite: 7]</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> International Business Consultant [cite: 7]</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Cross-Cultural Human Resources Manager [cite: 7]</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> International Project Manager [cite: 7]</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Global Product Manager [cite: 7]</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Diplomatic or Trade Officer [cite: 7]</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> International Sales Director [cite: 7]</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Entrepreneur / Global Startup Founder [cite: 7]</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Risk and Compliance Manager – Global Markets [cite: 7]</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> International Marketing Manager</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Global Business Development Manager</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> International Trade and Export Manager</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Foreign Investment Analyst</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> International Finance Manager</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Global Supply Chain Manager</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Country or Regional Manager</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> International Business Consultant</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Cross-Cultural Human Resources Manager</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> International Project Manager</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Global Product Manager</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Diplomatic or Trade Officer</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> International Sales Director</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Entrepreneur / Global Startup Founder</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Risk and Compliance Manager – Global Markets</li>
                                     </ul>
                                 </div>
 
@@ -271,7 +271,7 @@
                                         <h5 class="mb-0">
                                             <button class="btn-link" data-toggle="collapse" data-target="#f-one"
                                                 aria-expanded="true" aria-controls="f-one">
-                                                01. What is an Online MBA in International Business? [cite: 10]
+                                                01. What is an Online MBA in International Business?
                                                 <i class="fa fa-eye"></i>
                                             </button>
                                         </h5>
@@ -280,7 +280,7 @@
                                     <div id="f-one" class="collapse show" aria-labelledby="ff-one"
                                         data-parent="#faq-accordion">
                                         <div class="card-body">
-                                            An Online MBA in International Business is a postgraduate degree programme that combines core business management skills with specialised knowledge of global markets, international trade, and cross-cultural leadership. [cite: 10] It is designed for professionals who want to advance their careers in multinational companies or manage business operations across borders, all through a flexible, online learning format. [cite: 11]
+                                            An Online MBA in International Business is a postgraduate degree programme that combines core business management skills with specialised knowledge of global markets, international trade, and cross-cultural leadership. It is designed for professionals who want to advance their careers in multinational companies or manage business operations across borders, all through a flexible, online learning format.
                                         </div>
                                     </div>
                                 </div>
@@ -289,14 +289,14 @@
                                         <h5 class="mb-0">
                                             <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-two"
                                                 aria-expanded="false" aria-controls="f-two">
-                                                02. What is the duration of an Online MBA in International Business? [cite: 12]
+                                                02. What is the duration of an Online MBA in International Business?
                                                 <i class="fa fa-eye"></i>
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="f-two" class="collapse" aria-labelledby="ff-two" data-parent="#faq-accordion">
                                         <div class="card-body">
-                                            The typical duration of an Online MBA in International Business is 2 years, usually divided into four semesters. [cite: 13]
+                                            The typical duration of an Online MBA in International Business is 2 years, usually divided into four semesters.
                                         </div>
                                     </div>
                                 </div>
@@ -306,7 +306,7 @@
                                         <h5 class="mb-0">
                                             <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-three"
                                                 aria-expanded="false" aria-controls="f-three">
-                                                03. What is the scope of an Online MBA in International Business? [cite: 14]
+                                                03. What is the scope of an Online MBA in International Business?
                                                 <i class="fa fa-eye"></i>
                                             </button>
                                         </h5>
@@ -314,7 +314,7 @@
                                     <div id="f-three" class="collapse" aria-labelledby="ff-three"
                                         data-parent="#faq-accordion">
                                         <div class="card-body">
-                                            The scope of an Online MBA in International Business is vast, offering opportunities in multinational corporations, international trade, global marketing, finance, consulting, logistics, and supply chain management. [cite: 15] It prepares professionals for leadership roles in the global business environment, with the flexibility to work across industries and countries. [cite: 16]
+                                            The scope of an Online MBA in International Business is vast, offering opportunities in multinational corporations, international trade, global marketing, finance, consulting, logistics, and supply chain management. It prepares professionals for leadership roles in the global business environment, with the flexibility to work across industries and countries.
                                         </div>
                                     </div>
                                 </div>
@@ -323,7 +323,7 @@
                                         <h5 class="mb-0">
                                             <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-four"
                                                 aria-expanded="false" aria-controls="f-four">
-                                                04. What is the salary of an MBA in International Business? [cite: 17]
+                                                04. What is the salary of an MBA in International Business?
                                                 <i class="fa fa-eye"></i>
                                             </button>
                                         </h5>
@@ -331,7 +331,7 @@
                                     <div id="f-four" class="collapse" aria-labelledby="ff-four"
                                         data-parent="#faq-accordion">
                                         <div class="card-body">
-                                            In India, professionals with an MBA in International Business typically earn between ₹6 lakhs and ₹15 lakhs per annum, depending on experience, industry, and job role. [cite: 18] Entry-level positions start around ₹6–8 lakhs, while senior management roles in multinational companies can earn ₹12 lakhs or more annually. [cite: 19]
+                                            In India, professionals with an MBA in International Business typically earn between ₹6 lakhs and ₹15 lakhs per annum, depending on experience, industry, and job role. Entry-level positions start around ₹6–8 lakhs, while senior management roles in multinational companies can earn ₹12 lakhs or more annually.
                                         </div>
                                     </div>
                                 </div>
