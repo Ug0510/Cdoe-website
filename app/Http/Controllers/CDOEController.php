@@ -27,6 +27,11 @@ class CDOEController extends Controller
         return view('all_pages.programme.hr_programme');
     }
 
+     public function ib_programme()
+    {
+        return view('all_pages.programme.ib_programme');
+    }
+
     public function finance_programme()
     {
         return view('all_pages.programme.finance_programme');
