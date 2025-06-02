@@ -293,7 +293,7 @@
                 </li>
 
                 <li><a href="{{ route('facilities') }}">Facilities</a></li>
-                <li><a href="https://cdoeadmissions.tmu.ac.in/">Apply Now</a></li>
+                <li><a href="https://admissions.tmuonline.ac.in/">Apply Now</a></li>
 
             </ul>
         </div>
