@@ -86,12 +86,7 @@
                     </div>
 
 
-                    <div class="container-fluid">
-                        <img src="{{ asset('assets/img/programmes/5-reason-desktop.jpg') }}" alt=""
-                            class="d-none d-lg-block w-100" />
-                        <img src="{{ asset('assets/img/programmes/5-reason-mobile.jpg') }}" alt=""
-                            class="d-block d-lg-none w-100" />
-                    </div>
+               
 
                     {{-- Section 2: Curriculum --}}
                     <section class="curriculum-section">
