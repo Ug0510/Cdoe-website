@@ -80,12 +80,6 @@
                     </div>
 
 
-                    <div class="container-fluid">
-                        <img src="{{ asset('assets/img/programmes/5-reason-desktop.jpg') }}" alt="Reasons to choose Online MBA"
-                            class="d-none d-lg-block w-100" />
-                        <img src="{{ asset('assets/img/programmes/5-reason-mobile.jpg') }}" alt="Reasons to choose Online MBA"
-                            class="d-block d-lg-none w-100" />
-                    </div>
 
                     {{-- REMOVED: Curriculum Section was here --}}
 
