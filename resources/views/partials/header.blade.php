@@ -18,7 +18,7 @@
         @if ($meta->no_index_status === 'Y')
             <meta name="robots" content="noindex, nofollow">
         @else
-            <meta name="robots" content="index, follow">
+          <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
         @endif
     @else
         <meta name="robots" content="noindex, nofollow">
