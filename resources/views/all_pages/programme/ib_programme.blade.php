@@ -11,7 +11,7 @@
         <img src="{{ asset('assets/img/programmes/tab-banner.webp') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
         <div class="banner-title">
             <p>Online MBA <br> <span>International Business</span></p>
-            <p class="d-none d-lg-block">Enrol in an Online MBA in International Business to gain global leadership skills, master international trade, and advance your career in multinational companies.</p>
+            <p class="d-none d-lg-block">Enroll in an Online MBA in International Business to gain global leadership skills, master international trade, and advance your career in multinational companies.</p>
         </div>
     </div>
     <div class="course-single-area pd-top-60 pd-bottom-90">
@@ -71,7 +71,7 @@
 
                     {{-- Admissions Open Section --}}
                     <div class="course-section container pd-top-30 pd-bottom-30 text-center" id="admissions-open-section">
-                        <div class="section-header">
+                        <div class="section-header mt-5 mb-0">
                             <h2>Online MBA in International Business <span class="highlight">Admissions Open 2025</span></h2>
                         </div>
                         <div class="course-details-content">
