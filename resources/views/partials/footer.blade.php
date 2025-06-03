@@ -5,7 +5,7 @@
                 <div class="row">
                     <!-- <div class="col-lg-3 col-md-6">
                         <div class="widget widget_about text-center">
-                            <a href="index.html"><img src="{{ asset('/assets/img/logos/logo.png') }}" alt="img"></a>
+                            <a href="/"><img src="{{ asset('/assets/img/logos/logo.png') }}" alt="img"></a>
                             <div class="details">
                                 <p>Edumint tetur sadipscing elitr tempor invidunt ut labore et dolore magna aliquyam
                                     erat, sed diam voluptua.</p>
@@ -19,7 +19,7 @@
                         </div>
                     </div> -->
                     <div class="col-lg-5 col-12 mb-5">
-                        <a href="index.html"><img class="mb-3" src="{{ asset('/assets/img/logos/logo-footer.png') }}" width="60%" alt="img"></a>
+                        <a href="/"><img class="mb-3" src="{{ asset('/assets/img/logos/logo-footer.png') }}" width="60%" alt="img"></a>
                         <div class="details">
                             <p class="text-justify" style="font-size: 14px;">Teerthanker Mahaveer University offers UGC and DEB-approved online programmes, combining academic rigour with flexibility. Pursue accredited online education with TMU Online, and start your future-ready journey today.</p>
                                 {{-- <ul class="social-media">
@@ -93,7 +93,7 @@
                     <!-- <div class="col-md-7 text-md-right align-self-center mt-md-0 mt-2">
                         <div class="widget_nav_menu">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li><a href="about.html">About Us</a></li>
                                 <li><a href="pricing.html">Our Pricing</a></li>
                                 <li><a href="blog.html">blog</a></li>

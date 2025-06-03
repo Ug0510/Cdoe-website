@@ -11,7 +11,7 @@
                 <div class="section-title mb-0 text-center">
                     <h2 class="page-title">Blog Details</h2>
                     <ul class="page-list">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li>Blog Details</li>
                     </ul>
                 </div>
