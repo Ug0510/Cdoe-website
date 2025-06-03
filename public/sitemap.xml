@@ -1,135 +1,52 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<root>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;url&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;loc&gt;https://www.tmuonline.ac.in/&lt;/loc&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;lastmod&gt;2025-01-20&lt;/lastmod&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;changefreq&gt;daily&lt;/changefreq&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;priority&gt;1.0&lt;/priority&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;/url&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;url&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;loc&gt;https://www.tmuonline.ac.in/online-mba-finance&lt;/loc&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;lastmod&gt;2025-01-20&lt;/lastmod&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;changefreq&gt;daily&lt;/changefreq&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;priority&gt;0.9&lt;/priority&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;/url&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;url&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;loc&gt;https://www.tmuonline.ac.in/online-mba-hr&lt;/loc&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;lastmod&gt;2025-01-20&lt;/lastmod&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;changefreq&gt;daily&lt;/changefreq&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;priority&gt;0.9&lt;/priority&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;/url&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;url&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;loc&gt;https://www.tmuonline.ac.in/online-mba-marketing&lt;/loc&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;lastmod&gt;2025-01-20&lt;/lastmod&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;changefreq&gt;daily&lt;/changefreq&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;priority&gt;0.9&lt;/priority&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;/url&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;url&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;loc&gt;https://www.tmuonline.ac.in/admissions-rules&lt;/loc&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;lastmod&gt;2025-01-20&lt;/lastmod&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;changefreq&gt;daily&lt;/changefreq&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;priority&gt;0.8&lt;/priority&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;/url&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;url&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;loc&gt;https://www.tmuonline.ac.in/how-to-apply&lt;/loc&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;lastmod&gt;2025-01-20&lt;/lastmod&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;changefreq&gt;daily&lt;/changefreq&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;priority&gt;0.8&lt;/priority&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;/url&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;url&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;loc&gt;https://www.tmuonline.ac.in/facilities&lt;/loc&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;lastmod&gt;2025-01-20&lt;/lastmod&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;changefreq&gt;daily&lt;/changefreq&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;priority&gt;0.8&lt;/priority&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;/url&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-  <row>
-    <_xml_version_1_0_encoding_UTF_8_>&lt;/urlset&gt;</_xml_version_1_0_encoding_UTF_8_>
-  </row>
-</root>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.tmuonline.ac.in/</loc>
+  <lastmod>2025-06-03T08:52:46+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.tmuonline.ac.in/online-mba-finance</loc>
+  <lastmod>2025-06-03T08:52:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.tmuonline.ac.in/online-mba-hr</loc>
+  <lastmod>2025-06-03T08:52:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.tmuonline.ac.in/online-mba-marketing</loc>
+  <lastmod>2025-06-03T08:52:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.tmuonline.ac.in/online-mba-international-business</loc>
+  <lastmod>2025-06-03T08:52:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.tmuonline.ac.in/admissions-rules</loc>
+  <lastmod>2025-06-03T08:52:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.tmuonline.ac.in/how-to-apply</loc>
+  <lastmod>2025-06-03T08:52:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.tmuonline.ac.in/facilities</loc>
+  <lastmod>2025-06-03T08:52:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
