@@ -193,87 +193,125 @@
     <img src="{{ asset('/assets/img/other/accred1.png')}}" alt="" class="w-75 mx-auto my-4 d-none d-lg-block">
 
 
-    <!-- course area start -->
-<section class="specializations-section">
+    <!-- You'll need to include Swiper.js in your project. Add this to your <head> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Course Section Start -->
+<section class="featured-courses py-5">
     <div class="container">
 
       <!-- Section Header -->
-      <div class="specializations-header">
-        <span class="pre-title">EXPLORE OUR SPECIALIZED</span>
-        <h2 class="title">BCA (HONS / HONS WITH RESEARCH)</h2>
+      <div class="section-title text-center mb-5">
+        <span class="pre-title-fc">EXPLORE OUR SPECIALIZED</span>
+        <h2 class="title-fc">MBA Specialisations</h2>
+        <p class="section-subtitle-fc">Choose a specialisation that aligns with your career aspirations.</p>
       </div>
 
-      <!-- Responsive Course Grid -->
-      <div class="row g-4 justify-content-center">
+      <!-- Swiper Slider Container -->
+      <div class="swiper course-slider">
+        <div class="swiper-wrapper">
 
-        <!-- Card 1: Web Applications -->
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <a href="#web-apps" class="course-item">
-            <div class="course-item__image-wrapper">
-              <img src="https://i.imgur.com/k6Fk2sN.png" alt="Woman working on a tablet with UI overlays" class="course-item__image">
+          <!-- Slide 1: Finance -->
+          <div class="swiper-slide h-auto">
+            <div class="course-card-fc">
+              <div class="course-card-fc-img-container">
+                <img src="{{ asset('/assets/img/programmes/m1.webp')}}" alt="MBA in Finance" class="course-card-fc-img" />
+              </div>
+              <div class="course-card-fc-body">
+                <h3 class="course-card-fc-title">MBA in Finance</h3>
+                <p class="course-card-fc-text">Gain knowledge in financial management, investment strategies, and corporate finance.</p>
+              </div>
             </div>
-            <div class="course-item__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </div>
+
+          <!-- Slide 2: Human Resource Management -->
+          <div class="swiper-slide h-auto">
+            <div class="course-card-fc">
+              <div class="course-card-fc-img-container">
+                <img src="{{ asset('/assets/img/programmes/m2.webp')}}" alt="MBA in Human Resource Management" class="course-card-fc-img" />
+              </div>
+              <div class="course-card-fc-body">
+                <h3 class="course-card-fc-title">MBA in Human Resource Management</h3>
+                <p class="course-card-fc-text">Equip yourself with skills in talent acquisition, employee relations, and strategic HR planning.</p>
+              </div>
             </div>
-            <div class="course-item__content">
-              <h3 class="course-item__title">BCA (Hons.) in Web Applications</h3>
-              <p class="course-item__description">Design and develop responsive, user-friendly web applications.</p>
+          </div>
+
+          <!-- Slide 3: Marketing -->
+          <div class="swiper-slide h-auto">
+            <div class="course-card-fc">
+              <div class="course-card-fc-img-container">
+                <img src="{{ asset('/assets/img/programmes/m3.webp')}}" alt="MBA in Marketing" class="course-card-fc-img" />
+              </div>
+              <div class="course-card-fc-body">
+                <h3 class="course-card-fc-title">MBA in Marketing</h3>
+                <p class="course-card-fc-text">Master modern marketing strategies, digital marketing, consumer behavior, and brand management.</p>
+              </div>
             </div>
-          </a>
+          </div>
+
+          <!-- Slide 4: International Business -->
+          <div class="swiper-slide h-auto">
+            <div class="course-card-fc">
+              <div class="course-card-fc-img-container">
+                <img alt="MBA in International Business" class="course-card-fc-img" src="https://internationalbusinessguide.org/wp-content/uploads/2018/10/mbainbizcareer.jpg?1748933042" style="object-fit: cover; object-position: top;">
+              </div>
+              <div class="course-card-fc-body">
+                <h3 class="course-card-fc-title">MBA in International Business</h3>
+                <p class="course-card-fc-text">Gain insights into global markets, trade, and cross-cultural management for an international stage.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more slides here as needed -->
+
         </div>
 
-        <!-- Card 2: Software Engineering -->
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <a href="#software-eng" class="course-item">
-            <div class="course-item__image-wrapper">
-              <img src="https://i.imgur.com/kS9Yc2T.png" alt="Developer coding with multiple monitors" class="course-item__image">
-            </div>
-            <div class="course-item__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-            </div>
-            <div class="course-item__content">
-              <h3 class="course-item__title">BCA (Hons.) in Software Engineering and Quality Testing</h3>
-              <p class="course-item__description">Focus on software development life cycle and rigorous testing methods.</p>
-            </div>
-          </a>
-        </div>
-
-        <!-- Card 3: Cloud Computing & IoT -->
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <a href="#cloud-iot" class="course-item">
-            <div class="course-item__image-wrapper">
-              <img src="https://i.imgur.com/h5TzY0b.png" alt="Cloud computing and IoT network visualization" class="course-item__image">
-            </div>
-            <div class="course-item__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-            </div>
-            <div class="course-item__content">
-              <h3 class="course-item__title">BCA (Hons.) in Cloud Computing and IoT</h3>
-              <p class="course-item__description">Combine cloud architecture with IoT technologies for smart applications.</p>
-            </div>
-          </a>
-        </div>
-
-        <!-- Card 4: Digital Marketing -->
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <a href="#digital-marketing" class="course-item">
-            <div class="course-item__image-wrapper">
-              <img src="https://i.imgur.com/7bQyD5u.png" alt="Man analyzing marketing data on a phone" class="course-item__image">
-            </div>
-            <div class="course-item__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-            </div>
-            <div class="course-item__content">
-              <h3 class="course-item__title">BCA (Hons.) in Digital Marketing</h3>
-              <p class="course-item__description">Learn digital strategies including SEO, PPC, and social media marketing.</p>
-            </div>
-          </a>
-        </div>
-
+        <!-- Slider Navigation Buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
+
     </div>
 </section>
-<!-- course area End -->
+<!-- Course Section End -->
+
+<!-- You'll need to include the Swiper.js script. Add this before your closing </body> tag -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const swiper = new Swiper('.course-slider', {
+        // How many slides to show
+        slidesPerView: 1,
+        // Space between slides
+        spaceBetween: 24,
+        
+        // Make the slider continuous
+        loop: true,
+  
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+  
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 768px (tablets)
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 24
+          },
+          // when window width is >= 992px (desktops)
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          }
+        }
+      });
+    });
+  </script>
 
     <div class="container">
         <div class="row justify-content-center">
