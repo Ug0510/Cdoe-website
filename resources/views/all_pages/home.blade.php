@@ -193,125 +193,207 @@
     <img src="{{ asset('/assets/img/other/accred1.png')}}" alt="" class="w-75 mx-auto my-4 d-none d-lg-block">
 
 
-    <!-- You'll need to include Swiper.js in your project. Add this to your <head> -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-<!-- Course Section Start -->
-<section class="featured-courses py-5">
+    <!-- course area start -->
+<section class="specialized-courses py-5">
     <div class="container">
 
-      <!-- Section Header -->
-      <div class="section-title text-center mb-5">
-        <span class="pre-title-fc">EXPLORE OUR SPECIALIZED</span>
-        <h2 class="title-fc">MBA Specialisations</h2>
-        <p class="section-subtitle-fc">Choose a specialisation that aligns with your career aspirations.</p>
-      </div>
-
-      <!-- Swiper Slider Container -->
-      <div class="swiper course-slider">
-        <div class="swiper-wrapper">
-
-          <!-- Slide 1: Finance -->
-          <div class="swiper-slide h-auto">
-            <div class="course-card-fc">
-              <div class="course-card-fc-img-container">
-                <img src="{{ asset('/assets/img/programmes/m1.webp')}}" alt="MBA in Finance" class="course-card-fc-img" />
-              </div>
-              <div class="course-card-fc-body">
-                <h3 class="course-card-fc-title">MBA in Finance</h3>
-                <p class="course-card-fc-text">Gain knowledge in financial management, investment strategies, and corporate finance.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2: Human Resource Management -->
-          <div class="swiper-slide h-auto">
-            <div class="course-card-fc">
-              <div class="course-card-fc-img-container">
-                <img src="{{ asset('/assets/img/programmes/m2.webp')}}" alt="MBA in Human Resource Management" class="course-card-fc-img" />
-              </div>
-              <div class="course-card-fc-body">
-                <h3 class="course-card-fc-title">MBA in Human Resource Management</h3>
-                <p class="course-card-fc-text">Equip yourself with skills in talent acquisition, employee relations, and strategic HR planning.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3: Marketing -->
-          <div class="swiper-slide h-auto">
-            <div class="course-card-fc">
-              <div class="course-card-fc-img-container">
-                <img src="{{ asset('/assets/img/programmes/m3.webp')}}" alt="MBA in Marketing" class="course-card-fc-img" />
-              </div>
-              <div class="course-card-fc-body">
-                <h3 class="course-card-fc-title">MBA in Marketing</h3>
-                <p class="course-card-fc-text">Master modern marketing strategies, digital marketing, consumer behavior, and brand management.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 4: International Business -->
-          <div class="swiper-slide h-auto">
-            <div class="course-card-fc">
-              <div class="course-card-fc-img-container">
-                <img alt="MBA in International Business" class="course-card-fc-img" src="https://internationalbusinessguide.org/wp-content/uploads/2018/10/mbainbizcareer.jpg?1748933042" style="object-fit: cover; object-position: top;">
-              </div>
-              <div class="course-card-fc-body">
-                <h3 class="course-card-fc-title">MBA in International Business</h3>
-                <p class="course-card-fc-text">Gain insights into global markets, trade, and cross-cultural management for an international stage.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Add more slides here as needed -->
-
+        <!-- Section Header -->
+        <div class="section-title text-center mb-5">
+            <span class="pre-title">EXPLORE OUR SPECIALIZED</span>
+            <h2 class="title">BCA (HONS / HONS WITH RESEARCH)</h2>
         </div>
 
-        <!-- Slider Navigation Buttons -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
+        <!-- 
+            DESKTOP & TABLET CAROUSEL VIEW 
+            (Visible on screens > 991px) 
+        -->
+        <div class="courses-carousel-view">
+            <!-- Swiper -->
+            <div class="swiper specializedCoursesSwiper">
+                <div class="swiper-wrapper">
+
+                    <!-- Slide 1: Artificial Intelligence -->
+                    <div class="swiper-slide d-flex align-items-stretch">
+                        <div class="course-card-fc">
+                            <div class="course-card-fc-img-container">
+                                <img src="https://i.imgur.com/kPOnSJP.png" alt="BCA in Artificial Intelligence" class="course-card-fc-img" />
+                            </div>
+                            <div class="course-card-fc-body">
+                                <h3 class="course-card-fc-title">BCA (Hons.) in Artificial Intelligence</h3>
+                                <p class="course-card-fc-text">Learn to build intelligent systems using AI algorithms and models.</p>
+                                <div class="course-card-fc-meta">
+                                    <span class="duration-tag-fc">Duration: <strong>3 Years</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Data Analytics -->
+                    <div class="swiper-slide d-flex align-items-stretch">
+                        <div class="course-card-fc">
+                            <div class="course-card-fc-img-container">
+                                <img src="https://i.imgur.com/Jv9mJz4.png" alt="BCA in Data Analytics" class="course-card-fc-img" />
+                            </div>
+                            <div class="course-card-fc-body">
+                                <h3 class="course-card-fc-title">BCA (Hons.) in Data Analytics</h3>
+                                <p class="course-card-fc-text">Master data processing and visualization to support decision-making.</p>
+                                <div class="course-card-fc-meta">
+                                    <span class="duration-tag-fc">Duration: <strong>3 Years</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Cyber Security -->
+                    <div class="swiper-slide d-flex align-items-stretch">
+                        <div class="course-card-fc">
+                            <div class="course-card-fc-img-container">
+                                <img src="https://i.imgur.com/j1v2XhV.png" alt="BCA in Cyber Security" class="course-card-fc-img" />
+                            </div>
+                            <div class="course-card-fc-body">
+                                <h3 class="course-card-fc-title">BCA (Hons.) in Cyber Security</h3>
+                                <p class="course-card-fc-text">Gain skills to protect systems against digital threats and vulnerabilities.</p>
+                                <div class="course-card-fc-meta">
+                                    <span class="duration-tag-fc">Duration: <strong>3 Years</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4: Full Stack -->
+                    <div class="swiper-slide d-flex align-items-stretch">
+                        <div class="course-card-fc">
+                            <div class="course-card-fc-img-container">
+                                <img src="https://i.imgur.com/3fM6ZfI.png" alt="BCA in Full Stack" class="course-card-fc-img" />
+                            </div>
+                            <div class="course-card-fc-body">
+                                <h3 class="course-card-fc-title">BCA (Hons.) in Full Stack</h3>
+                                <p class="course-card-fc-text">Develop both front-end and back-end applications using modern frameworks.</p>
+                                <div class="course-card-fc-meta">
+                                    <span class="duration-tag-fc">Duration: <strong>3 Years</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 5: Web Applications -->
+                    <div class="swiper-slide d-flex align-items-stretch">
+                        <div class="course-card-fc">
+                            <div class="course-card-fc-img-container">
+                                <!-- You can add a 5th image here -->
+                                <img src="https://i.imgur.com/Jv9mJz4.png" alt="BCA in Web Applications" class="course-card-fc-img" />
+                            </div>
+                            <div class="course-card-fc-body">
+                                <h3 class="course-card-fc-title">BCA (Hons.) in Web Applications</h3>
+                                <p class="course-card-fc-text">Design and develop responsive, user-friendly web applications.</p>
+                                <div class="course-card-fc-meta">
+                                    <span class="duration-tag-fc">Duration: <strong>3 Years</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Custom Navigation Buttons - Now positioned correctly -->
+            <div class="swiper-nav-wrapper">
+                <div class="swiper-button-prev swiper-button-prev-custom"></div>
+                <div class="swiper-button-next swiper-button-next-custom"></div>
+            </div>
+        </div>
+
+
+        <!-- 
+            MOBILE LIST VIEW 
+            (Visible on screens <= 991px)
+        -->
+        <div class="courses-list-view">
+            
+            <!-- Item 1: Artificial Intelligence -->
+             <a href="#" class="course-list-item">
+                <div class="course-list-item-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+                <div class="course-list-item-content">
+                    <h3 class="course-list-item-title">BCA (Hons.) in Artificial Intelligence</h3>
+                    <p class="course-list-item-desc">Learn to build intelligent systems using AI algorithms and models.</p>
+                </div>
+            </a>
+            
+            <!-- Item 2: Data Analytics -->
+             <a href="#" class="course-list-item">
+                <div class="course-list-item-icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+                <div class="course-list-item-content">
+                    <h3 class="course-list-item-title">BCA (Hons.) in Data Analytics</h3>
+                    <p class="course-list-item-desc">Master data processing and visualization to support decision-making.</p>
+                </div>
+            </a>
+
+            <!-- Item 3: Cyber Security -->
+             <a href="#" class="course-list-item">
+                <div class="course-list-item-icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+                <div class="course-list-item-content">
+                    <h3 class="course-list-item-title">BCA (Hons.) in Cyber Security</h3>
+                    <p class="course-list-item-desc">Gain skills to protect systems against digital threats and vulnerabilities.</p>
+                </div>
+            </a>
+            
+            <!-- Item 4: Full Stack -->
+             <a href="#" class="course-list-item">
+                <div class="course-list-item-icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+                <div class="course-list-item-content">
+                    <h3 class="course-list-item-title">BCA (Hons.) in Full Stack</h3>
+                    <p class="course-list-item-desc">Develop both front-end and back-end applications using modern frameworks.</p>
+                </div>
+            </a>
+            
+            <!-- Item 5: Web Applications -->
+             <a href="#" class="course-list-item">
+                <div class="course-list-item-icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+                <div class="course-list-item-content">
+                    <h3 class="course-list-item-title">BCA (Hons.) in Web Applications</h3>
+                    <p class="course-list-item-desc">Design and develop responsive, user-friendly web applications.</p>
+                </div>
+            </a>
+            
+        </div>
 
     </div>
 </section>
-<!-- Course Section End -->
+<!-- course area End -->
 
-<!-- You'll need to include the Swiper.js script. Add this before your closing </body> tag -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const swiper = new Swiper('.course-slider', {
-        // How many slides to show
-        slidesPerView: 1,
-        // Space between slides
-        spaceBetween: 24,
-        
-        // Make the slider continuous
-        loop: true,
-  
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+  document.addEventListener("DOMContentLoaded", function() {
+    const swiper = new Swiper('.specializedCoursesSwiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20
         },
-  
-        // Responsive breakpoints
-        breakpoints: {
-          // when window width is >= 768px (tablets)
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 24
-          },
-          // when window width is >= 992px (desktops)
-          992: {
-            slidesPerView: 3,
-            spaceBetween: 30
-          }
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 30
         }
-      });
+      },
+      navigation: {
+        nextEl: '.swiper-button-next-custom',
+        prevEl: '.swiper-button-prev-custom',
+      },
     });
-  </script>
+  });
+</script>
 
     <div class="container">
         <div class="row justify-content-center">

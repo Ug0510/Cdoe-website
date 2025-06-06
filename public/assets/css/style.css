@@ -5497,34 +5497,35 @@ ul {
   background-color: rgba(255, 255, 255, 1);
 }
 /*--------------------------------------------------------------
-# Featured Courses Slider Section
+# Specialized Courses Section
 --------------------------------------------------------------*/
-.featured-courses {
-  background-color: #f8f9fa;
+.specialized-courses {
+  background-color: #ffffff;
+  padding: 80px 0;
 }
 
-/* --- Section Header --- */
-.section-title .pre-title-fc {
-  color: #FF7900;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-size: 1rem;
+.specialized-courses .section-title {
+  margin-bottom: 40px !important;
 }
-.section-title .title-fc {
+
+.specialized-courses .section-title .pre-title {
+  color: #f28b25; /* Exact orange from image */
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.specialized-courses .section-title .title {
   font-size: 2.8rem;
   font-weight: 700;
-  color: #1a237e; /* Deep Blue */
-  margin-top: 5px;
-}
-.section-title .section-subtitle-fc {
-  font-size: 1.1rem;
-  color: #555;
-  max-width: 600px;
-  margin: 10px auto 0;
+  color: #0d2352; /* Exact blue from image */
+  line-height: 1.2;
 }
 
-/* --- Course Card Styling --- */
+/* === Desktop/Tablet: Card & Carousel Styles === */
 .course-card-fc {
   background: #fff;
   border-radius: 15px;
@@ -5533,12 +5534,13 @@ ul {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  height: 100%; /* Critical for same-height cards in a row */
-  border: 1px solid #e0e0e0;
+  height: 100%;
+  border: 1px solid #e9eef5;
 }
+
 .course-card-fc:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(44, 62, 80, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(13, 35, 82, 0.12);
 }
 
 .course-card-fc-img-container {
@@ -5546,14 +5548,16 @@ ul {
   height: 200px;
   overflow: hidden;
 }
+
 .course-card-fc-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
+
 .course-card-fc:hover .course-card-fc-img {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 .course-card-fc-body {
@@ -5562,51 +5566,140 @@ ul {
   flex-direction: column;
   flex-grow: 1;
 }
+
 .course-card-fc-title {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  color: #333;
-  margin-bottom: 12px;
+  color: #1c2b4d;
+  margin-bottom: 10px;
   line-height: 1.4;
-  min-height: 70px; /* Aligns titles with 1 or 2 lines */
+  min-height: 50px;
 }
+
 .course-card-fc-text {
   font-size: 0.95rem;
-  color: #6c757d;
+  color: #5a6a85;
   line-height: 1.6;
-  flex-grow: 1;
+  flex-grow: 1; /* Pushes meta down */
+  margin-bottom: 20px;
 }
 
-/* --- Swiper.js Customization --- */
-.course-slider {
-  padding: 10px 0 40px; /* Add padding for shadow and space for nav */
+.course-card-fc-meta {
+  margin-top: auto; /* Pushes this to the bottom */
 }
 
-.swiper-slide {
-  /* This class is added by Swiper.js to ensure slides have equal height */
-  height: auto; 
+.duration-tag-fc {
+  font-size: 0.85rem;
+  color: #4A5568;
+  background-color: #EDF2F7;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
 }
 
-/* Custom Navigation Buttons */
-.course-slider .swiper-button-next,
-.course-slider .swiper-button-prev {
-  background-color: #fff;
-  color: #1a237e;
-  width: 50px;
-  height: 50px;
+.duration-tag-fc strong {
+  color: #1A237E;
+  font-weight: 600;
+}
+
+/* Swiper Carousel Navigation - Correctly positioned */
+.swiper-nav-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 40px; /* Space between cards and buttons */
+}
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  position: static; /* Let it sit in the normal flow */
+  transform: none;
+  width: 44px;
+  height: 44px;
+  background-color: #0d2352;
   border-radius: 50%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.2s, color 0.2s;
-  top: 50%; /* Position vertically centered to the card */
-  transform: translateY(-70%); /* Adjust to center against the card, not the whole slider */
+  color: white;
+  transition: background-color 0.3s ease;
+  margin-top: 0; 
 }
-.course-slider .swiper-button-next:hover,
-.course-slider .swiper-button-prev:hover {
-  background-color: #1a237e;
-  color: #fff;
+
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+  background-color: #f28b25; /* Use the same brand orange */
 }
-.course-slider .swiper-button-next:after,
-.course-slider .swiper-button-prev:after {
-  font-size: 1.2rem; /* Make the arrow icon smaller */
-  font-weight: 800;
+
+.swiper-button-prev-custom::after,
+.swiper-button-next-custom::after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* === Mobile: List View Styles (Pixel-perfect to reference) === */
+.course-list-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #eaf0f6;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(225, 229, 236, 0.5);
+}
+
+.course-list-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(206, 213, 225, 0.7);
+  border-color: #f28b25;
+}
+
+.course-list-item-icon {
+  flex-shrink: 0;
+  margin-right: 15px;
+  color: #f28b25;
+}
+
+.course-list-item-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.course-list-item-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0d2352;
+  margin: 0 0 4px 0;
+}
+
+.course-list-item-desc {
+  font-size: 0.9rem;
+  color: #6c757d;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Responsive Media Queries - The Core Logic
+--------------------------------------------------------------*/
+@media (max-width: 991.98px) {
+  .courses-carousel-view {
+      display: none; /* Hide carousel on mobile */
+  }
+  .courses-list-view {
+      display: block; /* Show list on mobile */
+  }
+  .specialized-courses .section-title .title {
+      font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .courses-carousel-view {
+      display: block; /* Show carousel on desktop */
+  }
+  .courses-list-view {
+      display: none; /* Hide list on desktop */
+  }
 }
