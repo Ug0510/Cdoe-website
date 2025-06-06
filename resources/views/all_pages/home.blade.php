@@ -193,122 +193,78 @@
     <img src="{{ asset('/assets/img/other/accred1.png')}}" alt="" class="w-75 mx-auto my-4 d-none d-lg-block">
 
 
-    <!-- course area start -->
-    <section class="featured-courses py-5 pt-0">
-        <div class="container">
-          <!-- Section Header -->
-          {{-- <div class="text-center mb-4 mb-md-5">
-            <h2 class="section-title-fc">
-              Explore Our Online MBA Specialisations
-            </h2>
-            <p class="section-subtitle-fc">
-              Choose a specialisation that aligns with your career aspirations and
-              industry demands.
-            </p>
-          </div> --}}
+<!-- course area start -->
+<section class="specializations-section">
+    <div class="container">
 
-          <div class="section-title style-white text-center mt-4">
-            <h2 class="title">Explore Our Online MBA Specialisations</h2>
-            <p class="section-subtitle-fc">
-                Choose a specialisation that aligns with your career aspirations and
-                industry demands.
-              </p>
-        </div>
-  
-          <!-- Course Cards -->
-          <div class="row g-4 justify-content-center">
-            <!-- Card 1: Finance -->
-            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
-              <div class="course-card-fc">
-                <div class="course-card-fc-img-container">
-                  <img
-                    src="{{ asset('/assets/img/programmes/m1.webp')}}"
-                    alt="Online MBA in Finance Specialisation"
-                    class="course-card-fc-img"
-                  />
-                </div>
-                <div class="course-card-fc-body">
-                  <h3 class="course-card-fc-title">
-                    MBA in Finance
-                  </h3>
-                  <p class="course-card-fc-text">
-                    Gain advanced knowledge in financial management, investment
-                    strategies, and corporate finance to excel in the dynamic
-                    world of finance.
-                  </p>
-                  <div class="course-card-fc-meta">
-                    <span class="duration-tag-fc"
-                      >Duration: <strong>2 Years</strong></span
-                    >
-                  </div>
-                  <!-- <a href="#finance-details" class="btn btn-primary-fc btn-sm mt-auto" aria-label="Learn more about MBA in Finance">Learn More</a> -->
-                </div>
-              </div>
-            </div>
-  
-            <!-- Card 2: Human Resource Management -->
-            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
-              <div class="course-card-fc">
-                <div class="course-card-fc-img-container">
-                  <img
-                    src="{{ asset('/assets/img/programmes/m2.webp')}}"
-                    alt="Online MBA in Human Resource Management Specialisation"
-                    class="course-card-fc-img"
-                  />
-                </div>
-                <div class="course-card-fc-body">
-                  <h3 class="course-card-fc-title">
-                    MBA in Human Resource Management
-                  </h3>
-                  <p class="course-card-fc-text">
-                    Equip yourself with essential skills in talent acquisition,
-                    employee relations, performance management, and strategic HR
-                    planning.
-                  </p>
-                  <div class="course-card-fc-meta">
-                    <span class="duration-tag-fc"
-                      >Duration: <strong>2 Years</strong></span
-                    >
-                  </div>
-                  <!-- <a href="#hr-details" class="btn btn-primary-fc btn-sm mt-auto" aria-label="Learn more about MBA in Human Resource Management">Learn More</a> -->
-                </div>
-              </div>
-            </div>
-  
-            <!-- Card 3: Marketing -->
-            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
-              <div class="course-card-fc">
-                <div class="course-card-fc-img-container">
-                  <img
-                    src="{{ asset('/assets/img/programmes/m3.webp')}}"
-                    alt="Online MBA in Marketing Specialisation"
-                    class="course-card-fc-img"
-                  />
-                </div>
-                <div class="course-card-fc-body">
-                  <h3 class="course-card-fc-title">
-                    MBA in Marketing
-                  </h3>
-                  <p class="course-card-fc-text">
-                    Master modern marketing strategies, digital marketing,
-                    consumer behavior, and brand management to lead in a
-                    competitive global market.
-                  </p>
-                  <div class="course-card-fc-meta">
-                    <span class="duration-tag-fc"
-                      >Duration: <strong>2 Years</strong></span
-                    >
-                  </div>
-                  <!-- <a href="#marketing-details" class="btn btn-primary-fc btn-sm mt-auto" aria-label="Learn more about MBA in Marketing">Learn More</a> -->
-                </div>
-              </div>
-            </div>
+      <!-- Section Header -->
+      <div class="specializations-header">
+        <span class="pre-title">EXPLORE OUR SPECIALIZED</span>
+        <h2 class="title">BCA (HONS / HONS WITH RESEARCH)</h2>
+      </div>
+
+      <!-- Specializations List -->
+      <div class="specializations-list">
+
+        <!-- Item 1: Artificial Intelligence -->
+        <a href="#artificial-intelligence" class="specialization-item">
+          <div class="specialization-item__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </div>
-        </div>
-      </section>
-    <!-- course area End -->
+          <div class="specialization-item__content">
+            <h3 class="specialization-item__title">BCA (Hons.) in Artificial Intelligence</h3>
+            <p class="specialization-item__description">Learn to build intelligent systems using AI algorithms and models.</p>
+          </div>
+        </a>
 
+        <!-- Item 2: Data Analytics -->
+        <a href="#data-analytics" class="specialization-item">
+          <div class="specialization-item__icon">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+          <div class="specialization-item__content">
+            <h3 class="specialization-item__title">BCA (Hons.) in Data Analytics</h3>
+            <p class="specialization-item__description">Master data processing and visualization to support decision-making.</p>
+          </div>
+        </a>
 
+        <!-- Item 3: Cyber Security -->
+        <a href="#cyber-security" class="specialization-item">
+          <div class="specialization-item__icon">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+          <div class="specialization-item__content">
+            <h3 class="specialization-item__title">BCA (Hons.) in Cyber Security</h3>
+            <p class="specialization-item__description">Gain skills to protect systems against digital threats and vulnerabilities.</p>
+          </div>
+        </a>
+
+        <!-- Item 4: Full Stack -->
+        <a href="#full-stack" class="specialization-item">
+          <div class="specialization-item__icon">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+          <div class="specialization-item__content">
+            <h3 class="specialization-item__title">BCA (Hons.) in Full Stack</h3>
+            <p class="specialization-item__description">Develop both front-end and back-end applications using modern frameworks.</p>
+          </div>
+        </a>
+        
+        <!-- Item 5: Web Applications -->
+        <a href="#web-applications" class="specialization-item">
+          <div class="specialization-item__icon">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+          <div class="specialization-item__content">
+            <h3 class="specialization-item__title">BCA (Hons.) in Web Applications</h3>
+            <p class="specialization-item__description">Design and develop responsive, user-friendly web applications.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+</section>
+<!-- course area End -->
 
     <div class="container">
         <div class="row justify-content-center">

@@ -5496,120 +5496,129 @@ ul {
 .lightbox-close:hover {
   background-color: rgba(255, 255, 255, 1);
 }
-
 /*--------------------------------------------------------------
-# Featured Courses Section (Improved)
+# Specializations Section
+# Design: A clean, scannable list for focused choices.
 --------------------------------------------------------------*/
-.featured-courses {
-  background-color: #f8f9fa; /* A very light grey, or keep white if preferred */
-  padding-top: 60px !important; /* Override default pt-0 if needed */
-  padding-bottom: 60px;
+:root {
+  --primary-color: #0d47a1; /* A deep, professional blue */
+  --accent-color: #FF7900;  /* A vibrant, energetic orange */
+  --text-dark: #1e293b;      /* For titles and important text */
+  --text-light: #64748b;     /* For descriptions and secondary text */
+  --border-color: #e2e8f0;   /* A light, neutral border */
+  --background-light: #f8fafc; /* A very subtle off-white for the section */
 }
 
-.section-title-fc {
-  font-size: 2.8rem; /* Or match your h2 style */
-  font-weight: 700;
-  color: #1a237e; /* A deep blue, adjust to your brand's primary blue */
-  margin-bottom: 15px;
-  position: relative;
-  display: inline-block; /* For the underline effect */
+.specializations-section {
+  background-color: #fff;
+  padding: 80px 0;
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif; /* Recommended: Use a modern, clean font */
 }
 
-/* Optional: Add an underline accent to the title */
-.section-title-fc::after {
-  content: '';
+/* --- Section Header --- */
+.specializations-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.specializations-header .pre-title {
+  color: var(--accent-color);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   display: block;
-  width: 80px;
-  height: 4px;
-  background: #FF7900; /* Your brand orange */
-  margin: 10px auto 0;
-  border-radius: 2px;
+  margin-bottom: 8px;
 }
 
-
-.section-subtitle-fc {
-  font-size: 1.1rem;
-  color: #555;
-  /* max-width: 700px; */
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 40px; /* Increased space before cards */
-  line-height: 1.6;
+.specializations-header .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
 }
 
-.course-card-fc {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column; /* Ensures body content flows vertically */
-  height: 100%; /* Works with d-flex align-items-stretch on parent col */
-  border: 1px solid #e0e0e0; /* Subtle border */
-}
-
-.course-card-fc:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(44, 62, 80, 0.15); /* Deeper shadow on hover */
-}
-
-.course-card-fc-img-container {
-  width: 100%;
-  height: 220px; /* Consistent image height */
-  overflow: hidden; /* Crucial for object-fit and zoom effect */
-}
-
-.course-card-fc-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures image covers the container, may crop */
-  transition: transform 0.4s ease;
-}
-
-.course-card-fc:hover .course-card-fc-img {
-  transform: scale(1.08); /* Subtle zoom effect on image on card hover */
-}
-
-.course-card-fc-body {
-  padding: 20px 25px 25px; /* More padding at bottom */
+/* --- Specializations List --- */
+.specializations-list {
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Allows this part to grow and push button down */
+  gap: 20px;
+  max-width: 850px;
+  margin: 0 auto;
 }
 
-.course-card-fc-title {
-  font-size: 1.25rem; /* Slightly larger, adjust as needed */
+.specialization-item {
+  display: flex;
+  align-items: center;
+  padding: 24px 30px;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+.specialization-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(30, 41, 59, 0.08);
+  border-color: var(--accent-color);
+}
+
+.specialization-item__icon {
+  flex-shrink: 0;
+  margin-right: 24px;
+  transition: transform 0.2s ease-out;
+}
+
+.specialization-item:hover .specialization-item__icon {
+    transform: translateX(4px);
+}
+
+.specialization-item__icon svg {
+  stroke: var(--accent-color);
+  width: 28px;
+  height: 28px;
+  stroke-width: 2.5;
+}
+
+.specialization-item__content {
+  text-align: left;
+}
+
+.specialization-item__title {
+  font-size: 1.25rem;
   font-weight: 600;
-  color: #333; /* Darker for better readability */
-  margin-bottom: 12px;
-  line-height: 1.4;
-  min-height: 50px; /* Helps align titles if they vary in line count */
+  color: var(--text-dark);
+  margin: 0 0 5px 0;
+  transition: color 0.2s ease-out;
 }
 
-.course-card-fc-text {
-  font-size: 0.9rem;
-  color: #6c757d;
-  margin-bottom: 15px;
+.specialization-item:hover .specialization-item__title {
+  color: var(--accent-color);
+}
+
+.specialization-item__description {
+  font-size: 1rem;
+  color: var(--text-light);
   line-height: 1.6;
-  flex-grow: 1; /* Pushes meta and button down */
+  margin: 0;
 }
 
-.course-card-fc-meta {
-  margin-bottom: 20px;
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .specializations-section {
+    padding: 60px 0;
+  }
+  .specializations-header .title {
+    font-size: 2rem;
+  }
+  .specialization-item {
+    padding: 20px;
+  }
+  .specialization-item__title {
+    font-size: 1.1rem;
+  }
+  .specialization-item__description {
+    font-size: 0.9rem;
+  }
 }
-
-.duration-tag-fc {
-  font-size: 0.85rem;
-  color: #4A5568; /* Slightly darker grey */
-  background-color: #EDF2F7; /* Very light blue/grey */
-  padding: 6px 12px;
-  border-radius: 20px; /* Pill shape */
-  display: inline-block;
-}
-
-.duration-tag-fc strong {
-  color: #1A237E; /* Brand's primary blue for emphasis */
-  font-weight: 600;
-}
-
