@@ -193,7 +193,7 @@
     <img src="{{ asset('/assets/img/other/accred1.png')}}" alt="" class="w-75 mx-auto my-4 d-none d-lg-block">
 
 
-<!-- course area start -->
+    <!-- course area start -->
 <section class="specializations-section">
     <div class="container">
 
@@ -203,63 +203,72 @@
         <h2 class="title">BCA (HONS / HONS WITH RESEARCH)</h2>
       </div>
 
-      <!-- Specializations List -->
-      <div class="specializations-list">
+      <!-- Responsive Course Grid -->
+      <div class="row g-4 justify-content-center">
 
-        <!-- Item 1: Artificial Intelligence -->
-        <a href="#artificial-intelligence" class="specialization-item">
-          <div class="specialization-item__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </div>
-          <div class="specialization-item__content">
-            <h3 class="specialization-item__title">BCA (Hons.) in Artificial Intelligence</h3>
-            <p class="specialization-item__description">Learn to build intelligent systems using AI algorithms and models.</p>
-          </div>
-        </a>
+        <!-- Card 1: Web Applications -->
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <a href="#web-apps" class="course-item">
+            <div class="course-item__image-wrapper">
+              <img src="https://i.imgur.com/k6Fk2sN.png" alt="Woman working on a tablet with UI overlays" class="course-item__image">
+            </div>
+            <div class="course-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </div>
+            <div class="course-item__content">
+              <h3 class="course-item__title">BCA (Hons.) in Web Applications</h3>
+              <p class="course-item__description">Design and develop responsive, user-friendly web applications.</p>
+            </div>
+          </a>
+        </div>
 
-        <!-- Item 2: Data Analytics -->
-        <a href="#data-analytics" class="specialization-item">
-          <div class="specialization-item__icon">
-             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </div>
-          <div class="specialization-item__content">
-            <h3 class="specialization-item__title">BCA (Hons.) in Data Analytics</h3>
-            <p class="specialization-item__description">Master data processing and visualization to support decision-making.</p>
-          </div>
-        </a>
+        <!-- Card 2: Software Engineering -->
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <a href="#software-eng" class="course-item">
+            <div class="course-item__image-wrapper">
+              <img src="https://i.imgur.com/kS9Yc2T.png" alt="Developer coding with multiple monitors" class="course-item__image">
+            </div>
+            <div class="course-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </div>
+            <div class="course-item__content">
+              <h3 class="course-item__title">BCA (Hons.) in Software Engineering and Quality Testing</h3>
+              <p class="course-item__description">Focus on software development life cycle and rigorous testing methods.</p>
+            </div>
+          </a>
+        </div>
 
-        <!-- Item 3: Cyber Security -->
-        <a href="#cyber-security" class="specialization-item">
-          <div class="specialization-item__icon">
-             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </div>
-          <div class="specialization-item__content">
-            <h3 class="specialization-item__title">BCA (Hons.) in Cyber Security</h3>
-            <p class="specialization-item__description">Gain skills to protect systems against digital threats and vulnerabilities.</p>
-          </div>
-        </a>
+        <!-- Card 3: Cloud Computing & IoT -->
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <a href="#cloud-iot" class="course-item">
+            <div class="course-item__image-wrapper">
+              <img src="https://i.imgur.com/h5TzY0b.png" alt="Cloud computing and IoT network visualization" class="course-item__image">
+            </div>
+            <div class="course-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </div>
+            <div class="course-item__content">
+              <h3 class="course-item__title">BCA (Hons.) in Cloud Computing and IoT</h3>
+              <p class="course-item__description">Combine cloud architecture with IoT technologies for smart applications.</p>
+            </div>
+          </a>
+        </div>
 
-        <!-- Item 4: Full Stack -->
-        <a href="#full-stack" class="specialization-item">
-          <div class="specialization-item__icon">
-             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </div>
-          <div class="specialization-item__content">
-            <h3 class="specialization-item__title">BCA (Hons.) in Full Stack</h3>
-            <p class="specialization-item__description">Develop both front-end and back-end applications using modern frameworks.</p>
-          </div>
-        </a>
-        
-        <!-- Item 5: Web Applications -->
-        <a href="#web-applications" class="specialization-item">
-          <div class="specialization-item__icon">
-             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </div>
-          <div class="specialization-item__content">
-            <h3 class="specialization-item__title">BCA (Hons.) in Web Applications</h3>
-            <p class="specialization-item__description">Design and develop responsive, user-friendly web applications.</p>
-          </div>
-        </a>
+        <!-- Card 4: Digital Marketing -->
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+          <a href="#digital-marketing" class="course-item">
+            <div class="course-item__image-wrapper">
+              <img src="https://i.imgur.com/7bQyD5u.png" alt="Man analyzing marketing data on a phone" class="course-item__image">
+            </div>
+            <div class="course-item__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </div>
+            <div class="course-item__content">
+              <h3 class="course-item__title">BCA (Hons.) in Digital Marketing</h3>
+              <p class="course-item__description">Learn digital strategies including SEO, PPC, and social media marketing.</p>
+            </div>
+          </a>
+        </div>
 
       </div>
     </div>
