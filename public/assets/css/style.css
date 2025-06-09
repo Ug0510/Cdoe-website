@@ -5502,6 +5502,7 @@ ul {
 .specialized-courses {
   background-color: #ffffff;
   padding: 80px 0;
+  position: relative;
 }
 
 .specialized-courses .section-title {
