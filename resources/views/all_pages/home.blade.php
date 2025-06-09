@@ -199,8 +199,8 @@
 
         <!-- Section Header -->
         <div class="section-title text-center mb-5">
-            <span class="pre-title">EXPLORE OUR SPECIALIZED</span>
-            <h2 class="title">BCA (HONS / HONS WITH RESEARCH)</h2>
+            <span class="pre-title">Explore Our Specialisations</span>
+            <h2 class="title">MBA Online</h2>
         </div>
 
         <!-- 
@@ -216,13 +216,13 @@
                     <div class="swiper-slide d-flex align-items-stretch">
                         <div class="course-card-fc">
                             <div class="course-card-fc-img-container">
-                                <img src="https://i.imgur.com/kPOnSJP.png" alt="BCA in Artificial Intelligence" class="course-card-fc-img" />
+                                <img src="{{ asset('/assets/img/programmes/m1.webp')}}" alt="Online MBA in Finance Specialisation" class="course-card-fc-img" />
                             </div>
                             <div class="course-card-fc-body">
-                                <h3 class="course-card-fc-title">BCA (Hons.) in Artificial Intelligence</h3>
-                                <p class="course-card-fc-text">Learn to build intelligent systems using AI algorithms and models.</p>
+                                <h3 class="course-card-fc-title">MBA in Finance</h3>
+                                <p class="course-card-fc-text">Gain advanced knowledge in financial management, investmentMore actions strategies, and corporate finance to excel in the dynamic world of finance.</p>
                                 <div class="course-card-fc-meta">
-                                    <span class="duration-tag-fc">Duration: <strong>3 Years</strong></span>
+                                    <span class="duration-tag-fc">Duration: <strong>2 Years</strong></span>
                                 </div>
                             </div>
                         </div>
@@ -232,13 +232,13 @@
                     <div class="swiper-slide d-flex align-items-stretch">
                         <div class="course-card-fc">
                             <div class="course-card-fc-img-container">
-                                <img src="https://i.imgur.com/Jv9mJz4.png" alt="BCA in Data Analytics" class="course-card-fc-img" />
+                                <img src="{{ asset('/assets/img/programmes/m2.webp')}}" alt="Online MBA in Human Resource Management Specialisation" class="course-card-fc-img" />
                             </div>
                             <div class="course-card-fc-body">
-                                <h3 class="course-card-fc-title">BCA (Hons.) in Data Analytics</h3>
-                                <p class="course-card-fc-text">Master data processing and visualization to support decision-making.</p>
+                                <h3 class="course-card-fc-title">MBA in Human Resource Management</h3>
+                                <p class="course-card-fc-text">Equip yourself with essential skills in talent acquisition,More actions employee relations, performance management, and strategic HR planning.</p>
                                 <div class="course-card-fc-meta">
-                                    <span class="duration-tag-fc">Duration: <strong>3 Years</strong></span>
+                                    <span class="duration-tag-fc">Duration: <strong>2 Years</strong></span>
                                 </div>
                             </div>
                         </div>
@@ -248,13 +248,13 @@
                     <div class="swiper-slide d-flex align-items-stretch">
                         <div class="course-card-fc">
                             <div class="course-card-fc-img-container">
-                                <img src="https://i.imgur.com/j1v2XhV.png" alt="BCA in Cyber Security" class="course-card-fc-img" />
+                                <img src="{{ asset('/assets/img/programmes/m3.webp')}}" alt="Online MBA in Marketing Specialisation" class="course-card-fc-img" />
                             </div>
                             <div class="course-card-fc-body">
-                                <h3 class="course-card-fc-title">BCA (Hons.) in Cyber Security</h3>
-                                <p class="course-card-fc-text">Gain skills to protect systems against digital threats and vulnerabilities.</p>
+                                <h3 class="course-card-fc-title">MBA in Marketing</h3>
+                                <p class="course-card-fc-text">Master modern marketing strategies, digital marketing,More actions consumer behavior, and brand management to lead in a competitive global market.</p>
                                 <div class="course-card-fc-meta">
-                                    <span class="duration-tag-fc">Duration: <strong>3 Years</strong></span>
+                                    <span class="duration-tag-fc">Duration: <strong>2 Years</strong></span>
                                 </div>
                             </div>
                         </div>
@@ -264,30 +264,13 @@
                     <div class="swiper-slide d-flex align-items-stretch">
                         <div class="course-card-fc">
                             <div class="course-card-fc-img-container">
-                                <img src="https://i.imgur.com/3fM6ZfI.png" alt="BCA in Full Stack" class="course-card-fc-img" />
+                                <img src="{{ asset('/assets/img/programmes/m4.jpg')}}" alt="MBA in International Business" class="course-card-fc-img" />
                             </div>
                             <div class="course-card-fc-body">
-                                <h3 class="course-card-fc-title">BCA (Hons.) in Full Stack</h3>
-                                <p class="course-card-fc-text">Develop both front-end and back-end applications using modern frameworks.</p>
+                                <h3 class="course-card-fc-title">MBA in International Business</h3>
+                                <p class="course-card-fc-text">Gain global leadership skills, master international trade, and advance your career in multinational companies.</p>
                                 <div class="course-card-fc-meta">
-                                    <span class="duration-tag-fc">Duration: <strong>3 Years</strong></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 5: Web Applications -->
-                    <div class="swiper-slide d-flex align-items-stretch">
-                        <div class="course-card-fc">
-                            <div class="course-card-fc-img-container">
-                                <!-- You can add a 5th image here -->
-                                <img src="https://i.imgur.com/Jv9mJz4.png" alt="BCA in Web Applications" class="course-card-fc-img" />
-                            </div>
-                            <div class="course-card-fc-body">
-                                <h3 class="course-card-fc-title">BCA (Hons.) in Web Applications</h3>
-                                <p class="course-card-fc-text">Design and develop responsive, user-friendly web applications.</p>
-                                <div class="course-card-fc-meta">
-                                    <span class="duration-tag-fc">Duration: <strong>3 Years</strong></span>
+                                    <span class="duration-tag-fc">Duration: <strong>2 Years</strong></span>
                                 </div>
                             </div>
                         </div>
@@ -310,59 +293,55 @@
         <div class="courses-list-view">
             
             <!-- Item 1: Artificial Intelligence -->
-             <a href="#" class="course-list-item">
+             <a href="{{route('finance.programme')}}" class="course-list-item">
                 <div class="course-list-item-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </div>
                 <div class="course-list-item-content">
-                    <h3 class="course-list-item-title">BCA (Hons.) in Artificial Intelligence</h3>
-                    <p class="course-list-item-desc">Learn to build intelligent systems using AI algorithms and models.</p>
+                    <h3 class="course-list-item-title">MBA in Finance</h3>
+                    <p class="course-list-item-desc">Gain advanced knowledge in financial management, investmentAdd commentMore actions
+                    strategies, and corporate finance to excel in the dynamic
+                    world of finance.</p>
                 </div>
             </a>
             
             <!-- Item 2: Data Analytics -->
-             <a href="#" class="course-list-item">
+             <a href="{{route('hr.programme')}}" class="course-list-item">
                 <div class="course-list-item-icon">
                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </div>
                 <div class="course-list-item-content">
-                    <h3 class="course-list-item-title">BCA (Hons.) in Data Analytics</h3>
-                    <p class="course-list-item-desc">Master data processing and visualization to support decision-making.</p>
+                    <h3 class="course-list-item-title">MBA in Human Resource Management</h3>
+                    <p class="course-list-item-desc">Equip yourself with essential skills in talent acquisition,Add commentMore actions
+                    employee relations, performance management, and strategic HR
+                    planning.</p>
                 </div>
             </a>
 
             <!-- Item 3: Cyber Security -->
-             <a href="#" class="course-list-item">
+             <a href="{{route('marketing.programme')}}" class="course-list-item">
                 <div class="course-list-item-icon">
                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </div>
                 <div class="course-list-item-content">
-                    <h3 class="course-list-item-title">BCA (Hons.) in Cyber Security</h3>
-                    <p class="course-list-item-desc">Gain skills to protect systems against digital threats and vulnerabilities.</p>
+                    <h3 class="course-list-item-title">MBA in Marketing</h3>
+                    <p class="course-list-item-desc">Master modern marketing strategies, digital marketing,Add commentMore actions
+                    consumer behavior, and brand management to lead in a
+                    competitive global market.</p>
                 </div>
             </a>
             
             <!-- Item 4: Full Stack -->
-             <a href="#" class="course-list-item">
+             <a href="{{route('ib.programme')}}" class="course-list-item">
                 <div class="course-list-item-icon">
                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </div>
                 <div class="course-list-item-content">
-                    <h3 class="course-list-item-title">BCA (Hons.) in Full Stack</h3>
-                    <p class="course-list-item-desc">Develop both front-end and back-end applications using modern frameworks.</p>
+                    <h3 class="course-list-item-title">MBA in International Business</h3>
+                    <p class="course-list-item-desc">Gain global leadership skills, master international trade, and advance your career in multinational companies.</p>
                 </div>
             </a>
             
-            <!-- Item 5: Web Applications -->
-             <a href="#" class="course-list-item">
-                <div class="course-list-item-icon">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </div>
-                <div class="course-list-item-content">
-                    <h3 class="course-list-item-title">BCA (Hons.) in Web Applications</h3>
-                    <p class="course-list-item-desc">Design and develop responsive, user-friendly web applications.</p>
-                </div>
-            </a>
             
         </div>
 
