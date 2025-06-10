@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Blogs;
+use Carbon\Carbon;
 use function view;
 
 class CDOEController extends Controller
@@ -12,16 +14,37 @@ class CDOEController extends Controller
     }
 
 
-   public function blog()
-{
-    $activeBlogs = Blogs::where('category_id', 43)
-        ->where('status', 1)
-        ->orderBy('posted_at', 'DESC')
-        ->orderBy('id', 'DESC')
-        ->get();
+    public function blog()
+    {
+        $activeBlogs = Blogs::where('category_id', 43)
+            ->where('status', 1)
+            ->orderBy('posted_at', 'DESC')
+            ->orderBy('id', 'DESC')
+            ->get();
 
-    return view('all_pages.blog', compact('activeBlogs'));
-}
+        return view('all_pages.blog', compact('activeBlogs'));
+    }
+
+    public function showBlog($slug)
+    {
+        $blog = Blogs::where('n_slug', $slug)->where('status', 1)->firstOrFail();
+
+        // Format posted date
+        $blog->posted_at = Carbon::parse($blog->posted_at)->format('d F, Y');
+
+        // Fetch recent blogs for sidebar (limit 3)
+        $recentBlogs = Blogs::where('status', 1)
+            ->where('id', '!=', $blog->id)
+            ->orderBy('posted_at', 'desc')
+            ->limit(3)
+            ->get()
+            ->map(function ($item) {
+                $item->posted_at = Carbon::parse($item->posted_at)->format('d F');
+                return $item;
+            });
+
+        return view('your-template-folder.blog_details', compact('blog', 'recentBlogs'));
+    }
 
 
     public function blog_details()
@@ -34,7 +57,7 @@ class CDOEController extends Controller
         return view('all_pages.programme.hr_programme');
     }
 
-     public function ib_programme()
+    public function ib_programme()
     {
         return view('all_pages.programme.ib_programme');
     }

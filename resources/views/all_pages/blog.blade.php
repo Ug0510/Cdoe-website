@@ -28,8 +28,10 @@
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="single-blog-inner style-border">
                             <div class="thumb">
+                                <a href="{{ url('blog/' . $blog->n_slug) }}">
                                 <img src="{{ 'https://www.tmu.ac.in/' . ($blog->monaco_image_path ?? 'assets/img/default.jpg') }}"
                                     alt="{{ $blog->alt_tag_main_image ?? 'Blog image' }}">
+                                </a>
                             </div>
                             <div class="details">
                                 <ul class="blog-meta">

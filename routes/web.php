@@ -18,4 +18,4 @@ Route::get('/online-mba-marketing', [CDOEController::class, 'marketing_programme
 Route::get('/admissions-rules', [CDOEController::class, 'admissions_rules'])->name('admissions.rules');
 Route::get('/how-to-apply', [CDOEController::class, 'how_to_apply'])->name('how.to.apply');
 Route::get('/facilities', [CDOEController::class, 'facilities'])->name('facilities');
-
+Route::get('/blog/{slug}', [CDOEController::class, 'showBlog'])->name('show.blog');
