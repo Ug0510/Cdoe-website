@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Blogs;
 use function view;
 
 class CDOEController extends Controller
@@ -12,10 +12,17 @@ class CDOEController extends Controller
     }
 
 
-    public function blog()
-    {
-        return view('all_pages.blog');
-    }
+   public function blog()
+{
+    $activeBlogs = Blogs::where('category_id', 43)
+        ->where('status', 1)
+        ->orderBy('posted_at', 'DESC')
+        ->orderBy('id', 'DESC')
+        ->get();
+
+    return view('all_pages.blog', compact('activeBlogs'));
+}
+
 
     public function blog_details()
     {
