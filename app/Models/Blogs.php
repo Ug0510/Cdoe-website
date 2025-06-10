@@ -4,14 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 
 class Blogs extends Model
 {
     use HasFactory;
 
-    // Use second_db connection
     protected $connection = 'second_db';
-
     protected $table = 'post';
     protected $guarded = [];
 
@@ -24,5 +23,12 @@ class Blogs extends Model
         'alt_tag', 'posted_at', 'priority', 'monaco_image_path',
         'monaco_image_alt_tag', 'thumbnail_alt_tag', 'alt_tag_main_image'
     ];
-}
 
+    protected static function booted()
+    {
+        // Only allow category_id 43 (online-website)
+        static::addGlobalScope('onlyOnlineWebsite', function (Builder $builder) {
+            $builder->where('category_id', 43);
+        });
+    }
+}

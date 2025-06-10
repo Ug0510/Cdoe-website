@@ -4,8 +4,8 @@
 
 @section('content')
 
- <!-- breadcrumb start -->
- <div class="breadcrumb-area bg-overlay" style="background-image:url('assets/img/bg/3.png')">
+    <!-- breadcrumb start -->
+    <div class="breadcrumb-area bg-overlay" style="background-image:url('assets/img/bg/3.png')">
         <div class="container">
             <div class="breadcrumb-inner">
                 <div class="section-title mb-0 text-center">
@@ -19,87 +19,52 @@
         </div>
     </div>
     <!-- breadcrumb end -->
-<div class="blog-area pd-top-120 pd-bottom-120">
+    <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="blog-details-page-content">
                         <div class="single-blog-inner">
                             <div class="thumb">
-                                <img src="assets/img/blog/4.png" alt="img">
+                                <img src="{{ 'https://www.tmu.ac.in/' . ($blog->post_path ?? 'assets/img/default.jpg') }}"
+                                    alt="{{ $blog->alt_tag_main_image }}">
 
-</div>
+                            </div>
                             <div class="details">
                                 <ul class="blog-meta">
                                     <li><i class="fa fa-user"></i> BY ADMIN</li>
-                                    <li><i class="fa fa-calendar-check-o"></i> 28 JANUARY, 2020</li>
+                                    <li><i class="fa fa-calendar-check-o"></i> {{ $blog->posted_at }}</li>
                                 </ul>
-                                <h3 class="title">Flock by when MTV ax quiz prog quiz graced</h3>
-                                <p>Lorem ipsum dolor sit amet, elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-                                    duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-                                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                    sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                                    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-                                    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                                    dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                                    ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                                <blockquote>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.
-                                    <h6 class="mb-0 mt-2">Marilyn Gilbert</h6>
-                                </blockquote>
-                                <p>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                                    est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-                                    elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                                    erat, sed diam voluptua. At vero eos et accusam</p>
-                                <div class="thumb mb-4">
-                                    <img src="assets/img/blog/single.png" alt="img">
-                                </div>
-                                <h5>AMC Entertainment sparks calls for scrutiny</h5>
-                                <p>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                                    est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-                                    elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                                    erat, sed diam voluptua. At vero eos et accusam</p>
-                                <ul class="single-list-wrap">
-                                    <li class="single-list-inner style-check">
-                                        <i class="fa fa-check"></i> Stet clita kasd gubergren, no sea takimata sanctus
-                                    </li>
-                                    <li class="single-list-inner style-check">
-                                        <i class="fa fa-check"></i> Ligula cur maecenas no sea takimata
-                                    </li>
-                                    <li class="single-list-inner style-check">
-                                        <i class="fa fa-check"></i> Fringilla nulla maecenas
-                                    </li>
-                                </ul>
+                                <h3 class="title">{{ $blog->post_title }}</h3>
+                                <p>{!! $blog->full_post !!}</p>
                             </div>
                         </div>
                         <div class="tag-and-share">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <h6>Related Tags :</h6>
+                                    {{-- <h6>Related Tags :</h6>
                                     <div class="tags">
                                         <a href="#">Treands, </a>
                                         <a href="#">Inttero, </a>
                                         <a href="#">Estario</a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <div class="col-sm-6 text-sm-right">
                                     <div class="blog-share">
                                         <h6>Share :</h6>
                                         <ul>
-                                            <li><a href="#"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-facebook-f" aria-hidden="true"></i></a>
+                                            </li>
                                             <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                            </li>
                                             <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="blog-comment">
+                        {{-- <div class="blog-comment">
                             <div class="section-title style-small">
                                 <h3>Comments</h3>
                             </div>
@@ -170,20 +135,20 @@
                                     <button class="btn btn-base">Post Comment</button>
                                 </div>
                             </div>
-                        </form>
+                        </form> --}}
                     </div>
                 </div>
                 <div class="col-lg-4 col-12">
                     <div class="td-sidebar">
-                        <div class="widget widget_search">
+                        {{-- <div class="widget widget_search">
                             <form class="search-form">
                                 <div class="form-group">
                                     <input type="text" placeholder="Search">
                                 </div>
                                 <button class="submit-btn" type="submit"><i class="fa fa-search"></i></button>
                             </form>
-                        </div>
-                        <div class="widget widget_catagory">
+                        </div> --}}
+                        {{-- <div class="widget widget_catagory">
                             <h4 class="widget-title">Catagory</h4>
                             <ul class="catagory-items">
                                 <li><a href="#">Tempor lorem interdum <i class="fa fa-caret-right"></i></a></li>
@@ -191,52 +156,37 @@
                                 <li><a href="#">Dolor proin <i class="fa fa-caret-right"></i></a></li>
                                 <li><a href="#">Pharetra amet <i class="fa fa-caret-right"></i></a></li>
                             </ul>
-                        </div>
-                        <div class="widget widget-recent-post">
-                            <h4 class="widget-title">Recent News</h4>
-                            <ul>
-                                <li>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <img src="assets/img/widget/1.png" alt="blog">
-                                        </div>
-                                        <div class="media-body align-self-center">
-                                            <h5 class="title"><a href="single-blog.html">Integer at faucibus urna.
-                                                    Nullam condtum</a></h5>
-                                            <div class="post-info"><i class="fa fa-calendar"></i><span>15 October</span>
+                        </div> --}}
+                        @if ($recentBlogs && count($recentBlogs))
+                            <div class="widget widget-recent-post">
+                                <h4 class="widget-title">Recent Blogs</h4>
+                                <ul>
+                                    @foreach ($recentBlogs as $recent)
+                                        <li>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <img src="{{ 'https://www.tmu.ac.in/' . ($recent->post_thumb_path ?? 'assets/img/default.jpg') }}"
+                                                        alt="blog">
+                                                </div>
+                                                <div class="media-body align-self-center">
+                                                    <h5 class="title">
+                                                        <a href="{{ route('blog.detail', $recent->n_slug) }}">
+                                                            {{ \Illuminate\Support\Str::limit($recent->post_title, 50) }}
+                                                        </a>
+                                                    </h5>
+                                                    <div class="post-info">
+                                                        <i class="fa fa-calendar"></i>
+                                                        <span>{{ $recent->posted_at }}</span>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <img src="assets/img/widget/2.png" alt="blog">
-                                        </div>
-                                        <div class="media-body align-self-center">
-                                            <h5 class="title"><a href="single-blog.html">Custom Platform for an Audit
-                                                    Insurance</a></h5>
-                                            <div class="post-info"><i class="fa fa-calendar"></i><span>15 October</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <img src="assets/img/widget/3.png" alt="blog">
-                                        </div>
-                                        <div class="media-body align-self-center">
-                                            <h5 class="title"><a href="single-blog.html">Famous app Developers and
-                                                    Designer</a></h5>
-                                            <div class="post-info"><i class="fa fa-calendar"></i><span>15 October</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="widget widget_price">
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
+                        {{-- <div class="widget widget_price">
                             <h4 class="widget-title">Price</h4>
                             <label class="single-checkbox">
                                 <input type="checkbox" checked="checked">
@@ -284,7 +234,7 @@
                                 <a href="#">Personal</a>
                                 <a href="#">Landing</a>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
