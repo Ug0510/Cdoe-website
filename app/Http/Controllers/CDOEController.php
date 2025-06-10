@@ -43,7 +43,7 @@ class CDOEController extends Controller
                 return $item;
             });
 
-        return view('your-template-folder.blog_details', compact('blog', 'recentBlogs'));
+        return view('all_pages.blog_details', compact('blog', 'recentBlogs'));
     }
 
 
