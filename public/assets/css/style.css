@@ -4329,7 +4329,7 @@ ul {
 .single-blog-inner .details .blog-meta li {
   display: inline-block;
   margin-right: 12px;
-  font-size: 8px;
+  font-size: 14px;
   color: var(--heading-color);
 }
 
