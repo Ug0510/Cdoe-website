@@ -33,6 +33,28 @@
         <meta name="robots" content="noindex, nofollow">
     @endif
 
+    {{-- Add this block only if current page is home --}}
+    @if (Request::is('/'))
+        <meta property="og:url" content="https://www.tmuonline.ac.in/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="TMU Online | UGC-Approved Online Degree Programmes">
+        <meta property="og:description" content="Explore UGC-approved online degree programmes at TMU Online. Study MBA flexibly with academic excellence and industry relevance.">
+        <meta property="og:image" content="https://www.tmuonline.ac.in/assets/img/logos/logo.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="tmuonline.ac.in">
+        <meta property="twitter:url" content="https://www.tmuonline.ac.in/">
+        <meta name="twitter:title" content="TMU Online | UGC-Approved Online Degree Programmes">
+        <meta name="twitter:description" content="Explore UGC-approved online degree programmes at TMU Online. Study MBA flexibly with academic excellence and industry relevance.">
+        <meta name="twitter:image" content="https://www.tmuonline.ac.in/assets/img/logos/logo.png">
+        <meta name="robots" content="noarchive" />
+        <meta name="revisit-after" content="1 days">
+        <meta name="googlebot" content="noodp">
+        <meta name="msnbot" content="noodp">
+        <meta name="slurp" content="noodp, noydir">
+        <meta name="teoma" content="noodp">
+        <meta name="robots" content="noodp, noydir">
+    @endif
+
 
 
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
