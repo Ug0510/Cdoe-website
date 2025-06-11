@@ -27,7 +27,7 @@
     <div class="mt-5">
     <h1 style="color: #ffffff;" class="mt-5">Facilities</h1>
     <p class="breadcrumbs" style="color: #ffffff;">
-      <a href="#">Home </a> &gt; Facilities
+      <a href="{{route('home')}}">Home </a> &gt; Facilities
     </p>
     </div>
   </section>

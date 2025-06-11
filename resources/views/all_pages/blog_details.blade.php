@@ -6,20 +6,15 @@
 
     <link rel="stylesheet" href="{{ asset('assets/css/toc.css') }}">
 
-    <!-- breadcrumb start -->
-    <div class="breadcrumb-area bg-overlay" style="background-image:url('assets/img/bg/3.png')">
-        <div class="container">
-            <div class="breadcrumb-inner">
-                <div class="section-title mb-0 text-center">
-                    <h2 class="page-title">Blog Details</h2>
-                    <ul class="page-list">
-                        <li><a href="/">Home</a></li>
-                        <li>Blog Details</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section">
+        <div class="mt-5">
+            <h1 style="color: #ffffff;" class="mt-5">Blogs</h1>
+            <p class="breadcrumbs" style="color: #ffffff;">
+                <a href="{{route('home')}}">Home </a> &gt; Blogs
+            </p>
         </div>
-    </div>
+    </section>
     <!-- breadcrumb end -->
     <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
