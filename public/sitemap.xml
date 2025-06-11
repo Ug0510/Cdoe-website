@@ -1,52 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-<url>
-  <loc>https://www.tmuonline.ac.in/</loc>
-  <lastmod>2025-06-03T08:52:46+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.tmuonline.ac.in/online-mba-finance</loc>
-  <lastmod>2025-06-03T08:52:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.tmuonline.ac.in/online-mba-hr</loc>
-  <lastmod>2025-06-03T08:52:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.tmuonline.ac.in/online-mba-marketing</loc>
-  <lastmod>2025-06-03T08:52:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.tmuonline.ac.in/online-mba-international-business</loc>
-  <lastmod>2025-06-03T08:52:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.tmuonline.ac.in/admissions-rules</loc>
-  <lastmod>2025-06-03T08:52:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.tmuonline.ac.in/how-to-apply</loc>
-  <lastmod>2025-06-03T08:52:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.tmuonline.ac.in/facilities</loc>
-  <lastmod>2025-06-03T08:52:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-
+  <url>
+       <loc>https://www.tmuonline.ac.in/</loc>
+       <lastmod>2025-06-11T07:30:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>1.0000</priority>
+  </url>
+  <url>
+       <loc>https://www.tmuonline.ac.in/online-mba-finance</loc>
+       <lastmod>2025-06-11T07:30:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.tmuonline.ac.in/online-mba-hr</loc>
+       <lastmod>2025-06-11T07:30:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.tmuonline.ac.in/online-mba-marketing</loc>
+       <lastmod>2025-06-11T07:30:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.tmuonline.ac.in/online-mba-international-business</loc>
+       <lastmod>2025-06-11T07:30:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.tmuonline.ac.in/admissions-rules</loc>
+       <lastmod>2025-06-11T07:30:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.tmuonline.ac.in/how-to-apply</loc>
+       <lastmod>2025-06-11T07:30:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.tmuonline.ac.in/facilities</loc>
+       <lastmod>2025-06-11T07:30:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.tmuonline.ac.in/blog/online-vs-regular-vs-distance-mba</loc>
+       <lastmod>2025-06-11T07:30:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
 </urlset>

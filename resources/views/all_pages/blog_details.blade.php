@@ -16,7 +16,7 @@
         </div>
     </section>
     <!-- breadcrumb end -->
-    <div class="blog-area pd-top-120 pd-bottom-120">
+    <div class="blog-area pd-top-60 pd-bottom-60">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
