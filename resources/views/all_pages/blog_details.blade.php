@@ -9,9 +9,9 @@
     <!-- Breadcrumb Section -->
     <section class="breadcrumb-section">
         <div class="mt-5">
-            <h1 style="color: #ffffff;" class="mt-5">Blogs</h1>
+            <h1 style="color: #ffffff;" class="mt-5">Blog</h1>
             <p class="breadcrumbs" style="color: #ffffff;">
-                <a href="{{route('home')}}">Home </a> &gt; Blogs
+                <a href="{{route('home')}}">Home </a> <a href="{{route('blog')}}">&gt; Blogs</a>
             </p>
         </div>
     </section>
