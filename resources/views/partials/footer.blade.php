@@ -47,7 +47,7 @@
                                 <li><a href="/how-to-apply">How to Apply</a></li>
                                 <li><a href="/admissions-rules">Admission Rules</a></li>
                                 <li><a href="/facilities">Facilities</a></li>
-                                <li><a href="{{ route('blog') }}">Facilities</a></li>
+                                <li><a href="{{ route('blog') }}">Blogs</a></li>
                             </ul>
                         </div>
                     </div>
