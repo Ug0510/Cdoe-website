@@ -1,0 +1,128 @@
+/* Table of Contents styles */
+.toc {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.toc h2,
+.toc h3,
+.toc h4 {
+    margin: 0;
+    /* Remove all margins for uniformity */
+}
+
+.toc h2 {
+    margin-top: 20px;
+    /* Add a top margin specifically for H2 */
+    margin-bottom: 10px;
+    /* Space below H2 */
+}
+
+.toc h3 {
+    color: #001055;
+    /* Specific color for TOC subheadings */
+    margin-bottom: 10px;
+    /* Ensure consistent spacing below H3 */
+}
+
+.toc ul {
+    list-style: none;
+    /* Remove default bullets */
+    padding-left: 0;
+    /* Remove padding for the main list */
+}
+
+.toc li {
+    margin: 5px 0;
+    /* Space between TOC items */
+}
+
+/* Additional space for the main TOC items */
+.toc>ul>li {
+    margin-bottom: 10px;
+    /* Space after each H2 */
+}
+
+/* Nested TOC styles */
+.toc-subheading {
+    margin-left: 20px;
+    /* Indent subheadings */
+}
+
+/* Ensure the TOC list has disc bullets */
+#tocList {
+    list-style-type: disc;
+    /* Use disc bullets */
+    padding-left: 20px;
+    /* Control indentation */
+}
+
+#tocList ul {
+    list-style-type: disc;
+    /* Disc bullets for nested lists */
+    padding-left: 20px;
+    /* Further indent nested lists */
+}
+
+
+
+#tocList ul>li {
+    margin: 5px 0;
+    /* Space between nested TOC items */
+    list-style-position: outside;
+    /* Bullet outside text for nested items */
+}
+
+/* Style the anchor links in the TOC */
+#tocList a {
+    text-decoration: none;
+    /* Remove underline from links */
+    font-size: 16px;
+    /* Set font size */
+    line-height: 1.5;
+    /* Control line height */
+    color: #001055;
+    /* Set text color */
+    padding-left: 5px;
+    /* Space between bullet and text */
+}
+
+#tocList a:hover {
+    color: #ff7900;
+    /* Change color on hover */
+}
+
+/* Ensure default color for visited links */
+#tocList a {
+    color: #001055;
+    /* Original link color */
+    text-decoration: none;
+}
+
+/* Ensure visited links don't change color */
+#tocList a:visited {
+    color: #001055;
+    /* Same as the original color */
+}
+
+.tmu-btn.btn-1 {
+    border: 1px solid #ff7900;
+    background-color: #ff7900;
+    color: #fff;
+}
+.read-more {
+    display: inline-block;
+    color: #ff7900;
+}
+.tmu-btn {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+.side-button, .tmu-btn, main1 a {
+    font-weight: 500;
+}

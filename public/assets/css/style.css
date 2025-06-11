@@ -4347,12 +4347,17 @@ ul {
 
 .single-blog-inner .details .title {
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 30px;
 }
 
 .single-blog-inner .details p {
   margin-bottom: 10px;
-  font-size: 12px;
+  font-size: 16px;
+}
+
+.single-blog-inner .details {
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .single-blog-inner .details .read-more-text {

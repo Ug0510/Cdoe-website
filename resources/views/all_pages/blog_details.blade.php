@@ -4,6 +4,8 @@
 
 @section('content')
 
+    <link rel="stylesheet" href="{{ asset('assets/css/toc.css') }}">
+
     <!-- breadcrumb start -->
     <div class="breadcrumb-area bg-overlay" style="background-image:url('assets/img/bg/3.png')">
         <div class="container">
@@ -35,19 +37,25 @@
                                     <li><i class="fa fa-user"></i> BY ADMIN</li>
                                     <li><i class="fa fa-calendar-check-o"></i> {{ $blog->posted_at }}</li>
                                 </ul>
-                                <h3 class="title">{{ $blog->post_title }}</h3>
-                                <p>{!! $blog->full_post !!}</p>
+                                <h1 class="title">{{ $blog->post_title }}</h1>
+                                <div class="toc">
+                                    <h3>Table of Contents</h3>
+                                    <ul id="tocList"></ul> <!-- TOC will be populated here by JavaScript -->
+                                </div>
+                                <div id="blogs69">
+                                    <p>{!! $blog->full_post !!}</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="tag-and-share">
+                        {{-- <div class="tag-and-share">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    {{-- <h6>Related Tags :</h6>
+                                    <h6>Related Tags :</h6>
                                     <div class="tags">
                                         <a href="#">Treands, </a>
                                         <a href="#">Inttero, </a>
                                         <a href="#">Estario</a>
-                                    </div> --}}
+                                    </div>
                                 </div>
                                 <div class="col-sm-6 text-sm-right">
                                     <div class="blog-share">
@@ -63,7 +71,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         {{-- <div class="blog-comment">
                             <div class="section-title style-small">
                                 <h3>Comments</h3>
@@ -241,5 +249,114 @@
         </div>
     </div>
     <!-- blog area end -->
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const content = document.getElementById('blogs69');
+            const tocList = document.getElementById('tocList');
+            const collapseAfter = 12; // Number of items after which to collapse
+            let currentParent = tocList; // Initial TOC parent to which headings are appended
+            let lastH2 = null; // To keep track of the last added h2
+            let lastH3 = null; // To keep track of the last added h3
+
+            if (content && tocList) {
+                const headings = content.querySelectorAll('h2, h3, h4');
+
+                headings.forEach((heading, index) => {
+                    if (heading.textContent.trim() === '') return; // Skip empty headings
+
+                    const level = parseInt(heading.tagName.charAt(1)); // Get heading level (2, 3, or 4)
+                    const anchor = document.createElement('a');
+                    const headingId = `heading-${index}`;
+                    heading.id = headingId; // Assign a unique ID
+                    anchor.href = `#${headingId}`;
+                    anchor.textContent = heading.textContent;
+
+                    const listItem = document.createElement('li');
+                    listItem.appendChild(anchor);
+
+                    if (level === 2) {
+                        // If it's an h2, append directly to the main TOC list
+                        tocList.appendChild(listItem);
+                        currentParent = listItem; // Update currentParent to this h2 for nesting h3 and h4
+                        lastH2 = listItem; // Store the reference to the last h2 added
+                        lastH3 = null; // Reset h3, because we are starting fresh under a new h2
+                    } else if (level === 3) {
+                        if (!lastH2) {
+                            // If there is no h2 yet, treat this as a top-level heading (though it's an h3)
+                            tocList.appendChild(listItem);
+                            currentParent = listItem; // h3 becomes the main item until h2 is found
+                        } else {
+                            // If it's an h3 and there's an h2, append it as a child of the last h2
+                            let nestedList = currentParent.querySelector('ul');
+                            if (!nestedList) {
+                                nestedList = document.createElement('ul');
+                                currentParent.appendChild(nestedList); // Create a nested list under the h2
+                            }
+                            nestedList.appendChild(listItem);
+                            lastH3 = listItem; // Store the reference to the last h3 added
+                        }
+                    } else if (level === 4) {
+                        if (!lastH3) {
+                            // If there's no h3, append directly to the main toc or h2
+                            if (!lastH2) {
+                                tocList.appendChild(listItem); // If no h2 or h3, append directly
+                            } else {
+                                let nestedList = currentParent.querySelector('ul');
+                                if (!nestedList) {
+                                    nestedList = document.createElement('ul');
+                                    currentParent.appendChild(
+                                        nestedList); // Create a nested list under the h2
+                                }
+                                nestedList.appendChild(listItem); // Add h4 under h2 if no h3 is found
+                            }
+                        } else {
+                            // If it's an h4, and we have an h3, append it under the last h3
+                            let nestedList = lastH3.querySelector('ul');
+                            if (!nestedList) {
+                                nestedList = document.createElement('ul');
+                                lastH3.appendChild(nestedList); // Create a nested list under the last h3
+                            }
+                            nestedList.appendChild(listItem);
+                        }
+                    }
+
+                    // Collapse list items after a certain number
+                    if (index >= collapseAfter) {
+                        listItem.classList.add('collapsed');
+                        listItem.style.display = 'none';
+                    }
+
+                    // Remove link focus color after click
+                    anchor.addEventListener('click', function() {
+                        setTimeout(() => {
+                            anchor.blur();
+                        }, 100); // Slight delay to allow the click action to complete
+                    });
+                });
+
+                // Add "Show More" button if needed
+                if (headings.length > collapseAfter) {
+                    const showMoreBtn = document.createElement('button');
+                    showMoreBtn.textContent = 'Show More';
+                    showMoreBtn.classList.add('tmu-btn', 'btn-1', 'read-more', 'ms-2', 'mt-2', 'py-1', 'px-3',
+                        'fs-12');
+                    tocList.appendChild(showMoreBtn);
+
+                    showMoreBtn.addEventListener('click', function() {
+                        const collapsedItems = tocList.querySelectorAll('.collapsed');
+                        collapsedItems.forEach(item => {
+                            item.style.display = item.style.display === 'none' ? 'list-item' :
+                                'none';
+                        });
+                        showMoreBtn.textContent = showMoreBtn.textContent === 'Show More' ? 'Show Less' :
+                            'Show More';
+                    });
+                }
+            }
+        });
+    </script>
 
 @endsection
