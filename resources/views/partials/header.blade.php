@@ -5,13 +5,24 @@
     <!-- <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>@yield('title', 'CDOE TMU Website')</title> -->
-    
+
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PTD3S2DJ');</script>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PTD3S2DJ');
+    </script>
     <!-- End Google Tag Manager -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,12 +33,12 @@
     <meta name="description" content="{{ $meta->meta_description ?? 'CDOE website' }}">
     <meta name="keywords" content="{{ $meta->meta_keywords ?? '' }}">
     <meta name="google-site-verification" content="CFrZUzA2qgbjobzI08wjz2oeMroTswGtiT3jJo0vPzw" />
-    <link rel="canonical" href="{{ url('/').$meta->canonical_tag ?? url()->current() }}">
+    <link rel="canonical" href="{{ url('/') . $meta->canonical_tag ?? url()->current() }}">
     @if (isset($meta))
         @if ($meta->no_index_status === 'Y')
             <meta name="robots" content="noindex, nofollow">
         @else
-          <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+            <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
         @endif
     @else
         <meta name="robots" content="noindex, nofollow">
@@ -38,13 +49,15 @@
         <meta property="og:url" content="https://www.tmuonline.ac.in/">
         <meta property="og:type" content="website">
         <meta property="og:title" content="TMU Online | UGC-Approved Online Degree Programmes">
-        <meta property="og:description" content="Explore UGC-approved online degree programmes at TMU Online. Study MBA flexibly with academic excellence and industry relevance.">
+        <meta property="og:description"
+            content="Explore UGC-approved online degree programmes at TMU Online. Study MBA flexibly with academic excellence and industry relevance.">
         <meta property="og:image" content="https://www.tmuonline.ac.in/assets/img/logos/logo.png">
         <meta name="twitter:card" content="summary_large_image">
         <meta property="twitter:domain" content="tmuonline.ac.in">
         <meta property="twitter:url" content="https://www.tmuonline.ac.in/">
         <meta name="twitter:title" content="TMU Online | UGC-Approved Online Degree Programmes">
-        <meta name="twitter:description" content="Explore UGC-approved online degree programmes at TMU Online. Study MBA flexibly with academic excellence and industry relevance.">
+        <meta name="twitter:description"
+            content="Explore UGC-approved online degree programmes at TMU Online. Study MBA flexibly with academic excellence and industry relevance.">
         <meta name="twitter:image" content="https://www.tmuonline.ac.in/assets/img/logos/logo.png">
         <meta name="robots" content="noarchive" />
         <meta name="revisit-after" content="1 days">
@@ -53,6 +66,11 @@
         <meta name="slurp" content="noodp, noydir">
         <meta name="teoma" content="noodp">
         <meta name="robots" content="noodp, noydir">
+    @endif
+
+    {{-- Render schema markup if valid --}}
+    @if (!empty($meta->schema_markup) && !in_array(strtolower(trim($meta->schema_markup)), ['na', '.', 'null']))
+        {!! $meta->schema_markup !!}
     @endif
 
 
@@ -206,9 +224,9 @@
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTD3S2DJ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) --> 
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTD3S2DJ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <div id="preloader" role="status" aria-live="polite" aria-hidden="false">
         <div class="loader-animation-container">
@@ -254,7 +272,8 @@
     <nav class="cus-nav d-none d-lg-flex">
         <div class="logo">
             <div class="logo-wrapper">
-                <a href="{{ route('home') }}"><img src="{{ asset('/assets/img/logos/logo.png') }}" alt=""></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('/assets/img/logos/logo.png') }}"
+                        alt=""></a>
             </div>
         </div>
         <div class="logo-space"></div>
