@@ -173,7 +173,7 @@
                                                 </div>
                                                 <div class="media-body align-self-center">
                                                     <h5 class="title">
-                                                        <a href="{{ route('blog.detail', $recent->n_slug) }}">
+                                                        <a href="{{ route('show.blog', $recent->n_slug) }}">
                                                             {{ \Illuminate\Support\Str::limit($recent->post_title, 50) }}
                                                         </a>
                                                     </h5>
