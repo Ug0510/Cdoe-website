@@ -56,4 +56,10 @@
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
+  <url>
+       <loc>https://www.tmuonline.ac.in/blog/top-online-mba-courses-working-professionals</loc>
+       <lastmod>2025-01-20</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8</priority>
+  </url>
 </urlset>
