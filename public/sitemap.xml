@@ -62,4 +62,27 @@
        <changefreq>daily</changefreq>
        <priority>0.8</priority>
   </url>
+     <url>
+     <loc>https://www.tmuonline.ac.in/blog/7-benefits-of-online-mba-degree</loc>
+     <lastmod>2025-01-20</lastmod>
+     <changefreq>daily</changefreq>
+     <priority>0.8</priority>
+     <image:image>
+     <image:loc>https://www.tmu.ac.in/uploads/blogs/1750075767_6Qdu3rNGvk.jpg</image:loc>
+     <image:caption>7 Benefits of Online MBA Degree</image:caption>
+     <image:title>7 Benefits of Online MBA Degree</image:title>
+     </image:image>
+  </url>
+  <url>
+     <loc>https://www.tmuonline.ac.in/blog/top-bba-specialisations</loc>
+     <lastmod>2025-01-20</lastmod>
+     <changefreq>daily</changefreq>
+     <priority>0.8</priority>
+     <image:image>
+     <image:loc>https://www.tmu.ac.in/uploads/blogs/1750155903_qlA7G34M9l.jpg</image:loc>
+     <image:caption>Top BBA Specialisations</image:caption>
+     <image:title>Top BBA Specialisations</image:title>
+     </image: image>
+  </url>
+
 </urlset>
