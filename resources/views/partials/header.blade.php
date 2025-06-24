@@ -299,6 +299,7 @@
             </div>
 
             <a href="{{ route('facilities') }}">Facilities</a>
+            <a href="{{ route('blog') }}">Blogs</a>
             <a href="https://admissions.tmuonline.ac.in/" class="apply-btn">Apply Now</a>
         </div>
     </nav>
