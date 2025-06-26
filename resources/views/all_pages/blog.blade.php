@@ -36,7 +36,7 @@
                                 </ul>
                                 <h5 class="title">
                                     <a href="{{ url('blog/' . $blog->n_slug) }}">
-                                        {{ \Illuminate\Support\Str::limit($blog->post_title, 70) }}
+                                        {{ \Illuminate\Support\Str::limit($blog->post_title, 30) }}
                                     </a>
                                 </h5>
                                 <p>{{ \Illuminate\Support\Str::limit(strip_tags($blog->post_description), 80) }}</p>
@@ -51,14 +51,14 @@
     </div>
 
     <!-- blog area end -->
-
+{{-- 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var title = document.querySelector('.title a');
             var text = title.innerText || title.textContent;
 
             // Check if the text length is more than 32 characters
-            if (text.length > 32) {
+            if (text.length > 30) {
                 // Truncate to 32 characters and add ellipsis
                 text = text.substring(0, 32) + '...';
             }
@@ -66,6 +66,6 @@
             // Update the text content of the h5 title
             title.innerText = text;
         });
-    </script>
+    </script> --}}
 
 @endsection
