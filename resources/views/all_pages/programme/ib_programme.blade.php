@@ -16,7 +16,7 @@
     </div>
     <div class="course-single-area pd-top-60 pd-bottom-90">
         <div class="section-header">
-            <h2>Excel in Global Markets with India's Best <br><span class="highlight">Online MBA in International Business</span></h2>
+            <h1 style="font-size:2.5rem;">Excel in Global Markets with India's Best <br><span class="highlight" style="color:#ff7900">Online MBA in International Business</span></h1>
         </div>
         <div class="row">
             <div class="col-lg-12">
