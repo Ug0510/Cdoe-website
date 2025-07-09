@@ -200,7 +200,7 @@
         <!-- Section Header -->
         <div class="section-title text-center mb-5">
             <span class="pre-title">Explore Our Specialisations</span>
-            <h2 class="title">MBA Online</h2>
+            <h1 class="title">MBA Online</h1>
         </div>
 
         <!-- 
