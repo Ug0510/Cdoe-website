@@ -48,6 +48,7 @@
                                 <li><a href="/admissions-rules">Admission Rules</a></li>
                                 <li><a href="/facilities">Facilities</a></li>
                                 <li><a href="{{ route('blog') }}">Blogs</a></li>
+                                <li><a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="blank">Mandatory Disclosure</a></li>
                             </ul>
                         </div>
                     </div>
