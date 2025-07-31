@@ -300,6 +300,7 @@
 
             <a href="{{ route('facilities') }}">Facilities</a>
             <a href="{{ route('blog') }}">Blogs</a>
+            <a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="blank">Mandatory Disclosure</a>
             <a href="https://admissions.tmuonline.ac.in/" class="apply-btn">Apply Now</a>
         </div>
     </nav>
@@ -349,6 +350,8 @@
                 </li>
 
                 <li><a href="{{ route('facilities') }}">Facilities</a></li>
+                <li><a href="{{ route('blog') }}">Blogs</a></li>
+            <li><a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="blank">Mandatory Disclosure</a></li>
                 <li><a href="https://admissions.tmuonline.ac.in/">Apply Now</a></li>
 
             </ul>
