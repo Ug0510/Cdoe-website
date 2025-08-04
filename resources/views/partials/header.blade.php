@@ -25,6 +25,39 @@
     </script>
     <!-- End Google Tag Manager -->
 
+    //No index meta tag for test environment
+    <script>
+        (function() {
+            const isTestEnv = window.location.hostname === 'test.cdoe.tmu.ac.in';
+
+            if (isTestEnv) {
+                // Update or create robots meta tag
+                let robotsMeta = document.querySelector('meta[name="robots"]');
+                if (robotsMeta) {
+                    robotsMeta.setAttribute('content', 'noindex, nofollow');
+                } else {
+                    robotsMeta = document.createElement('meta');
+                    robotsMeta.setAttribute('name', 'robots');
+                    robotsMeta.setAttribute('content', 'noindex, nofollow');
+                    document.head.appendChild(robotsMeta);
+                }
+
+                // Update canonical link
+                let canonicalLink = document.querySelector('link[rel="canonical"]');
+                if (canonicalLink) {
+                    canonicalLink.setAttribute('href', 'https://test.cdoe.tmu.ac.in');
+                } else {
+                    canonicalLink = document.createElement('link');
+                    canonicalLink.setAttribute('rel', 'canonical');
+                    canonicalLink.setAttribute('href', 'https://test.cdoe.tmu.ac.in');
+                    document.head.appendChild(canonicalLink);
+                }
+            }
+        })();
+    </script>
+    //Noindex meta tag for test environment
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
 
@@ -351,7 +384,8 @@
 
                 <li><a href="{{ route('facilities') }}">Facilities</a></li>
                 <li><a href="{{ route('blog') }}">Blogs</a></li>
-            <li><a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="blank">Mandatory Disclosure</a></li>
+                <li><a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="blank">Mandatory
+                        Disclosure</a></li>
                 <li><a href="https://admissions.tmuonline.ac.in/">Apply Now</a></li>
 
             </ul>

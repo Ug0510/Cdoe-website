@@ -194,25 +194,7 @@
 
         }); // End DOMContentLoaded
     </script>
- //Noindex for test 
-    <script>
-    (function () {
-        const isTestEnv = window.location.hostname === 'test.cdoe.tmu.ac.in';
 
-        if (isTestEnv) {
-            let metaTag = document.querySelector('meta[name="robots"]');
-
-            if (metaTag) {
-                metaTag.setAttribute('content', 'noindex, nofollow');
-            } else {
-                metaTag = document.createElement('meta');
-                metaTag.setAttribute('name', 'robots');
-                metaTag.setAttribute('content', 'noindex, nofollow');
-                document.head.appendChild(metaTag);
-            }
-        }
-    })();
-</script>
 
 </body>
 
