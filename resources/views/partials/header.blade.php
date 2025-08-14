@@ -24,7 +24,9 @@
         })(window, document, 'script', 'dataLayer', 'GTM-PTD3S2DJ');
     </script>
     <!-- End Google Tag Manager -->
- 
+
+    <!-- No index meta tag for test environment -->
+
     <script>
         (function() {
             const isTestEnv = window.location.hostname === 'test.cdoe.tmu.ac.in';
@@ -54,6 +56,10 @@
             }
         })();
     </script>
+
+    <!-- Noindex meta tag for test environment -->
+
+
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -331,7 +337,16 @@
 
             <a href="{{ route('facilities') }}">Facilities</a>
             <a href="{{ route('blog') }}">Blogs</a>
-            <a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="blank">Mandatory Disclosure</a>
+            {{-- <a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="blank">Mandatory Disclosure</a> --}}
+            
+            <div class="dropdown">
+                <a href="#">Mandatory Disclosure</a>
+                <ul class="submenu">
+                    <li><a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}">UGC-Precaution Notice</a></li>
+                    <li><a href="{{ asset('/assets/pdf/Circular_18_Fee_refund_rule.pdf') }}">Fee Refund Rule</a></li>
+                </ul>
+            </div>
+
             <a href="https://admissions.tmuonline.ac.in/" class="apply-btn">Apply Now</a>
         </div>
     </nav>
