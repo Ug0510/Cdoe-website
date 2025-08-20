@@ -5,6 +5,11 @@
 
     RewriteEngine On
 
+    # Redirect non-www to www and force HTTPS
+    RewriteCond %{HTTPS} off [OR]
+    RewriteCond %{HTTP_HOST} ^tmuonline\.ac\.in$ [NC]
+    RewriteRule ^(.*)$ https://www.tmuonline.ac.in/$1 [L,R=301]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -22,4 +27,5 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
 </IfModule>
