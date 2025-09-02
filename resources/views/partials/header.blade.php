@@ -344,7 +344,7 @@
                 <ul class="submenu">
                     <li><a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="_blank">UGC-Precaution Notice</a></li>
                     <li><a href="{{ asset('/assets/pdf/Circular_18_Fee_refund_rule.pdf') }}" target="_blank">Fee Refund Rule</a></li>
-                    <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}" target="_blank">Admission Date Extension</a></li>
+                    <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}">Admission Date Extension</a></li>
                 </ul>
             </div>
 
