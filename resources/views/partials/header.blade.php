@@ -256,7 +256,119 @@
         }
     </style>
 
+    <!-- Dropdown Menu Styles -->
+    <style>
+        /* base */
+        .cus-nav .dropdown {
+            position: relative;
+        }
 
+        .cus-nav .submenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            border-radius: 12px;
+            padding: 8px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all .18s ease;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        /* show first level on hover */
+        .cus-nav .dropdown:hover>.submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        /* nested dropdown anchors layout */
+        .cus-nav .submenu>li>a {
+            display: block;
+            padding: 10px 14px;
+            white-space: nowrap;
+        }
+
+        /* position the second level to the right of the first */
+        .cus-nav .submenu .dropdown {
+            position: relative;
+        }
+
+        .cus-nav .submenu .submenu {
+            top: 0;
+            left: 90%;
+            margin-left: 6px;
+            /* tiny gap between levels */
+            transform: translateY(0);
+            /* no slide for side menus */
+        }
+
+        /* show second level when hovering its parent li */
+        .cus-nav .submenu .dropdown:hover>.submenu {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        /* IMPORTANT: prevent clipping */
+        .cus-nav,
+        .nav-options {
+            overflow: visible;
+        }
+
+        @media (min-width: 983px) and (max-width: 1261px) {
+            .cus-nav .nav-options {
+                gap: 10px;
+                /* adjust horizontal spacing */
+            }
+
+            .cus-nav .nav-options a,
+            .cus-nav .dropdown>a {
+                font-size: 14px;
+                /* reduce font size for this range */
+                padding: 8px 12px;
+                /* optional: tighten padding */
+            }
+
+            .cus-nav .submenu {
+                min-width: 190px;
+                /* optional: narrower submenu */
+            }
+        }
+
+        @media (min-width: 993px) and (max-width: 1143px) {
+            .cus-nav .nav-options {
+                gap: 6px;
+                /* tighter spacing */
+                flex-wrap: nowrap;
+                /* keep in one line */
+            }
+
+            .cus-nav .nav-options a,
+            .cus-nav .dropdown>a {
+                font-size: 13px;
+                /* shrink font */
+                padding: 6px 10px;
+                /* reduce padding */
+            }
+
+            .cus-nav .submenu {
+                min-width: 170px;
+                /* adjust dropdown width if needed */
+            }
+
+            .cus-nav .logo img {
+                max-width: 130px;
+                /* shrink logo a little */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -335,18 +447,33 @@
                 </ul>
             </div>
 
-            <a href="{{ route('facilities') }}">Facilities</a>
+            {{-- <a href="{{ route('facilities') }}">Facilities</a> --}}
+
             <a href="{{ route('blog') }}">Blogs</a>
-            {{-- <a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="blank">Mandatory Disclosure</a> --}}
-            
+            <a href="{{ route('facilities') }}">FAQs</a>
             <div class="dropdown">
                 <a href="#">Mandatory Disclosure</a>
                 <ul class="submenu">
-                    <li><a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="_blank">UGC-Precaution Notice</a></li>
-                    <li><a href="{{ asset('/assets/pdf/Circular_18_Fee_refund_rule.pdf') }}" target="_blank">Fee Refund Rule</a></li>
-                    <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}">Admission Date Extension</a></li>
+                    <li class="dropdown">
+                        <a href="#">UGC Approval and Compliance</a>
+                        <ul class="submenu">
+                            <li><a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}"
+                                    target="_blank">UGC-Precaution Notice</a></li>
+                            <li><a href="{{ asset('/assets/pdf/Circular_18_Fee_refund_rule.pdf') }}"
+                                    target="_blank">Fee Refund Rule</a></li>
+                            <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}">Admission Date
+                                    Extension</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Academics</a>
+                        {{-- <ul class="submenu"><li><a href="{{ asset('/assets/pdf/example.pdf') }}" target="_blank">Example PDF</a></li></ul> --}}
+                    </li>
+
                 </ul>
             </div>
+
 
             <a href="https://admissions.tmuonline.ac.in/" class="apply-btn">Apply Now</a>
         </div>
@@ -398,8 +525,40 @@
 
                 <li><a href="{{ route('facilities') }}">Facilities</a></li>
                 <li><a href="{{ route('blog') }}">Blogs</a></li>
-                <li><a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="blank">Mandatory
-                        Disclosure</a></li>
+                <li class="flourish-nav-item-has-submenu">
+                    <button type="button" class="flourish-submenu-toggle">
+                        Mandatory Disclosure <span class="submenu-arrow">▸</span>
+                    </button>
+
+                    <ul class="flourish-submenu">
+                        <h5 style="font-size: 17.6px">UGC Compliance</h5>
+                        <hr>
+                        <li><a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="_blank">
+                                UGC-Precaution Notice</a></li>
+                        <li><a href="{{ asset('/assets/pdf/Circular_18_Fee_refund_rule.pdf') }}" target="_blank">Fee
+                                Refund Rule</a></li>
+                        <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}"
+                                target="_blank">Admission Date Extension</a></li>
+                        <h5 style="font-size: 17.6px">Academics</h5>
+                        <hr>
+                        {{-- <li>
+                                <a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="_blank">
+                                    UGC-Precaution Notice
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ asset('/assets/pdf/Circular_18_Fee_refund_rule.pdf') }}" target="_blank">
+                                    Fee Refund Rule
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}" target="_blank">
+                                    Admission Date Extension
+                                </a>
+                            </li> --}}
+                    </ul>
+                </li>
+
                 <li><a href="https://admissions.tmuonline.ac.in/">Apply Now</a></li>
 
             </ul>
@@ -407,3 +566,5 @@
         <!-- End of Expandable Menu Content -->
     </nav>
     <!-- End Mobile Navbar Container -->
+
+    <!-- JavaScript for Submenu Toggle -->
