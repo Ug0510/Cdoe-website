@@ -462,8 +462,12 @@
                                     target="_blank">UGC-Precaution Notice</a></li>
                             <li><a href="{{ asset('/assets/pdf/Circular_18_Fee_refund_rule.pdf') }}"
                                     target="_blank">Fee Refund Rule</a></li>
-                            <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}">Admission Date
-                                    Extension</a></li>
+                            <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}"
+                                    target="_blank">Admission Date Extension</a></li>
+                            <li><a href="#" target="_blank">TMU Application submitted for UGC DEB Approval</a></li>
+                            <li><a href="#" target="_blank">TMU Regulatory Body Approval</a></li>
+                            <li><a href="#" target="_blank">CIQA Reports</a></li>
+                            <li><a href="#" target="_blank">Sample Feedback Form</a></li>
                         </ul>
                     </li>
 
@@ -538,12 +542,17 @@
                     <ul class="flourish-submenu mandatory-submenu">
                         <h5 style="font-size: 17.6px">UGC Compliance</h5>
                         <hr>
+
                         <li><a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="_blank">
                                 UGC-Precaution Notice</a></li>
                         <li><a href="{{ asset('/assets/pdf/Circular_18_Fee_refund_rule.pdf') }}" target="_blank">Fee
                                 Refund Rule</a></li>
                         <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}"
                                 target="_blank">Admission Date Extension</a></li>
+                        <li><a href="#" target="_blank">TMU Application submitted for UGC DEB Approval</a></li>
+                        <li><a href="#" target="_blank">TMU Regulatory Body Approval</a></li>
+                        <li><a href="#" target="_blank">CIQA Reports</a></li>
+                        <li><a href="#" target="_blank">Sample Feedback Form</a></li>
                         <h5 style="font-size: 17.6px" class="mt-3">Academics</h5>
                         <hr>
                         <li><a href="#" target="_blank">Syllabus</a></li>
@@ -566,6 +575,6 @@
             /* max-height: 250px; */
             overflow-y: auto;
             overflow-x: hidden;
-            
+
         }
     </style>
