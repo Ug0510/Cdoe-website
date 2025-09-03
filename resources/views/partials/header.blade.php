@@ -348,6 +348,7 @@
                 /* tighter spacing */
                 flex-wrap: nowrap;
                 /* keep in one line */
+                margin-left: -40px;
             }
 
             .cus-nav .nav-options a,
