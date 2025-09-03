@@ -469,7 +469,11 @@
 
                     <li class="dropdown">
                         <a href="#">Academics</a>
-                        {{-- <ul class="submenu"><li><a href="{{ asset('/assets/pdf/example.pdf') }}" target="_blank">Example PDF</a></li></ul> --}}
+                        <ul class="submenu">
+                            <li><a href="#" target="_blank">Syllabus</a></li>
+                            <li><a href="#" target="_blank">Academic Calendar</a></li>
+                            <li><a href="#" target="_blank">Examination</a></li>
+                        </ul>
                     </li>
 
                 </ul>
@@ -531,7 +535,7 @@
                         Mandatory Disclosure <span class="submenu-arrow">▸</span>
                     </button>
 
-                    <ul class="flourish-submenu">
+                    <ul class="flourish-submenu mandatory-submenu">
                         <h5 style="font-size: 17.6px">UGC Compliance</h5>
                         <hr>
                         <li><a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="_blank">
@@ -540,23 +544,11 @@
                                 Refund Rule</a></li>
                         <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}"
                                 target="_blank">Admission Date Extension</a></li>
-                        <h5 style="font-size: 17.6px">Academics</h5>
+                        <h5 style="font-size: 17.6px" class="mt-3">Academics</h5>
                         <hr>
-                        {{-- <li>
-                                <a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="_blank">
-                                    UGC-Precaution Notice
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ asset('/assets/pdf/Circular_18_Fee_refund_rule.pdf') }}" target="_blank">
-                                    Fee Refund Rule
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}" target="_blank">
-                                    Admission Date Extension
-                                </a>
-                            </li> --}}
+                        <li><a href="#" target="_blank">Syllabus</a></li>
+                        <li><a href="#" target="_blank">Academic Calendar</a></li>
+                        <li><a href="#" target="_blank">Examination</a></li>
                     </ul>
                 </li>
 
@@ -568,4 +560,12 @@
     </nav>
     <!-- End Mobile Navbar Container -->
 
-    <!-- JavaScript for Submenu Toggle -->
+    <!-- Css for the Mandatory Disclosure submenu scrollbar in mobile view -->
+    <style>
+        .mandatory-submenu {
+            /* max-height: 250px; */
+            overflow-y: auto;
+            overflow-x: hidden;
+            
+        }
+    </style>
