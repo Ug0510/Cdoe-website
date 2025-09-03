@@ -451,7 +451,7 @@
             {{-- <a href="{{ route('facilities') }}">Facilities</a> --}}
 
             <a href="{{ route('blog') }}">Blogs</a>
-            <a href="{{ route('facilities') }}">FAQs</a>
+            <a href="#">FAQs</a>
             <div class="dropdown">
                 <a href="#">Mandatory Disclosure</a>
                 <ul class="submenu">
@@ -524,7 +524,7 @@
                     </ul>
                 </li>
 
-                <li><a href="{{ route('facilities') }}">Facilities</a></li>
+                <li><a href="#">FAQs</a></li>
                 <li><a href="{{ route('blog') }}">Blogs</a></li>
                 <li class="flourish-nav-item-has-submenu">
                     <button type="button" class="flourish-submenu-toggle">
