@@ -7,7 +7,7 @@
     <!-- breadcrumb start -->
     <section class="breadcrumb-section">
         <div class="mt-5">
-            <h1 style="color: #ffffff;" class="mt-5">Blogs</h1>
+            <h2 style="color: #ffffff;" class="mt-5">Blogs</h2>
             <p class="breadcrumbs" style="color: #ffffff;">
                 <a href="{{route('home')}}">Home </a> &gt; Blogs
             </p>
