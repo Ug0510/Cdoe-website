@@ -448,10 +448,7 @@
                 </ul>
             </div>
 
-            {{-- <a href="{{ route('facilities') }}">Facilities</a> --}}
-
-            <a href="{{ route('blog') }}">Blogs</a>
-            <a href="#">FAQs</a>
+            
             <div class="dropdown">
                 <a href="#">Mandatory Disclosure</a>
                 <ul class="submenu">
@@ -477,13 +474,17 @@
                             <li><a href="#" target="_blank">Syllabus</a></li>
                             <li><a href="#" target="_blank">Academic Calendar</a></li>
                             <li><a href="#" target="_blank">Examination</a></li>
+                            <li><a href="#" target="_blank">Student Grievances</a></li>
                         </ul>
                     </li>
 
                 </ul>
             </div>
 
+            {{-- <a href="{{ route('facilities') }}">Facilities</a> --}}
 
+            <a href="{{ route('blog') }}">Blogs</a>
+            <a href="#">FAQs</a>
             <a href="https://admissions.tmuonline.ac.in/" class="apply-btn">Apply Now</a>
         </div>
     </nav>
