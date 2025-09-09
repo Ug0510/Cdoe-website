@@ -448,7 +448,7 @@
                 </ul>
             </div>
 
-            
+
             <div class="dropdown">
                 <a href="#">Mandatory Disclosure</a>
                 <ul class="submenu">
@@ -462,7 +462,8 @@
                             <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}"
                                     target="_blank">Admission Date Extension</a></li>
                             <li><a href="#" target="_blank">TMU Application submitted for UGC DEB Approval</a></li>
-                            <li><a href="{{ asset('/assets/pdf/Proposal_Establishment_CFOE.pdf') }}" target="_blank">TMU Regulatory Body Approval</a></li>
+                            <li><a href="{{ asset('/assets/pdf/Proposal_Establishment_CFOE.pdf') }}"
+                                    target="_blank">TMU Regulatory Body Approval</a></li>
                             <li><a href="#" target="_blank">CIQA Reports</a></li>
                             <li><a href="#" target="_blank">Sample Feedback Form</a></li>
                         </ul>
@@ -471,12 +472,27 @@
                     <li class="dropdown">
                         <a href="#">Academics</a>
                         <ul class="submenu">
-                            <li><a href="#" target="_blank">Syllabus</a></li>
+                            <li class="dropdown">
+                                <a href="#">Syllabus</a>
+                                <ul class="submenu">
+                                    <li class="dropdown">
+                                        <a href="{{ asset('/assets/pdf/Cdoe_PPR_BBA_Online.pdf') }}">PPR Online BBA Gen</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="{{ asset('/assets/pdf/PPR_ONLINE_MBA_GEN.pdf') }}">PPR Online MBA Gen</a>
+                                    </li>
+                                </ul>
+                            </li>
+
                             <li><a href="#" target="_blank">Academic Calendar</a></li>
                             <li><a href="#" target="_blank">Examination</a></li>
                             <li><a href="#" target="_blank">Student Grievances</a></li>
                         </ul>
                     </li>
+
+                </ul>
+                </li>
+
 
                 </ul>
             </div>
