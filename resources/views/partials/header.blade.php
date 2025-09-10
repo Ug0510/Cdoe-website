@@ -461,7 +461,8 @@
                                     target="_blank">Fee Refund Rule</a></li>
                             <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}"
                                     target="_blank">Admission Date Extension</a></li>
-                            <li><a href="#" target="_blank">TMU Application submitted for UGC DEB Approval</a></li>
+                            <li><a href="#" target="_blank">TMU Application submitted for UGC DEB Approval</a>
+                            </li>
                             <li><a href="{{ asset('/assets/pdf/Proposal_Establishment_CFOE.pdf') }}"
                                     target="_blank">TMU Regulatory Body Approval</a></li>
                             <li><a href="#" target="_blank">CIQA Reports</a></li>
@@ -476,17 +477,19 @@
                                 <a href="#">Syllabus</a>
                                 <ul class="submenu">
                                     <li class="dropdown">
-                                        <a href="{{ asset('/assets/pdf/Cdoe_PPR_BBA_Online.pdf') }}">PPR Online BBA Gen</a>
+                                        <a href="{{ asset('/assets/pdf/Cdoe_PPR_BBA_Online.pdf') }}" target="_blank">PPR Online BBA
+                                            Gen</a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="{{ asset('/assets/pdf/PPR_ONLINE_MBA_GEN.pdf') }}">PPR Online MBA Gen</a>
+                                        <a href="{{ asset('/assets/pdf/PPR_ONLINE_MBA_GEN.pdf') }}" target="_blank">PPR Online MBA
+                                            Gen</a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li><a href="#" target="_blank">Academic Calendar</a></li>
                             <li><a href="#" target="_blank">Examination</a></li>
-                            <li><a href="#" target="_blank">Student Grievances</a></li>
+                            <li><a href="{{ asset('/assets/pdf/Student_Handling_Mechanism.pdf') }}" target="_blank">Student Grievances</a></li>
                         </ul>
                     </li>
 
@@ -567,14 +570,18 @@
                         <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}"
                                 target="_blank">Admission Date Extension</a></li>
                         <li><a href="#" target="_blank">TMU Application submitted for UGC DEB Approval</a></li>
-                        <li><a href="#" target="_blank">TMU Regulatory Body Approval</a></li>
+                        <li><a href="{{ asset('/assets/pdf/Proposal_Establishment_CFOE.pdf') }}" target="_blank">TMU Regulatory Body Approval</a></li>
                         <li><a href="#" target="_blank">CIQA Reports</a></li>
                         <li><a href="#" target="_blank">Sample Feedback Form</a></li>
                         <h5 style="font-size: 17.6px" class="mt-3">Academics</h5>
                         <hr>
-                        <li><a href="#" target="_blank">Syllabus</a></li>
+                        <li><a href="{{ asset('/assets/pdf/Student_Handling_Mechanism.pdf') }}" target="_blank">Student Grievances</a></li>
                         <li><a href="#" target="_blank">Academic Calendar</a></li>
                         <li><a href="#" target="_blank">Examination</a></li>
+                        <li class="fw-bold mb-0"><a href="#" target="_blank">Syllabus</a></li>
+                        <hr class="mt-0 mb-1">
+                        <li><a href="{{ asset('/assets/pdf/Cdoe_PPR_BBA_Online.pdf') }}">PPR Online BBA Gen</a></li>
+                        <li><a href="{{ asset('/assets/pdf/PPR_ONLINE_MBA_GEN.pdf') }}">PPR Online MBA Gen</a></li>
                     </ul>
                 </li>
 
