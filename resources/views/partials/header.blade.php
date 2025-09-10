@@ -580,8 +580,8 @@
                         <li><a href="#" target="_blank">Examination</a></li>
                         <li class="fw-bold mb-0"><a href="#" target="_blank">Syllabus</a></li>
                         <hr class="mt-0 mb-1">
-                        <li><a href="{{ asset('/assets/pdf/Cdoe_PPR_BBA_Online.pdf') }}">PPR Online BBA Gen</a></li>
-                        <li><a href="{{ asset('/assets/pdf/PPR_ONLINE_MBA_GEN.pdf') }}">PPR Online MBA Gen</a></li>
+                        <li><a href="{{ asset('/assets/pdf/Cdoe_PPR_BBA_Online.pdf') }}" target="_blank">PPR Online BBA Gen</a></li>
+                        <li><a href="{{ asset('/assets/pdf/PPR_ONLINE_MBA_GEN.pdf') }}" target="_blank">PPR Online MBA Gen</a></li>
                     </ul>
                 </li>
 
