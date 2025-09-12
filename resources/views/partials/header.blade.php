@@ -503,7 +503,6 @@
             {{-- <a href="{{ route('facilities') }}">Facilities</a> --}}
 
             <a href="{{ route('blog') }}">Blogs</a>
-            <a href="#">FAQs</a>
             <a href="https://admissions.tmuonline.ac.in/" class="apply-btn">Apply Now</a>
         </div>
     </nav>
@@ -552,7 +551,6 @@
                     </ul>
                 </li>
 
-                <li><a href="#">FAQs</a></li>
                 <li><a href="{{ route('blog') }}">Blogs</a></li>
                 <li class="flourish-nav-item-has-submenu">
                     <button type="button" class="flourish-submenu-toggle">
