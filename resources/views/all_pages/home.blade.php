@@ -279,9 +279,15 @@
             </div>
 
             <!--
+<<<<<<< Updated upstream
                                                                                                                             DESKTOP & TABLET CAROUSEL VIEW
                                                                                                                             (Visible on screens > 991px)
                                                                                                                         -->
+=======
+                                                                                                                        DESKTOP & TABLET CAROUSEL VIEW
+                                                                                                                        (Visible on screens > 991px)
+                                                                                                                    -->
+>>>>>>> Stashed changes
             <div class="courses-carousel-view">
                 <!-- Swiper -->
                 <div class="swiper specializedCoursesSwiper">
@@ -374,9 +380,15 @@
 
 
             <!--
+<<<<<<< Updated upstream
                                                                                                                             MOBILE LIST VIEW
                                                                                                                             (Visible on screens <= 991px)
                                                                                                                         -->
+=======
+                                                                                                                        MOBILE LIST VIEW
+                                                                                                                        (Visible on screens <= 991px)
+                                                                                                                    -->
+>>>>>>> Stashed changes
             <div class="courses-list-view">
 
                 <!-- Item 1: Artificial Intelligence -->
@@ -965,7 +977,7 @@ $altTexts = [
 
                 {{-- <style>
                     .fresh-faqs {
-                        gap: 20px;
+                        gap: 10px;
                         /* space between tabs and content */
                     }
 
@@ -1003,9 +1015,33 @@ $altTexts = [
                     .fresh-faqs-content .fresh-faqs-tab-pane.active {
                         display: block;
                     }
-                </style>
 
-                <style>
+                    /* @media (max-width: 768px) {
+                        .fresh-faqs {
+                            flex-direction: column;
+                            gap: 16px;
+                        }
+
+                        .fresh-faqs-tabs {
+                            flex-direction: row !important;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            width: 100% !important;
+                        }
+
+                        .fresh-faqs-tab-btn {
+                            flex: 1 1 auto;
+                            margin: 5px;
+                            white-space: nowrap;
+                        }
+
+                        .fresh-faqs-content {
+                            max-width: 100% !important;
+                            padding-left: 0 !important;
+                        }
+                    } */
+                    <style>
+
                     /* FAQ container */
                     .fresh-faqs {
                         display: flex;
@@ -1080,7 +1116,7 @@ $altTexts = [
                     <!-- Right Content -->
                     <div class="fresh-faqs-content flex-grow-1 ps-4">
                         <div class="fresh-faqs-tab-pane active" id="fresh-faqs-general">
-                            <div class="col-12 mt-5 mt-lg-0">
+                            <div class="col-12 mt-1 mt-lg-0">
                                 <div id="accordion" class="accordion-area">
                                     <div class="card single-faq-inner">
                                         <div class="card-header" id="ff-one">
@@ -1200,7 +1236,7 @@ $altTexts = [
                             </div>
                         </div>
                         <div class="fresh-faqs-tab-pane" id="fresh-faqs-admission">
-                            <div class="col-12 mt-5 mt-lg-0">
+                            <div class="col-12 mt-1 mt-lg-0">
                                 <div id="accordion" class="accordion-area">
                                     <div class="card single-faq-inner">
                                         <div class="card-header" id="ff-one">
@@ -1316,7 +1352,7 @@ $altTexts = [
                             </div>
                         </div>
                         <div class="fresh-faqs-tab-pane" id="fresh-faqs-academics">
-                            <div class="col-12 mt-5 mt-lg-0">
+                            <div class="col-12 mt-1 mt-lg-0">
                                 <div id="accordion" class="accordion-area">
 
                                     <div class="card single-faq-inner">
