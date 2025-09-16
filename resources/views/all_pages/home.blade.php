@@ -278,16 +278,6 @@
                 <h1 class="title">MBA Online</h1>
             </div>
 
-            <!--
-<<<<<<< Updated upstream
-                                                                                                                            DESKTOP & TABLET CAROUSEL VIEW
-                                                                                                                            (Visible on screens > 991px)
-                                                                                                                        -->
-=======
-                                                                                                                        DESKTOP & TABLET CAROUSEL VIEW
-                                                                                                                        (Visible on screens > 991px)
-                                                                                                                    -->
->>>>>>> Stashed changes
             <div class="courses-carousel-view">
                 <!-- Swiper -->
                 <div class="swiper specializedCoursesSwiper">
@@ -379,16 +369,7 @@
             </div>
 
 
-            <!--
-<<<<<<< Updated upstream
-                                                                                                                            MOBILE LIST VIEW
-                                                                                                                            (Visible on screens <= 991px)
-                                                                                                                        -->
-=======
-                                                                                                                        MOBILE LIST VIEW
-                                                                                                                        (Visible on screens <= 991px)
-                                                                                                                    -->
->>>>>>> Stashed changes
+         
             <div class="courses-list-view">
 
                 <!-- Item 1: Artificial Intelligence -->

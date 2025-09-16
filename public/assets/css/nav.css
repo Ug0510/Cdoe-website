@@ -767,9 +767,11 @@ nav.shrink {
   #heroCarousel .carousel-inner .carousel-item:nth-child(3){
     background-image: url('../img/banner/hero-banner3-mobile.webp');
   }
+  
 }
 
 @media screen and (min-width:540px) and (max-width:992px) {
+   
   #heroCarousel .carousel-inner .carousel-item:nth-child(1){
     background-image: url('../img/banner/hero-banner1-tab.webp');
   }
@@ -780,9 +782,11 @@ nav.shrink {
   #heroCarousel .carousel-inner .carousel-item:nth-child(3){
     background-image: url('../img/banner/hero-banner3-tab.webp');
   }
+ 
 }
 
 @media screen and (min-width:992px) {
+
   #heroCarousel .carousel-inner .carousel-item:nth-child(1){
     background-image: url('../img/banner/hero-banner1.webp');
   }
@@ -792,7 +796,7 @@ nav.shrink {
   #heroCarousel .carousel-inner .carousel-item:nth-child(3){
     background-image: url('../img/banner/hero-banner3.webp');
   }
-  
+
 }
 
 
