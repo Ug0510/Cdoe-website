@@ -757,14 +757,17 @@ nav.shrink {
 
 @media screen and (max-width:540px) {
   #heroCarousel .carousel-inner .carousel-item:nth-child(1){
+    background-image: url('../img/banner/hero-banner4-mobile.webp');
+  }
+  #heroCarousel .carousel-inner .carousel-item:nth-child(2){
     background-image: url('../img/banner/hero-banner1-mobile.webp');
   }
 
-  #heroCarousel .carousel-inner .carousel-item:nth-child(2){
+  #heroCarousel .carousel-inner .carousel-item:nth-child(3){
     background-image: url('../img/banner/hero-banner2-mobile.webp');
   }
 
-  #heroCarousel .carousel-inner .carousel-item:nth-child(3){
+  #heroCarousel .carousel-inner .carousel-item:nth-child(4){
     background-image: url('../img/banner/hero-banner3-mobile.webp');
   }
   
@@ -773,10 +776,13 @@ nav.shrink {
 @media screen and (min-width:540px) and (max-width:992px) {
    
   #heroCarousel .carousel-inner .carousel-item:nth-child(1){
+    background-image: url('../img/banner/hero-banner4-tab.webp');
+  }
+  #heroCarousel .carousel-inner .carousel-item:nth-child(2){
     background-image: url('../img/banner/hero-banner1-tab.webp');
   }
 
-  #heroCarousel .carousel-inner .carousel-item:nth-child(2){
+  #heroCarousel .carousel-inner .carousel-item:nth-child(3){
     background-image: url('../img/banner/hero-banner2-tab.webp');
   }
   #heroCarousel .carousel-inner .carousel-item:nth-child(3){
@@ -787,15 +793,20 @@ nav.shrink {
 
 @media screen and (min-width:992px) {
 
-  #heroCarousel .carousel-inner .carousel-item:nth-child(1){
+    #heroCarousel .carousel-inner .carousel-item:nth-child(1){
+    background-image: url('../img/banner/hero-banner4.webp');
+  }
+
+  #heroCarousel .carousel-inner .carousel-item:nth-child(2){
     background-image: url('../img/banner/hero-banner1.webp');
   }
-  #heroCarousel .carousel-inner .carousel-item:nth-child(2){
+  #heroCarousel .carousel-inner .carousel-item:nth-child(3){
     background-image: url('../img/banner/hero-banner2.webp');
   }
   #heroCarousel .carousel-inner .carousel-item:nth-child(3){
     background-image: url('../img/banner/hero-banner3.webp');
   }
+
 
 }
 
