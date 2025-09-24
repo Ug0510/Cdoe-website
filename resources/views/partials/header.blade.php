@@ -124,7 +124,7 @@
         $ogType = 'image/png';
 
         if (isset($blog) && !empty($blog->post_path)) {
-            $ogImage = asset($blog->post_path);
+            $ogImage = env('BLOG_URL') . '/' . ltrim($blog->post_path, '/');
             $ogWidth = 1280;
             $ogHeight = 500;
             $ogType = 'image/jpg';
