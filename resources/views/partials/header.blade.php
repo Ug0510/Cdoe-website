@@ -75,7 +75,7 @@
     <meta property="og:description" content="{{ $meta->meta_description }}" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="TMU-Online" />
-    <meta property="og:url" content="{{ $currentUrl }}" />
+    <meta property="og:url" content="{{ url()->current() }}" />
 
     @if (isset($meta))
         @if ($meta->no_index_status === 'Y')
