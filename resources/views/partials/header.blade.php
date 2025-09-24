@@ -71,6 +71,12 @@
     <meta name="keywords" content="{{ $meta->meta_keywords ?? '' }}">
     <meta name="google-site-verification" content="CFrZUzA2qgbjobzI08wjz2oeMroTswGtiT3jJo0vPzw" />
     <link rel="canonical" href="{{ url('/') . $meta->canonical_tag ?? url()->current() }}">
+    <meta property="og:title" content="{{ $meta->meta_title }}" />
+    <meta property="og:description" content="{{ $meta->meta_description }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TMU-Online" />
+    <meta property="og:url" content="{{ $currentUrl }}" />
+
     @if (isset($meta))
         @if ($meta->no_index_status === 'Y')
             <meta name="robots" content="noindex, nofollow">
@@ -110,6 +116,27 @@
         {!! $meta->schema_markup !!}
     @endif
 
+    @php
+        // Default values (logo)
+        $ogImage = asset('assets/img/logos/logo.png');
+        $ogWidth = 839;
+        $ogHeight = 473;
+        $ogType = 'image/png';
+
+        if (isset($blog) && !empty($blog->post_path) && file_exists(public_path($blog->post_path))) {
+            $ogImage = asset($blog->post_path);
+            $ogWidth = 1280;
+            $ogHeight = 500;
+            $ogType = 'image/jpg';
+        }
+    @endphp
+
+    <meta property="og:image" content="{{ $ogImage }}" />
+    <meta property="og:image:width" content="{{ $ogWidth }}" />
+    <meta property="og:image:height" content="{{ $ogHeight }}" />
+    <meta property="og:image:type" content="{{ $ogType }}" />
+    <meta name="author" content="Teerthanker Mahaveer University" />
+
 
 
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
@@ -128,7 +155,8 @@
     <link rel="preload" as="image" href="{{ asset('/assets/img/logos/logo.webp') }}">
 
     <!-- External Libraries -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -477,11 +505,13 @@
                                 <a href="#">Syllabus</a>
                                 <ul class="submenu">
                                     <li class="dropdown">
-                                        <a href="{{ asset('/assets/pdf/Cdoe_PPR_BBA_Online.pdf') }}" target="_blank">PPR Online BBA
+                                        <a href="{{ asset('/assets/pdf/Cdoe_PPR_BBA_Online.pdf') }}"
+                                            target="_blank">PPR Online BBA
                                             Gen</a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="{{ asset('/assets/pdf/PPR_ONLINE_MBA_GEN.pdf') }}" target="_blank">PPR Online MBA
+                                        <a href="{{ asset('/assets/pdf/PPR_ONLINE_MBA_GEN.pdf') }}"
+                                            target="_blank">PPR Online MBA
                                             Gen</a>
                                     </li>
                                 </ul>
@@ -489,7 +519,8 @@
 
                             <li><a href="#" target="_blank">Academic Calendar</a></li>
                             <li><a href="#" target="_blank">Examination</a></li>
-                            <li><a href="{{ asset('/assets/pdf/Student_Handling_Mechanism.pdf') }}" target="_blank">Student Grievances</a></li>
+                            <li><a href="{{ asset('/assets/pdf/Student_Handling_Mechanism.pdf') }}"
+                                    target="_blank">Student Grievances</a></li>
                         </ul>
                     </li>
 
@@ -568,18 +599,22 @@
                         <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}"
                                 target="_blank">Admission Date Extension</a></li>
                         <li><a href="#" target="_blank">TMU Application submitted for UGC DEB Approval</a></li>
-                        <li><a href="{{ asset('/assets/pdf/Proposal_Establishment_CFOE.pdf') }}" target="_blank">TMU Regulatory Body Approval</a></li>
+                        <li><a href="{{ asset('/assets/pdf/Proposal_Establishment_CFOE.pdf') }}" target="_blank">TMU
+                                Regulatory Body Approval</a></li>
                         <li><a href="#" target="_blank">CIQA Reports</a></li>
                         <li><a href="#" target="_blank">Sample Feedback Form</a></li>
                         <h5 style="font-size: 17.6px" class="mt-3">Academics</h5>
                         <hr>
-                        <li><a href="{{ asset('/assets/pdf/Student_Handling_Mechanism.pdf') }}" target="_blank">Student Grievances</a></li>
+                        <li><a href="{{ asset('/assets/pdf/Student_Handling_Mechanism.pdf') }}"
+                                target="_blank">Student Grievances</a></li>
                         <li><a href="#" target="_blank">Academic Calendar</a></li>
                         <li><a href="#" target="_blank">Examination</a></li>
                         <li class="fw-bold mb-0"><a href="#" target="_blank">Syllabus</a></li>
                         <hr class="mt-0 mb-1">
-                        <li><a href="{{ asset('/assets/pdf/Cdoe_PPR_BBA_Online.pdf') }}" target="_blank">PPR Online BBA Gen</a></li>
-                        <li><a href="{{ asset('/assets/pdf/PPR_ONLINE_MBA_GEN.pdf') }}" target="_blank">PPR Online MBA Gen</a></li>
+                        <li><a href="{{ asset('/assets/pdf/Cdoe_PPR_BBA_Online.pdf') }}" target="_blank">PPR Online
+                                BBA Gen</a></li>
+                        <li><a href="{{ asset('/assets/pdf/PPR_ONLINE_MBA_GEN.pdf') }}" target="_blank">PPR Online
+                                MBA Gen</a></li>
                     </ul>
                 </li>
 
