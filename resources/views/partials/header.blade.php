@@ -123,7 +123,7 @@
         $ogHeight = 473;
         $ogType = 'image/png';
 
-        if (isset($blog) && !empty($blog->post_path) && file_exists(public_path($blog->post_path))) {
+        if (isset($blog) && !empty($blog->post_path)) {
             $ogImage = asset($blog->post_path);
             $ogWidth = 1280;
             $ogHeight = 500;
