@@ -489,7 +489,7 @@
                                     target="_blank">Fee Refund Rule</a></li>
                             <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}"
                                     target="_blank">Admission Date Extension</a></li>
-                            <li><a href="#" target="_blank">TMU Application submitted for UGC DEB Approval</a>
+                            <li><a href="{{ asset('/assets/pdf/BCA_Proposal_Application.pdf') }}" target="_blank">TMU Application submitted for UGC DEB Approval</a>
                             </li>
                             <li><a href="{{ asset('/assets/pdf/Proposal_Establishment_CFOE.pdf') }}"
                                     target="_blank">TMU Regulatory Body Approval</a></li>
@@ -598,7 +598,8 @@
                                 Refund Rule</a></li>
                         <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}"
                                 target="_blank">Admission Date Extension</a></li>
-                        <li><a href="#" target="_blank">TMU Application submitted for UGC DEB Approval</a></li>
+                        <li><a href="{{ asset('/assets/pdf/BCA_Proposal_Application.pdf') }}" target="_blank">TMU Application submitted for UGC DEB Approval</a>
+                            </li>
                         <li><a href="{{ asset('/assets/pdf/Proposal_Establishment_CFOE.pdf') }}" target="_blank">TMU Regulatory Body Approval</a></li>
                         <li><a href="{{ asset('/assets/pdf/CIQA_report.pdf') }}" target="_blank">CIQA Reports</a></li>
                         <li><a href="#" target="_blank">Sample Feedback Form</a></li>
