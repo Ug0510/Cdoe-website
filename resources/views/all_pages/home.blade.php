@@ -780,14 +780,14 @@ $altTexts = [
 
 
     <!-- ============================ Reel Showcase Section Start ============================ -->
-    <section class="tmu-reel-showcase py-5 position-relative">
+    {{-- <section class="tmu-reel-showcase py-5 position-relative">
         <div class="tmu-reel-background-element tmu-reel-bg-el-1"></div>
         <div class="tmu-reel-background-element tmu-reel-bg-el-2"></div>
 
         <div class="container position-relative">
             {{-- <h2 class="tmu-reel-showcase__title text-center mb-5">Why TMU Online? Watch & Discover</h2> --}}
 
-            <div class="tmu-reel-swiper-container position-relative">
+            {{-- <div class="tmu-reel-swiper-container position-relative">
 
                 <div class="swiper tmu-reel-swiper">
                     <div class="swiper-wrapper">
@@ -849,8 +849,8 @@ $altTexts = [
                 </div>
 
             </div>
-        </div>
-    </section>
+        </div> 
+    </section> --}}
     <!-- ============================ Reel Showcase Section End ============================ -->
 
 
