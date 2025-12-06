@@ -531,6 +531,10 @@
                         </ul>
                     </li>
 
+                    <li>
+                        <a href="{{ asset('/assets/pdf/NAAC.pdf') }}" target="_blank">Certificate of NAAC</a>
+                    </li>
+
                 </ul>
                 </li>
 
@@ -619,7 +623,7 @@
                                 target="_blank">Student Grievances</a></li>
                         <li><a href="#" target="_blank">Academic Calendar</a></li>
                         <li><a href="#" target="_blank">Examination</a></li>
-                        <li class="fw-bold mb-0"><a href="#" target="_blank">Syllabus</a></li>
+                        <li class="fw-bold mb-0"><b><a href="#" target="_blank">Syllabus</a></b></li>
                         <hr class="mt-0 mb-1">
                         <li><a href="{{ asset('/assets/pdf/Cdoe_PPR_BBA_Online.pdf') }}" target="_blank">PPR Online
                                 BBA Gen</a></li>
@@ -627,10 +631,13 @@
                                 MBA Gen</a></li>
                         <li><a href="{{ asset('/assets/pdf/PPR_BCA_CDOE.pdf') }}" target="_blank">PPR Online
                                 BCA</a></li>
+
+                        <h5 style="font-size: 17.6px" class="mt-3">Accrediations</h5>
+                        <hr class="mt-0 mb-1">
+                        <li><a href="https://admissions.tmuonline.ac.in/">Certificate of NAAC</a></li>
                     </ul>
                 </li>
 
-                <li><a href="https://admissions.tmuonline.ac.in/">Apply Now</a></li>
 
             </ul>
         </div>
