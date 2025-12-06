@@ -375,7 +375,7 @@ nav.shrink {
     left: -10%;
     width: 120%;
     height: 120%;
-    background-image: url('logo.png'); /* Optional watermark */
+    background-image: url('/public/assets/img/logos/logo.webp'); /* Optional watermark */
     background-repeat: no-repeat;
     background-position: center;
     background-size: 40%;
