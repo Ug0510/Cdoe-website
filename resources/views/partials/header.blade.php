@@ -612,7 +612,7 @@
                         <li><a href="{{ asset('/assets/pdf/BCA_Proposal_Application.pdf') }}" target="_blank">TMU
                                 Application submitted for UGC DEB Approval</a>
                         </li>
-                        <li><a href="{{ asset('/assets/pdf/Proposal_Establishment_CFOE.pdf') }}" target="_blank">TMU
+                        <li><a href="{{ asset('/assets/pdf/TMU_Statutory_body_Establishment.pdf') }}" target="_blank">TMU
                                 Regulatory Body Approval</a></li>
                         <li><a href="{{ asset('/assets/pdf/CIQA_report.pdf') }}" target="_blank">CIQA Reports</a>
                         </li>
