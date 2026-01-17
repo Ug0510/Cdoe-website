@@ -369,7 +369,7 @@
             </div>
 
 
-         
+
             <div class="courses-list-view">
 
                 <!-- Item 1: Artificial Intelligence -->
@@ -580,7 +580,175 @@
         <img src="{{ asset('/assets/img/5-reason-mobile.webp') }}" alt="" class="d-block d-lg-none">
     </div>
 
+   
+   {{-- Mandatory Disclosure Section --}}
+    <section class="tmu-disclosure-section py-5">
+    <div class="container">
+        
+        <div class="eligibility-premium-wrapper d-none d-md-flex">
+            <div class="card-bg-overlay" style="background-image: url('/assets/img/bd/banner-02.jpg');"></div>
+            <div class="card-content-box">
+                <div class="accent-line"></div>
+                <h2 class="main-heading">Mandatory <span class="text-orange">Disclosure</span></h2>
+                <div class="btn-container">
+                    <a href="{{ route('mandatory.disclosure') }}" target="_blank" class="tmu-btn-premium">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
 
+        <div class="eligibility-premium-wrapper d-flex d-md-none">
+            <div class="card-bg-overlay mobile-overlay" style="background-image: url('/assets/img/bd/banner-02.jpg');"></div>
+            <div class="card-content-box text-center w-100 px-3">
+                <div class="accent-line mx-auto"></div>
+                <h2 class="main-heading-mobile text-nowrap">Mandatory <span class="text-orange">Disclosure</span></h2>
+                <div class="btn-container mt-2">
+                    <a href="{{ route('mandatory.disclosure') }}" target="_blank" class="tmu-btn-premium">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+/* Base Wrapper - Fixed Height */
+.eligibility-premium-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px; 
+    border-radius: 20px;
+    overflow: hidden;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background: linear-gradient( 0deg, rgba(255, 102, 0, 0.9) 0%, rgba(255, 102, 0, 0.7) 100%
+);
+}
+
+.card-bg-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient( 0deg, rgba(255, 102, 0, 0.9) 0%, rgba(255, 102, 0, 0.7) 100%
+);
+    background-size: cover;
+    background-position: center;
+}
+
+.mobile-overlay {
+    background: linear-gradient( 0deg, rgba(255, 102, 0, 0.9) 0%, rgba(255, 102, 0, 0.7) 100%
+);
+}
+
+.card-content-box {
+    position: relative;
+    z-index: 2;
+    padding: 0 40px;
+}
+
+.accent-line {
+    width: 40px;
+    height: 4px;
+    background: #003366;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+.category-tag {
+    color: #003366;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.main-heading {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+/* --- Mobile Heading Fix --- */
+.main-heading-mobile {
+    color: #ffffff;
+    font-weight: 800;
+    /* This ensures it stays in one line and scales based on screen width */
+    font-size: clamp(1.2rem, 5.5vw, 1.7rem); 
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+}
+
+.text-orange {
+    color: #003366;
+}
+
+.tmu-btn-premium {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    background: #003366;
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    border: 2px solid #003366;
+}
+
+.tmu-btn-premium i {
+    margin-left: 10px;
+    font-size: 0.7rem;
+}
+
+/* Ensure centering on mobile */
+@media (max-width: 767px) {
+    .card-content-box {
+        padding: 0 15px;
+    }
+}
+
+/* Specific Tablet & iPad Media Query */
+@media (min-width: 768px) and (max-width: 1024.98px) {
+    /* 1. Ensure container adjusts height correctly */
+    .eligibility-premium-wrapper {
+        height: auto !important;
+        min-height: 180px; 
+        margin: 0 5px; /* Slight buffer for screen edges */
+    }
+
+    /* 2. FIX FOR THE IMAGE: Pin the gavel/books to the right */
+    .card-bg-overlay {
+        background-position: right center !important;
+        background-size: cover !important;
+    }
+
+    /* 3. FIX FOR TEXT OVERLAP: Add right padding to keep text on the left */
+    .card-content-box {
+        padding-right: 45% !important; /* Forces text to stay in the left 55% of the card */
+        padding-left: 30px !important;
+    }
+
+    .main-heading {
+        font-size: 1.7rem !important; /* Scales down font for tablet widths */
+    }
+
+    .tmu-btn-premium {
+        padding: 8px 18px !important;
+        font-size: 0.8rem !important;
+    }
+}
+</style>
+{{-- Mandatory Disclosure --}}
 
 
 
@@ -787,7 +955,7 @@ $altTexts = [
         <div class="container position-relative">
             {{-- <h2 class="tmu-reel-showcase__title text-center mb-5">Why TMU Online? Watch & Discover</h2> --}}
 
-            {{-- <div class="tmu-reel-swiper-container position-relative">
+    {{-- <div class="tmu-reel-swiper-container position-relative">
 
                 <div class="swiper tmu-reel-swiper">
                     <div class="swiper-wrapper">
