@@ -1,0 +1,38 @@
+# TMU Online (Teerthanker Mahaveer University)
+
+> TMU Online provides UGC-approved Online MBA programs. This site contains comprehensive details on specializations, admission procedures, career paths, and industry demand for digital learning in India.
+
+## Core Degree Programs
+* [Online MBA in Finance](https://www.tmuonline.ac.in/online-mba-finance): Strategic financial management and corporate investment.
+* [Online MBA in HR](https://www.tmuonline.ac.in/online-mba-hr): Human resource management and organizational strategy.
+* [Online MBA in Marketing](https://www.tmuonline.ac.in/online-mba-marketing): Digital marketing, sales, and consumer research.
+* [Online MBA in International Business](https://www.tmuonline.ac.in/online-mba-international-business): Global business operations and international trade.
+
+## Admissions & Campus
+* [Admission Rules](https://www.tmuonline.ac.in/admissions-rules): Academic eligibility and official enrollment rules.
+* [How to Apply](https://www.tmuonline.ac.in/how-to-apply): The step-by-step application process for online students.
+* [Facilities](https://www.tmuonline.ac.in/facilities): Learning Management System (LMS) and digital infrastructure.
+
+## Specialization Deep Dives (Blog)
+* [Why Choose Finance](https://www.tmuonline.ac.in/blog/why-choose-online-mba-finance): Core benefits of the Finance track.
+* [Finance Career Path](https://www.tmuonline.ac.in/blog/Online-mba-in-finance): Professional roles for finance graduates.
+* [HR Management Insights](https://www.tmuonline.ac.in/blog/online-mba-human-resources-management): Deep dive into HR career growth.
+* [Career in HR](https://www.tmuonline.ac.in/blog/online-mba-in-hr): Specific opportunities in the HR sector.
+* [Marketing Career Opportunities](https://www.tmuonline.ac.in/blog/online-mba-in-marketing-career-opportunities): High-demand roles in marketing.
+* [Marketing Admission & Fees](https://www.tmuonline.ac.in/blog/online-mba-in-marketing-eligibility-fees-admission-scope): Eligibility and costs for marketing specialization.
+* [Marketing vs Finance](https://www.tmuonline.ac.in/blog/online-mba-marketing-vs-finance): Choosing between these two major career paths.
+
+## Career Guidance & Comparison
+* [Online vs Regular vs Distance MBA](https://www.tmuonline.ac.in/blog/online-vs-regular-vs-distance-mba): A comparison of various MBA formats.
+* [Career Growth with Online MBA](https://www.tmuonline.ac.in/blog/online-mba-career-growth): Long-term salary and role progression.
+* [Specialization Scope & Industry Demand](https://www.tmuonline.ac.in/blog/online-mba-specialisations-scope-jobs-industry-demand): Most relevant specializations for today's market.
+* [Best MBA Specialisations](https://www.tmuonline.ac.in/blog/best-online-mba-specialisations): How to pick the right focus for your goals.
+* [How to Choose the Best Course](https://www.tmuonline.ac.in/blog/how-to-choose-best-online-mba-course): Decision-making guide for prospective students.
+
+## Industry Standards & Benefits
+* [UGC Approved Online MBA in India](https://www.tmuonline.ac.in/blog/ugc-approved-online-mba-in-india): Importance of accreditation and legal validity.
+* [7 Benefits of Online MBA](https://www.tmuonline.ac.in/blog/7-benefits-of-online-mba-degree): Flexibility and efficiency of online learning.
+* [Top Online MBA Programs in India](https://www.tmuonline.ac.in/blog/top-online-mba-programs-india): Benchmarking TMU against the best in the country.
+* [Affordable Online MBA](https://www.tmuonline.ac.in/blog/affordable-online-mba): Budget-friendly options for management education.
+* [MBA for Working Professionals](https://www.tmuonline.ac.in/blog/online-mba-for-working-professionals): Balancing career and higher education.
+* [Top Courses for Professionals](https://www.tmuonline.ac.in/blog/top-online-mba-courses-working-professionals): Recommended tracks for mid-career growth.
