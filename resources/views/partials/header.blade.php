@@ -330,7 +330,7 @@
 
         .cus-nav .submenu .submenu {
             top: 0;
-            left: 90%;
+            left: 72%;
             margin-left: 6px;
             /* tiny gap between levels */
             transform: translateY(0);
@@ -478,62 +478,36 @@
 
 
             <div class="dropdown">
-                <a href="#">Mandatory Disclosure</a>
+                <a href="#">Academics</a>
                 <ul class="submenu">
                     <li class="dropdown">
-                        <a href="#">UGC Approval and Compliance</a>
-                        <ul class="submenu">
-                            <li><a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}"
-                                    target="_blank">UGC-Precaution Notice</a></li>
-                            <li><a href="{{ asset('/assets/pdf/Circular_18_Fee_refund_rule.pdf') }}"
-                                    target="_blank">Fee Refund Rule</a></li>
-                            <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}"
-                                    target="_blank">Admission Date Extension</a></li>
-                            <li><a href="{{ asset('/assets/pdf/BCA_Proposal_Application.pdf') }}" target="_blank">TMU
-                                    Application submitted for UGC DEB Approval</a>
-                            </li>
-                            <li><a href="{{ asset('/assets/pdf/Proposal_Establishment_CFOE.pdf') }}"
-                                    target="_blank">TMU Regulatory Body Approval</a></li>
-                            <li><a href="{{ asset('/assets/pdf/CIQA_report.pdf') }}" target="_blank">CIQA Reports</a>
-                            </li>
-                            <li><a href="#" target="_blank">Sample Feedback Form</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#">Academics</a>
+                        <a href="#">Syllabus</a>
                         <ul class="submenu">
                             <li class="dropdown">
-                                <a href="#">Syllabus</a>
-                                <ul class="submenu">
-                                    <li class="dropdown">
-                                        <a href="{{ asset('/assets/pdf/Cdoe_PPR_BBA_Online.pdf') }}"
-                                            target="_blank">PPR Online BBA
-                                            Gen</a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="{{ asset('/assets/pdf/PPR_ONLINE_MBA_GEN.pdf') }}"
-                                            target="_blank">PPR Online MBA
-                                            Gen</a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="{{ asset('/assets/pdf/PPR_BCA_CDOE.pdf') }}" target="_blank">PPR
-                                            Online
-                                            BCA</a>
-                                    </li>
-                                </ul>
+                                <a href="{{ asset('/assets/pdf/Cdoe_PPR_BBA_Online.pdf') }}" target="_blank">PPR
+                                    Online BBA
+                                    Gen</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="{{ asset('/assets/pdf/PPR_ONLINE_MBA_GEN.pdf') }}" target="_blank">PPR
+                                    Online MBA
+                                    Gen</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="{{ asset('/assets/pdf/PPR_BCA_CDOE.pdf') }}" target="_blank">PPR
+                                    Online
+                                    BCA</a>
                             </li>
 
-                            <li><a href="#" target="_blank">Academic Calendar</a></li>
-                            <li><a href="#" target="_blank">Examination</a></li>
-                            <li><a href="{{ asset('/assets/pdf/Student_Handling_Mechanism.pdf') }}"
-                                    target="_blank">Student Grievances</a></li>
                         </ul>
+                    {{-- <li><a href="#" target="_blank">Academic Calendar</a></li> --}}
+                    {{-- <li><a href="#" target="_blank">Examination</a></li> --}}
+                    <li><a href="{{ asset('/assets/pdf/Student_Handling_Mechanism.pdf') }}" target="_blank">Student
+                            Grievances</a></li>
                     </li>
 
-                    <li>
-                        <a href="{{ asset('/assets/pdf/NAAC.pdf') }}" target="_blank">Certificate of NAAC</a>
-                    </li>
+                </ul>
+                </li>
 
                 </ul>
                 </li>
@@ -596,33 +570,15 @@
                 <li><a href="{{ route('blog') }}">Blogs</a></li>
                 <li class="flourish-nav-item-has-submenu">
                     <button type="button" class="flourish-submenu-toggle">
-                        Mandatory Disclosure <span class="submenu-arrow">▸</span>
+                        Academics <span class="submenu-arrow">▸</span>
                     </button>
 
                     <ul class="flourish-submenu mandatory-submenu">
-                        <h5 style="font-size: 17.6px">UGC Compliance</h5>
-                        <hr>
-
-                        <li><a href="{{ asset('/assets/pdf/UGC-Precaution-notice.pdf') }}" target="_blank">
-                                UGC-Precaution Notice</a></li>
-                        <li><a href="{{ asset('/assets/pdf/Circular_18_Fee_refund_rule.pdf') }}" target="_blank">Fee
-                                Refund Rule</a></li>
-                        <li><a href="{{ asset('/assets/pdf/Admission_Date_Extension.pdf') }}"
-                                target="_blank">Admission Date Extension</a></li>
-                        <li><a href="{{ asset('/assets/pdf/BCA_Proposal_Application.pdf') }}" target="_blank">TMU
-                                Application submitted for UGC DEB Approval</a>
-                        </li>
-                        <li><a href="{{ asset('/assets/pdf/TMU_Statutory_body_Establishment.pdf') }}" target="_blank">TMU
-                                Regulatory Body Approval</a></li>
-                        <li><a href="{{ asset('/assets/pdf/CIQA_report.pdf') }}" target="_blank">CIQA Reports</a>
-                        </li>
-                        <li><a href="#" target="_blank">Sample Feedback Form</a></li>
-                        <h5 style="font-size: 17.6px" class="mt-3">Academics</h5>
                         <hr>
                         <li><a href="{{ asset('/assets/pdf/Student_Handling_Mechanism.pdf') }}"
                                 target="_blank">Student Grievances</a></li>
-                        <li><a href="#" target="_blank">Academic Calendar</a></li>
-                        <li><a href="#" target="_blank">Examination</a></li>
+                        {{-- <li><a href="#" target="_blank">Academic Calendar</a></li> --}}
+                        {{-- <li><a href="#" target="_blank">Examination</a></li> --}}
                         <li class="fw-bold mb-0"><b><a href="#" target="_blank">Syllabus</a></b></li>
                         <hr class="mt-0 mb-1">
                         <li><a href="{{ asset('/assets/pdf/Cdoe_PPR_BBA_Online.pdf') }}" target="_blank">PPR Online
@@ -632,9 +588,6 @@
                         <li><a href="{{ asset('/assets/pdf/PPR_BCA_CDOE.pdf') }}" target="_blank">PPR Online
                                 BCA</a></li>
 
-                        <h5 style="font-size: 17.6px" class="mt-3">Accrediations</h5>
-                        <hr class="mt-0 mb-1">
-                        <li><a href="https://admissions.tmuonline.ac.in/">Certificate of NAAC</a></li>
                     </ul>
                 </li>
 
