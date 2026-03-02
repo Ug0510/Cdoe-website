@@ -2,10 +2,13 @@
 # Redirect all requests to the public folder
 RewriteCond %{REQUEST_URI} !^/public/
 RewriteRule ^(.*)$ /public/$1 [L]
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^tmuonline\.ac\.in\.tmu\.ac\.in$ [NC]
+RewriteRule ^(.*)$ https://tmuonline.ac.in/$1 [L,R=301]
 
 # php -- BEGIN cPanel-generated handler, do not edit
 # Set the “ea-php82” package as the default “PHP” programming language.
 <IfModule mime_module>
-  AddHandler application/x-httpd-ea-php82___lsphp .php .php8 .phtml
+  AddHandler application/x-httpd-ea-php82 .php .php8 .phtml
 </IfModule>
 # php -- END cPanel-generated handler, do not edit

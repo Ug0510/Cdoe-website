@@ -501,59 +501,59 @@ const images = [
     "assets/img/gallery/17.webp",
     "assets/img/gallery/18.webp",
     // Add more as needed
-  ];
-  let currentImageIndex = 0;
-  
-  function openLightbox(index) {
+];
+let currentImageIndex = 0;
+
+function openLightbox(index) {
     currentImageIndex = index;
     const lightboxImg = document.getElementById("custom-lightbox-img");
     lightboxImg.classList.remove('show');
     setTimeout(() => {
-      lightboxImg.src = images[currentImageIndex];
-      lightboxImg.classList.add('show');
+        lightboxImg.src = images[currentImageIndex];
+        lightboxImg.classList.add('show');
     }, 200);
     document.getElementById("custom-lightbox-caption").innerText =
-      document.querySelectorAll('.custom-gallery-item')[currentImageIndex].querySelector('.custom-caption').innerText;
+        document.querySelectorAll('.custom-gallery-item')[currentImageIndex].querySelector('.custom-caption').innerText;
     document.getElementById("custom-lightbox").style.display = "flex";
-  }
-  
-  function closeLightbox(event) {
+}
+
+function closeLightbox(event) {
     if (event.target.id === "custom-lightbox" || event.target.classList.contains('custom-close-btn')) {
-      document.getElementById("custom-lightbox").style.display = "none";
-      document.body.style.overflow = "auto";
+        document.getElementById("custom-lightbox").style.display = "none";
+        document.body.style.overflow = "auto";
     }
-  }
-  
-  function nextImage() {
+}
+
+function nextImage() {
     currentImageIndex = (currentImageIndex + 1) % images.length;
     const lightboxImg = document.getElementById("custom-lightbox-img");
     lightboxImg.classList.remove('show');
     setTimeout(() => {
-      lightboxImg.src = images[currentImageIndex];
-      lightboxImg.classList.add('show');
+        lightboxImg.src = images[currentImageIndex];
+        lightboxImg.classList.add('show');
     }, 200);
     document.getElementById("custom-lightbox-caption").innerText =
-      document.querySelectorAll('.custom-gallery-item')[currentImageIndex].querySelector('.custom-caption').innerText;
-  }
-  
-  function prevImage() {
+        document.querySelectorAll('.custom-gallery-item')[currentImageIndex].querySelector('.custom-caption').innerText;
+}
+
+function prevImage() {
     currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
     const lightboxImg = document.getElementById("custom-lightbox-img");
     lightboxImg.classList.remove('show');
     setTimeout(() => {
-      lightboxImg.src = images[currentImageIndex];
-      lightboxImg.classList.add('show');
+        lightboxImg.src = images[currentImageIndex];
+        lightboxImg.classList.add('show');
     }, 200);
     document.getElementById("custom-lightbox-caption").innerText =
-      document.querySelectorAll('.custom-gallery-item')[currentImageIndex].querySelector('.custom-caption').innerText;
-  }
+        document.querySelectorAll('.custom-gallery-item')[currentImageIndex].querySelector('.custom-caption').innerText;
+}
 // recruiter section JS start
 
 document.addEventListener('DOMContentLoaded', () => {
     const logos = [
-      'assets/img/logos/1.jpg','assets/img/logos/2.jpg','assets/img/logos/3.jpg','assets/img/logos/4.jpg','assets/img/logos/5.jpg',
-      'assets/img/logos/6.jpg','assets/img/logos/7.jpg','assets/img/logos/8.jpg','assets/img/logos/1.jpg',
-      'assets/img/logos/2.jpg','assets/img/logos/3.jpg'
+        'assets/img/logos/1.jpg', 'assets/img/logos/2.jpg', 'assets/img/logos/3.jpg', 'assets/img/logos/4.jpg', 'assets/img/logos/5.jpg',
+        'assets/img/logos/6.jpg', 'assets/img/logos/7.jpg', 'assets/img/logos/8.jpg', 'assets/img/logos/1.jpg',
+        'assets/img/logos/2.jpg', 'assets/img/logos/3.jpg'
     ];
     const itemsPerPage = 5;
     let currentStart = 0;
@@ -563,52 +563,52 @@ document.addEventListener('DOMContentLoaded', () => {
     // pre-create img elements
     const imgElements = [];
     for (let i = 0; i < itemsPerPage; i++) {
-      const img = document.createElement('img');
-      img.className = 'semi-circle-logo';
-      container?.appendChild(img);
-      imgElements.push(img);
+        const img = document.createElement('img');
+        img.className = 'semi-circle-logo';
+        container?.appendChild(img);
+        imgElements.push(img);
     }
 
     // position logos along the semi-circle
     function positionImgs() {
-      imgElements.forEach((img, i) => {
-        const idx = (currentStart + i) % logos.length;
-        img.src = logos[idx];
-        img.alt = `logo ${idx + 1}`;
+        imgElements.forEach((img, i) => {
+            const idx = (currentStart + i) % logos.length;
+            img.src = logos[idx];
+            img.alt = `logo ${idx + 1}`;
 
-        const angle = Math.PI * (i / (itemsPerPage - 1)); // 0→π
-        const x = radius * Math.cos(angle);
-        const y = radius * Math.sin(angle);
+            const angle = Math.PI * (i / (itemsPerPage - 1)); // 0→π
+            const x = radius * Math.cos(angle);
+            const y = radius * Math.sin(angle);
 
-        img.style.left = `calc(50% + ${x}px - 32px)`;
-        img.style.top  = `calc(100% - ${y}px - 32px)`;
-      });
+            img.style.left = `calc(50% + ${x}px - 32px)`;
+            img.style.top = `calc(100% - ${y}px - 32px)`;
+        });
     }
 
     function rotateNext() {
-      imgElements.forEach(img => img.style.opacity = '0');
-      setTimeout(() => {
-        currentStart = (currentStart + 1) % logos.length;
-        const first = imgElements.shift();
-        imgElements.push(first);
-        positionImgs();
-        container.innerHTML = '';
-        imgElements.forEach(el => container.appendChild(el));
-        imgElements.forEach(img => img.style.opacity = '1');
-      }, 300);
+        imgElements.forEach(img => img.style.opacity = '0');
+        setTimeout(() => {
+            currentStart = (currentStart + 1) % logos.length;
+            const first = imgElements.shift();
+            imgElements.push(first);
+            positionImgs();
+            container.innerHTML = '';
+            imgElements.forEach(el => container.appendChild(el));
+            imgElements.forEach(img => img.style.opacity = '1');
+        }, 300);
     }
 
     function rotatePrev() {
-      imgElements.forEach(img => img.style.opacity = '0');
-      setTimeout(() => {
-        currentStart = (currentStart - 1 + logos.length) % logos.length;
-        const last = imgElements.pop();
-        imgElements.unshift(last);
-        positionImgs();
-        container.innerHTML = '';
-        imgElements.forEach(el => container.appendChild(el));
-        imgElements.forEach(img => img.style.opacity = '1');
-      }, 300);
+        imgElements.forEach(img => img.style.opacity = '0');
+        setTimeout(() => {
+            currentStart = (currentStart - 1 + logos.length) % logos.length;
+            const last = imgElements.pop();
+            imgElements.unshift(last);
+            positionImgs();
+            container.innerHTML = '';
+            imgElements.forEach(el => container.appendChild(el));
+            imgElements.forEach(img => img.style.opacity = '1');
+        }, 300);
     }
 
     document.getElementById('next').addEventListener('click', rotateNext);
@@ -618,29 +618,303 @@ document.addEventListener('DOMContentLoaded', () => {
     let autoRotate = setInterval(rotateNext, 3000);
     container.addEventListener('mouseenter', () => clearInterval(autoRotate));
     container.addEventListener('mouseleave', () => {
-      autoRotate = setInterval(rotateNext, 3000);
+        autoRotate = setInterval(rotateNext, 3000);
     });
 
     positionImgs();
-  });
+});
 
-  // recruiter section JS end
+// recruiter section JS end
 
-  async function downloadImage(url) {
-  try {
-    const response = await fetch(url, { mode: 'cors' });
-    if (!response.ok) throw new Error('Network response was not ok');
-    const blob = await response.blob();
-    const filename = url.split('/').pop();
-    const link = document.createElement('a');
-    link.href = window.URL.createObjectURL(blob);
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    window.URL.revokeObjectURL(link.href);
-  } catch (error) {
-    console.error('Download failed:', error);
-    alert('Failed to download the image. Please try again or check the image URL.');
-  }
+async function downloadImage(url) {
+    try {
+        const response = await fetch(url, { mode: 'cors' });
+        if (!response.ok) throw new Error('Network response was not ok');
+        const blob = await response.blob();
+        const filename = url.split('/').pop();
+        const link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(link.href);
+    } catch (error) {
+        console.error('Download failed:', error);
+        alert('Failed to download the image. Please try again or check the image URL.');
+    }
 }
+
+// ============================================
+// Download Brochure Section - OTP Flow
+// ============================================
+document.addEventListener('DOMContentLoaded', function () {
+    // Elements
+    const openModalBtn = document.getElementById('openBrochureModal');
+    const closeModalBtn = document.getElementById('closeBrochureModal');
+    const modalOverlay = document.getElementById('brochureModalOverlay');
+    const brochureForm = document.getElementById('brochureForm');
+    const otpForm = document.getElementById('otpForm');
+    const step1 = document.getElementById('modalStep1');
+    const step2 = document.getElementById('modalStep2');
+    const step3 = document.getElementById('modalStep3');
+    const backBtn = document.getElementById('backToStep1');
+    const resendBtn = document.getElementById('resendOtpBtn');
+    const closeSuccessBtn = document.getElementById('closeSuccessModal');
+
+    // Check if elements exist before adding listeners
+    if (!openModalBtn || !modalOverlay) return;
+
+    let currentMobile = '';
+    let currentName = '';
+    let otpTimerInterval = null;
+
+    // Open Modal
+    openModalBtn.addEventListener('click', function () {
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    // Close Modal
+    function closeModal() {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        resetForm();
+    }
+
+    if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+    if (closeSuccessBtn) closeSuccessBtn.addEventListener('click', closeModal);
+
+    modalOverlay.addEventListener('click', function (e) {
+        if (e.target === modalOverlay) {
+            closeModal();
+        }
+    });
+
+    // Reset Form
+    function resetForm() {
+        if (brochureForm) brochureForm.reset();
+        if (otpForm) otpForm.reset();
+        if (step1) step1.style.display = 'block';
+        if (step2) step2.style.display = 'none';
+        if (step3) step3.style.display = 'none';
+        clearErrors();
+        if (otpTimerInterval) clearInterval(otpTimerInterval);
+    }
+
+    // Clear Errors
+    function clearErrors() {
+        document.querySelectorAll('.error-msg').forEach(el => el.textContent = '');
+    }
+
+    // Show Error
+    function showError(elementId, message) {
+        const el = document.getElementById(elementId);
+        if (el) el.textContent = message;
+    }
+
+    // Validate Mobile
+    function isValidMobile(mobile) {
+        return /^[6-9]\d{9}$/.test(mobile);
+    }
+
+    // Show Loader
+    function showLoader(btn, show) {
+        if (!btn) return;
+        const text = btn.querySelector('.btn-text');
+        const loader = btn.querySelector('.btn-loader');
+        if (show) {
+            if (text) text.style.display = 'none';
+            if (loader) loader.style.display = 'block';
+            btn.disabled = true;
+        } else {
+            if (text) text.style.display = 'block';
+            if (loader) loader.style.display = 'none';
+            btn.disabled = false;
+        }
+    }
+
+    // Start OTP Timer
+    function startOtpTimer() {
+        let seconds = 30;
+        const timerEl = document.getElementById('otpTimer');
+        if (resendBtn) resendBtn.disabled = true;
+
+        otpTimerInterval = setInterval(function () {
+            seconds--;
+            if (timerEl) timerEl.innerHTML = `Resend OTP in <strong>${seconds}</strong>s`;
+
+            if (seconds <= 0) {
+                clearInterval(otpTimerInterval);
+                if (timerEl) timerEl.textContent = '';
+                if (resendBtn) resendBtn.disabled = false;
+            }
+        }, 1000);
+    }
+
+    // Send OTP API - calls Laravel backend
+    async function sendOTPAPI(name, mobile) {
+        const response = await fetch('/api/otp/send', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || '',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({ name: name, mobile: mobile })
+        });
+        return await response.json();
+    }
+
+    // Verify OTP API - calls Laravel backend
+    async function verifyOTPAPI(mobile, otp) {
+        const response = await fetch('/api/otp/verify', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || '',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({ mobile: mobile, otp: otp })
+        });
+        return await response.json();
+    }
+
+    // Download Brochure
+    function downloadBrochure() {
+        const link = document.createElement('a');
+        link.href = '/assets/brochure/TMU-Online-Brochure.pdf';
+        link.download = 'TMU-Online-Brochure.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    // Form Submit - Send OTP
+    if (brochureForm) {
+        brochureForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            clearErrors();
+
+            const nameInput = document.getElementById('brochureName');
+            const mobileInput = document.getElementById('brochureMobile');
+            const name = nameInput ? nameInput.value.trim() : '';
+            const mobile = mobileInput ? mobileInput.value.trim() : '';
+
+            // Validation
+            if (!name) {
+                showError('nameError', 'Please enter your name');
+                return;
+            }
+
+            if (!mobile) {
+                showError('mobileError', 'Please enter your mobile number');
+                return;
+            }
+
+            if (!isValidMobile(mobile)) {
+                showError('mobileError', 'Please enter a valid 10-digit mobile number');
+                return;
+            }
+
+            currentMobile = mobile;
+            currentName = name;
+            const sendBtn = document.getElementById('sendOtpBtn');
+            showLoader(sendBtn, true);
+
+            try {
+                const result = await sendOTPAPI(name, mobile);
+
+                if (result.success) {
+                    const displayMobile = document.getElementById('displayMobile');
+                    if (displayMobile) displayMobile.textContent = '+91 ' + mobile;
+                    if (step1) step1.style.display = 'none';
+                    if (step2) step2.style.display = 'block';
+                    startOtpTimer();
+                } else {
+                    showError('mobileError', result.message || 'Failed to send OTP');
+                }
+            } catch (error) {
+                showError('mobileError', 'Something went wrong. Please try again.');
+            }
+
+            showLoader(sendBtn, false);
+        });
+    }
+
+    // OTP Form Submit
+    if (otpForm) {
+        otpForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            clearErrors();
+
+            const otpInput = document.getElementById('otpInput');
+            const otp = otpInput ? otpInput.value.trim() : '';
+
+            if (!otp || otp.length !== 6) {
+                showError('otpError', 'Please enter a valid 6-digit OTP');
+                return;
+            }
+
+            const verifyBtn = document.getElementById('verifyOtpBtn');
+            showLoader(verifyBtn, true);
+
+            try {
+                const result = await verifyOTPAPI(currentMobile, otp);
+
+                if (result.success) {
+                    if (step2) step2.style.display = 'none';
+                    if (step3) step3.style.display = 'block';
+                    downloadBrochure();
+                } else {
+                    showError('otpError', result.message || 'Invalid OTP');
+                }
+            } catch (error) {
+                showError('otpError', 'Something went wrong. Please try again.');
+            }
+
+            showLoader(verifyBtn, false);
+        });
+    }
+
+    // Resend OTP
+    if (resendBtn) {
+        resendBtn.addEventListener('click', async function () {
+            resendBtn.disabled = true;
+
+            try {
+                const result = await sendOTPAPI(currentName, currentMobile);
+                if (result.success) {
+                    startOtpTimer();
+                }
+            } catch (error) {
+                resendBtn.disabled = false;
+            }
+        });
+    }
+
+    // Back to Step 1
+    if (backBtn) {
+        backBtn.addEventListener('click', function () {
+            if (step2) step2.style.display = 'none';
+            if (step1) step1.style.display = 'block';
+            if (otpTimerInterval) clearInterval(otpTimerInterval);
+        });
+    }
+
+    // Only allow numbers in mobile input
+    const mobileInput = document.getElementById('brochureMobile');
+    if (mobileInput) {
+        mobileInput.addEventListener('input', function () {
+            this.value = this.value.replace(/\D/g, '').slice(0, 10);
+        });
+    }
+
+    // Only allow numbers in OTP input
+    const otpInput = document.getElementById('otpInput');
+    if (otpInput) {
+        otpInput.addEventListener('input', function () {
+            this.value = this.value.replace(/\D/g, '').slice(0, 6);
+        });
+    }
+});

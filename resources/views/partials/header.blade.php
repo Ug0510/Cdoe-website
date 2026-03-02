@@ -8,7 +8,7 @@
 
     <!-- Google Tag Manager -->
     <script>
-        (function(w, d, s, l, i) {
+        (function (w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({
                 'gtm.start': new Date().getTime(),
@@ -28,7 +28,7 @@
     <!-- No index meta tag for test environment -->
 
     <script>
-        (function() {
+        (function () {
             const isTestEnv = window.location.hostname === 'test.cdoe.tmu.ac.in';
 
             if (isTestEnv) {
@@ -64,6 +64,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
     <title>{{ $meta->meta_title ?? 'CDOE | TMU' }}</title>
@@ -155,8 +156,7 @@
     <link rel="preload" as="image" href="{{ asset('/assets/img/logos/logo.webp') }}">
 
     <!-- External Libraries -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -418,7 +418,7 @@
 
     <script>
         // This JavaScript remains the same
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             const preloader = document.getElementById('preloader');
             const body = document.body;
 
@@ -429,7 +429,7 @@
             }
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             document.body.classList.add('preloading');
         });
     </script>
@@ -450,8 +450,7 @@
     <nav class="cus-nav d-none d-lg-flex">
         <div class="logo">
             <div class="logo-wrapper">
-                <a href="{{ route('home') }}"><img src="{{ asset('/assets/img/logos/logo.png') }}"
-                        alt=""></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('/assets/img/logos/logo.png') }}" alt=""></a>
             </div>
         </div>
         <div class="logo-space"></div>
@@ -500,7 +499,8 @@
                             </li>
 
                         </ul>
-                    {{-- <li><a href="#" target="_blank">Academic Calendar</a></li> --}}
+                        {{--
+                    <li><a href="#" target="_blank">Academic Calendar</a></li> --}}
                     {{-- <li><a href="#" target="_blank">Examination</a></li> --}}
                     <li><a href="{{ asset('/assets/pdf/Student_Handling_Mechanism.pdf') }}" target="_blank">Student
                             Grievances</a></li>
@@ -575,8 +575,8 @@
 
                     <ul class="flourish-submenu mandatory-submenu">
                         <hr>
-                        <li><a href="{{ asset('/assets/pdf/Student_Handling_Mechanism.pdf') }}"
-                                target="_blank">Student Grievances</a></li>
+                        <li><a href="{{ asset('/assets/pdf/Student_Handling_Mechanism.pdf') }}" target="_blank">Student
+                                Grievances</a></li>
                         {{-- <li><a href="#" target="_blank">Academic Calendar</a></li> --}}
                         {{-- <li><a href="#" target="_blank">Examination</a></li> --}}
                         <li class="fw-bold mb-0"><b><a href="#" target="_blank">Syllabus</a></b></li>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CDOEController;
+use App\Http\Controllers\OtpController;
 
 
 
@@ -20,3 +21,9 @@ Route::get('/admissions-rules', [CDOEController::class, 'admissions_rules'])->na
 Route::get('/how-to-apply', [CDOEController::class, 'how_to_apply'])->name('how.to.apply');
 Route::get('/facilities', [CDOEController::class, 'facilities'])->name('facilities');
 Route::get('/blog/{slug}', [CDOEController::class, 'showBlog'])->name('show.blog');
+
+// OTP API Routes
+Route::prefix('api/otp')->group(function () {
+    Route::post('/send', [OtpController::class, 'sendOtp'])->name('otp.send');
+    Route::post('/verify', [OtpController::class, 'verifyOtp'])->name('otp.verify');
+});

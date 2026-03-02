@@ -264,9 +264,130 @@
 
 
 
+
+
     {{-- accreditation area start --}}
     <img src="{{ asset('/assets/img/other/accred1.png') }}" alt="" class="w-75 mx-auto my-4 d-none d-lg-block">
 
+    {{-- Download Brochure Section --}}
+    <section class="download-brochure-section">
+        <div class="container">
+            <div class="brochure-wrapper">
+                <!-- Left Side - Student Image with Yellow Accent -->
+                <div class="brochure-left">
+                    <div class="yellow-accent-circle"></div>
+                    <img src="{{ asset('/assets/img/brochure/student.png') }}" alt="Student" class="brochure-student-img">
+                    <!-- Decorative Dots Left -->
+                    <div class="decorative-dots dots-left">
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+
+                <!-- Right Side - Content -->
+                <div class="brochure-right">
+                    <!-- Decorative Lines -->
+                    <div class="decorative-lines">
+                        <span></span><span></span><span></span>
+                    </div>
+
+                    <h2 class="brochure-heading">
+                        <em>Are You Ready To Take The</em><br>
+                        <em>Next Step In Your Career ?</em>
+                    </h2>
+
+                    <button type="button" class="btn-download-brochure" id="openBrochureModal">
+                        Download Brochure
+                    </button>
+
+                    <!-- Decorative Dots Right -->
+                    <div class="decorative-dots dots-right">
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brochure Modal -->
+    <div class="brochure-modal-overlay" id="brochureModalOverlay">
+        <div class="brochure-modal">
+            <button type="button" class="modal-close-btn" id="closeBrochureModal">&times;</button>
+
+            <!-- Step 1: Name & Mobile -->
+            <div class="modal-step" id="modalStep1">
+                <h3 class="modal-title">Download Brochure</h3>
+                <p class="modal-subtitle">Please enter your details to download the brochure</p>
+
+                <form id="brochureForm" class="brochure-form">
+                    <div class="form-group">
+                        <label for="brochureName">Full Name <span class="required">*</span></label>
+                        <input type="text" id="brochureName" name="name" placeholder="Enter your full name" required>
+                        <span class="error-msg" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="brochureMobile">Mobile Number <span class="required">*</span></label>
+                        <div class="mobile-input-wrapper">
+                            <span class="country-code">+91</span>
+                            <input type="tel" id="brochureMobile" name="mobile" placeholder="Enter 10 digit mobile number"
+                                maxlength="10" required>
+                        </div>
+                        <span class="error-msg" id="mobileError"></span>
+                    </div>
+
+                    <button type="submit" class="btn-submit-brochure" id="sendOtpBtn">
+                        <span class="btn-text">Send OTP</span>
+                        <span class="btn-loader" style="display: none;"></span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Step 2: OTP Verification -->
+            <div class="modal-step" id="modalStep2" style="display: none;">
+                <h3 class="modal-title">Verify OTP</h3>
+                <p class="modal-subtitle">Enter the OTP sent to <span id="displayMobile"></span></p>
+
+                <form id="otpForm" class="brochure-form">
+                    <div class="form-group">
+                        <label for="otpInput">Enter OTP <span class="required">*</span></label>
+                        <div class="otp-input-wrapper">
+                            <input type="text" id="otpInput" name="otp" placeholder="Enter 6-digit OTP" maxlength="6"
+                                required>
+                        </div>
+                        <span class="error-msg" id="otpError"></span>
+                    </div>
+
+                    <div class="resend-otp-wrapper">
+                        <span id="otpTimer">Resend OTP in <strong>30</strong>s</span>
+                        <button type="button" class="btn-resend-otp" id="resendOtpBtn" disabled>Resend OTP</button>
+                    </div>
+
+                    <button type="submit" class="btn-submit-brochure" id="verifyOtpBtn">
+                        <span class="btn-text">Verify & Download</span>
+                        <span class="btn-loader" style="display: none;"></span>
+                    </button>
+
+                    <button type="button" class="btn-back" id="backToStep1">
+                        <i class="fas fa-arrow-left"></i> Change Number
+                    </button>
+                </form>
+            </div>
+
+            <!-- Step 3: Success -->
+            <div class="modal-step" id="modalStep3" style="display: none;">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3 class="modal-title success-title">Thank You!</h3>
+                <p class="modal-subtitle">Your brochure download will start automatically.</p>
+                <button type="button" class="btn-submit-brochure" id="closeSuccessModal">Close</button>
+            </div>
+        </div>
+    </div>
 
     <!-- course area start -->
     <section class="specialized-courses py-5">
@@ -375,9 +496,8 @@
                 <!-- Item 1: Artificial Intelligence -->
                 <a href="{{ route('finance.programme') }}" class="course-list-item">
                     <div class="course-list-item-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                     </div>
@@ -393,9 +513,8 @@
                 <!-- Item 2: Data Analytics -->
                 <a href="{{ route('hr.programme') }}" class="course-list-item">
                     <div class="course-list-item-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                     </div>
@@ -411,9 +530,8 @@
                 <!-- Item 3: Cyber Security -->
                 <a href="{{ route('marketing.programme') }}" class="course-list-item">
                     <div class="course-list-item-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                     </div>
@@ -429,9 +547,8 @@
                 <!-- Item 4: Full Stack -->
                 <a href="{{ route('ib.programme') }}" class="course-list-item">
                     <div class="course-list-item-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                     </div>
@@ -451,7 +568,7 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const swiper = new Swiper('.specializedCoursesSwiper', {
                 slidesPerView: 1,
                 spaceBetween: 30,
@@ -485,48 +602,39 @@
 
         <div class="custom-gallery">
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/1.webp') }}" alt="Image 1" loading="lazy"
-                    onclick="openLightbox(0)">
+                <img src="{{ asset('/assets/img/gallery/1.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(0)">
                 <div class="custom-caption">Dr APJ Abdul Kalam at the 1st Convocation 2012</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/2.webp') }}" alt="Image 2" loading="lazy"
-                    onclick="openLightbox(1)">
+                <img src="{{ asset('/assets/img/gallery/2.webp') }}" alt="Image 2" loading="lazy" onclick="openLightbox(1)">
                 <div class="custom-caption">2012 Graduates Celebrating Success</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/3.webp') }}" alt="Image 1" loading="lazy"
-                    onclick="openLightbox(2)">
+                <img src="{{ asset('/assets/img/gallery/3.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(2)">
                 <div class="custom-caption">Shri Akhilesh Yadav with Shri Suresh Jain at the 2nd Convocation</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/4.webp') }}" alt="Image 2" loading="lazy"
-                    onclick="openLightbox(3)">
+                <img src="{{ asset('/assets/img/gallery/4.webp') }}" alt="Image 2" loading="lazy" onclick="openLightbox(3)">
                 <div class="custom-caption">Graduates of 2023 Mark a Milestone</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/5.webp') }}" alt="Image 1" loading="lazy"
-                    onclick="openLightbox(4)">
+                <img src="{{ asset('/assets/img/gallery/5.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(4)">
                 <div class="custom-caption">Distinguished Guests at Convocation 2024</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/6.webp') }}" alt="Image 2" loading="lazy"
-                    onclick="openLightbox(5)">
+                <img src="{{ asset('/assets/img/gallery/6.webp') }}" alt="Image 2" loading="lazy" onclick="openLightbox(5)">
                 <div class="custom-caption">Students at the 3rd Convocation Ceremony</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/7.webp') }}" alt="Image 1" loading="lazy"
-                    onclick="openLightbox(6)">
+                <img src="{{ asset('/assets/img/gallery/7.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(6)">
                 <div class="custom-caption">Dinesh Sharma Addresses Graduates at Convocation 2021</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/8.webp') }}" alt="Image 2" loading="lazy"
-                    onclick="openLightbox(7)">
+                <img src="{{ asset('/assets/img/gallery/8.webp') }}" alt="Image 2" loading="lazy" onclick="openLightbox(7)">
                 <div class="custom-caption">Guru Randhawa Performs Live at Rock-on 2023</div>
             </div>
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/9.webp') }}" alt="Image 1" loading="lazy"
-                    onclick="openLightbox(8)">
+                <img src="{{ asset('/assets/img/gallery/9.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(8)">
                 <div class="custom-caption">TMU’s 2023 Graduates</div>
             </div>
             <div class="custom-gallery-item">
@@ -580,1549 +688,1526 @@
         <img src="{{ asset('/assets/img/5-reason-mobile.webp') }}" alt="" class="d-block d-lg-none">
     </div>
 
-   
-   {{-- Mandatory Disclosure Section --}}
-    <section class="tmu-disclosure-section py-5">
-    <div class="container">
-        
-        <div class="eligibility-premium-wrapper d-none d-md-flex">
-            <div class="card-bg-overlay" style="background-image: url('/assets/img/bd/banner-02.jpg');"></div>
-            <div class="card-content-box">
-                <div class="accent-line"></div>
-                <h2 class="main-heading">Mandatory <span class="text-orange">Disclosure</span></h2>
-                <div class="btn-container">
-                    <a href="{{ route('mandatory.disclosure') }}" target="_blank" class="tmu-btn-premium">
-                        <span>Read More</span>
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
+
+
+            {{-- Mandatory Disclosure Section --}}
+            <section class="tmu-disclosure-section py-5">
+                <div class="container">
+
+                    <div class="eligibility-premium-wrapper d-none d-md-flex">
+                        <div class="card-bg-overlay" style="background-image: url('/assets/img/bd/banner-02.jpg');"></div>
+                        <div class="card-content-box">
+                            <div class="accent-line"></div>
+                            <h2 class="main-heading">Mandatory <span class="text-orange">Disclosure</span></h2>
+                            <div class="btn-container">
+                                <a href="{{ route('mandatory.disclosure') }}" target="_blank" class="tmu-btn-premium">
+                                    <span>Read More</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="eligibility-premium-wrapper d-flex d-md-none">
+                        <div class="card-bg-overlay mobile-overlay" style="background-image: url('/assets/img/bd/banner-02.jpg');">
+                        </div>
+                        <div class="card-content-box text-center w-100 px-3">
+                            <div class="accent-line mx-auto"></div>
+                            <h2 class="main-heading-mobile text-nowrap">Mandatory <span class="text-orange">Disclosure</span></h2>
+                            <div class="btn-container mt-2">
+                                <a href="{{ route('mandatory.disclosure') }}" target="_blank" class="tmu-btn-premium">
+                                    <span>Read More</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <style>
+                /* Base Wrapper - Fixed Height */
+                .eligibility-premium-wrapper {
+                    position: relative;
+                    width: 100%;
+                    height: 220px;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    align-items: center;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                    background: linear-gradient(0deg, rgba(255, 102, 0, 0.9) 0%, rgba(255, 102, 0, 0.7) 100%);
+                }
+
+                .card-bg-overlay {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    background: linear-gradient(0deg, rgba(255, 102, 0, 0.9) 0%, rgba(255, 102, 0, 0.7) 100%);
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                .mobile-overlay {
+                    background: linear-gradient(0deg, rgba(255, 102, 0, 0.9) 0%, rgba(255, 102, 0, 0.7) 100%);
+                }
+
+                .card-content-box {
+                    position: relative;
+                    z-index: 2;
+                    padding: 0 40px;
+                }
+
+                .accent-line {
+                    width: 40px;
+                    height: 4px;
+                    background: #003366;
+                    margin-bottom: 10px;
+                    border-radius: 2px;
+                }
+
+                .category-tag {
+                    color: #003366;
+                    font-weight: 700;
+                    font-size: 0.75rem;
+                    text-transform: uppercase;
+                    margin-bottom: 5px;
+                }
+
+                .main-heading {
+                    color: #ffffff;
+                    font-size: 2.2rem;
+                    font-weight: 800;
+                    line-height: 1.1;
+                }
+
+                /* --- Mobile Heading Fix --- */
+                .main-heading-mobile {
+                    color: #ffffff;
+                    font-weight: 800;
+                    /* This ensures it stays in one line and scales based on screen width */
+                    font-size: clamp(1.2rem, 5.5vw, 1.7rem);
+                    letter-spacing: -0.5px;
+                    margin-bottom: 15px;
+                }
+
+                .text-orange {
+                    color: #003366;
+                }
+
+                .tmu-btn-premium {
+                    display: inline-flex;
+                    align-items: center;
+                    text-decoration: none;
+                    background: #003366;
+                    color: #fff !important;
+                    padding: 10px 20px;
+                    border-radius: 40px;
+                    font-weight: 700;
+                    font-size: 0.85rem;
+                    transition: all 0.3s ease;
+                    border: 2px solid #003366;
+                }
+
+                .tmu-btn-premium i {
+                    margin-left: 10px;
+                    font-size: 0.7rem;
+                }
+
+                /* Ensure centering on mobile */
+                @media (max-width: 767px) {
+                    .card-content-box {
+                        padding: 0 15px;
+                    }
+                }
+
+                /* Specific Tablet & iPad Media Query */
+                @media (min-width: 768px) and (max-width: 1024.98px) {
+
+                    /* 1. Ensure container adjusts height correctly */
+                    .eligibility-premium-wrapper {
+                        height: auto !important;
+                        min-height: 180px;
+                        margin: 0 5px;
+                        /* Slight buffer for screen edges */
+                    }
+
+                    /* 2. FIX FOR THE IMAGE: Pin the gavel/books to the right */
+                    .card-bg-overlay {
+                        background-position: right center !important;
+                        background-size: cover !important;
+                    }
+
+                    /* 3. FIX FOR TEXT OVERLAP: Add right padding to keep text on the left */
+                    .card-content-box {
+                        padding-right: 45% !important;
+                        /* Forces text to stay in the left 55% of the card */
+                        padding-left: 30px !important;
+                    }
+
+                    .main-heading {
+                        font-size: 1.7rem !important;
+                        /* Scales down font for tablet widths */
+                    }
+
+                    .tmu-btn-premium {
+                        padding: 8px 18px !important;
+                        font-size: 0.8rem !important;
+                    }
+                }
+            </style>
+            {{-- Mandatory Disclosure --}}
+
+
+
+            <!-- work area start -->
+            <div class="work-area">
+                <div class="container">
+                    <div class="section-title style-white text-center mb-4 mb-md-5 mt-3 mt-lg-5">
+                        <h2 class="title">Why TMU Online?</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-6 col-md-6">
+                            <div class="single-intro-inner style-icon-bg text-center">
+                                <div class="thumb">
+                                    <img src="{{ asset('/assets/img/icon/i-1.svg') }}" loading="lazy" class="why-icon" alt="img">
+                                </div>
+                                <div class="details">
+                                    <h5>Online Sessions by Industry Experts</h5>
+                                    <p>Learn directly from top industry professionals who share real-world insights, latest
+                                        trends, and business strategies.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-6 col-md-6">
+                            <div class="single-intro-inner style-icon-bg text-center">
+                                <div class="thumb">
+                                    <img src="{{ asset('/assets/img/icon/i-2.svg') }}" loading="lazy" class="why-icon" alt="img">
+                                </div>
+                                <div class="details">
+                                    <h5>Internship Opportunities</h5>
+                                    <p>Gain practical exposure through internships, helping you apply theoretical knowledge and
+                                        enhance your employability.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-6 col-md-6">
+                            <div class="single-intro-inner style-icon-bg text-center">
+                                <div class="thumb">
+                                    <img src="{{ asset('/assets/img/icon/i-3.svg') }}" loading="lazy" class="why-icon" alt="img">
+                                </div>
+                                <div class="details">
+                                    <h5>Flexible Examination Options</h5>
+                                    <p>Appear for exams at your convenience with flexible scheduling and remote assessment
+                                        options.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-6 col-md-6">
+                            <div class="single-intro-inner style-icon-bg text-center">
+                                <div class="thumb">
+                                    <img src="{{ asset('/assets/img/icon/i-4.svg') }}" loading="lazy" class="why-icon" alt="img">
+                                </div>
+                                <div class="details">
+                                    <h5>User-Friendly LMS</h5>
+                                    <p>Access lectures, assignments, and study materials anytime through an intuitive and
+                                        interactive platform.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-6 col-md-6">
+                            <div class="single-intro-inner style-icon-bg text-center">
+                                <div class="thumb">
+                                    <img src="{{ asset('/assets/img/icon/i-5.svg') }}" loading="lazy" class="why-icon" alt="img">
+                                </div>
+                                <div class="details">
+                                    <h5>24/7 Access to Digital Library</h5>
+                                    <p>Explore a vast collection of e-books, journals, and research materials anytime, anywhere.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-6 col-md-6">
+                            <div class="single-intro-inner style-icon-bg text-center">
+                                <div class="thumb">
+                                    <img src="{{ asset('/assets/img/icon/i-6.svg') }}" loading="lazy" class="why-icon" alt="img">
+                                </div>
+                                <div class="details">
+                                    <h5>Budget-Friendly Fee Structure</h5>
+                                    <p>Get high-quality education at an affordable cost with flexible payment options.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+            <!-- work area end -->
 
-        <div class="eligibility-premium-wrapper d-flex d-md-none">
-            <div class="card-bg-overlay mobile-overlay" style="background-image: url('/assets/img/bd/banner-02.jpg');"></div>
-            <div class="card-content-box text-center w-100 px-3">
-                <div class="accent-line mx-auto"></div>
-                <h2 class="main-heading-mobile text-nowrap">Mandatory <span class="text-orange">Disclosure</span></h2>
-                <div class="btn-container mt-2">
-                    <a href="{{ route('mandatory.disclosure') }}" target="_blank" class="tmu-btn-premium">
-                        <span>Read More</span>
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
+
+            <!-- Degree Section -->
+            <!-- Degree Showcase Section -->
+            <section class="degree-showcase py-5 position-relative overflow-hidden">
+                <!-- Gradient Blobs -->
+                <div class="blob blob1"></div>
+                <div class="blob blob2"></div>
+                <div class="blob blob3"></div>
+
+                <div class="container text-center position-relative">
+                    <p class="university-name mb-4"><span>Proudly Earned at</span> Teerthanker Mahaveer University</p>
+
+                    <div class="degree-card shadow mx-auto">
+                        <img src="{{ asset('/assets/img/degree.webp') }}" loading="lazy" alt="TMU Degree Certificate"
+                            class="img-fluid" />
+                    </div>
+
+
+                    <!-- Optional CTA -->
+                    {{-- <a href="#" class="btn btn-dark mt-3 px-4 ">Explore Our MBA Program</a> --}}
+                </div>
+            </section>
+
+
+
+
+
+
+
+            <section class="recruiters-section">
+                <div class="container">
+
+                    <!-- Section Title -->
+                    <div class="recruiter-title-container">
+                        <div class="section-title style-white text-center mb-4 mb-md-5 mt-3 mt-lg-5">
+                            <h2 class="title">Teerthanker Mahaveer University Online, <br><span class="highlight">Opens Doors
+                                    World Wide.</span></h2>
+                            <p>Our top-class recruiters list gives you the assurance that you'll get placed in
+                                leading MNCs and work with renowned brands.</p>
+                            <span class="title-underline"></span>
+                        </div>
+
+                    </div>
+
+                    <!-- Recruiter Logos Grid -->
+                    <div class="recruiter-logo-grid">
+
+                        {{-- Loop from 1 to 32 assuming images 1.jpg to 32.jpg exist --}}
+                        @php
+                            // Define alt texts - you might want a more dynamic way to fetch these
+                            // Or just use generic ones if specific names aren't readily available
+                            $altTexts = [
+                                1 => 'Wipro Logo',
+                                2 => 'Vistara Logo',
+                                3 => 'Videocon Logo',
+                                4 => 'VFS Global Logo',
+                                5 => 'Pantaloons Logo',
+                                6 => 'Amazon India Logo',
+                                7 => 'Tata Strive Logo',
+                                8 => 'Tally Logo',
+                                9 => 'Skyway Communications Logo',
+                                10 => 'Safety Circle Logo',
+                                11 => 'Royal Bank of Scotland Logo',
+                                12 => 'Paytm Logo',
+                                13 => 'OM Logistics Ltd Logo',
+                                14 => 'OYO Logo',
+                                15 => 'Neva Clothing Logo',
+                                16 => 'Max Life Insurance Logo',
+                                17 => 'Overseas Logo',
+                                18 => 'Tripat Infoways Logo',
+                                19 => 'LIC Logo',
+                                20 => 'Kotak Mahindra Bank Logo',
+                                21 => 'Karvy Stock Broking Logo',
+                                22 => 'Indigo Logo',
+                                23 => 'Globe Toyota Logo',
+                                24 => 'Recruiter Logo 24', // Add more specific Alts if you have them
+                                25 => 'Recruiter Logo 25',
+                                26 => 'Recruiter Logo 26',
+                                27 => 'Recruiter Logo 27',
+                                28 => 'Recruiter Logo 28',
+                                29 => 'Recruiter Logo 29',
+                                30 => 'Recruiter Logo 30',
+                                31 => 'Recruiter Logo 31',
+                                32 => 'Recruiter Logo 32',
+                            ];
+                        @endphp
+
+                        @for ($i = 1; $i <= 32; $i++)
+                            <div class="recruiter-item">
+                                <img src="{{ asset('assets/img/recruiters/' . $i . '.jpg') }}" loading="lazy"
+                                    alt="{{ $altTexts[$i] ?? 'Recruiter Logo ' . $i }}" class="recruiter-logo"
+                                    onerror="this.style.display='none'; this.parentElement.style.display='none';" {{-- Hide item if
+                                    image fails to load --}}>
+                            </div>
+                        @endfor
+
+                    </div> <!-- End Recruiter Logos Grid -->
+
+                </div> <!-- End Container -->
+            </section>
+            <!-- ========== Recruiters Section End ========== -->
+
+
+            <!-- ============================ Reel Showcase Section Start ============================ -->
+            {{-- <section class="tmu-reel-showcase py-5 position-relative">
+                <div class="tmu-reel-background-element tmu-reel-bg-el-1"></div>
+                <div class="tmu-reel-background-element tmu-reel-bg-el-2"></div>
+
+                <div class="container position-relative">
+                    {{-- <h2 class="tmu-reel-showcase__title text-center mb-5">Why TMU Online? Watch & Discover</h2> --}}
+
+                    {{-- <div class="tmu-reel-swiper-container position-relative">
+
+                        <div class="swiper tmu-reel-swiper">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="tmu-reel-item">
+                                        <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DHtGgTsJLRi/embed/"
+                                            frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
+                                            loading="lazy" title="Instagram Reel 1">
+                                        </iframe>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="tmu-reel-item">
+                                        <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DHn57DfSTzI/embed/"
+                                            frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
+                                            loading="lazy" title="Instagram Reel 2">
+                                        </iframe>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="tmu-reel-item">
+                                        <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DCT49FeOt6x/embed/"
+                                            frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
+                                            loading="lazy" title="Instagram Reel 3">
+                                        </iframe>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="tmu-reel-item">
+                                        <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DCJR2JQIgOX/embed/"
+                                            frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
+                                            loading="lazy" title="Instagram Reel 4">
+                                        </iframe>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="tmu-reel-item">
+                                        <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DCEuwZbJT2H/embed/"
+                                            frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
+                                            loading="lazy" title="Instagram Reel 5">
+                                        </iframe>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="tmu-swiper-nav tmu-swiper-button-prev">
+                            <i class="bi bi-chevron-left"></i>
+                        </div>
+                        <div class="tmu-swiper-nav tmu-swiper-button-next">
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </section> --}}
+            <!-- ============================ Reel Showcase Section End ============================ -->
+
+
+
+
+
+            <!-- faq area start -->
+            <div class="faq-area mt-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="title text-center mb-2 mb-lg-4">FAQs</h2>
+                        </div>
+
+                        {{-- <div class="col-12 mt-5 mt-lg-0">
+                            <div id="accordion" class="accordion-area">
+                                <div class="card single-faq-inner">
+                                    <div class="card-header" id="ff-one">
+                                        <h5 class="mb-0">
+                                            <button class="btn-link" data-toggle="collapse" data-target="#f-one"
+                                                aria-expanded="true" aria-controls="f-one">
+                                                Is TMU CDOE UGC-approved?
+                                                <i class="fa fa-eye"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="f-one" class="show collapse" aria-labelledby="ff-one" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Yes. All distance and online education programmes offered by TMU’s CDOE are recognized
+                                            and approved by the University Grants Commission (UGC) and other relevant regulatory
+                                            bodies, ensuring validity and credibility.</div>
+                                    </div>
+                                </div>
+                                <div class="card single-faq-inner">
+                                    <div class="card-header" id="ff-two">
+                                        <h5 class="mb-0">
+                                            <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-two"
+                                                aria-expanded="true" aria-controls="f-two">
+                                                02. What is the eligibility for an Online MBA?
+                                                <i class="fa fa-eye"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="f-two" class="collapse" aria-labelledby="ff-two" data-parent="#accordion">
+                                        <div class="card-body">
+                                            A bachelor’s degree in any discipline from a recognized university is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card single-faq-inner">
+                                    <div class="card-header" id="ff-three">
+                                        <h5 class="mb-0">
+                                            <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-three"
+                                                aria-expanded="true" aria-controls="f-three">
+                                                03. How can I apply for admission to TMU CDOE?
+                                                <i class="fa fa-eye"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="f-three" class="collapse" aria-labelledby="ff-three" data-parent="#accordion">
+                                        <div class="card-body">
+                                            You can apply online via the official TMU CDOE website <a
+                                                href="https://www.cdoe.tmu.ac.in/">https://www.cdoe.tmu.ac.in/</a>. The process
+                                            involves filling out the application form, uploading the required documents, and paying
+                                            the application fee online.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card single-faq-inner">
+                                    <div class="card-header" id="ff-four">
+                                        <h5 class="mb-0">
+                                            <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-four"
+                                                aria-expanded="true" aria-controls="f-four">
+                                                04. Can I pursue an Online MBA while working?
+                                                <i class="fa fa-eye"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="f-four" class="collapse" aria-labelledby="ff-four" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Yes, the programme is designed for working professionals and offers flexible learning
+                                            options.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card single-faq-inner">
+                                    <div class="card-header" id="ff-five">
+                                        <h5 class="mb-0">
+                                            <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-five"
+                                                aria-expanded="true" aria-controls="f-five">
+                                                05. What specialisations does TMU Online MBA offer?
+                                                <i class="fa fa-eye"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="f-five" class="collapse" aria-labelledby="ff-five" data-parent="#accordion">
+                                        <div class="card-body">
+                                            TMU CDOE offers specialisations in marketing, finance, and human resources management.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> --}}
+
+
+                        {{-- <style>
+                            .fresh-faqs {
+                                gap: 10px;
+                                /* space between tabs and content */
+                            }
+
+                            .fresh-faqs-tabs {
+                                min-width: 180px;
+                            }
+
+                            .fresh-faqs-tabs .fresh-faqs-tab-btn {
+                                border: 1px solid #ccc;
+                                background: #fff;
+                                color: #000;
+                                border-radius: 50px;
+                                padding: 8px 18px;
+                                font-weight: 600;
+                                margin-bottom: 10px;
+                                transition: all 0.2s ease;
+                                cursor: pointer;
+                            }
+
+                            .fresh-faqs-tabs .fresh-faqs-tab-btn:hover {
+                                border-color: #003366;
+                                color: #003366;
+                            }
+
+                            .fresh-faqs-tabs .fresh-faqs-tab-btn.active {
+                                background: #0d3b66;
+                                color: #fff;
+                                border-color: #0d3b66;
+                            }
+
+                            .fresh-faqs-content .fresh-faqs-tab-pane {
+                                display: none;
+                            }
+
+                            .fresh-faqs-content .fresh-faqs-tab-pane.active {
+                                display: block;
+                            }
+
+                            /* @media (max-width: 768px) {
+                                                        .fresh-faqs {
+                                                            flex-direction: column;
+                                                            gap: 16px;
+                                                        }
+
+                                                        .fresh-faqs-tabs {
+                                                            flex-direction: row !important;
+                                                            flex-wrap: wrap;
+                                                            justify-content: center;
+                                                            width: 100% !important;
+                                                        }
+
+                                                        .fresh-faqs-tab-btn {
+                                                            flex: 1 1 auto;
+                                                            margin: 5px;
+                                                            white-space: nowrap;
+                                                        }
+
+                                                        .fresh-faqs-content {
+                                                            max-width: 100% !important;
+                                                            padding-left: 0 !important;
+                                                        }
+                                                    } */
+                            <style>
+
+                            /* FAQ container */
+                            .fresh-faqs {
+                                display: flex;
+                                align-items: flex-start;
+                                gap: 24px;
+                                /* space between tabs & content */
+                                width: 100%;
+                                /* make it responsive */
+                            }
+
+                            /* Left Tabs */
+                            .fresh-faqs-tabs {
+                                flex: 0 0 220px;
+                                /* fixed width for tabs */
+                            }
+
+                            /* Tab Buttons */
+                            .fresh-faqs-tab-btn {
+                                border: 1px solid #ccc;
+                                background: #fff;
+                                color: #000;
+                                border-radius: 50px;
+                                padding: 10px 20px;
+                                font-weight: 600;
+                                margin-bottom: 12px;
+                                transition: all 0.2s ease;
+                                cursor: pointer;
+                                text-align: left;
+                                width: 100%;
+                                /* full width inside tabs column */
+                            }
+
+                            .fresh-faqs-tab-btn:hover {
+                                border-color: #003366;
+                                color: #003366;
+                            }
+
+                            .fresh-faqs-tab-btn.active {
+                                background: #0d3b66;
+                                color: #fff;
+                                border-color: #0d3b66;
+                            }
+
+                            /* Right Content */
+                            .fresh-faqs-content {
+                                flex: 1;
+                                /* take all remaining width */
+                                min-width: 0;
+                                /* prevents flexbox overflow issues */
+                                max-width: calc(100% - 220px - 24px);
+                                /* stays fixed even when toggled */
+                            }
+
+                            /* Accordion inside content */
+                            .fresh-faqs-content .accordion {
+                                width: 100%;
+                                /* force full width */
+                                max-width: 100%;
+                                /* prevent auto-shrinking */
+                            }
+                        </style>
+
+                        <div class="fresh-faqs d-flex">
+                            <!-- Left Tabs -->
+                            <div class="fresh-faqs-tabs d-flex flex-column">
+                                <button class="fresh-faqs-tab-btn active" data-target="#fresh-faqs-general">General</button>
+                                <button class="fresh-faqs-tab-btn" data-target="#fresh-faqs-admission">Admission</button>
+                                <button class="fresh-faqs-tab-btn" data-target="#fresh-faqs-academics">Academics</button>
+
+                            </div>
+
+                            <!-- Right Content -->
+                            <div class="fresh-faqs-content flex-grow-1 ps-4">
+                                <div class="fresh-faqs-tab-pane active" id="fresh-faqs-general">
+                                    <div class="col-12 mt-1 mt-lg-0">
+                                        <div id="accordion" class="accordion-area">
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-one">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link" data-toggle="collapse" data-target="#f-one"
+                                                            aria-expanded="true" aria-controls="f-one">
+                                                            Q1. Is there any distinction between Online and On-Campus Degrees?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-one" class="show collapse" aria-labelledby="ff-one"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        No, both formats offer the same level of academic rigor, recognition, and
+                                                        credibility. TMU Online degrees are equivalent to traditional on-campus
+                                                        degrees in every respect.</div>
+                                                </div>
+                                            </div>
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-two">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#f-two" aria-expanded="true" aria-controls="f-two">
+                                                            Q2. How are the courses delivered?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-two" class="collapse" aria-labelledby="ff-two" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Programs are conducted through a comprehensive digital platform featuring
+                                                        recorded lectures, live interactive classes, discussion forums, assignments,
+                                                        quizzes, and proctored final exams.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-three">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#f-three" aria-expanded="true" aria-controls="f-three">
+                                                            Q3. Is Placement Assistance available?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-three" class="collapse" aria-labelledby="ff-three"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Yes, TMU will provides virtual career support including resume-building
+                                                        workshops, industry-led webinars, career counselling, and placement
+                                                        opportunities through its T&D department.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-four">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#f-four" aria-expanded="true" aria-controls="f-four">
+                                                            Q4. Can International students apply?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-four" class="collapse" aria-labelledby="ff-four"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Definitely. TMU Online welcomes learners from around the world, provided
+                                                        they meet the eligibility requirements and have access to the necessary
+                                                        digital tools.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-five">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#f-five" aria-expanded="true" aria-controls="f-five">
+                                                            Q5. What programs are offered through TMU Online?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-five" class="collapse" aria-labelledby="ff-five"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        TMU Online offers a range of Undergraduate (UG) and Postgraduate (PG) degree
+                                                        programs across various disciplines
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-six">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#f-six" aria-expanded="true" aria-controls="f-six">
+                                                            Q6. Are Online Degrees accepted by employers?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-six" class="collapse" aria-labelledby="ff-six" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Yes, online degrees from accredited institutions are widely accepted by
+                                                        employers, especially when they focus on relevant skills and industry needs.
+                                                        TMU Online degrees are UGC-entitled and recognized at par with traditional
+                                                        degrees.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fresh-faqs-tab-pane" id="fresh-faqs-admission">
+                                    <div class="col-12 mt-1 mt-lg-0">
+                                        <div id="accordion" class="accordion-area">
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-one">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link" data-toggle="collapse" data-target="#f-one"
+                                                            aria-expanded="true" aria-controls="f-one">
+                                                            Q1. What are the Eligibility Requirements?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-one" class="show collapse" aria-labelledby="ff-one"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Eligibility depends on the program level:<br>
+                                                        <b>Undergraduate Programs:</b><br>
+                                                        BBA: Completion of 10+2 with a Minimum of 50% Marks.<br>
+                                                        BA: Completion of 10+2 from a Recognized Board.<br><br>
+                                                        <b>Postgraduate Programs:</b><br>
+                                                        MBA: A Bachelor’s Degree from a Recognized University is required.<br><br>
+                                                        All Applicants must submit Academic Certificates and a Valid
+                                                        Government-issued ID.
+                                                        Some programs may have additional requirements or assessments.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-two">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#f-two" aria-expanded="true" aria-controls="f-two">
+                                                            Q2. What documents are needed for Admission?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-two" class="collapse" aria-labelledby="ff-two" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Here’s a breakdown of required documents:<br><br>
+                                                        <b>Domestic Students:</b><br>
+                                                        - 10th, 12th Mark sheet and Passing Certificates<br>
+                                                        - Bachelor’s Degree Certificate with Marks sheets<br>
+                                                        - Government-issued ID (Aadhaar, PAN, Passport)<br><br>
+                                                        <b>International Students:</b><br>
+                                                        - O’Level and A’Level or Equivalent Qualifications<br>
+                                                        - Bachelor’s Degree Certificate with Marks sheets<br>
+                                                        - Passport Copy (Mandatory)<br><br>
+                                                        Once documents are ready, the admissions team will assist you through the
+                                                        process.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-three">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#f-three" aria-expanded="true" aria-controls="f-three">
+                                                            Q3. Is there an Entrance Exam?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-three" class="collapse" aria-labelledby="ff-three"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        No entrance test is required. Admission is based on eligibility criteria and
+                                                        document verification.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-four">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#f-four" aria-expanded="true" aria-controls="f-four">
+                                                            Q4. Are EMI options available for Tuition Fees?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-four" class="collapse" aria-labelledby="ff-four"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Yes, Flexible EMI plans are available at affordable rates. Visit the program
+                                                        page or speak with a counsellor for more details.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-five">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#f-five" aria-expanded="true" aria-controls="f-five">
+                                                            Q5. Is there a Refund Policy?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-five" class="collapse" aria-labelledby="ff-five"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Yes, refunds are available in accordance with UGC guidelines. Requests must
+                                                        be made within the specified timeframe, and a processing fee may apply.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fresh-faqs-tab-pane" id="fresh-faqs-academics">
+                                    <div class="col-12 mt-1 mt-lg-0">
+                                        <div id="accordion" class="accordion-area">
+
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-one">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link" data-toggle="collapse" data-target="#f-one"
+                                                            aria-expanded="true" aria-controls="f-one">
+                                                            Q1. How are classes get conducted?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-one" class="show collapse" aria-labelledby="ff-one"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Classes include live sessions and recorded lectures accessible via the
+                                                        Learning Management System (LMS).
+                                                        Students can participate in group discussions and interactive activities.
+                                                        All live sessions are recorded for later viewing.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-two">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#f-two" aria-expanded="true" aria-controls="f-two">
+                                                            Q2. Where can I find study materials?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-two" class="collapse" aria-labelledby="ff-two" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        All learning resources—such as lecture notes, e-books, videos, case studies,
+                                                        and quizzes—are available on the LMS for self-paced access.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-three">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#f-three" aria-expanded="true" aria-controls="f-three">
+                                                            Q3. How are exams administered?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-three" class="collapse" aria-labelledby="ff-three"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Exams are conducted online with secure proctoring. The process includes:<br>
+                                                        i) Advance Notification of exam schedules via Email/SMS and LMS.<br>
+                                                        ii) Online proctored exams taken from home using a secure browser.<br>
+                                                        iii) Evaluation and Result Declaration.<br><br>
+                                                        Mock exams are provided to help students familiarize themselves with the
+                                                        system.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-four">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#f-four" aria-expanded="true" aria-controls="f-four">
+                                                            Q4. How do students access industry insights and expert sessions?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-four" class="collapse" aria-labelledby="ff-four"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        TMU Online hosts Industry Interaction webinars featuring entrepreneurs, tech
+                                                        leaders,
+                                                        marketing professionals, and subject experts at frequent intervals.
+                                                        These sessions offer valuable insights and networking opportunities.
+                                                        Recordings are available on the student portal for later access.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-five">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#f-five" aria-expanded="true" aria-controls="f-five">
+                                                            Q5. Will faculty be available for doubt resolution?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-five" class="collapse" aria-labelledby="ff-five"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Yes, students can interact with faculty during live Q&A sessions,
+                                                        discussion boards, and scheduled one-on-one mentoring.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-six">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#f-six" aria-expanded="true" aria-controls="f-six">
+                                                            Q6. Does TMU Online offer career support?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-six" class="collapse" aria-labelledby="ff-six" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Yes. TMU Online provides career services including resume reviews,
+                                                        interview preparation, and access to job opportunities through
+                                                        recruitment drives and career platforms.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="ff-seven">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#f-seven" aria-expanded="true" aria-controls="f-seven">
+                                                            Q7. Where can I view the academic calendar?
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="f-seven" class="collapse" aria-labelledby="ff-seven"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        The academic calendar is available on the LMS and includes key dates
+                                                        for assignments, exams, and other academic milestones.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <script>
+                            document.querySelectorAll('.fresh-faqs-tabs .fresh-faqs-tab-btn').forEach(button => {
+                                button.addEventListener('click', () => {
+                                    // remove active from all
+                                    document.querySelectorAll('.fresh-faqs-tabs .fresh-faqs-tab-btn').forEach(btn => btn
+                                        .classList.remove('active'));
+                                    document.querySelectorAll('.fresh-faqs-content .fresh-faqs-tab-pane').forEach(pane => pane
+                                        .classList.remove('active'));
+
+                                    // activate clicked
+                                    button.classList.add('active');
+                                    const target = document.querySelector(button.getAttribute('data-target'));
+                                    if (target) target.classList.add('active');
+                                });
+                            });
+                        </script> --}}
+
+
+                        <div class="fresh-faqs">
+                            <!-- TOP TABS -->
+                            <div class="fresh-faqs-tabs d-flex justify-content-center align-items-center gap-2 flex-wrap">
+                                <button class="fresh-faqs-tab-btn active" data-target="#fresh-faqs-general">General</button>
+                                <button class="fresh-faqs-tab-btn" data-target="#fresh-faqs-admission">Admission</button>
+                                <button class="fresh-faqs-tab-btn" data-target="#fresh-faqs-academics">Academics</button>
+                            </div>
+
+                            <!-- CONTENT -->
+                            <div class="fresh-faqs-content">
+                                <!-- ================= General ================= -->
+                                <div class="fresh-faqs-tab-pane active" id="fresh-faqs-general">
+                                    <div class="col-12">
+                                        <div id="accordion-general" class="accordion-area">
+                                            <!-- G1 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="gen-h1">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link" data-bs-toggle="collapse" data-bs-target="#gen-c1"
+                                                            aria-expanded="true" aria-controls="gen-c1">
+                                                            Q1. Is there any distinction between Online and On-Campus Degrees? <i
+                                                                class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="gen-c1" class="collapse show" aria-labelledby="gen-h1"
+                                                    data-bs-parent="#accordion-general">
+                                                    <div class="card-body">
+                                                        No, both formats offer the same level of academic rigor, recognition, and
+                                                        credibility. TMU Online
+                                                        degrees are equivalent to traditional on-campus degrees in every respect.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- G2 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="gen-h2">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#gen-c2" aria-expanded="false" aria-controls="gen-c2">
+                                                            Q2. How are the courses delivered? <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="gen-c2" class="collapse" aria-labelledby="gen-h2"
+                                                    data-bs-parent="#accordion-general">
+                                                    <div class="card-body">
+                                                        Programs are conducted through a comprehensive digital platform featuring
+                                                        recorded lectures, live interactive classes, discussion forums, assignments,
+                                                        quizzes, and proctored final exams.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- G3 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="gen-h3">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#gen-c3" aria-expanded="false" aria-controls="gen-c3">
+                                                            Q3. Is Placement Assistance available? <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="gen-c3" class="collapse" aria-labelledby="gen-h3"
+                                                    data-bs-parent="#accordion-general">
+                                                    <div class="card-body">
+                                                        Yes, TMU will provides virtual career support including resume-building
+                                                        workshops, industry-led
+                                                        webinars, career counselling, and placement opportunities through its
+                                                        T&amp;D department.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- G4 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="gen-h4">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#gen-c4" aria-expanded="false" aria-controls="gen-c4">
+                                                            Q4. Can International students apply? <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="gen-c4" class="collapse" aria-labelledby="gen-h4"
+                                                    data-bs-parent="#accordion-general">
+                                                    <div class="card-body">
+                                                        Definitely. TMU Online welcomes learners from around the world, provided
+                                                        they meet the eligibility
+                                                        requirements and have access to the necessary digital tools.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- G5 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="gen-h5">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#gen-c5" aria-expanded="false" aria-controls="gen-c5">
+                                                            Q5. What programs are offered through TMU Online? <i
+                                                                class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="gen-c5" class="collapse" aria-labelledby="gen-h5"
+                                                    data-bs-parent="#accordion-general">
+                                                    <div class="card-body">
+                                                        TMU Online offers a range of Undergraduate (UG) and Postgraduate (PG) degree
+                                                        programs across
+                                                        various disciplines.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- G6 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="gen-h6">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#gen-c6" aria-expanded="false" aria-controls="gen-c6">
+                                                            Q6. Are Online Degrees accepted by employers? <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="gen-c6" class="collapse" aria-labelledby="gen-h6"
+                                                    data-bs-parent="#accordion-general">
+                                                    <div class="card-body">
+                                                        Yes, online degrees from accredited institutions are widely accepted by
+                                                        employers, especially when
+                                                        they focus on relevant skills and industry needs. TMU Online degrees are
+                                                        UGC-entitled and
+                                                        recognized at par with traditional degrees.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ================= Admission ================= -->
+                                <div class="fresh-faqs-tab-pane" id="fresh-faqs-admission">
+                                    <div class="col-12">
+                                        <div id="accordion-admission" class="accordion-area">
+                                            <!-- A1 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="adm-h1">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link" data-bs-toggle="collapse" data-bs-target="#adm-c1"
+                                                            aria-expanded="true" aria-controls="adm-c1">
+                                                            Q1. What are the Eligibility Requirements? <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="adm-c1" class="collapse show" aria-labelledby="adm-h1"
+                                                    data-bs-parent="#accordion-admission">
+                                                    <div class="card-body">
+                                                        Eligibility depends on the program level:<br>
+                                                        <b>Undergraduate Programs:</b><br>
+                                                        BBA: Completion of 10+2 with a Minimum of 50% Marks.<br>
+                                                        BA: Completion of 10+2 from a Recognized Board.<br><br>
+                                                        <b>Postgraduate Programs:</b><br>
+                                                        MBA: A Bachelor’s Degree from a Recognized University is required.<br><br>
+                                                        All Applicants must submit Academic Certificates and a Valid
+                                                        Government-issued ID. Some
+                                                        programs may have additional requirements or assessments.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- A2 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="adm-h2">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#adm-c2" aria-expanded="false" aria-controls="adm-c2">
+                                                            Q2. What documents are needed for Admission? <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="adm-c2" class="collapse" aria-labelledby="adm-h2"
+                                                    data-bs-parent="#accordion-admission">
+                                                    <div class="card-body">
+                                                        Here’s a breakdown of required documents:<br><br>
+                                                        <b>Domestic Students</b><br>
+                                                        10 th , 12 th Mark sheet and Passing Certificates<br>
+                                                        Bachelor’s Degree Certificate with Marks sheets<br>
+                                                        Government-issued ID (Aadhaar, PAN, Passport)<br><br>
+                                                        <b>International Students</b><br>
+                                                        O’Level and A’Level or Equivalent Qualifications<br>
+                                                        Bachelor’s Degree Certificate with Marks sheets<br>
+                                                        Passport Copy (Mandatory)<br><br>
+                                                        Once documents are ready, the admissions team will assist you through the
+                                                        process.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- A3 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="adm-h3">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#adm-c3" aria-expanded="false" aria-controls="adm-c3">
+                                                            Q3. Is there an Entrance Exam? <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="adm-c3" class="collapse" aria-labelledby="adm-h3"
+                                                    data-bs-parent="#accordion-admission">
+                                                    <div class="card-body">
+                                                        No entrance test is required. Admission is based on eligibility criteria and
+                                                        document verification.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- A4 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="adm-h4">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#adm-c4" aria-expanded="false" aria-controls="adm-c4">
+                                                            Q4. Are EMI options available for Tuition Fees? <i
+                                                                class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="adm-c4" class="collapse" aria-labelledby="adm-h4"
+                                                    data-bs-parent="#accordion-admission">
+                                                    <div class="card-body">
+                                                        Yes, Flexible EMI plans are available at affordable rates. Visit the program
+                                                        page or speak with a
+                                                        counsellor for more details.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- A5 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="adm-h5">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#adm-c5" aria-expanded="false" aria-controls="adm-c5">
+                                                            Q5. Is there a Refund Policy? <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="adm-c5" class="collapse" aria-labelledby="adm-h5"
+                                                    data-bs-parent="#accordion-admission">
+                                                    <div class="card-body">
+                                                        Yes, refunds are available in accordance with UGC guidelines. Requests must
+                                                        be made within the
+                                                        specified timeframe, and a processing fee may apply.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ================= Academics ================= -->
+                                <div class="fresh-faqs-tab-pane" id="fresh-faqs-academics">
+                                    <div class="col-12">
+                                        <div id="accordion-academics" class="accordion-area">
+                                            <!-- C1 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="acd-h1">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link" data-bs-toggle="collapse" data-bs-target="#acd-c1"
+                                                            aria-expanded="true" aria-controls="acd-c1">
+                                                            Q1. How are classes get conducted? <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="acd-c1" class="collapse show" aria-labelledby="acd-h1"
+                                                    data-bs-parent="#accordion-academics">
+                                                    <div class="card-body">
+                                                        Classes include live sessions and recorded lectures accessible via the
+                                                        Learning Management System
+                                                        (LMS). Students can participate in group discussions and interactive
+                                                        activities. All live sessions are
+                                                        recorded for later viewing.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- C2 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="acd-h2">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#acd-c2" aria-expanded="false" aria-controls="acd-c2">
+                                                            Q2. Where can I find study materials? <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="acd-c2" class="collapse" aria-labelledby="acd-h2"
+                                                    data-bs-parent="#accordion-academics">
+                                                    <div class="card-body">
+                                                        All learning resources—such as lecture notes, e-books, videos, case studies,
+                                                        and quizzes—are
+                                                        available on the LMS for self-paced access.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- C3 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="acd-h3">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#acd-c3" aria-expanded="false" aria-controls="acd-c3">
+                                                            Q3. How are exams administered? <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="acd-c3" class="collapse" aria-labelledby="acd-h3"
+                                                    data-bs-parent="#accordion-academics">
+                                                    <div class="card-body">
+                                                        Exams are conducted online with secure proctoring. The process includes:<br>
+                                                        i) Advance Notification of exam schedules via Email/SMS and LMS.<br>
+                                                        ii) Online proctored exams taken from home using a secure browser<br>
+                                                        iii) Evaluation and Result Declaration<br>
+                                                        Mock exams to help students familiarize themselves with the system
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- C4 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="acd-h4">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#acd-c4" aria-expanded="false" aria-controls="acd-c4">
+                                                            Q4. How do students access industry insights and expert sessions? <i
+                                                                class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="acd-c4" class="collapse" aria-labelledby="acd-h4"
+                                                    data-bs-parent="#accordion-academics">
+                                                    <div class="card-body">
+                                                        TMU Online hosts Industry Interaction webinars featuring entrepreneurs, tech
+                                                        leaders, marketing
+                                                        professionals, and subject experts at frequent Intervals. These sessions
+                                                        offer valuable insights and
+                                                        networking opportunities. Recordings are available on the student portal for
+                                                        later access.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- C5 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="acd-h5">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#acd-c5" aria-expanded="false" aria-controls="acd-c5">
+                                                            Q5. Will faculty be available for doubt resolution? <i
+                                                                class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="acd-c5" class="collapse" aria-labelledby="acd-h5"
+                                                    data-bs-parent="#accordion-academics">
+                                                    <div class="card-body">
+                                                        Yes, students can interact with faculty during live Q&amp;A sessions,
+                                                        discussion boards, and scheduled
+                                                        one-on-one mentoring.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- C6 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="acd-h6">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#acd-c6" aria-expanded="false" aria-controls="acd-c6">
+                                                            Q6. Does TMU Online offer career support? <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="acd-c6" class="collapse" aria-labelledby="acd-h6"
+                                                    data-bs-parent="#accordion-academics">
+                                                    <div class="card-body">
+                                                        Yes. TMU Online provides career services including resume reviews, interview
+                                                        preparation, and
+                                                        access to job opportunities through recruitment drives and career platforms.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- C7 -->
+                                            <div class="card single-faq-inner">
+                                                <div class="card-header" id="acd-h7">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn-link collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#acd-c7" aria-expanded="false" aria-controls="acd-c7">
+                                                            Q7. Where can I view the academic calendar? <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="acd-c7" class="collapse" aria-labelledby="acd-h7"
+                                                    data-bs-parent="#accordion-academics">
+                                                    <div class="card-body">
+                                                        The academic calendar is available on the LMS and includes key dates for
+                                                        assignments, exams, and
+                                                        other academic milestones.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <script>
+                            // Tab switching (no page-centering scroll)
+                            document.querySelectorAll('.fresh-faqs-tab-btn').forEach(btn => {
+                                btn.addEventListener('click', () => {
+                                    document.querySelectorAll('.fresh-faqs-tab-btn').forEach(b => b.classList.remove('active'));
+                                    btn.classList.add('active');
+
+                                    const target = btn.getAttribute('data-target');
+                                    document.querySelectorAll('.fresh-faqs-tab-pane').forEach(p => p.classList.remove(
+                                        'active'));
+                                    const pane = document.querySelector(target);
+                                    if (pane) pane.classList.add('active');
+
+                                    // If you want to keep the tab row horizontally scrollable on mobile:
+                                    // const tabs = document.querySelector('.fresh-faqs-tabs');
+                                    // tabs.scrollTo({ left: btn.offsetLeft - tabs.clientWidth/2 + btn.clientWidth/2, behavior: 'smooth' });
+                                });
+                            });
+                        </script>
+                        <!-- =================== /FAQs (Bootstrap 5, fixed) =================== -->
+                        <!-- =================== /FAQs (Top Tabs) =================== -->
+                    </div>
                 </div>
             </div>
-        </div>
-
-    </div>
-</section>
-
-<style>
-/* Base Wrapper - Fixed Height */
-.eligibility-premium-wrapper {
-    position: relative;
-    width: 100%;
-    height: 220px; 
-    border-radius: 20px;
-    overflow: hidden;
-    align-items: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    background: linear-gradient( 0deg, rgba(255, 102, 0, 0.9) 0%, rgba(255, 102, 0, 0.7) 100%
-);
-}
-
-.card-bg-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: linear-gradient( 0deg, rgba(255, 102, 0, 0.9) 0%, rgba(255, 102, 0, 0.7) 100%
-);
-    background-size: cover;
-    background-position: center;
-}
-
-.mobile-overlay {
-    background: linear-gradient( 0deg, rgba(255, 102, 0, 0.9) 0%, rgba(255, 102, 0, 0.7) 100%
-);
-}
-
-.card-content-box {
-    position: relative;
-    z-index: 2;
-    padding: 0 40px;
-}
-
-.accent-line {
-    width: 40px;
-    height: 4px;
-    background: #003366;
-    margin-bottom: 10px;
-    border-radius: 2px;
-}
-
-.category-tag {
-    color: #003366;
-    font-weight: 700;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-
-.main-heading {
-    color: #ffffff;
-    font-size: 2.2rem;
-    font-weight: 800;
-    line-height: 1.1;
-}
-
-/* --- Mobile Heading Fix --- */
-.main-heading-mobile {
-    color: #ffffff;
-    font-weight: 800;
-    /* This ensures it stays in one line and scales based on screen width */
-    font-size: clamp(1.2rem, 5.5vw, 1.7rem); 
-    letter-spacing: -0.5px;
-    margin-bottom: 15px;
-}
-
-.text-orange {
-    color: #003366;
-}
-
-.tmu-btn-premium {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    background: #003366;
-    color: #fff !important;
-    padding: 10px 20px;
-    border-radius: 40px;
-    font-weight: 700;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
-    border: 2px solid #003366;
-}
-
-.tmu-btn-premium i {
-    margin-left: 10px;
-    font-size: 0.7rem;
-}
-
-/* Ensure centering on mobile */
-@media (max-width: 767px) {
-    .card-content-box {
-        padding: 0 15px;
-    }
-}
-
-/* Specific Tablet & iPad Media Query */
-@media (min-width: 768px) and (max-width: 1024.98px) {
-    /* 1. Ensure container adjusts height correctly */
-    .eligibility-premium-wrapper {
-        height: auto !important;
-        min-height: 180px; 
-        margin: 0 5px; /* Slight buffer for screen edges */
-    }
-
-    /* 2. FIX FOR THE IMAGE: Pin the gavel/books to the right */
-    .card-bg-overlay {
-        background-position: right center !important;
-        background-size: cover !important;
-    }
-
-    /* 3. FIX FOR TEXT OVERLAP: Add right padding to keep text on the left */
-    .card-content-box {
-        padding-right: 45% !important; /* Forces text to stay in the left 55% of the card */
-        padding-left: 30px !important;
-    }
-
-    .main-heading {
-        font-size: 1.7rem !important; /* Scales down font for tablet widths */
-    }
-
-    .tmu-btn-premium {
-        padding: 8px 18px !important;
-        font-size: 0.8rem !important;
-    }
-}
-</style>
-{{-- Mandatory Disclosure --}}
-
-
-
-    <!-- work area start -->
-    <div class="work-area">
-        <div class="container">
-            <div class="section-title style-white text-center mb-4 mb-md-5 mt-3 mt-lg-5">
-                <h2 class="title">Why TMU Online?</h2>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-6 col-md-6">
-                    <div class="single-intro-inner style-icon-bg text-center">
-                        <div class="thumb">
-                            <img src="{{ asset('/assets/img/icon/i-1.svg') }}" loading="lazy" class="why-icon"
-                                alt="img">
-                        </div>
-                        <div class="details">
-                            <h5>Online Sessions by Industry Experts</h5>
-                            <p>Learn directly from top industry professionals who share real-world insights, latest
-                                trends, and business strategies.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-6 col-md-6">
-                    <div class="single-intro-inner style-icon-bg text-center">
-                        <div class="thumb">
-                            <img src="{{ asset('/assets/img/icon/i-2.svg') }}" loading="lazy" class="why-icon"
-                                alt="img">
-                        </div>
-                        <div class="details">
-                            <h5>Internship Opportunities</h5>
-                            <p>Gain practical exposure through internships, helping you apply theoretical knowledge and
-                                enhance your employability.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-6 col-md-6">
-                    <div class="single-intro-inner style-icon-bg text-center">
-                        <div class="thumb">
-                            <img src="{{ asset('/assets/img/icon/i-3.svg') }}" loading="lazy" class="why-icon"
-                                alt="img">
-                        </div>
-                        <div class="details">
-                            <h5>Flexible Examination Options</h5>
-                            <p>Appear for exams at your convenience with flexible scheduling and remote assessment
-                                options.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-6 col-md-6">
-                    <div class="single-intro-inner style-icon-bg text-center">
-                        <div class="thumb">
-                            <img src="{{ asset('/assets/img/icon/i-4.svg') }}" loading="lazy" class="why-icon"
-                                alt="img">
-                        </div>
-                        <div class="details">
-                            <h5>User-Friendly LMS</h5>
-                            <p>Access lectures, assignments, and study materials anytime through an intuitive and
-                                interactive platform.</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-6 col-md-6">
-                    <div class="single-intro-inner style-icon-bg text-center">
-                        <div class="thumb">
-                            <img src="{{ asset('/assets/img/icon/i-5.svg') }}" loading="lazy" class="why-icon"
-                                alt="img">
-                        </div>
-                        <div class="details">
-                            <h5>24/7 Access to Digital Library</h5>
-                            <p>Explore a vast collection of e-books, journals, and research materials anytime, anywhere.
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-6 col-md-6">
-                    <div class="single-intro-inner style-icon-bg text-center">
-                        <div class="thumb">
-                            <img src="{{ asset('/assets/img/icon/i-6.svg') }}" loading="lazy" class="why-icon"
-                                alt="img">
-                        </div>
-                        <div class="details">
-                            <h5>Budget-Friendly Fee Structure</h5>
-                            <p>Get high-quality education at an affordable cost with flexible payment options.</p>
-
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
-    </div>
-    <!-- work area end -->
-
-
-    <!-- Degree Section -->
-    <!-- Degree Showcase Section -->
-    <section class="degree-showcase py-5 position-relative overflow-hidden">
-        <!-- Gradient Blobs -->
-        <div class="blob blob1"></div>
-        <div class="blob blob2"></div>
-        <div class="blob blob3"></div>
-
-        <div class="container text-center position-relative">
-            <p class="university-name mb-4"><span>Proudly Earned at</span> Teerthanker Mahaveer University</p>
-
-            <div class="degree-card shadow mx-auto">
-                <img src="{{ asset('/assets/img/degree.webp') }}" loading="lazy" alt="TMU Degree Certificate"
-                    class="img-fluid" />
-            </div>
-
-
-            <!-- Optional CTA -->
-            {{-- <a href="#" class="btn btn-dark mt-3 px-4 ">Explore Our MBA Program</a> --}}
-        </div>
-    </section>
-
-
-
-
-
-
-
-    <section class="recruiters-section">
-        <div class="container">
-
-            <!-- Section Title -->
-            <div class="recruiter-title-container">
-                <div class="section-title style-white text-center mb-4 mb-md-5 mt-3 mt-lg-5">
-                    <h2 class="title">Teerthanker Mahaveer University Online, <br><span class="highlight">Opens Doors
-                            World Wide.</span></h2>
-                    <p>Our top-class recruiters list gives you the assurance that you'll get placed in
-                        leading MNCs and work with renowned brands.</p>
-                    <span class="title-underline"></span>
-                </div>
-
-            </div>
-
-            <!-- Recruiter Logos Grid -->
-            <div class="recruiter-logo-grid">
-
-                {{-- Loop from 1 to 32 assuming images 1.jpg to 32.jpg exist --}}
-                @php
-                    // Define alt texts - you might want a more dynamic way to fetch these
-                    // Or just use generic ones if specific names aren't readily available
-$altTexts = [
-    1 => 'Wipro Logo',
-    2 => 'Vistara Logo',
-    3 => 'Videocon Logo',
-    4 => 'VFS Global Logo',
-    5 => 'Pantaloons Logo',
-    6 => 'Amazon India Logo',
-    7 => 'Tata Strive Logo',
-    8 => 'Tally Logo',
-    9 => 'Skyway Communications Logo',
-    10 => 'Safety Circle Logo',
-    11 => 'Royal Bank of Scotland Logo',
-    12 => 'Paytm Logo',
-    13 => 'OM Logistics Ltd Logo',
-    14 => 'OYO Logo',
-    15 => 'Neva Clothing Logo',
-    16 => 'Max Life Insurance Logo',
-    17 => 'Overseas Logo',
-    18 => 'Tripat Infoways Logo',
-    19 => 'LIC Logo',
-    20 => 'Kotak Mahindra Bank Logo',
-    21 => 'Karvy Stock Broking Logo',
-    22 => 'Indigo Logo',
-    23 => 'Globe Toyota Logo',
-    24 => 'Recruiter Logo 24', // Add more specific Alts if you have them
-    25 => 'Recruiter Logo 25',
-    26 => 'Recruiter Logo 26',
-    27 => 'Recruiter Logo 27',
-    28 => 'Recruiter Logo 28',
-    29 => 'Recruiter Logo 29',
-    30 => 'Recruiter Logo 30',
-    31 => 'Recruiter Logo 31',
-    32 => 'Recruiter Logo 32',
-                    ];
-                @endphp
-
-                @for ($i = 1; $i <= 32; $i++)
-                    <div class="recruiter-item">
-                        <img src="{{ asset('assets/img/recruiters/' . $i . '.jpg') }}" loading="lazy"
-                            alt="{{ $altTexts[$i] ?? 'Recruiter Logo ' . $i }}" class="recruiter-logo"
-                            onerror="this.style.display='none'; this.parentElement.style.display='none';"
-                            {{-- Hide item if image fails to load --}}>
-                    </div>
-                @endfor
-
-            </div> <!-- End Recruiter Logos Grid -->
-
-        </div> <!-- End Container -->
-    </section>
-    <!-- ========== Recruiters Section End ========== -->
-
-
-    <!-- ============================ Reel Showcase Section Start ============================ -->
-    {{-- <section class="tmu-reel-showcase py-5 position-relative">
-        <div class="tmu-reel-background-element tmu-reel-bg-el-1"></div>
-        <div class="tmu-reel-background-element tmu-reel-bg-el-2"></div>
-
-        <div class="container position-relative">
-            {{-- <h2 class="tmu-reel-showcase__title text-center mb-5">Why TMU Online? Watch & Discover</h2> --}}
-
-    {{-- <div class="tmu-reel-swiper-container position-relative">
-
-                <div class="swiper tmu-reel-swiper">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="tmu-reel-item">
-                                <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DHtGgTsJLRi/embed/"
-                                    frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
-                                    loading="lazy" title="Instagram Reel 1">
-                                </iframe>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="tmu-reel-item">
-                                <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DHn57DfSTzI/embed/"
-                                    frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
-                                    loading="lazy" title="Instagram Reel 2">
-                                </iframe>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="tmu-reel-item">
-                                <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DCT49FeOt6x/embed/"
-                                    frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
-                                    loading="lazy" title="Instagram Reel 3">
-                                </iframe>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="tmu-reel-item">
-                                <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DCJR2JQIgOX/embed/"
-                                    frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
-                                    loading="lazy" title="Instagram Reel 4">
-                                </iframe>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="tmu-reel-item">
-                                <iframe class="tmu-reel-video" src="https://www.instagram.com/reel/DCEuwZbJT2H/embed/"
-                                    frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true"
-                                    loading="lazy" title="Instagram Reel 5">
-                                </iframe>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="tmu-swiper-nav tmu-swiper-button-prev">
-                    <i class="bi bi-chevron-left"></i>
-                </div>
-                <div class="tmu-swiper-nav tmu-swiper-button-next">
-                    <i class="bi bi-chevron-right"></i>
-                </div>
-
-            </div>
-        </div> 
-    </section> --}}
-    <!-- ============================ Reel Showcase Section End ============================ -->
-
-
-
-
-
-    <!-- faq area start -->
-    <div class="faq-area mt-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="title text-center mb-2 mb-lg-4">FAQs</h2>
-                </div>
-
-                {{-- <div class="col-12 mt-5 mt-lg-0">
-                    <div id="accordion" class="accordion-area">
-                        <div class="card single-faq-inner">
-                            <div class="card-header" id="ff-one">
-                                <h5 class="mb-0">
-                                    <button class="btn-link" data-toggle="collapse" data-target="#f-one"
-                                        aria-expanded="true" aria-controls="f-one">
-                                        Is TMU CDOE UGC-approved?
-                                        <i class="fa fa-eye"></i>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="f-one" class="show collapse" aria-labelledby="ff-one" data-parent="#accordion">
-                                <div class="card-body">
-                                    Yes. All distance and online education programmes offered by TMU’s CDOE are recognized
-                                    and approved by the University Grants Commission (UGC) and other relevant regulatory
-                                    bodies, ensuring validity and credibility.</div>
-                            </div>
-                        </div>
-                        <div class="card single-faq-inner">
-                            <div class="card-header" id="ff-two">
-                                <h5 class="mb-0">
-                                    <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-two"
-                                        aria-expanded="true" aria-controls="f-two">
-                                        02. What is the eligibility for an Online MBA?
-                                        <i class="fa fa-eye"></i>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="f-two" class="collapse" aria-labelledby="ff-two" data-parent="#accordion">
-                                <div class="card-body">
-                                    A bachelor’s degree in any discipline from a recognized university is required.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card single-faq-inner">
-                            <div class="card-header" id="ff-three">
-                                <h5 class="mb-0">
-                                    <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-three"
-                                        aria-expanded="true" aria-controls="f-three">
-                                        03. How can I apply for admission to TMU CDOE?
-                                        <i class="fa fa-eye"></i>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="f-three" class="collapse" aria-labelledby="ff-three" data-parent="#accordion">
-                                <div class="card-body">
-                                    You can apply online via the official TMU CDOE website <a
-                                        href="https://www.cdoe.tmu.ac.in/">https://www.cdoe.tmu.ac.in/</a>. The process
-                                    involves filling out the application form, uploading the required documents, and paying
-                                    the application fee online.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card single-faq-inner">
-                            <div class="card-header" id="ff-four">
-                                <h5 class="mb-0">
-                                    <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-four"
-                                        aria-expanded="true" aria-controls="f-four">
-                                        04. Can I pursue an Online MBA while working?
-                                        <i class="fa fa-eye"></i>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="f-four" class="collapse" aria-labelledby="ff-four" data-parent="#accordion">
-                                <div class="card-body">
-                                    Yes, the programme is designed for working professionals and offers flexible learning
-                                    options.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card single-faq-inner">
-                            <div class="card-header" id="ff-five">
-                                <h5 class="mb-0">
-                                    <button class="btn-link collapsed" data-toggle="collapse" data-target="#f-five"
-                                        aria-expanded="true" aria-controls="f-five">
-                                        05. What specialisations does TMU Online MBA offer?
-                                        <i class="fa fa-eye"></i>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="f-five" class="collapse" aria-labelledby="ff-five" data-parent="#accordion">
-                                <div class="card-body">
-                                    TMU CDOE offers specialisations in marketing, finance, and human resources management.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-
-
-                {{-- <style>
-                    .fresh-faqs {
-                        gap: 10px;
-                        /* space between tabs and content */
-                    }
-
-                    .fresh-faqs-tabs {
-                        min-width: 180px;
-                    }
-
-                    .fresh-faqs-tabs .fresh-faqs-tab-btn {
-                        border: 1px solid #ccc;
-                        background: #fff;
-                        color: #000;
-                        border-radius: 50px;
-                        padding: 8px 18px;
-                        font-weight: 600;
-                        margin-bottom: 10px;
-                        transition: all 0.2s ease;
-                        cursor: pointer;
-                    }
-
-                    .fresh-faqs-tabs .fresh-faqs-tab-btn:hover {
-                        border-color: #003366;
-                        color: #003366;
-                    }
-
-                    .fresh-faqs-tabs .fresh-faqs-tab-btn.active {
-                        background: #0d3b66;
-                        color: #fff;
-                        border-color: #0d3b66;
-                    }
-
-                    .fresh-faqs-content .fresh-faqs-tab-pane {
-                        display: none;
-                    }
-
-                    .fresh-faqs-content .fresh-faqs-tab-pane.active {
-                        display: block;
-                    }
-
-                    /* @media (max-width: 768px) {
-                        .fresh-faqs {
-                            flex-direction: column;
-                            gap: 16px;
-                        }
-
-                        .fresh-faqs-tabs {
-                            flex-direction: row !important;
-                            flex-wrap: wrap;
-                            justify-content: center;
-                            width: 100% !important;
-                        }
-
-                        .fresh-faqs-tab-btn {
-                            flex: 1 1 auto;
-                            margin: 5px;
-                            white-space: nowrap;
-                        }
-
-                        .fresh-faqs-content {
-                            max-width: 100% !important;
-                            padding-left: 0 !important;
-                        }
-                    } */
-                    <style>
-
-                    /* FAQ container */
-                    .fresh-faqs {
-                        display: flex;
-                        align-items: flex-start;
-                        gap: 24px;
-                        /* space between tabs & content */
-                        width: 100%;
-                        /* make it responsive */
-                    }
-
-                    /* Left Tabs */
-                    .fresh-faqs-tabs {
-                        flex: 0 0 220px;
-                        /* fixed width for tabs */
-                    }
-
-                    /* Tab Buttons */
-                    .fresh-faqs-tab-btn {
-                        border: 1px solid #ccc;
-                        background: #fff;
-                        color: #000;
-                        border-radius: 50px;
-                        padding: 10px 20px;
-                        font-weight: 600;
-                        margin-bottom: 12px;
-                        transition: all 0.2s ease;
-                        cursor: pointer;
-                        text-align: left;
-                        width: 100%;
-                        /* full width inside tabs column */
-                    }
-
-                    .fresh-faqs-tab-btn:hover {
-                        border-color: #003366;
-                        color: #003366;
-                    }
-
-                    .fresh-faqs-tab-btn.active {
-                        background: #0d3b66;
-                        color: #fff;
-                        border-color: #0d3b66;
-                    }
-
-                    /* Right Content */
-                    .fresh-faqs-content {
-                        flex: 1;
-                        /* take all remaining width */
-                        min-width: 0;
-                        /* prevents flexbox overflow issues */
-                        max-width: calc(100% - 220px - 24px);
-                        /* stays fixed even when toggled */
-                    }
-
-                    /* Accordion inside content */
-                    .fresh-faqs-content .accordion {
-                        width: 100%;
-                        /* force full width */
-                        max-width: 100%;
-                        /* prevent auto-shrinking */
-                    }
-                </style>
-
-                <div class="fresh-faqs d-flex">
-                    <!-- Left Tabs -->
-                    <div class="fresh-faqs-tabs d-flex flex-column">
-                        <button class="fresh-faqs-tab-btn active" data-target="#fresh-faqs-general">General</button>
-                        <button class="fresh-faqs-tab-btn" data-target="#fresh-faqs-admission">Admission</button>
-                        <button class="fresh-faqs-tab-btn" data-target="#fresh-faqs-academics">Academics</button>
-
-                    </div>
-
-                    <!-- Right Content -->
-                    <div class="fresh-faqs-content flex-grow-1 ps-4">
-                        <div class="fresh-faqs-tab-pane active" id="fresh-faqs-general">
-                            <div class="col-12 mt-1 mt-lg-0">
-                                <div id="accordion" class="accordion-area">
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-one">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link" data-toggle="collapse" data-target="#f-one"
-                                                    aria-expanded="true" aria-controls="f-one">
-                                                    Q1. Is there any distinction between Online and On-Campus Degrees?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-one" class="show collapse" aria-labelledby="ff-one"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                No, both formats offer the same level of academic rigor, recognition, and
-                                                credibility. TMU Online degrees are equivalent to traditional on-campus
-                                                degrees in every respect.</div>
-                                        </div>
-                                    </div>
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-two">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-toggle="collapse"
-                                                    data-target="#f-two" aria-expanded="true" aria-controls="f-two">
-                                                    Q2. How are the courses delivered?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-two" class="collapse" aria-labelledby="ff-two"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                Programs are conducted through a comprehensive digital platform featuring
-                                                recorded lectures, live interactive classes, discussion forums, assignments,
-                                                quizzes, and proctored final exams.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-three">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-toggle="collapse"
-                                                    data-target="#f-three" aria-expanded="true" aria-controls="f-three">
-                                                    Q3. Is Placement Assistance available?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-three" class="collapse" aria-labelledby="ff-three"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                Yes, TMU will provides virtual career support including resume-building
-                                                workshops, industry-led webinars, career counselling, and placement
-                                                opportunities through its T&D department.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-four">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-toggle="collapse"
-                                                    data-target="#f-four" aria-expanded="true" aria-controls="f-four">
-                                                    Q4. Can International students apply?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-four" class="collapse" aria-labelledby="ff-four"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                Definitely. TMU Online welcomes learners from around the world, provided
-                                                they meet the eligibility requirements and have access to the necessary
-                                                digital tools.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-five">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-toggle="collapse"
-                                                    data-target="#f-five" aria-expanded="true" aria-controls="f-five">
-                                                    Q5. What programs are offered through TMU Online?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-five" class="collapse" aria-labelledby="ff-five"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                TMU Online offers a range of Undergraduate (UG) and Postgraduate (PG) degree
-                                                programs across various disciplines
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-six">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-toggle="collapse"
-                                                    data-target="#f-six" aria-expanded="true" aria-controls="f-six">
-                                                    Q6. Are Online Degrees accepted by employers?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-six" class="collapse" aria-labelledby="ff-six"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                Yes, online degrees from accredited institutions are widely accepted by
-                                                employers, especially when they focus on relevant skills and industry needs.
-                                                TMU Online degrees are UGC-entitled and recognized at par with traditional
-                                                degrees.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="fresh-faqs-tab-pane" id="fresh-faqs-admission">
-                            <div class="col-12 mt-1 mt-lg-0">
-                                <div id="accordion" class="accordion-area">
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-one">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link" data-toggle="collapse" data-target="#f-one"
-                                                    aria-expanded="true" aria-controls="f-one">
-                                                    Q1. What are the Eligibility Requirements?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-one" class="show collapse" aria-labelledby="ff-one"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                Eligibility depends on the program level:<br>
-                                                <b>Undergraduate Programs:</b><br>
-                                                BBA: Completion of 10+2 with a Minimum of 50% Marks.<br>
-                                                BA: Completion of 10+2 from a Recognized Board.<br><br>
-                                                <b>Postgraduate Programs:</b><br>
-                                                MBA: A Bachelor’s Degree from a Recognized University is required.<br><br>
-                                                All Applicants must submit Academic Certificates and a Valid
-                                                Government-issued ID.
-                                                Some programs may have additional requirements or assessments.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-two">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-toggle="collapse"
-                                                    data-target="#f-two" aria-expanded="true" aria-controls="f-two">
-                                                    Q2. What documents are needed for Admission?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-two" class="collapse" aria-labelledby="ff-two"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                Here’s a breakdown of required documents:<br><br>
-                                                <b>Domestic Students:</b><br>
-                                                - 10th, 12th Mark sheet and Passing Certificates<br>
-                                                - Bachelor’s Degree Certificate with Marks sheets<br>
-                                                - Government-issued ID (Aadhaar, PAN, Passport)<br><br>
-                                                <b>International Students:</b><br>
-                                                - O’Level and A’Level or Equivalent Qualifications<br>
-                                                - Bachelor’s Degree Certificate with Marks sheets<br>
-                                                - Passport Copy (Mandatory)<br><br>
-                                                Once documents are ready, the admissions team will assist you through the
-                                                process.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-three">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-toggle="collapse"
-                                                    data-target="#f-three" aria-expanded="true" aria-controls="f-three">
-                                                    Q3. Is there an Entrance Exam?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-three" class="collapse" aria-labelledby="ff-three"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                No entrance test is required. Admission is based on eligibility criteria and
-                                                document verification.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-four">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-toggle="collapse"
-                                                    data-target="#f-four" aria-expanded="true" aria-controls="f-four">
-                                                    Q4. Are EMI options available for Tuition Fees?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-four" class="collapse" aria-labelledby="ff-four"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                Yes, Flexible EMI plans are available at affordable rates. Visit the program
-                                                page or speak with a counsellor for more details.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-five">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-toggle="collapse"
-                                                    data-target="#f-five" aria-expanded="true" aria-controls="f-five">
-                                                    Q5. Is there a Refund Policy?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-five" class="collapse" aria-labelledby="ff-five"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                Yes, refunds are available in accordance with UGC guidelines. Requests must
-                                                be made within the specified timeframe, and a processing fee may apply.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="fresh-faqs-tab-pane" id="fresh-faqs-academics">
-                            <div class="col-12 mt-1 mt-lg-0">
-                                <div id="accordion" class="accordion-area">
-
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-one">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link" data-toggle="collapse" data-target="#f-one"
-                                                    aria-expanded="true" aria-controls="f-one">
-                                                    Q1. How are classes get conducted?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-one" class="show collapse" aria-labelledby="ff-one"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                Classes include live sessions and recorded lectures accessible via the
-                                                Learning Management System (LMS).
-                                                Students can participate in group discussions and interactive activities.
-                                                All live sessions are recorded for later viewing.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-two">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-toggle="collapse"
-                                                    data-target="#f-two" aria-expanded="true" aria-controls="f-two">
-                                                    Q2. Where can I find study materials?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-two" class="collapse" aria-labelledby="ff-two"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                All learning resources—such as lecture notes, e-books, videos, case studies,
-                                                and quizzes—are available on the LMS for self-paced access.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-three">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-toggle="collapse"
-                                                    data-target="#f-three" aria-expanded="true" aria-controls="f-three">
-                                                    Q3. How are exams administered?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-three" class="collapse" aria-labelledby="ff-three"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                Exams are conducted online with secure proctoring. The process includes:<br>
-                                                i) Advance Notification of exam schedules via Email/SMS and LMS.<br>
-                                                ii) Online proctored exams taken from home using a secure browser.<br>
-                                                iii) Evaluation and Result Declaration.<br><br>
-                                                Mock exams are provided to help students familiarize themselves with the
-                                                system.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-four">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-toggle="collapse"
-                                                    data-target="#f-four" aria-expanded="true" aria-controls="f-four">
-                                                    Q4. How do students access industry insights and expert sessions?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-four" class="collapse" aria-labelledby="ff-four"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                TMU Online hosts Industry Interaction webinars featuring entrepreneurs, tech
-                                                leaders,
-                                                marketing professionals, and subject experts at frequent intervals.
-                                                These sessions offer valuable insights and networking opportunities.
-                                                Recordings are available on the student portal for later access.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-five">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-toggle="collapse"
-                                                    data-target="#f-five" aria-expanded="true" aria-controls="f-five">
-                                                    Q5. Will faculty be available for doubt resolution?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-five" class="collapse" aria-labelledby="ff-five"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                Yes, students can interact with faculty during live Q&A sessions,
-                                                discussion boards, and scheduled one-on-one mentoring.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-six">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-toggle="collapse"
-                                                    data-target="#f-six" aria-expanded="true" aria-controls="f-six">
-                                                    Q6. Does TMU Online offer career support?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-six" class="collapse" aria-labelledby="ff-six"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                Yes. TMU Online provides career services including resume reviews,
-                                                interview preparation, and access to job opportunities through
-                                                recruitment drives and career platforms.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="ff-seven">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-toggle="collapse"
-                                                    data-target="#f-seven" aria-expanded="true" aria-controls="f-seven">
-                                                    Q7. Where can I view the academic calendar?
-                                                    <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="f-seven" class="collapse" aria-labelledby="ff-seven"
-                                            data-parent="#accordion">
-                                            <div class="card-body">
-                                                The academic calendar is available on the LMS and includes key dates
-                                                for assignments, exams, and other academic milestones.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <script>
-                    document.querySelectorAll('.fresh-faqs-tabs .fresh-faqs-tab-btn').forEach(button => {
-                        button.addEventListener('click', () => {
-                            // remove active from all
-                            document.querySelectorAll('.fresh-faqs-tabs .fresh-faqs-tab-btn').forEach(btn => btn
-                                .classList.remove('active'));
-                            document.querySelectorAll('.fresh-faqs-content .fresh-faqs-tab-pane').forEach(pane => pane
-                                .classList.remove('active'));
-
-                            // activate clicked
-                            button.classList.add('active');
-                            const target = document.querySelector(button.getAttribute('data-target'));
-                            if (target) target.classList.add('active');
-                        });
-                    });
-                </script> --}}
-
-
-                <div class="fresh-faqs">
-                    <!-- TOP TABS -->
-                    <div class="fresh-faqs-tabs d-flex justify-content-center align-items-center gap-2 flex-wrap">
-                        <button class="fresh-faqs-tab-btn active" data-target="#fresh-faqs-general">General</button>
-                        <button class="fresh-faqs-tab-btn" data-target="#fresh-faqs-admission">Admission</button>
-                        <button class="fresh-faqs-tab-btn" data-target="#fresh-faqs-academics">Academics</button>
-                    </div>
-
-                    <!-- CONTENT -->
-                    <div class="fresh-faqs-content">
-                        <!-- ================= General ================= -->
-                        <div class="fresh-faqs-tab-pane active" id="fresh-faqs-general">
-                            <div class="col-12">
-                                <div id="accordion-general" class="accordion-area">
-                                    <!-- G1 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="gen-h1">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link" data-bs-toggle="collapse"
-                                                    data-bs-target="#gen-c1" aria-expanded="true" aria-controls="gen-c1">
-                                                    Q1. Is there any distinction between Online and On-Campus Degrees? <i
-                                                        class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="gen-c1" class="collapse show" aria-labelledby="gen-h1"
-                                            data-bs-parent="#accordion-general">
-                                            <div class="card-body">
-                                                No, both formats offer the same level of academic rigor, recognition, and
-                                                credibility. TMU Online
-                                                degrees are equivalent to traditional on-campus degrees in every respect.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- G2 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="gen-h2">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-bs-toggle="collapse"
-                                                    data-bs-target="#gen-c2" aria-expanded="false"
-                                                    aria-controls="gen-c2">
-                                                    Q2. How are the courses delivered? <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="gen-c2" class="collapse" aria-labelledby="gen-h2"
-                                            data-bs-parent="#accordion-general">
-                                            <div class="card-body">
-                                                Programs are conducted through a comprehensive digital platform featuring
-                                                recorded lectures, live interactive classes, discussion forums, assignments,
-                                                quizzes, and proctored final exams.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- G3 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="gen-h3">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-bs-toggle="collapse"
-                                                    data-bs-target="#gen-c3" aria-expanded="false"
-                                                    aria-controls="gen-c3">
-                                                    Q3. Is Placement Assistance available? <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="gen-c3" class="collapse" aria-labelledby="gen-h3"
-                                            data-bs-parent="#accordion-general">
-                                            <div class="card-body">
-                                                Yes, TMU will provides virtual career support including resume-building
-                                                workshops, industry-led
-                                                webinars, career counselling, and placement opportunities through its
-                                                T&amp;D department.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- G4 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="gen-h4">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-bs-toggle="collapse"
-                                                    data-bs-target="#gen-c4" aria-expanded="false"
-                                                    aria-controls="gen-c4">
-                                                    Q4. Can International students apply? <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="gen-c4" class="collapse" aria-labelledby="gen-h4"
-                                            data-bs-parent="#accordion-general">
-                                            <div class="card-body">
-                                                Definitely. TMU Online welcomes learners from around the world, provided
-                                                they meet the eligibility
-                                                requirements and have access to the necessary digital tools.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- G5 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="gen-h5">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-bs-toggle="collapse"
-                                                    data-bs-target="#gen-c5" aria-expanded="false"
-                                                    aria-controls="gen-c5">
-                                                    Q5. What programs are offered through TMU Online? <i
-                                                        class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="gen-c5" class="collapse" aria-labelledby="gen-h5"
-                                            data-bs-parent="#accordion-general">
-                                            <div class="card-body">
-                                                TMU Online offers a range of Undergraduate (UG) and Postgraduate (PG) degree
-                                                programs across
-                                                various disciplines.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- G6 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="gen-h6">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-bs-toggle="collapse"
-                                                    data-bs-target="#gen-c6" aria-expanded="false"
-                                                    aria-controls="gen-c6">
-                                                    Q6. Are Online Degrees accepted by employers? <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="gen-c6" class="collapse" aria-labelledby="gen-h6"
-                                            data-bs-parent="#accordion-general">
-                                            <div class="card-body">
-                                                Yes, online degrees from accredited institutions are widely accepted by
-                                                employers, especially when
-                                                they focus on relevant skills and industry needs. TMU Online degrees are
-                                                UGC-entitled and
-                                                recognized at par with traditional degrees.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- ================= Admission ================= -->
-                        <div class="fresh-faqs-tab-pane" id="fresh-faqs-admission">
-                            <div class="col-12">
-                                <div id="accordion-admission" class="accordion-area">
-                                    <!-- A1 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="adm-h1">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link" data-bs-toggle="collapse"
-                                                    data-bs-target="#adm-c1" aria-expanded="true" aria-controls="adm-c1">
-                                                    Q1. What are the Eligibility Requirements? <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="adm-c1" class="collapse show" aria-labelledby="adm-h1"
-                                            data-bs-parent="#accordion-admission">
-                                            <div class="card-body">
-                                                Eligibility depends on the program level:<br>
-                                                <b>Undergraduate Programs:</b><br>
-                                                BBA: Completion of 10+2 with a Minimum of 50% Marks.<br>
-                                                BA: Completion of 10+2 from a Recognized Board.<br><br>
-                                                <b>Postgraduate Programs:</b><br>
-                                                MBA: A Bachelor’s Degree from a Recognized University is required.<br><br>
-                                                All Applicants must submit Academic Certificates and a Valid
-                                                Government-issued ID. Some
-                                                programs may have additional requirements or assessments.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- A2 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="adm-h2">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-bs-toggle="collapse"
-                                                    data-bs-target="#adm-c2" aria-expanded="false"
-                                                    aria-controls="adm-c2">
-                                                    Q2. What documents are needed for Admission? <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="adm-c2" class="collapse" aria-labelledby="adm-h2"
-                                            data-bs-parent="#accordion-admission">
-                                            <div class="card-body">
-                                                Here’s a breakdown of required documents:<br><br>
-                                                <b>Domestic Students</b><br>
-                                                10 th , 12 th Mark sheet and Passing Certificates<br>
-                                                Bachelor’s Degree Certificate with Marks sheets<br>
-                                                Government-issued ID (Aadhaar, PAN, Passport)<br><br>
-                                                <b>International Students</b><br>
-                                                O’Level and A’Level or Equivalent Qualifications<br>
-                                                Bachelor’s Degree Certificate with Marks sheets<br>
-                                                Passport Copy (Mandatory)<br><br>
-                                                Once documents are ready, the admissions team will assist you through the
-                                                process.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- A3 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="adm-h3">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-bs-toggle="collapse"
-                                                    data-bs-target="#adm-c3" aria-expanded="false"
-                                                    aria-controls="adm-c3">
-                                                    Q3. Is there an Entrance Exam? <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="adm-c3" class="collapse" aria-labelledby="adm-h3"
-                                            data-bs-parent="#accordion-admission">
-                                            <div class="card-body">
-                                                No entrance test is required. Admission is based on eligibility criteria and
-                                                document verification.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- A4 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="adm-h4">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-bs-toggle="collapse"
-                                                    data-bs-target="#adm-c4" aria-expanded="false"
-                                                    aria-controls="adm-c4">
-                                                    Q4. Are EMI options available for Tuition Fees? <i
-                                                        class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="adm-c4" class="collapse" aria-labelledby="adm-h4"
-                                            data-bs-parent="#accordion-admission">
-                                            <div class="card-body">
-                                                Yes, Flexible EMI plans are available at affordable rates. Visit the program
-                                                page or speak with a
-                                                counsellor for more details.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- A5 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="adm-h5">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-bs-toggle="collapse"
-                                                    data-bs-target="#adm-c5" aria-expanded="false"
-                                                    aria-controls="adm-c5">
-                                                    Q5. Is there a Refund Policy? <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="adm-c5" class="collapse" aria-labelledby="adm-h5"
-                                            data-bs-parent="#accordion-admission">
-                                            <div class="card-body">
-                                                Yes, refunds are available in accordance with UGC guidelines. Requests must
-                                                be made within the
-                                                specified timeframe, and a processing fee may apply.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- ================= Academics ================= -->
-                        <div class="fresh-faqs-tab-pane" id="fresh-faqs-academics">
-                            <div class="col-12">
-                                <div id="accordion-academics" class="accordion-area">
-                                    <!-- C1 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="acd-h1">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link" data-bs-toggle="collapse"
-                                                    data-bs-target="#acd-c1" aria-expanded="true" aria-controls="acd-c1">
-                                                    Q1. How are classes get conducted? <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="acd-c1" class="collapse show" aria-labelledby="acd-h1"
-                                            data-bs-parent="#accordion-academics">
-                                            <div class="card-body">
-                                                Classes include live sessions and recorded lectures accessible via the
-                                                Learning Management System
-                                                (LMS). Students can participate in group discussions and interactive
-                                                activities. All live sessions are
-                                                recorded for later viewing.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- C2 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="acd-h2">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-bs-toggle="collapse"
-                                                    data-bs-target="#acd-c2" aria-expanded="false"
-                                                    aria-controls="acd-c2">
-                                                    Q2. Where can I find study materials? <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="acd-c2" class="collapse" aria-labelledby="acd-h2"
-                                            data-bs-parent="#accordion-academics">
-                                            <div class="card-body">
-                                                All learning resources—such as lecture notes, e-books, videos, case studies,
-                                                and quizzes—are
-                                                available on the LMS for self-paced access.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- C3 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="acd-h3">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-bs-toggle="collapse"
-                                                    data-bs-target="#acd-c3" aria-expanded="false"
-                                                    aria-controls="acd-c3">
-                                                    Q3. How are exams administered? <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="acd-c3" class="collapse" aria-labelledby="acd-h3"
-                                            data-bs-parent="#accordion-academics">
-                                            <div class="card-body">
-                                                Exams are conducted online with secure proctoring. The process includes:<br>
-                                                i) Advance Notification of exam schedules via Email/SMS and LMS.<br>
-                                                ii) Online proctored exams taken from home using a secure browser<br>
-                                                iii) Evaluation and Result Declaration<br>
-                                                Mock exams to help students familiarize themselves with the system
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- C4 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="acd-h4">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-bs-toggle="collapse"
-                                                    data-bs-target="#acd-c4" aria-expanded="false"
-                                                    aria-controls="acd-c4">
-                                                    Q4. How do students access industry insights and expert sessions? <i
-                                                        class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="acd-c4" class="collapse" aria-labelledby="acd-h4"
-                                            data-bs-parent="#accordion-academics">
-                                            <div class="card-body">
-                                                TMU Online hosts Industry Interaction webinars featuring entrepreneurs, tech
-                                                leaders, marketing
-                                                professionals, and subject experts at frequent Intervals. These sessions
-                                                offer valuable insights and
-                                                networking opportunities. Recordings are available on the student portal for
-                                                later access.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- C5 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="acd-h5">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-bs-toggle="collapse"
-                                                    data-bs-target="#acd-c5" aria-expanded="false"
-                                                    aria-controls="acd-c5">
-                                                    Q5. Will faculty be available for doubt resolution? <i
-                                                        class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="acd-c5" class="collapse" aria-labelledby="acd-h5"
-                                            data-bs-parent="#accordion-academics">
-                                            <div class="card-body">
-                                                Yes, students can interact with faculty during live Q&amp;A sessions,
-                                                discussion boards, and scheduled
-                                                one-on-one mentoring.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- C6 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="acd-h6">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-bs-toggle="collapse"
-                                                    data-bs-target="#acd-c6" aria-expanded="false"
-                                                    aria-controls="acd-c6">
-                                                    Q6. Does TMU Online offer career support? <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="acd-c6" class="collapse" aria-labelledby="acd-h6"
-                                            data-bs-parent="#accordion-academics">
-                                            <div class="card-body">
-                                                Yes. TMU Online provides career services including resume reviews, interview
-                                                preparation, and
-                                                access to job opportunities through recruitment drives and career platforms.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- C7 -->
-                                    <div class="card single-faq-inner">
-                                        <div class="card-header" id="acd-h7">
-                                            <h5 class="mb-0">
-                                                <button class="btn-link collapsed" data-bs-toggle="collapse"
-                                                    data-bs-target="#acd-c7" aria-expanded="false"
-                                                    aria-controls="acd-c7">
-                                                    Q7. Where can I view the academic calendar? <i class="fa fa-eye"></i>
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="acd-c7" class="collapse" aria-labelledby="acd-h7"
-                                            data-bs-parent="#accordion-academics">
-                                            <div class="card-body">
-                                                The academic calendar is available on the LMS and includes key dates for
-                                                assignments, exams, and
-                                                other academic milestones.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <script>
-                    // Tab switching (no page-centering scroll)
-                    document.querySelectorAll('.fresh-faqs-tab-btn').forEach(btn => {
-                        btn.addEventListener('click', () => {
-                            document.querySelectorAll('.fresh-faqs-tab-btn').forEach(b => b.classList.remove('active'));
-                            btn.classList.add('active');
-
-                            const target = btn.getAttribute('data-target');
-                            document.querySelectorAll('.fresh-faqs-tab-pane').forEach(p => p.classList.remove(
-                                'active'));
-                            const pane = document.querySelector(target);
-                            if (pane) pane.classList.add('active');
-
-                            // If you want to keep the tab row horizontally scrollable on mobile:
-                            // const tabs = document.querySelector('.fresh-faqs-tabs');
-                            // tabs.scrollTo({ left: btn.offsetLeft - tabs.clientWidth/2 + btn.clientWidth/2, behavior: 'smooth' });
-                        });
-                    });
-                </script>
-                <!-- =================== /FAQs (Bootstrap 5, fixed) =================== -->
-                <!-- =================== /FAQs (Top Tabs) =================== -->
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    <!-- faq area end -->
+            <!-- faq area end -->
 
 
 @endsection
