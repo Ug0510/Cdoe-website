@@ -11,11 +11,11 @@ use Illuminate\Support\Facades\Log;
 class OtpController extends Controller
 {
     // SMS API Configuration
-    private const SMS_API_URL = 'http://www.universalsmsadvertising.com/universalsmsapi.php';
+    private const SMS_API_URL = 'https://www.universalsmsadvertising.com/universalsmsapi.php';
     private const SMS_USERNAME = '9837016352';
     private const SMS_PASSWORD = '9837016352';
     private const SMS_SENDER_ID = 'TMUniv';
-    private const SMS_TYPE = 'F'; // F = Flash SMS
+    private const SMS_TYPE = 'T'; // Changed to T (Text SMS) for better reliability
 
     // OTP Configuration
     private const OTP_EXPIRY_MINUTES = 15;
@@ -79,8 +79,8 @@ class OtpController extends Controller
             $message = "Dear Sir, OTP to verify {$otpCode}.Thanks! TMU, Moradabad.";
             $smsResult = $this->sendSms($mobile, $message);
 
-            // Log for debugging (remove in production)
-            Log::info("OTP generated for {$mobile}: {$otpCode}");
+            // Log for debugging
+            Log::info("OTP Request for {$mobile}");
 
             if ($smsResult['success']) {
                 return response()->json([
@@ -89,6 +89,7 @@ class OtpController extends Controller
                     'expires_in' => self::OTP_EXPIRY_MINUTES * 60, // seconds
                 ]);
             } else {
+                Log::error("Failed to send SMS to {$mobile}. Error: " . ($smsResult['error'] ?? 'Unknown Error'));
                 return response()->json([
                     'success' => false,
                     'message' => 'Failed to send OTP. Please try again.'
@@ -203,20 +204,27 @@ class OtpController extends Controller
                 'text' => $message,
             ];
 
-            $response = Http::timeout(30)->get(self::SMS_API_URL, $params);
+            // Enhanced HTTP call for better compatibility on live servers
+            $response = Http::timeout(35)
+                ->withoutVerifying() // Often needed on dedicated servers with custom SSL configs
+                ->withHeaders([
+                    'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+                ])
+                ->get(self::SMS_API_URL, $params);
 
-            Log::info('SMS API Response: ' . $response->body());
+            $body = $response->body();
+            Log::info('SMS API Response for ' . $mobile . ': ' . $body);
 
             // Check if SMS was sent successfully
-            // The API response format may vary - adjust based on actual response
             if ($response->successful()) {
-                return ['success' => true, 'response' => $response->body()];
+                // Some APIs return a success message in the body even with 200 OK
+                return ['success' => true, 'response' => $body];
             } else {
-                return ['success' => false, 'error' => $response->body()];
+                return ['success' => false, 'error' => 'HTTP Status: ' . $response->status() . ' Body: ' . $body];
             }
 
         } catch (\Exception $e) {
-            Log::error('SMS Send Error: ' . $e->getMessage());
+            Log::error('SMS Send Exception for ' . $mobile . ': ' . $e->getMessage());
             return ['success' => false, 'error' => $e->getMessage()];
         }
     }
