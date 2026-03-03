@@ -256,37 +256,42 @@ class OtpController extends Controller
      */
     private function sendToGoogleSheet(string $name, string $mobile): void
     {
+        $log = Log::channel('otp');
         try {
             $webhookUrl = config('services.google_sheet.webhook_url');
 
             if (!$webhookUrl) {
-                Log::warning('Google Sheet Webhook URL not configured in services.php or .env');
+                $log->warning('Google Sheet Webhook URL not configured in services.php or .env');
                 return;
             }
 
             $mobileNumber = str_replace(['+', '91'], '', $mobile);
+            $log->info("Attempting to sync lead to Google Sheet: {$name} ({$mobileNumber})");
 
-            // Using followRedirects() explicitly and adding headers for better compatibility
-            $response = Http::timeout(15)
-                ->withoutVerifying() // Only for local testing if SSL verify fails
+            // Google Apps Script Webhooks often work better with form-data and following redirects
+            $response = Http::timeout(20)
+                ->withoutVerifying()
                 ->withHeaders([
-                    'Accept' => 'application/json',
-                    'Content-Type' => 'application/json',
+                    'User-Agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
                 ])
+                ->asForm() // Changed to form data as some Apps Script setups prefer it
                 ->post($webhookUrl, [
                     'name' => $name,
                     'mobile' => $mobileNumber,
                     'verified_at' => now()->toDateTimeString(),
                 ]);
 
-            if ($response->successful() || $response->status() === 302) {
-                Log::info("Lead successfully synced to Google Sheet: {$name} ({$mobileNumber})");
+            $status = $response->status();
+
+            // Apps Script deployment usually returns a 200 via redirect (302)
+            if ($response->successful() || $status === 302 || $status === 307) {
+                $log->info("Lead sync SUCCESS for {$name} [Status: {$status}]");
             } else {
-                Log::error("Failed to sync lead to Google Sheet. Status: " . $response->status());
-                Log::error("Response Body: " . $response->body());
+                $log->error("Lead sync FAILED for {$name} [Status: {$status}]");
+                $log->debug("Response Body: " . $response->body());
             }
         } catch (\Exception $e) {
-            Log::error('Google Sheet Sync Error: ' . $e->getMessage());
+            $log->error('Google Sheet Sync EXCEPTION: ' . $e->getMessage());
         }
     }
 
@@ -305,16 +310,26 @@ class OtpController extends Controller
         $testMessage = "TMU Test Message at " . now()->toDateTimeString();
 
         Log::channel('otp')->info("--- START DIAGNOSTIC TEST for {$testMobile} ---");
-        $result = $this->sendSms($testMobile, $testMessage);
-        Log::channel('otp')->info("--- END DIAGNOSTIC TEST result: " . json_encode($result) . " ---");
+
+        // Test SMS
+        $smsResult = $this->sendSms($testMobile, $testMessage);
+
+        // Test Google Sheet Sync (Lead generation)
+        Log::channel('otp')->info("--- START GOOGLE SHEET SYNC TEST ---");
+        $this->sendToGoogleSheet("Diagnostic Test User", $testMobile);
+        Log::channel('otp')->info("--- END GOOGLE SHEET SYNC TEST ---");
+
+        Log::channel('otp')->info("--- END DIAGNOSTIC TEST ---");
 
         return response()->json([
-            'message' => 'Diagnostic test completed. Check storage/logs/otp.log for details.',
+            'message' => 'Diagnostic test completed. Please check both your SMS and your Google Sheet.',
             'test_data' => [
                 'mobile' => $testMobile,
                 'api_url' => self::SMS_API_URL,
+                'sheet_webhook_url' => config('services.google_sheet.webhook_url'),
             ],
-            'result' => $result
+            'sms_result' => $smsResult,
+            'log_info' => 'Check storage/logs/otp.log for detailed sync logs.'
         ]);
     }
 }
