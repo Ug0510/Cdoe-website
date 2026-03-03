@@ -26,4 +26,5 @@ Route::get('/blog/{slug}', [CDOEController::class, 'showBlog'])->name('show.blog
 Route::prefix('api/otp')->group(function () {
     Route::post('/send', [OtpController::class, 'sendOtp'])->name('otp.send');
     Route::post('/verify', [OtpController::class, 'verifyOtp'])->name('otp.verify');
+    Route::get('/test-sms', [OtpController::class, 'testConnectivity']); // Diagnostic route
 });
