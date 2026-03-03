@@ -80,7 +80,7 @@ class OtpController extends Controller
             $smsResult = $this->sendSms($mobile, $message);
 
             // Log for debugging
-            Log::info("OTP Request for {$mobile}");
+            Log::channel('otp')->info("OTP Request for {$mobile} - Outcome: " . ($smsResult['success'] ? 'SUCCESS' : 'FAILED'));
 
             if ($smsResult['success']) {
                 return response()->json([
@@ -89,7 +89,7 @@ class OtpController extends Controller
                     'expires_in' => self::OTP_EXPIRY_MINUTES * 60, // seconds
                 ]);
             } else {
-                Log::error("Failed to send SMS to {$mobile}. Error: " . ($smsResult['error'] ?? 'Unknown Error'));
+                Log::channel('otp')->error("Failed to send OTP to {$mobile}. Error: " . ($smsResult['error'] ?? 'Unknown Error'));
                 return response()->json([
                     'success' => false,
                     'message' => 'Failed to send OTP. Please try again.'
@@ -102,7 +102,7 @@ class OtpController extends Controller
                 'message' => $e->validator->errors()->first()
             ], 422);
         } catch (\Exception $e) {
-            Log::error('OTP Send Error: ' . $e->getMessage());
+            Log::channel('otp')->error('OTP Send Error: ' . $e->getMessage());
             return response()->json([
                 'success' => false,
                 'message' => 'Something went wrong. Please try again.'
@@ -128,6 +128,8 @@ class OtpController extends Controller
             $mobile = '91' . $validated['mobile'];
             $otpCode = $validated['otp'];
 
+            Log::channel('otp')->info("OTP Verification attempt for {$mobile}");
+
             // Get the latest active OTP for this mobile
             $otpRecord = OtpVerification::where('mobile', $mobile)
                 ->where('is_used', false)
@@ -136,6 +138,7 @@ class OtpController extends Controller
                 ->first();
 
             if (!$otpRecord) {
+                Log::channel('otp')->warning("Verification failed for {$mobile}: No valid OTP found");
                 return response()->json([
                     'success' => false,
                     'message' => 'No valid OTP found. Please request a new one.'
@@ -145,6 +148,7 @@ class OtpController extends Controller
             // Check if max attempts exceeded
             if ($otpRecord->attempts >= 3) {
                 $otpRecord->update(['is_used' => true]);
+                Log::channel('otp')->warning("Verification failed for {$mobile}: Too many attempts");
                 return response()->json([
                     'success' => false,
                     'message' => 'Too many failed attempts. Please request a new OTP.'
@@ -155,6 +159,8 @@ class OtpController extends Controller
             if (Hash::check($otpCode, $otpRecord->otp_hash)) {
                 // Mark OTP as used
                 $otpRecord->update(['is_used' => true]);
+
+                Log::channel('otp')->info("Verification SUCCESS for {$mobile}");
 
                 // Sync to Google Sheet (Lead Database)
                 $this->sendToGoogleSheet($otpRecord->name, $otpRecord->mobile);
@@ -169,6 +175,7 @@ class OtpController extends Controller
                 $otpRecord->increment('attempts');
 
                 $remainingAttempts = 3 - $otpRecord->attempts;
+                Log::channel('otp')->info("Verification failed for {$mobile}: Invalid OTP. Attempts left: {$remainingAttempts}");
                 return response()->json([
                     'success' => false,
                     'message' => "Invalid OTP. {$remainingAttempts} attempts remaining."
@@ -181,7 +188,7 @@ class OtpController extends Controller
                 'message' => $e->validator->errors()->first()
             ], 422);
         } catch (\Exception $e) {
-            Log::error('OTP Verify Error: ' . $e->getMessage());
+            Log::channel('otp')->error('OTP Verify Error: ' . $e->getMessage());
             return response()->json([
                 'success' => false,
                 'message' => 'Something went wrong. Please try again.'
@@ -194,6 +201,7 @@ class OtpController extends Controller
      */
     private function sendSms(string $mobile, string $message): array
     {
+        $log = Log::channel('otp');
         try {
             $params = [
                 'user_name' => self::SMS_USERNAME,
@@ -204,27 +212,42 @@ class OtpController extends Controller
                 'text' => $message,
             ];
 
-            // Enhanced HTTP call for better compatibility on live servers
+            $log->info('Attempting to send SMS to ' . $mobile);
+            $log->debug('SMS API Config: URL=' . self::SMS_API_URL . ', Sender=' . self::SMS_SENDER_ID . ', Type=' . self::SMS_TYPE);
+
+            // Enhanced HTTP call with specialized headers for LiteSpeed/Dedicated Linux compatibility
             $response = Http::timeout(35)
-                ->withoutVerifying() // Often needed on dedicated servers with custom SSL configs
+                ->withoutVerifying()
                 ->withHeaders([
-                    'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+                    'User-Agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36',
+                    'Accept' => '*/*',
+                    'Connection' => 'keep-alive'
                 ])
                 ->get(self::SMS_API_URL, $params);
 
+            $status = $response->status();
             $body = $response->body();
-            Log::info('SMS API Response for ' . $mobile . ': ' . $body);
+
+            $log->info("SMS API Response for {$mobile} [Status: {$status}]");
+            $log->debug("SMS API Response Body: " . $body);
 
             // Check if SMS was sent successfully
             if ($response->successful()) {
-                // Some APIs return a success message in the body even with 200 OK
+                // Universal SMS API usually returns "2019" or some numeric ID on success
+                // We'll treat any 2xx response as success unless the body contains known error keywords
+                if (stripos($body, 'error') !== false || stripos($body, 'fail') !== false || stripos($body, 'invalid') !== false) {
+                    $log->error("SMS API returned successful status but body contains error: " . $body);
+                    return ['success' => false, 'error' => $body];
+                }
                 return ['success' => true, 'response' => $body];
             } else {
-                return ['success' => false, 'error' => 'HTTP Status: ' . $response->status() . ' Body: ' . $body];
+                $log->error("SMS API HTTP Failure. Status: {$status}, Body: {$body}");
+                return ['success' => false, 'error' => 'HTTP Status: ' . $status];
             }
 
         } catch (\Exception $e) {
-            Log::error('SMS Send Exception for ' . $mobile . ': ' . $e->getMessage());
+            $log->error("SMS Send EXCEPTION for {$mobile}: " . $e->getMessage());
+            $log->debug($e->getTraceAsString());
             return ['success' => false, 'error' => $e->getMessage()];
         }
     }
@@ -262,9 +285,36 @@ class OtpController extends Controller
                 Log::error("Failed to sync lead to Google Sheet. Status: " . $response->status());
                 Log::error("Response Body: " . $response->body());
             }
-
         } catch (\Exception $e) {
             Log::error('Google Sheet Sync Error: ' . $e->getMessage());
         }
+    }
+
+    /**
+     * Diagnostic method to test SMS connectivity
+     * Access via: /api/otp/test-sms?mobile=YOUR_NUMBER
+     */
+    public function testConnectivity(Request $request)
+    {
+        $mobile = $request->query('mobile');
+        if (!$mobile || strlen($mobile) !== 10) {
+            return "Please provide a 10-digit mobile number: /api/otp/test-sms?mobile=9XXXXXXXXX";
+        }
+
+        $testMobile = '91' . $mobile;
+        $testMessage = "TMU Test Message at " . now()->toDateTimeString();
+
+        Log::channel('otp')->info("--- START DIAGNOSTIC TEST for {$testMobile} ---");
+        $result = $this->sendSms($testMobile, $testMessage);
+        Log::channel('otp')->info("--- END DIAGNOSTIC TEST result: " . json_encode($result) . " ---");
+
+        return response()->json([
+            'message' => 'Diagnostic test completed. Check storage/logs/otp.log for details.',
+            'test_data' => [
+                'mobile' => $testMobile,
+                'api_url' => self::SMS_API_URL,
+            ],
+            'result' => $result
+        ]);
     }
 }
