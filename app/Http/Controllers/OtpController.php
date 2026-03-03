@@ -258,7 +258,7 @@ class OtpController extends Controller
     {
         $log = Log::channel('otp');
         try {
-            $webhookUrl = config('services.google_sheet.webhook_url');
+            $webhookUrl = trim(config('services.google_sheet.webhook_url') ?? '');
 
             if (!$webhookUrl) {
                 $log->warning('Google Sheet Webhook URL not configured in services.php or .env');
@@ -266,32 +266,49 @@ class OtpController extends Controller
             }
 
             $mobileNumber = str_replace(['+', '91'], '', $mobile);
-            $log->info("Attempting to sync lead to Google Sheet: {$name} ({$mobileNumber})");
+            $payload = [
+                'name' => $name,
+                'mobile' => $mobileNumber,
+                'verified_at' => now()->toDateTimeString(),
+            ];
 
-            // Google Apps Script Webhooks often work better with form-data and following redirects
-            $response = Http::timeout(20)
+            $log->info("Attempting lead sync for {$name} ({$mobileNumber})");
+            $log->debug("Sync Payload: " . json_encode($payload));
+
+            // Using strict redirect handling to ensure POST data is preserved
+            $response = Http::timeout(30)
                 ->withoutVerifying()
-                ->withHeaders([
-                    'User-Agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
+                ->withOptions([
+                    'allow_redirects' => [
+                        'max' => 10,
+                        'strict' => true, // Important: strictly follow RFC 7231 (keep POST as POST on 302)
+                        'track_redirects' => true,
+                    ]
                 ])
-                ->asForm() // Changed to form data as some Apps Script setups prefer it
-                ->post($webhookUrl, [
-                    'name' => $name,
-                    'mobile' => $mobileNumber,
-                    'verified_at' => now()->toDateTimeString(),
-                ]);
+                ->withHeaders([
+                    'Accept' => 'application/json',
+                    'Content-Type' => 'application/json',
+                    'User-Agent' => 'Laravel-Webhook-Client/1.0'
+                ])
+                ->post($webhookUrl, $payload);
 
             $status = $response->status();
+            $body = $response->body();
 
-            // Apps Script deployment usually returns a 200 via redirect (302)
+            // Check success - GAS often returns 200 or 302
             if ($response->successful() || $status === 302 || $status === 307) {
-                $log->info("Lead sync SUCCESS for {$name} [Status: {$status}]");
+                $log->info("Lead sync SUCCESS [Status: {$status}]");
+                // If it's a small response, log it
+                if (strlen($body) < 500) {
+                    $log->debug("Sync Response: " . $body);
+                }
             } else {
-                $log->error("Lead sync FAILED for {$name} [Status: {$status}]");
-                $log->debug("Response Body: " . $response->body());
+                $log->error("Lead sync FAILED [Status: {$status}]");
+                $log->error("Sync Response Body: " . $body);
             }
         } catch (\Exception $e) {
             $log->error('Google Sheet Sync EXCEPTION: ' . $e->getMessage());
+            $log->debug($e->getTraceAsString());
         }
     }
 
