@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('CDOE', 'Online BBA Admission 2025: Fees, Eligibility, Syllabus and Career | TMU')
+@section('CDOE', 'Online BBA Admission 2026: Fees, Eligibility, Syllabus and Career | TMU')
 
 @section('content')
 
@@ -73,10 +73,10 @@
                     {{-- Admissions Open Section --}}
                     <div class="course-section container pd-top-30 pd-bottom-30 text-center" id="admissions-open-section">
                         <div class="section-header mt-5 mb-0">
-                            <h2>Online BBA <span class="highlight">Admissions Open 2025</span></h2>
+                            <h2>Online BBA <span class="highlight">Admissions Open 2026</span></h2>
                         </div>
                         <div class="course-details-content">
-                            <p>Admissions open for the 2025 batch of the TMU Online BBA—a comprehensive program designed to prepare students for corporate careers and entrepreneurial ventures. TMU Online offers a flexible, 100% online learning experience that combines academic excellence with practical management training. Take the first step towards a successful career in business management today.</p>
+                            <p>Admissions open for the 2026 batch of the TMU Online BBA—a comprehensive program designed to prepare students for corporate careers and entrepreneurial ventures. TMU Online offers a flexible, 100% online learning experience that combines academic excellence with practical management training. Take the first step towards a successful career in business management today.</p>
                         </div>
                     </div>
 
