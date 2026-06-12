@@ -38,6 +38,7 @@
                                 <li><a href="/online-mba-hr">MBA in HR Management </a></li>
                                 <li><a href="/online-mba-marketing">MBA in Marketing</a></li>
                                 <li><a href="/online-bba">BBA</a></li>
+                                <li><a href="/online-bca">BCA</a></li>
                             </ul>
                         </div>
                     </div>
@@ -90,7 +91,7 @@
         <div class="footer-bottom">
             <div class="container">
                     <div class="col-md-12 align-center">
-                        <p>Copyrights © 2025 All Rights Reserved by Teerthanker Mahaveer University, Moradabad.
+                        <p>Copyrights © 2026 All Rights Reserved by Teerthanker Mahaveer University, Moradabad.
                         </p>
                     </div>
                     <!-- <div class="col-md-7 text-md-right align-self-center mt-md-0 mt-2">

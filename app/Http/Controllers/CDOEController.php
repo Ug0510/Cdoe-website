@@ -77,6 +77,11 @@ class CDOEController extends Controller
         return view('all_pages.programme.bba_programme');
     }
 
+    public function bca_programme()
+    {
+        return view('all_pages.programme.bca_programme');
+    }
+
     public function mandatory_disclosure()
     {
         return view('all_pages.mandatory_disclosure');
