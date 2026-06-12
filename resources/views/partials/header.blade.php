@@ -464,6 +464,7 @@
                     <li><a href="{{ route('hr.programme') }}">MBA HR Management</a></li>
                     <li><a href="{{ route('marketing.programme') }}">MBA Marketing</a></li>
                     <li><a href="{{ route('ib.programme') }}">MBA International Business</a></li>
+                    <li><a href="{{ route('bba.programme') }}">Online BBA</a></li>
                 </ul>
             </div>
 
@@ -554,6 +555,8 @@
                         <li><a href="{{ route('finance.programme') }}">MBA Finance</a></li>
                         <li><a href="{{ route('hr.programme') }}">MBA HR Management</a></li>
                         <li><a href="{{ route('marketing.programme') }}">MBA Marketing</a></li>
+                        <li><a href="{{ route('ib.programme') }}">MBA International Business</a></li>
+                        <li><a href="{{ route('bba.programme') }}">Online BBA</a></li>
                     </ul>
                 </li>
 

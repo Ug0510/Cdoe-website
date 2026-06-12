@@ -16,6 +16,7 @@ Route::get('/online-mba-hr', [CDOEController::class, 'hr_programme'])->name('hr.
 Route::get('/online-mba-finance', [CDOEController::class, 'finance_programme'])->name('finance.programme');
 Route::get('/online-mba-international-business', [CDOEController::class, 'ib_programme'])->name('ib.programme');
 Route::get('/online-mba-marketing', [CDOEController::class, 'marketing_programme'])->name('marketing.programme');
+Route::get('/online-bba', [CDOEController::class, 'bba_programme'])->name('bba.programme');
 Route::get('/mandatory-disclosure', [CDOEController::class, 'mandatory_disclosure'])->name('mandatory.disclosure');
 Route::get('/admissions-rules', [CDOEController::class, 'admissions_rules'])->name('admissions.rules');
 Route::get('/how-to-apply', [CDOEController::class, 'how_to_apply'])->name('how.to.apply');
