@@ -16,7 +16,7 @@
     </div>
     <div class="course-single-area pd-top-60 pd-bottom-90">
         <div class="section-header">
-            <h1 style="font-size:2.5rem;">Excel in Business Administration with India's Best <br><span class="highlight" style="color:#ff7900">Online BBA Programme</span></h1>
+            <h1 style="font-size:2.5rem;">Accelerate Your Professional Growth with a <br><span class="highlight" style="color:#ff7900">UGC-Certified Online BBA</span></h1>
         </div>
         <div class="row">
             <div class="col-lg-12">
@@ -69,6 +69,113 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- ========== Fee Structure & Scholarship Section Start ========== -->
+                    <section class="compact-fee-section px-1 px-lg-5 mt-5">
+                        <div class="container-fluid compact-fee-container px-3 px-lg-5">
+                            
+                            <div class="career-paths-header text-center mb-4">
+                                <h2>Fee Structure & <span>Scholarships</span></h2>
+                            </div>
+
+                            <div class="row">
+                                <!-- Fee Structure Column -->
+                                <div class="col-lg-6 mb-4 mb-lg-0">
+                                    <div class="card h-100 compact-card">
+                                        <div class="compact-card-header text-white text-center py-3" style="background-color: #001D4A; border-bottom: none;">
+                                            <h3 class="mb-0 text-white">BBA Fee Details</h3>
+                                        </div>
+                                        <div class="compact-card-body d-flex flex-column justify-content-between h-100">
+                                            <div>
+                                                <div class="table-responsive">
+                                                    <table class="table align-middle mb-0 compact-table">
+                                                        <thead class="table-light">
+                                                            <tr>
+                                                                <th scope="col" style="color: #001D4A; font-weight: 600;">Fee Component</th>
+                                                                <th scope="col" class="text-end" style="color: #001D4A; font-weight: 600;">Amount (Rs.)</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Registration Fee (One-Time)</td>
+                                                                <td class="text-end fw-semibold">Rs. 1,000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Tuition Fee (Per Semester)</td>
+                                                                <td class="text-end fw-semibold">Rs. 12,600</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Examination Fee (Per Semester)</td>
+                                                                <td class="text-end fw-semibold">Rs. 1,000</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Scholarship Column -->
+                                <div class="col-lg-6">
+                                    <div class="card h-100 compact-card">
+                                        <div class="compact-card-header text-white text-center py-3" style="background-color: #FF6600; border-bottom: none;">
+                                            <h3 class="mb-0 text-white">Scholarship</h3>
+                                        </div>
+                                        <div class="compact-card-body d-flex flex-column justify-content-between h-100">
+                                            <div>
+                                                <div class="text-center mb-2 p-2" style="background-color: rgba(255,102,0,0.05); border-radius: 8px; border: 1px solid rgba(255,102,0,0.1);">
+                                                    <p class="text-muted mb-0" style="font-size: 11px;">25% scholarship on tuition fees per semester is available for:</p>
+                                                </div>
+                                                
+                                                <h6 style="color: #001D4A; font-weight: 600; margin-bottom: 8px; font-size: 13px;"></h6>
+                                                
+                                                <div class="d-flex flex-column gap-2">
+                                                    <div class="d-flex align-items-center scholarship-item-compact">
+                                                        <div class="flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; border-radius: 50%; background-color: rgba(255,102,0,0.1); color: #FF6600;">
+                                                            <i class="fas fa-graduation-cap"></i>
+                                                        </div>
+                                                        <div class="ms-2" style="margin-left: 10px;">
+                                                            <h6 class="mb-0">TMU Faculty & Staff</h6>
+                                                            <span class="text-muted" style="font-size: 11px;">All faculty & staff members of the university.</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex align-items-center scholarship-item-compact">
+                                                        <div class="flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; border-radius: 50%; background-color: rgba(255,102,0,0.1); color: #FF6600;">
+                                                            <i class="fas fa-user-graduate"></i>
+                                                        </div>
+                                                        <div class="ms-2" style="margin-left: 10px;">
+                                                            <h6 class="mb-0">Existing TMU Students</h6>
+                                                            <span class="text-muted" style="font-size: 11px;">Currently enrolled students pursuing other programs.</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex align-items-center scholarship-item-compact">
+                                                        <div class="flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; border-radius: 50%; background-color: rgba(255,102,0,0.1); color: #FF6600;">
+                                                            <i class="fas fa-users"></i>
+                                                        </div>
+                                                        <div class="ms-2" style="margin-left: 10px;">
+                                                            <h6 class="mb-0">TMU Alumni</h6>
+                                                            <span class="text-muted" style="font-size: 11px;">Graduated students of Teerthanker Mahaveer University.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="alert alert-light border-0 mb-0 mt-2 py-2" style="background-color: #f8f9fa; border-radius: 8px;">
+                                                <p class="text-muted mb-0" style="font-size: 11px; line-height: 1.4; text-align: center;"><i class="fas fa-info-circle me-1" style="color: #001D4A;"></i> Candidates must provide valid TMU ID or alumni proof to avail of the scholarship at the time of admission.</p>
+                                            </div>
+                                            <div class="text-center mb-2 p-2" style="background-color: rgba(255,102,0,0.05); border-radius: 8px; border: 1px solid rgba(255,102,0,0.1);">
+                                                    <p class="text-muted mb-0" style="font-size: 11px;"><i class="fa-solid fa-star"></i> The fees may change over time. Kindly confirm from the admission cell before taking admission.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- ========== Fee Structure & Scholarship Section End ========== -->
 
                     {{-- Admissions Open Section --}}
                     <div class="course-section container pd-top-30 pd-bottom-30 text-center" id="admissions-open-section">
@@ -176,38 +283,29 @@
 
                             </div> </div> </section>
 
-                    <section class="career-paths-section px-1 px-lg-5">
+                    <section class="compact-career-section px-1 px-lg-5">
                         <div class="container-fluid">
 
                             <div class="career-paths-header">
                                 <h2>Career Paths After Online BBA <span>Programme</span></h2>
-                                <p>The Online BBA programme offers a flexible and career-focused learning experience for students who want to build a strong foundation in business and management. It is designed to provide essential knowledge of key business areas such as marketing, finance, human resources, and entrepreneurship through an interactive digital learning environment.</p>
-                                <p>Here are some of the most popular career paths you can pursue after earning an online BBA:</p>
+                                <p>An Online BBA opens up diverse career opportunities across marketing, sales, human resources, operations, and financial services. Here are some of the most popular career paths and job roles you can pursue after graduation:</p>
                             </div>
 
-                            <div class="career-paths-content">
+                            <div class="career-paths-grid">
+                                <div class="career-path-badge"><i class="fas fa-chart-line"></i> Sales Executive / Manager</div>
+                                <div class="career-path-badge"><i class="fas fa-users-cog"></i> Assistant Manager</div>
+                                <div class="career-path-badge"><i class="fas fa-briefcase"></i> Business Development Executive</div>
+                                <div class="career-path-badge"><i class="fas fa-bullhorn"></i> Marketing Executive</div>
+                                <div class="career-path-badge"><i class="fas fa-users"></i> Human Resource Executive</div>
+                                <div class="career-path-badge"><i class="fas fa-handshake"></i> Customer Relationship Manager</div>
+                                <div class="career-path-badge"><i class="fas fa-lightbulb"></i> Entrepreneur / Start-up Founder</div>
+                                <div class="career-path-badge"><i class="fas fa-store"></i> Retail Store Manager</div>
+                                <div class="career-path-badge"><i class="fas fa-cogs"></i> Operations Executive</div>
+                                <div class="career-path-badge"><i class="fas fa-calculator"></i> Finance Executive (Entry-Level)</div>
+                            </div>
 
-                                <div class="career-paths-image-col">
-                                    <img src="{{ asset('assets/img/programmes/prog-img-4.jpg') }}"
-                                        alt="Professionals discussing BBA career paths" class="career-image">
-                                </div>
-
-                                <div class="career-paths-list-col">
-                                    <ul class="career-path-list pl-3">
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Flexible learning anytime, anywhere</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Learn while working or managing other tasks</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Cost-effective degree programme</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Industry-relevant curriculum</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Strong foundation in business management</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Improves leadership skills</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Access to online study materials</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Enhances career opportunities</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Supports higher studies like MBA</li>
-                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Self-paced and convenient learning</li>
-                                    </ul>
-                                </div>
-
-                            </div> </div> </section>
+                        </div>
+                    </section>
 
                     <section class="career-paths-section px-1 px-lg-5">
                         <div class="container-fluid px-3 px-lg-5">
@@ -246,6 +344,8 @@
                             </div>
                         </div>
                     </section>
+
+                    
 
                     {{-- Section 3: FAQ --}}
                     <div class="course-section mt-5 container" id="faq-section">
