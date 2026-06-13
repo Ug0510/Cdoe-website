@@ -283,7 +283,7 @@
 
                             </div> </div> </section>
 
-                    <section class="compact-career-section px-1 px-lg-5">
+                    <section class="career-paths-section px-1 px-lg-5">
                         <div class="container-fluid">
 
                             <div class="career-paths-header">
@@ -291,19 +291,29 @@
                                 <p>An Online BBA opens up diverse career opportunities across marketing, sales, human resources, operations, and financial services. Here are some of the most popular career paths and job roles you can pursue after graduation:</p>
                             </div>
 
-                            <div class="career-paths-grid">
-                                <div class="career-path-badge"><i class="fas fa-chart-line"></i> Sales Executive / Manager</div>
-                                <div class="career-path-badge"><i class="fas fa-users-cog"></i> Assistant Manager</div>
-                                <div class="career-path-badge"><i class="fas fa-briefcase"></i> Business Development Executive</div>
-                                <div class="career-path-badge"><i class="fas fa-bullhorn"></i> Marketing Executive</div>
-                                <div class="career-path-badge"><i class="fas fa-users"></i> Human Resource Executive</div>
-                                <div class="career-path-badge"><i class="fas fa-handshake"></i> Customer Relationship Manager</div>
-                                <div class="career-path-badge"><i class="fas fa-lightbulb"></i> Entrepreneur / Start-up Founder</div>
-                                <div class="career-path-badge"><i class="fas fa-store"></i> Retail Store Manager</div>
-                                <div class="career-path-badge"><i class="fas fa-cogs"></i> Operations Executive</div>
-                                <div class="career-path-badge"><i class="fas fa-calculator"></i> Finance Executive (Entry-Level)</div>
-                            </div>
+                            <div class="career-paths-content">
 
+                                <div class="career-paths-image-col">
+                                    <img src="{{ asset('assets/img/programmes/prog-img-4.jpg') }}"
+                                        alt="Professionals discussing BBA career paths" class="career-image">
+                                </div>
+
+                                <div class="career-paths-list-col">
+                                    <ul class="career-path-list pl-3">
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Sales Executive / Manager</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Assistant Manager</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Business Development Executive</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Marketing Executive</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Human Resource Executive</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Customer Relationship Manager</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Entrepreneur / Start-up Founder</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Retail Store Manager</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Operations Executive</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Finance Executive (Entry-Level)</li>
+                                    </ul>
+                                </div>
+
+                            </div>
                         </div>
                     </section>
 

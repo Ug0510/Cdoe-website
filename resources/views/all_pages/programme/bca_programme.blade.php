@@ -287,7 +287,7 @@
 
                             </div> </div> </section>
 
-                    <section class="compact-career-section px-1 px-lg-5">
+                    <section class="career-paths-section px-1 px-lg-5">
                         <div class="container-fluid">
 
                             <div class="career-paths-header">
@@ -295,21 +295,31 @@
                                 <p>An Online BCA degree equips you with fundamental IT skills, opening doors to diverse technical roles. Here are some popular career paths you can pursue after completing your BCA:</p>
                             </div>
 
-                            <div class="career-paths-grid">
-                                <div class="career-path-badge"><i class="fas fa-code"></i> Software Developer</div>
-                                <div class="career-path-badge"><i class="fas fa-laptop-code"></i> Web Developer</div>
-                                <div class="career-path-badge"><i class="fas fa-headset"></i> Technical Support Executive</div>
-                                <div class="career-path-badge"><i class="fas fa-database"></i> Database Administrator (Entry-Level)</div>
-                                <div class="career-path-badge"><i class="fas fa-server"></i> System Administrator</div>
-                                <div class="career-path-badge"><i class="fas fa-info-circle"></i> IT Support Specialist</div>
-                                <div class="career-path-badge"><i class="fas fa-window-restore"></i> Application Support Executive</div>
-                                <div class="career-path-badge"><i class="fas fa-paint-brush"></i> UI/UX Support Professional</div>
-                                <div class="career-path-badge"><i class="fas fa-chart-bar"></i> Business Analyst (Entry-Level)</div>
-                                <div class="career-path-badge"><i class="fas fa-cloud"></i> Digital Technology Associate</div>
-                                <div class="career-path-badge"><i class="fas fa-table"></i> Data Analyst (Entry-Level)</div>
-                                <div class="career-path-badge"><i class="fas fa-laptop-house"></i> Entrepreneurship & Freelancing</div>
-                            </div>
+                            <div class="career-paths-content">
 
+                                <div class="career-paths-image-col">
+                                    <img src="{{ asset('assets/img/programmes/prog-img-4.jpg') }}"
+                                        alt="Professionals discussing BCA career paths" class="career-image">
+                                </div>
+
+                                <div class="career-paths-list-col">
+                                    <ul class="career-path-list pl-3">
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Software Developer</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Web Developer</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Technical Support Executive</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Database Administrator (Entry-Level)</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> System Administrator</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> IT Support Specialist</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Application Support Executive</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> UI/UX Support Professional</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Business Analyst (Entry-Level)</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Digital Technology Associate</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Data Analyst (Entry-Level)</li>
+                                        <li class="career-path-item"><i class="fas fa-check-circle"></i> Entrepreneurship & Freelancing</li>
+                                    </ul>
+                                </div>
+
+                            </div>
                         </div>
                     </section>
 
