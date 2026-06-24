@@ -480,6 +480,23 @@
                             </div>
                         </div>
 
+                        <!-- Slide 5: Digital Marketing -->
+                        <div class="swiper-slide d-flex align-items-stretch">
+                            <div class="course-card-fc">
+                                <div class="course-card-fc-img-container">
+                                    <img src="{{ asset('/assets/img/programmes/dm-mobile-banner.webp') }}"
+                                        alt="Online MBA in Digital Marketing Specialisation" class="course-card-fc-img" />
+                                </div>
+                                <div class="course-card-fc-body">
+                                    <h3 class="course-card-fc-title">MBA in Digital Marketing</h3>
+                                    <p class="course-card-fc-text">Develop expertise in SEO, social media marketing, content strategy, performance marketing, and analytics to drive digital business growth.</p>
+                                    <div class="course-card-fc-meta">
+                                        <span class="duration-tag-fc">Duration: <strong>2 Years</strong></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <!-- Custom Navigation Buttons - Now positioned correctly -->
@@ -556,6 +573,20 @@
                         <h3 class="course-list-item-title">MBA in International Business</h3>
                         <p class="course-list-item-desc">Gain global leadership skills, master international trade, and
                             advance your career in multinational companies.</p>
+                    </div>
+                </a>
+
+                <!-- Item 5: Digital Marketing -->
+                <a href="{{ route('digital_marketing.programme') }}" class="course-list-item">
+                    <div class="course-list-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="course-list-item-content">
+                        <h3 class="course-list-item-title">MBA in Digital Marketing</h3>
+                        <p class="course-list-item-desc">Master SEO, social media marketing, analytics, and digital strategy to lead in the modern business world.</p>
                     </div>
                 </a>
 
