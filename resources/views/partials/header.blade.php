@@ -465,6 +465,8 @@
                     <li><a href="{{ route('marketing.programme') }}">MBA Marketing</a></li>
                     <li><a href="{{ route('digital_marketing.programme') }}">MBA Digital Marketing</a></li>
                     <li><a href="{{ route('ib.programme') }}">MBA International Business</a></li>
+                    <li><a href="{{ route('lscm.programme') }}">MBA Logistics & Supply Chain Management</a></li>
+                    <li><a href="{{ route('data_analytics.programme') }}">MBA Data Analytics</a></li>
                     <li><a href="{{ route('bba.programme') }}">BBA</a></li>
                     <li><a href="{{ route('bca.programme') }}">BCA</a></li>
                 </ul>
@@ -559,6 +561,8 @@
                         <li><a href="{{ route('marketing.programme') }}">MBA Marketing</a></li>
                         <li><a href="{{ route('digital_marketing.programme') }}">MBA Digital Marketing</a></li>
                         <li><a href="{{ route('ib.programme') }}">MBA International Business</a></li>
+                        <li><a href="{{ route('lscm.programme') }}">MBA Logistics & Supply Chain Management</a></li>
+                        <li><a href="{{ route('data_analytics.programme') }}">MBA Data Analytics</a></li>
                         <li><a href="{{ route('bba.programme') }}">BBA</a></li>
                         <li><a href="{{ route('bca.programme') }}">BCA</a></li>
                     </ul>
