@@ -33,7 +33,6 @@
                         <div class="course-details-content">
                             <p>TMU’s Online MBA in Data Analytics is tailored for aspiring professionals and graduates seeking to build expertise in data-driven business management through a flexible online format. The programme equips learners with the knowledge and skills needed to interpret data, support strategic decision-making, and address modern business challenges.</p>
                             <p>The curriculum blends management principles with advanced analytics concepts, covering areas such as data interpretation, business intelligence, predictive analytics, and data visualisation. By combining practical applications with industry-focused learning, the programme prepares students to leverage data effectively and drive organisational growth across diverse sectors.</p>
-                            
                             <h3 class="mt-4 mb-3" style="font-size: 1.8rem; font-weight: 700; color: #001d4a;">Why Choose an Online MBA in Data Analytics</h3>
                             <div class="row pt-2">
                                 <div class="col-sm-6">
