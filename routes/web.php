@@ -20,6 +20,7 @@ Route::get('/online-bba', [CDOEController::class, 'bba_programme'])->name('bba.p
 Route::get('/online-bca', [CDOEController::class, 'bca_programme'])->name('bca.programme');
 Route::get('/online-mba-digital-marketing', [CDOEController::class, 'digital_marketing_programme'])->name('digital_marketing.programme');
 Route::get('/online-mba-logistics-and-supply-chain-management', [CDOEController::class, 'lscm_programme'])->name('lscm.programme');
+Route::get('/online-mba-in-agri-business', [CDOEController::class, 'agri_business_programme'])->name('agri_business.programme');
 Route::get('/online-mba-data-analytics', [CDOEController::class, 'data_analytics_programme'])->name('data_analytics.programme');
 Route::get('/mandatory-disclosure', [CDOEController::class, 'mandatory_disclosure'])->name('mandatory.disclosure');
 Route::get('/admissions-rules', [CDOEController::class, 'admissions_rules'])->name('admissions.rules');
