@@ -17,14 +17,14 @@ jobs:
         run: |
           echo "CPANEL_HOST exists: ${{ secrets.CPANEL_HOST != '' }}"
           echo "CPANEL_USER exists: ${{ secrets.CPANEL_USER != '' }}"
-          echo "CPANEL_SSH_KEY exists: ${{ secrets.CPANEL_SSH_KEY != '' }}"
+          echo "SSH_KEY exists: ${{ secrets.SSH_KEY != '' }}"
 
       - name: Deploy to cPanel via SSH
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.CPANEL_HOST }}
           username: ${{ secrets.CPANEL_USER }}
-          key: ${{ secrets.CPANEL_SSH_KEY }}
+          key: ${{ secrets.SSH_KEY }}
           port: 22
           debug: true
           script: |
