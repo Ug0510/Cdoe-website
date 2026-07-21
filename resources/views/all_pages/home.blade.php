@@ -404,7 +404,7 @@
                 <div class="swiper specializedCoursesSwiper">
                     <div class="swiper-wrapper">
 
-                        <!-- Slide 1: Artificial Intelligence -->
+                        <!-- Slide 1: Finance -->
                         <div class="swiper-slide d-flex align-items-stretch">
                             <div class="course-card-fc">
                                 <div class="course-card-fc-img-container">
@@ -414,7 +414,7 @@
                                 <div class="course-card-fc-body">
                                     <h3 class="course-card-fc-title">MBA in Finance</h3>
                                     <p class="course-card-fc-text">Gain advanced knowledge in financial management,
-                                        investmentMore actions strategies, and corporate finance to excel in the dynamic
+                                        investment strategies, and corporate finance to excel in the dynamic
                                         world of finance.</p>
                                     <div class="course-card-fc-meta">
                                         <span class="duration-tag-fc">Duration: <strong>2 Years</strong></span>
@@ -423,7 +423,7 @@
                             </div>
                         </div>
 
-                        <!-- Slide 2: Data Analytics -->
+                        <!-- Slide 2: Human Resource Management -->
                         <div class="swiper-slide d-flex align-items-stretch">
                             <div class="course-card-fc">
                                 <div class="course-card-fc-img-container">
@@ -434,7 +434,7 @@
                                 <div class="course-card-fc-body">
                                     <h3 class="course-card-fc-title">MBA in Human Resource Management</h3>
                                     <p class="course-card-fc-text">Equip yourself with essential skills in talent
-                                        acquisition,More actions employee relations, performance management, and strategic
+                                        acquisition, employee relations, performance management, and strategic
                                         HR planning.</p>
                                     <div class="course-card-fc-meta">
                                         <span class="duration-tag-fc">Duration: <strong>2 Years</strong></span>
@@ -443,7 +443,7 @@
                             </div>
                         </div>
 
-                        <!-- Slide 3: Cyber Security -->
+                        <!-- Slide 3: Marketing -->
                         <div class="swiper-slide d-flex align-items-stretch">
                             <div class="course-card-fc">
                                 <div class="course-card-fc-img-container">
@@ -453,7 +453,7 @@
                                 <div class="course-card-fc-body">
                                     <h3 class="course-card-fc-title">MBA in Marketing</h3>
                                     <p class="course-card-fc-text">Master modern marketing strategies, digital
-                                        marketing,More actions consumer behavior, and brand management to lead in a
+                                        marketing, consumer behavior, and brand management to lead in a
                                         competitive global market.</p>
                                     <div class="course-card-fc-meta">
                                         <span class="duration-tag-fc">Duration: <strong>2 Years</strong></span>
@@ -462,7 +462,7 @@
                             </div>
                         </div>
 
-                        <!-- Slide 4: Full Stack -->
+                        <!-- Slide 4: International Business -->
                         <div class="swiper-slide d-flex align-items-stretch">
                             <div class="course-card-fc">
                                 <div class="course-card-fc-img-container">
@@ -473,6 +473,74 @@
                                     <h3 class="course-card-fc-title">MBA in International Business</h3>
                                     <p class="course-card-fc-text">Gain global leadership skills, master international
                                         trade, and advance your career in multinational companies.</p>
+                                    <div class="course-card-fc-meta">
+                                        <span class="duration-tag-fc">Duration: <strong>2 Years</strong></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5: Data Analytics -->
+                        <div class="swiper-slide d-flex align-items-stretch">
+                            <div class="course-card-fc">
+                                <div class="course-card-fc-img-container">
+                                    <img src="{{ asset('/assets/img/programmes/m5.png') }}"
+                                        alt="Online MBA in Data Analytics Specialisation" class="course-card-fc-img" />
+                                </div>
+                                <div class="course-card-fc-body">
+                                    <h3 class="course-card-fc-title">MBA in Data Analytics</h3>
+                                    <p class="course-card-fc-text">Transform data into strategic business decisions with TMU’s Online MBA in Data Analytics. Gain expertise in analytics, business intelligence, and data-driven management.</p>
+                                    <div class="course-card-fc-meta">
+                                        <span class="duration-tag-fc">Duration: <strong>2 Years</strong></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 6: Logistics & Supply Chain Management -->
+                        <div class="swiper-slide d-flex align-items-stretch">
+                            <div class="course-card-fc">
+                                <div class="course-card-fc-img-container">
+                                    <img src="{{ asset('/assets/img/programmes/m6.png') }}"
+                                        alt="Online MBA in Logistics & Supply Chain Management Specialisation" class="course-card-fc-img" />
+                                </div>
+                                <div class="course-card-fc-body">
+                                    <h3 class="course-card-fc-title">MBA in Logistics & Supply Chain Management</h3>
+                                    <p class="course-card-fc-text">Advance your career in operations, logistics, and global supply networks. Develop strategic, managerial, and analytical capabilities designed for modern business environments.</p>
+                                    <div class="course-card-fc-meta">
+                                        <span class="duration-tag-fc">Duration: <strong>2 Years</strong></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 7: Digital Marketing -->
+                        <div class="swiper-slide d-flex align-items-stretch">
+                            <div class="course-card-fc">
+                                <div class="course-card-fc-img-container">
+                                    <img src="{{ asset('/assets/img/programmes/m7.png') }}"
+                                        alt="Online MBA in Digital Marketing Specialisation" class="course-card-fc-img" />
+                                </div>
+                                <div class="course-card-fc-body">
+                                    <h3 class="course-card-fc-title">MBA in Digital Marketing</h3>
+                                    <p class="course-card-fc-text">Develop expertise in modern marketing strategies, online branding, performance marketing, and customer engagement. Learn from an industry-focused curriculum.</p>
+                                    <div class="course-card-fc-meta">
+                                        <span class="duration-tag-fc">Duration: <strong>2 Years</strong></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 8: Agri Business -->
+                        <div class="swiper-slide d-flex align-items-stretch">
+                            <div class="course-card-fc">
+                                <div class="course-card-fc-img-container">
+                                    <img src="{{ asset('/assets/img/programmes/m8.png') }}"
+                                        alt="Online MBA in Agri Business Specialisation" class="course-card-fc-img" />
+                                </div>
+                                <div class="course-card-fc-body">
+                                    <h3 class="course-card-fc-title">MBA in Agri Business</h3>
+                                    <p class="course-card-fc-text">Build leadership and management expertise for the agricultural sector. Develop strategic, analytical, and business management skills designed for the agribusiness landscape.</p>
                                     <div class="course-card-fc-meta">
                                         <span class="duration-tag-fc">Duration: <strong>2 Years</strong></span>
                                     </div>
@@ -493,7 +561,7 @@
 
             <div class="courses-list-view">
 
-                <!-- Item 1: Artificial Intelligence -->
+                <!-- Item 1: Finance -->
                 <a href="{{ route('finance.programme') }}" class="course-list-item">
                     <div class="course-list-item-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -503,14 +571,13 @@
                     </div>
                     <div class="course-list-item-content">
                         <h3 class="course-list-item-title">MBA in Finance</h3>
-                        <p class="course-list-item-desc">Gain advanced knowledge in financial management, investmentAdd
-                            commentMore actions
+                        <p class="course-list-item-desc">Gain advanced knowledge in financial management, investment
                             strategies, and corporate finance to excel in the dynamic
                             world of finance.</p>
                     </div>
                 </a>
 
-                <!-- Item 2: Data Analytics -->
+                <!-- Item 2: Human Resource Management -->
                 <a href="{{ route('hr.programme') }}" class="course-list-item">
                     <div class="course-list-item-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -520,14 +587,13 @@
                     </div>
                     <div class="course-list-item-content">
                         <h3 class="course-list-item-title">MBA in Human Resource Management</h3>
-                        <p class="course-list-item-desc">Equip yourself with essential skills in talent acquisition,Add
-                            commentMore actions
+                        <p class="course-list-item-desc">Equip yourself with essential skills in talent acquisition,
                             employee relations, performance management, and strategic HR
                             planning.</p>
                     </div>
                 </a>
 
-                <!-- Item 3: Cyber Security -->
+                <!-- Item 3: Marketing -->
                 <a href="{{ route('marketing.programme') }}" class="course-list-item">
                     <div class="course-list-item-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -537,14 +603,13 @@
                     </div>
                     <div class="course-list-item-content">
                         <h3 class="course-list-item-title">MBA in Marketing</h3>
-                        <p class="course-list-item-desc">Master modern marketing strategies, digital marketing,Add
-                            commentMore actions
+                        <p class="course-list-item-desc">Master modern marketing strategies, digital marketing,
                             consumer behavior, and brand management to lead in a
                             competitive global market.</p>
                     </div>
                 </a>
 
-                <!-- Item 4: Full Stack -->
+                <!-- Item 4: International Business -->
                 <a href="{{ route('ib.programme') }}" class="course-list-item">
                     <div class="course-list-item-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -556,6 +621,62 @@
                         <h3 class="course-list-item-title">MBA in International Business</h3>
                         <p class="course-list-item-desc">Gain global leadership skills, master international trade, and
                             advance your career in multinational companies.</p>
+                    </div>
+                </a>
+
+                <!-- Item 5: Data Analytics -->
+                <a href="{{ route('data_analytics.programme') }}" class="course-list-item">
+                    <div class="course-list-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="course-list-item-content">
+                        <h3 class="course-list-item-title">MBA in Data Analytics</h3>
+                        <p class="course-list-item-desc">Transform data into strategic business decisions. Gain expertise in analytics, business intelligence, and data-driven management.</p>
+                    </div>
+                </a>
+
+                <!-- Item 6: Logistics & Supply Chain Management -->
+                <a href="{{ route('lscm.programme') }}" class="course-list-item">
+                    <div class="course-list-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="course-list-item-content">
+                        <h3 class="course-list-item-title">MBA in Logistics & Supply Chain Management</h3>
+                        <p class="course-list-item-desc">Advance your career in operations, logistics, and global supply networks. Develop strategic, managerial, and analytical capabilities.</p>
+                    </div>
+                </a>
+
+                <!-- Item 7: Digital Marketing -->
+                <a href="{{ route('digital_marketing.programme') }}" class="course-list-item">
+                    <div class="course-list-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="course-list-item-content">
+                        <h3 class="course-list-item-title">MBA in Digital Marketing</h3>
+                        <p class="course-list-item-desc">Develop expertise in modern marketing strategies, online branding, performance marketing, and customer engagement.</p>
+                    </div>
+                </a>
+
+                <!-- Item 8: Agri Business -->
+                <a href="{{ route('agri_business.programme') }}" class="course-list-item">
+                    <div class="course-list-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="course-list-item-content">
+                        <h3 class="course-list-item-title">MBA in Agri Business</h3>
+                        <p class="course-list-item-desc">Build leadership and management expertise for the agricultural sector. Develop strategic, analytical, and business management skills.</p>
                     </div>
                 </a>
 
