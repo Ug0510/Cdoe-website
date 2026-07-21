@@ -3,7 +3,7 @@ name: Deploy to cPanel
 on:
   push:
     branches:
-      - main  # Change to your deployment branch
+      - main
 
 jobs:
   deploy:
@@ -11,7 +11,13 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Verify Secrets
+        run: |
+          echo "CPANEL_HOST exists: ${{ secrets.CPANEL_HOST != '' }}"
+          echo "CPANEL_USER exists: ${{ secrets.CPANEL_USER != '' }}"
+          echo "CPANEL_SSH_KEY exists: ${{ secrets.CPANEL_SSH_KEY != '' }}"
 
       - name: Deploy to cPanel via SSH
         uses: appleboy/ssh-action@v0.1.10
@@ -20,7 +26,10 @@ jobs:
           username: ${{ secrets.CPANEL_USER }}
           key: ${{ secrets.CPANEL_SSH_KEY }}
           port: 22
+          debug: true
           script: |
-            cd /home/tmuac1/public_html/other_websites/test.cdoe.tmu.ac.in  # Change this to your project path
+            pwd
+            whoami
+            cd /home/tmuac1/public_html/other_websites/test.cdoe.tmu.ac.in
             git pull origin main
             php artisan optimize:clear
