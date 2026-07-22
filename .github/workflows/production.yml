@@ -18,9 +18,11 @@ jobs:
         with:
           host: ${{ secrets.CPANEL_HOST }}
           username: ${{ secrets.CPANEL_USER }}
-          key: ${{ secrets.CPANEL_SSH_KEY }}
+          key: ${{ secrets.SSH_KEY }}
           port: 22
           script: |
             cd /home/tmuac1/public_html/other_websites/tmuonline.ac.in  # Change this to your project path
-            git pull origin main
+            git fetch origin
+            git reset --hard origin/production
             php artisan optimize:clear
+            echo "Production deployment completed."
