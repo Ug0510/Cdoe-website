@@ -31,5 +31,6 @@ jobs:
             pwd
             whoami
             cd /home/tmuac1/public_html/other_websites/test.cdoe.tmu.ac.in
-            git pull origin main
+            git fetch origin
+            git reset --hard origin/main
             php artisan optimize:clear
