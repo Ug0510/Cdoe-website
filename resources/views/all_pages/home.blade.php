@@ -432,7 +432,7 @@
                                         class="course-card-fc-img" />
                                 </div>
                                 <div class="course-card-fc-body">
-                                    <h3 class="course-card-fc-title">MBA in Human Resource Management</h3>
+                                    <h3 class="course-card-fc-title">MBA in HR Management</h3>
                                     <p class="course-card-fc-text">Equip yourself with essential skills in talent
                                         acquisition, employee relations, performance management, and strategic
                                         HR planning.</p>
