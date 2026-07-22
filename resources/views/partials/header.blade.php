@@ -460,6 +460,8 @@
             <div class="dropdown">
                 <a>Programmes</a>
                 <ul class="submenu">
+                    <li><a href="{{ route('bba.programme') }}">BBA</a></li>
+                    <li><a href="{{ route('bca.programme') }}">BCA</a></li>
                     <li><a href="{{ route('finance.programme') }}">MBA Finance</a></li>
                     <li><a href="{{ route('hr.programme') }}">MBA HR Management</a></li>
                     <li><a href="{{ route('marketing.programme') }}">MBA Marketing</a></li>
@@ -467,8 +469,7 @@
                     <li><a href="{{ route('ib.programme') }}">MBA International Business</a></li>
                     <li><a href="{{ route('lscm.programme') }}">MBA Logistics & Supply Chain Management</a></li>
                     <li><a href="{{ route('data_analytics.programme') }}">MBA Data Analytics</a></li>
-                    <li><a href="{{ route('bba.programme') }}">BBA</a></li>
-                    <li><a href="{{ route('bca.programme') }}">BCA</a></li>
+                    <li><a href="{{ route('agri_business.programme') }}">MBA Agri Business</a></li>
                 </ul>
             </div>
 

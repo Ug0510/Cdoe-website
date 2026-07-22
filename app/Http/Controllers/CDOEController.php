@@ -57,6 +57,11 @@ class CDOEController extends Controller
         return view('all_pages.programme.hr_programme');
     }
 
+    public function agri_business_programme()
+    {
+        return view('all_pages.programme.agri_business');
+    }
+
     public function ib_programme()
     {
         return view('all_pages.programme.ib_programme');

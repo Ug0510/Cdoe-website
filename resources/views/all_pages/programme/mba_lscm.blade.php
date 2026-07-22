@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="{{ asset('/assets/css/programme.css') }}">
     <!-- breadcrumb start -->
     <div class="programme-banner">
-        <img src="{{ asset('assets/img/programmes/Online-MBA-in-Logistics_desktop.jpg') }}" alt="Programme Banner" class="d-none d-lg-block">
-        <img src="{{ asset('assets/img/programmes/Logistics-online-MBA_mobile.jpg') }}" alt="Programme Banner" class="d-block d-md-none">
-        <img src="{{ asset('assets/img/programmes/MBA-in-Logistics_tablet.jpg') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
+        <img src="{{ asset('assets/img/programmes/logostic_desktop.jpg') }}" alt="Programme Banner" class="d-none d-lg-block">
+        <img src="{{ asset('assets/img/programmes/lodostic_mobile.jpg') }}" alt="Programme Banner" class="d-block d-md-none">
+        <img src="{{ asset('assets/img/programmes/logostick_tablet.jpg') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
         <div class="banner-title">
             <p>Online MBA in<br> <span>Logistics & Supply Chain Management</span></p>
             <p class="d-none d-lg-block">Advance your career in operations, logistics, and global supply networks with TMU’s Online MBA in Logistics and Supply Chain Management programme. Develop strategic, managerial, and analytical capabilities through flexible online learning designed for modern business environments.</p>
