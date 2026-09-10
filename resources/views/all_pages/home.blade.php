@@ -1244,69 +1244,109 @@
 
         <div class="custom-gallery">
             <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/1.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(0)">
+                <img src="{{ asset('/assets/img/gallery/19.jpeg') }}" alt="Placement Drive 1" loading="lazy"
+                    onclick="openLightbox(0)">
+                <div class="custom-caption">Campus Placement & Interview Drive</div>
+            </div>
+            <div class="custom-gallery-item">
+                <img src="{{ asset('/assets/img/gallery/20.jpeg') }}" alt="Placement Drive 2" loading="lazy"
+                    onclick="openLightbox(1)">
+                <div class="custom-caption">Corporate Interaction & Selection Process</div>
+            </div>
+            <div class="custom-gallery-item">
+                <img src="{{ asset('/assets/img/gallery/21.jpeg') }}" alt="Placement Drive 3" loading="lazy"
+                    onclick="openLightbox(2)">
+                <div class="custom-caption">Technical & HR Interview Session</div>
+            </div>
+            <div class="custom-gallery-item">
+                <img src="{{ asset('/assets/img/gallery/22.jpeg') }}" alt="Placement Drive 4" loading="lazy"
+                    onclick="openLightbox(3)">
+                <div class="custom-caption">Group Discussion & Student Assessment</div>
+            </div>
+            <div class="custom-gallery-item">
+                <img src="{{ asset('/assets/img/gallery/23.jpeg') }}" alt="Placement Drive 5" loading="lazy"
+                    onclick="openLightbox(4)">
+                <div class="custom-caption">Felicitation Ceremony for Placed Students</div>
+            </div>
+            <div class="custom-gallery-item">
+                <img src="{{ asset('/assets/img/gallery/24.jpeg') }}" alt="Placement Drive 6" loading="lazy"
+                    onclick="openLightbox(5)">
+                <div class="custom-caption">Placement Orientation in University Auditorium</div>
+            </div>
+            <div class="custom-gallery-item">
+                <img src="{{ asset('/assets/img/gallery/25.jpeg') }}" alt="Placement Drive 7" loading="lazy"
+                    onclick="openLightbox(6)">
+                <div class="custom-caption">Expert Guest Lecture & Industry Insights</div>
+            </div>
+            <div class="custom-gallery-item">
+                <img src="{{ asset('/assets/img/gallery/26.jpeg') }}" alt="Placement Drive 8" loading="lazy"
+                    onclick="openLightbox(7)">
+                <div class="custom-caption">Corporate Skill & Career Development Workshop</div>
+            </div>
+            <div class="custom-gallery-item d-none d-sm-block">
+                <img src="{{ asset('/assets/img/gallery/1.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(8)">
                 <div class="custom-caption">Dr APJ Abdul Kalam at the 1st Convocation 2012</div>
             </div>
-            <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/2.webp') }}" alt="Image 2" loading="lazy" onclick="openLightbox(1)">
+            <div class="custom-gallery-item d-none d-sm-block">
+                <img src="{{ asset('/assets/img/gallery/2.webp') }}" alt="Image 2" loading="lazy" onclick="openLightbox(9)">
                 <div class="custom-caption">2012 Graduates Celebrating Success</div>
             </div>
-            <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/3.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(2)">
+            <div class="custom-gallery-item d-none d-sm-block">
+                <img src="{{ asset('/assets/img/gallery/3.webp') }}" alt="Image 3" loading="lazy" onclick="openLightbox(10)">
                 <div class="custom-caption">Shri Akhilesh Yadav with Shri Suresh Jain at the 2nd Convocation</div>
             </div>
-            <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/4.webp') }}" alt="Image 2" loading="lazy" onclick="openLightbox(3)">
+            <div class="custom-gallery-item d-none d-sm-block">
+                <img src="{{ asset('/assets/img/gallery/4.webp') }}" alt="Image 4" loading="lazy" onclick="openLightbox(11)">
                 <div class="custom-caption">Graduates of 2023 Mark a Milestone</div>
             </div>
-            <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/5.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(4)">
+            <div class="custom-gallery-item d-none d-sm-block">
+                <img src="{{ asset('/assets/img/gallery/5.webp') }}" alt="Image 5" loading="lazy" onclick="openLightbox(12)">
                 <div class="custom-caption">Distinguished Guests at Convocation 2024</div>
             </div>
-            <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/6.webp') }}" alt="Image 2" loading="lazy" onclick="openLightbox(5)">
+            <div class="custom-gallery-item d-none d-sm-block">
+                <img src="{{ asset('/assets/img/gallery/6.webp') }}" alt="Image 6" loading="lazy" onclick="openLightbox(13)">
                 <div class="custom-caption">Students at the 3rd Convocation Ceremony</div>
             </div>
-            <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/7.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(6)">
+            <div class="custom-gallery-item d-none d-sm-block">
+                <img src="{{ asset('/assets/img/gallery/7.webp') }}" alt="Image 7" loading="lazy" onclick="openLightbox(14)">
                 <div class="custom-caption">Dinesh Sharma Addresses Graduates at Convocation 2021</div>
             </div>
-            <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/8.webp') }}" alt="Image 2" loading="lazy" onclick="openLightbox(7)">
+            <div class="custom-gallery-item d-none d-sm-block">
+                <img src="{{ asset('/assets/img/gallery/8.webp') }}" alt="Image 8" loading="lazy" onclick="openLightbox(15)">
                 <div class="custom-caption">Guru Randhawa Performs Live at Rock-on 2023</div>
             </div>
-            <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/9.webp') }}" alt="Image 1" loading="lazy" onclick="openLightbox(8)">
+            <div class="custom-gallery-item d-none d-sm-block">
+                <img src="{{ asset('/assets/img/gallery/9.webp') }}" alt="Image 9" loading="lazy" onclick="openLightbox(16)">
                 <div class="custom-caption">TMU’s 2023 Graduates</div>
             </div>
-            <div class="custom-gallery-item">
-                <img src="{{ asset('/assets/img/gallery/10.webp') }}" alt="Image 2" loading="lazy"
-                    onclick="openLightbox(9)">
+            <div class="custom-gallery-item d-none d-sm-block">
+                <img src="{{ asset('/assets/img/gallery/10.webp') }}" alt="Image 10" loading="lazy"
+                    onclick="openLightbox(17)">
                 <div class="custom-caption">A Glimpse into Convocation 2024 Celebrations</div>
             </div>
             <div class="custom-gallery-item d-none d-sm-block">
-                <img src="{{ asset('/assets/img/gallery/11.webp') }}" alt="Image 1" loading="lazy"
-                    onclick="openLightbox(10)">
+                <img src="{{ asset('/assets/img/gallery/11.webp') }}" alt="Image 11" loading="lazy"
+                    onclick="openLightbox(18)">
                 <div class="custom-caption">Students Enjoying the Rock-on Fest</div>
             </div>
             <div class="custom-gallery-item d-none d-sm-block">
-                <img src="{{ asset('/assets/img/gallery/12.webp') }}" alt="Image 2" loading="lazy"
-                    onclick="openLightbox(11)">
+                <img src="{{ asset('/assets/img/gallery/12.webp') }}" alt="Image 12" loading="lazy"
+                    onclick="openLightbox(19)">
                 <div class="custom-caption">Dr Kalam Graces Convocation 2012 with Wisdom</div>
             </div>
             <div class="custom-gallery-item d-none d-sm-block">
-                <img src="{{ asset('/assets/img/gallery/13.webp') }}" alt="Image 1" loading="lazy"
-                    onclick="openLightbox(12)">
+                <img src="{{ asset('/assets/img/gallery/13.webp') }}" alt="Image 13" loading="lazy"
+                    onclick="openLightbox(20)">
                 <div class="custom-caption">Shaaz Sets the Stage Ablaze at Rock-on 2023</div>
             </div>
             <div class="custom-gallery-item d-none d-sm-block">
-                <img src="{{ asset('/assets/img/gallery/14.webp') }}" alt="Image 2" loading="lazy"
-                    onclick="openLightbox(13)">
+                <img src="{{ asset('/assets/img/gallery/14.webp') }}" alt="Image 14" loading="lazy"
+                    onclick="openLightbox(21)">
                 <div class="custom-caption">Memorable Moments from Convocation 2024</div>
             </div>
             <div class="custom-gallery-item d-none d-sm-block">
-                <img src="{{ asset('/assets/img/gallery/15.webp') }}" alt="Image 1" loading="lazy"
-                    onclick="openLightbox(14)">
+                <img src="{{ asset('/assets/img/gallery/15.webp') }}" alt="Image 15" loading="lazy"
+                    onclick="openLightbox(22)">
                 <div class="custom-caption">Gurudev Sri Sri Ravi Shankar at the Special Convocation 2024</div>
             </div>
         </div>
