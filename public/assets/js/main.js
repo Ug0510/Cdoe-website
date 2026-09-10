@@ -487,6 +487,14 @@ $(document).ready(function () {
 
 
 const images = [
+    "assets/img/gallery/19.jpeg",
+    "assets/img/gallery/20.jpeg",
+    "assets/img/gallery/21.jpeg",
+    "assets/img/gallery/22.jpeg",
+    "assets/img/gallery/23.jpeg",
+    "assets/img/gallery/24.jpeg",
+    "assets/img/gallery/25.jpeg",
+    "assets/img/gallery/26.jpeg",
     "assets/img/gallery/1.webp",
     "assets/img/gallery/2.webp",
     "assets/img/gallery/3.webp",
@@ -501,11 +509,7 @@ const images = [
     "assets/img/gallery/12.webp",
     "assets/img/gallery/13.webp",
     "assets/img/gallery/14.webp",
-    "assets/img/gallery/15.webp",
-    "assets/img/gallery/16.webp",
-    "assets/img/gallery/17.webp",
-    "assets/img/gallery/18.webp",
-    // Add more as needed
+    "assets/img/gallery/15.webp"
 ];
 let currentImageIndex = 0;
 
