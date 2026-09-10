@@ -203,7 +203,7 @@
 <script src="{{asset('assets/js/vendor.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <!-- main js  -->
-<script src="{{asset('assets/js/main.js')}}"></script>
+<script src="{{ asset('assets/js/main.js') }}?v={{ time() }}"></script>
 
 <!-- Lightbox2 JS CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>

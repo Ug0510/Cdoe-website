@@ -486,75 +486,63 @@ $(document).ready(function () {
 });
 
 
-const images = [
-    "assets/img/gallery/19.jpeg",
-    "assets/img/gallery/20.jpeg",
-    "assets/img/gallery/21.jpeg",
-    "assets/img/gallery/22.jpeg",
-    "assets/img/gallery/23.jpeg",
-    "assets/img/gallery/24.jpeg",
-    "assets/img/gallery/25.jpeg",
-    "assets/img/gallery/26.jpeg",
-    "assets/img/gallery/1.webp",
-    "assets/img/gallery/2.webp",
-    "assets/img/gallery/3.webp",
-    "assets/img/gallery/4.webp",
-    "assets/img/gallery/5.webp",
-    "assets/img/gallery/6.webp",
-    "assets/img/gallery/7.webp",
-    "assets/img/gallery/8.webp",
-    "assets/img/gallery/9.webp",
-    "assets/img/gallery/10.webp",
-    "assets/img/gallery/11.webp",
-    "assets/img/gallery/12.webp",
-    "assets/img/gallery/13.webp",
-    "assets/img/gallery/14.webp",
-    "assets/img/gallery/15.webp"
-];
 let currentImageIndex = 0;
+
+function updateLightboxContent() {
+    const items = document.querySelectorAll('.custom-gallery-item');
+    if (!items || items.length === 0 || currentImageIndex < 0 || currentImageIndex >= items.length) return;
+
+    const currentItem = items[currentImageIndex];
+    const imgEl = currentItem.querySelector('img');
+    const captionEl = currentItem.querySelector('.custom-caption');
+    const lightboxImg = document.getElementById("custom-lightbox-img");
+    const lightboxCaption = document.getElementById("custom-lightbox-caption");
+
+    if (lightboxImg && imgEl) {
+        lightboxImg.classList.remove('show');
+        setTimeout(() => {
+            lightboxImg.src = imgEl.src;
+            lightboxImg.classList.add('show');
+        }, 150);
+    }
+
+    if (lightboxCaption && captionEl) {
+        lightboxCaption.innerText = captionEl.innerText;
+    }
+}
 
 function openLightbox(index) {
     currentImageIndex = index;
-    const lightboxImg = document.getElementById("custom-lightbox-img");
-    lightboxImg.classList.remove('show');
-    setTimeout(() => {
-        lightboxImg.src = images[currentImageIndex];
-        lightboxImg.classList.add('show');
-    }, 200);
-    document.getElementById("custom-lightbox-caption").innerText =
-        document.querySelectorAll('.custom-gallery-item')[currentImageIndex].querySelector('.custom-caption').innerText;
-    document.getElementById("custom-lightbox").style.display = "flex";
+    updateLightboxContent();
+    const lightbox = document.getElementById("custom-lightbox");
+    if (lightbox) {
+        lightbox.style.display = "flex";
+        document.body.style.overflow = "hidden";
+    }
 }
 
 function closeLightbox(event) {
-    if (event.target.id === "custom-lightbox" || event.target.classList.contains('custom-close-btn')) {
-        document.getElementById("custom-lightbox").style.display = "none";
+    if (!event || event.target.id === "custom-lightbox" || event.target.classList.contains('custom-close-btn')) {
+        const lightbox = document.getElementById("custom-lightbox");
+        if (lightbox) {
+            lightbox.style.display = "none";
+        }
         document.body.style.overflow = "auto";
     }
 }
 
 function nextImage() {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    const lightboxImg = document.getElementById("custom-lightbox-img");
-    lightboxImg.classList.remove('show');
-    setTimeout(() => {
-        lightboxImg.src = images[currentImageIndex];
-        lightboxImg.classList.add('show');
-    }, 200);
-    document.getElementById("custom-lightbox-caption").innerText =
-        document.querySelectorAll('.custom-gallery-item')[currentImageIndex].querySelector('.custom-caption').innerText;
+    const items = document.querySelectorAll('.custom-gallery-item');
+    if (!items || items.length === 0) return;
+    currentImageIndex = (currentImageIndex + 1) % items.length;
+    updateLightboxContent();
 }
 
 function prevImage() {
-    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-    const lightboxImg = document.getElementById("custom-lightbox-img");
-    lightboxImg.classList.remove('show');
-    setTimeout(() => {
-        lightboxImg.src = images[currentImageIndex];
-        lightboxImg.classList.add('show');
-    }, 200);
-    document.getElementById("custom-lightbox-caption").innerText =
-        document.querySelectorAll('.custom-gallery-item')[currentImageIndex].querySelector('.custom-caption').innerText;
+    const items = document.querySelectorAll('.custom-gallery-item');
+    if (!items || items.length === 0) return;
+    currentImageIndex = (currentImageIndex - 1 + items.length) % items.length;
+    updateLightboxContent();
 }
 // recruiter section JS start
 
