@@ -6,9 +6,16 @@
 
     <link rel="stylesheet" href="{{ asset('/assets/css/programme.css') }}">
     <div class="programme-banner">
+        {{-- Separate img tags commented out for LCP performance
         <img src="{{ asset('assets/img/programmes/Online-BBA.jpg') }}" alt="Programme Banner" class="d-none d-lg-block">
         <img src="{{ asset('assets/img/programmes/online-bba-mobile.jpeg') }}" alt="Programme Banner" class="d-block d-md-none">
         <img src="{{ asset('assets/img/programmes/online-bba-tablet.jpeg') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
+        --}}
+        <picture>
+            <source media="(max-width: 767px)" srcset="{{ asset('assets/img/programmes/online-bba-mobile.jpeg') }}">
+            <source media="(max-width: 991px)" srcset="{{ asset('assets/img/programmes/online-bba-tablet.jpeg') }}">
+            <img src="{{ asset('assets/img/programmes/Online-BBA.jpg') }}" alt="Online BBA Programme Banner" fetchpriority="high" decoding="async" class="w-100">
+        </picture>
         <div class="banner-title">
             <p>Online BBA <br> <span>Bachelor of Business Administration</span></p>
             <p class="d-none d-lg-block">Shape your future in business with TMU’s Online BBA programme. Develop managerial, analytical, and entrepreneurial skills through industry-relevant coursework and flexible online learning.</p>

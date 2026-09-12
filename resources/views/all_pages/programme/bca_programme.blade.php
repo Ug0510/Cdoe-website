@@ -6,9 +6,16 @@
 
     <link rel="stylesheet" href="{{ asset('/assets/css/programme.css') }}">
     <div class="programme-banner">
+        {{-- Separate img tags commented out for LCP performance
         <img src="{{ asset('assets/img/programmes/bca_desktop.jpeg') }}" alt="Programme Banner" class="d-none d-lg-block">
         <img src="{{ asset('assets/img/programmes/bca_mobile.jpeg') }}" alt="Programme Banner" class="d-block d-md-none">
         <img src="{{ asset('assets/img/programmes/bca_tablet.jpeg') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
+        --}}
+        <picture>
+            <source media="(max-width: 767px)" srcset="{{ asset('assets/img/programmes/bca_mobile.jpeg') }}">
+            <source media="(max-width: 991px)" srcset="{{ asset('assets/img/programmes/bca_tablet.jpeg') }}">
+            <img src="{{ asset('assets/img/programmes/bca_desktop.jpeg') }}" alt="Online BCA Programme Banner" fetchpriority="high" decoding="async" class="w-100">
+        </picture>
         <div class="banner-title">
             <p>Online BCA <br> <span>Bachelor of Computer Applications</span></p>
             <p class="d-none d-lg-block">Build a strong foundation in technology and prepare for a successful career in the digital world with TMU’s Online BCA programme. Gain industry-relevant knowledge in computer applications, software development, and emerging technologies through a flexible and interactive online learning experience.</p>
