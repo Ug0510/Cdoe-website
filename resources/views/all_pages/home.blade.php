@@ -232,9 +232,50 @@
         </div>
 
         <div class="carousel-inner">
+            {{-- Old empty items reliant on CSS background images commented out for LCP performance
             <div class="carousel-item active"></div>
             <div class="carousel-item"></div>
             <div class="carousel-item"></div>
+            --}}
+
+            <!-- Slide 1 (LCP Hero Banner) -->
+            <div class="carousel-item active">
+                <picture>
+                    <source media="(max-width: 540px)" srcset="{{ asset('/assets/img/banner/hero-banner4-mobile.webp') }}">
+                    <source media="(max-width: 992px)" srcset="{{ asset('/assets/img/banner/hero-banner4-tab.webp') }}">
+                    <img src="{{ asset('/assets/img/banner/hero-banner4.webp') }}" 
+                         alt="CDOE TMU Distance and Online Education" 
+                         fetchpriority="high" 
+                         decoding="async" 
+                         class="d-block w-100">
+                </picture>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <picture>
+                    <source media="(max-width: 540px)" srcset="{{ asset('/assets/img/banner/hero-banner1-mobile.webp') }}">
+                    <source media="(max-width: 992px)" srcset="{{ asset('/assets/img/banner/hero-banner1-tab.webp') }}">
+                    <img src="{{ asset('/assets/img/banner/hero-banner1.webp') }}" 
+                         alt="CDOE Online Programmes" 
+                         loading="lazy" 
+                         decoding="async" 
+                         class="d-block w-100">
+                </picture>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <picture>
+                    <source media="(max-width: 540px)" srcset="{{ asset('/assets/img/banner/hero-banner2-mobile.webp') }}">
+                    <source media="(max-width: 992px)" srcset="{{ asset('/assets/img/banner/hero-banner2-tab.webp') }}">
+                    <img src="{{ asset('/assets/img/banner/hero-banner2.webp') }}" 
+                         alt="CDOE TMU Online Education" 
+                         loading="lazy" 
+                         decoding="async" 
+                         class="d-block w-100">
+                </picture>
+            </div>
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
@@ -267,7 +308,7 @@
 
 
     {{-- accreditation area start --}}
-    <img src="{{ asset('/assets/img/other/accred1.png') }}" alt="" class="w-75 mx-auto my-4 d-none d-lg-block">
+    <img src="{{ asset('/assets/img/other/accred1.webp') }}" alt="" class="w-75 mx-auto my-4 d-none d-lg-block" loading="lazy">
 
     {{-- Download Brochure Section --}}
     <section class="download-brochure-section">
@@ -276,7 +317,7 @@
                 <!-- Left Side - Student Image with Yellow Accent -->
                 <div class="brochure-left">
                     <div class="yellow-accent-circle"></div>
-                    <img src="{{ asset('/assets/img/brochure/student.png') }}" alt="Student" class="brochure-student-img">
+                    <img src="{{ asset('/assets/img/brochure/student.webp') }}" alt="Student" class="brochure-student-img" loading="lazy">
                     <!-- Decorative Dots Left -->
                     <div class="decorative-dots dots-left">
                         <span></span><span></span><span></span><span></span><span></span><span></span>
@@ -517,7 +558,7 @@
                             <div class="tmu-prog-card">
                                 <div class="tmu-card-media">
                                     <span class="tmu-badge pg">Postgraduate</span>
-                                    <img src="{{ asset('/assets/img/programmes/m5.png') }}" alt="MBA in Data Analytics" loading="lazy">
+                                    <img src="{{ asset('/assets/img/programmes/m5.webp') }}" alt="MBA in Data Analytics" loading="lazy">
                                     <div class="media-overlay"></div>
                                 </div>
                                 <div class="tmu-card-body">
@@ -544,7 +585,7 @@
                             <div class="tmu-prog-card">
                                 <div class="tmu-card-media">
                                     <span class="tmu-badge pg">Postgraduate</span>
-                                    <img src="{{ asset('/assets/img/programmes/m6.png') }}" alt="MBA in Logistics & Supply Chain Management" loading="lazy">
+                                    <img src="{{ asset('/assets/img/programmes/m6.webp') }}" alt="MBA in Logistics & Supply Chain Management" loading="lazy">
                                     <div class="media-overlay"></div>
                                 </div>
                                 <div class="tmu-card-body">
@@ -571,7 +612,7 @@
                             <div class="tmu-prog-card">
                                 <div class="tmu-card-media">
                                     <span class="tmu-badge pg">Postgraduate</span>
-                                    <img src="{{ asset('/assets/img/programmes/m7.png') }}" alt="MBA in Digital Marketing" loading="lazy">
+                                    <img src="{{ asset('/assets/img/programmes/m7.webp') }}" alt="MBA in Digital Marketing" loading="lazy">
                                     <div class="media-overlay"></div>
                                 </div>
                                 <div class="tmu-card-body">
@@ -598,7 +639,7 @@
                             <div class="tmu-prog-card">
                                 <div class="tmu-card-media">
                                     <span class="tmu-badge pg">Postgraduate</span>
-                                    <img src="{{ asset('/assets/img/programmes/m8.png') }}" alt="MBA in Agri Business" loading="lazy">
+                                    <img src="{{ asset('/assets/img/programmes/m8.webp') }}" alt="MBA in Agri Business" loading="lazy">
                                     <div class="media-overlay"></div>
                                 </div>
                                 <div class="tmu-card-body">

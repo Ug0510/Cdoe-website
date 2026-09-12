@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="{{ asset('/assets/css/programme.css') }}">
     <!-- breadcrumb start -->
     <div class="programme-banner">
+        {{-- Separate img tags commented out for LCP performance
         <img src="{{ asset('assets/img/programmes/marketing-banner.webp') }}" alt="Programme Banner" class="d-none d-lg-block">
         <img src="{{ asset('assets/img/programmes/mobile-banner.webp') }}" alt="Programme Banner" class="d-block d-md-none">
         <img src="{{ asset('assets/img/programmes/tab-banner.webp') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
+        --}}
+        <picture>
+            <source media="(max-width: 767px)" srcset="{{ asset('assets/img/programmes/mobile-banner.webp') }}">
+            <source media="(max-width: 991px)" srcset="{{ asset('assets/img/programmes/tab-banner.webp') }}">
+            <img src="{{ asset('assets/img/programmes/marketing-banner.webp') }}" alt="Online MBA in Marketing Banner" fetchpriority="high" decoding="async" class="w-100">
+        </picture>
         <div class="banner-title">
             <p>Online MBA in<br> <span>in Marketing</span></p>
             <p class="d-none d-lg-block">Master brand strategy, digital marketing, and consumer behaviour with TMU’s Online MBA in Marketing. Flexible, career-focused learning prepares you for dynamic marketing leadership roles across industries.</p>
