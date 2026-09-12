@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="{{ asset('/assets/css/programme.css') }}">
     <!-- breadcrumb start -->
     <div class="programme-banner">
+        {{-- Separate img tags commented out for LCP performance
         <img src="{{ asset('assets/img/programmes/finance-banner.webp') }}" alt="Programme Banner" class="d-none d-lg-block">
         <img src="{{ asset('assets/img/programmes/mobile-banner.webp') }}" alt="Programme Banner" class="d-block d-md-none">
         <img src="{{ asset('assets/img/programmes/tab-banner.webp') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
+        --}}
+        <picture>
+            <source media="(max-width: 767px)" srcset="{{ asset('assets/img/programmes/mobile-banner.webp') }}">
+            <source media="(max-width: 991px)" srcset="{{ asset('assets/img/programmes/tab-banner.webp') }}">
+            <img src="{{ asset('assets/img/programmes/finance-banner.webp') }}" alt="Online MBA in Data Analytics Banner" fetchpriority="high" decoding="async" class="w-100">
+        </picture>
         <div class="banner-title">
             <p>Online MBA in<br> <span>Data Analytics</span></p>
             <p class="d-none d-lg-block">Transform data into strategic business decisions with TMU’s Online MBA in Data Analytics. Gain expertise in analytics, business intelligence, and data-driven management through a flexible online learning experience.</p>

@@ -25,6 +25,7 @@
     </script>
     <!-- End Google Tag Manager -->
 
+    {{-- Duplicate GTM commented out to prevent duplicate network calls
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -35,6 +36,7 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-PTD3S2DJ');</script>
     <!-- End Google Tag Manager -->
+    --}}
 
     <!-- Meta Pixel Code -->
     <script>
@@ -191,6 +193,11 @@
     <link rel="stylesheet" href="{{ asset('/assets/css/nav.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/css/reel.css') }}">
     <link rel="preload" as="image" href="{{ asset('/assets/img/logos/logo.webp') }}">
+    @if (Request::is('/'))
+    <!-- Preload Hero Banner for Mobile and Desktop LCP -->
+    <link rel="preload" as="image" href="{{ asset('/assets/img/banner/hero-banner4-mobile.webp') }}" media="(max-width: 540px)" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ asset('/assets/img/banner/hero-banner4.webp') }}" media="(min-width: 541px)" fetchpriority="high">
+    @endif
 
     <!-- External Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -533,32 +540,35 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <!-- Preloader with Aesthetic Animation -->
     <div id="preloader" role="status" aria-live="polite" aria-hidden="false">
         <div class="loader-animation-container">
             <div class="loader-bar"></div>
             <div class="loader-bar"></div>
             <div class="loader-bar"></div>
-            <!-- You can add more .loader-bar divs here for more bars -->
         </div>
         <p class="loading-text">Loading...</p>
     </div>
 
     <script>
-        // This JavaScript remains the same
-        window.addEventListener('load', function () {
-            const preloader = document.getElementById('preloader');
-            const body = document.body;
-
-            if (preloader) {
-                body.classList.remove('preloading');
-                preloader.classList.add('hidden');
-                preloader.setAttribute('aria-hidden', 'true');
+        (function() {
+            function hidePreloader() {
+                const preloader = document.getElementById('preloader');
+                if (preloader && !preloader.classList.contains('hidden')) {
+                    document.body.classList.remove('preloading');
+                    preloader.classList.add('hidden');
+                    preloader.setAttribute('aria-hidden', 'true');
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                    }, 500);
+                }
             }
-        });
 
-        document.addEventListener('DOMContentLoaded', function () {
-            document.body.classList.add('preloading');
-        });
+            // Hide immediately when DOM is interactive, or at max after 800ms to preserve aesthetics without lag
+            document.addEventListener('DOMContentLoaded', hidePreloader);
+            window.addEventListener('load', hidePreloader);
+            setTimeout(hidePreloader, 800);
+        })();
     </script>
 
     <!-- preloader area start -->

@@ -7,11 +7,18 @@
     <link rel="stylesheet" href="{{ asset('/assets/css/programme.css') }}">
     <!-- breadcrumb start -->
     <div class="programme-banner">
+        {{-- Separate img tags commented out for LCP performance
         <img src="{{ asset('assets/img/programmes/Online-MBA-Agri-Business-desktop.jpg') }}" alt="Programme Banner"
             class="d-none d-lg-block">
         <img src="{{ asset('assets/img/programmes/MBA-in-Agribusiness-mobile.jpg') }}" alt="Programme Banner" class="d-block d-md-none">
         <img src="{{ asset('assets/img/programmes/Agri-business-mba-tablet.jpg') }}" alt="Programme Banner"
             class="d-none d-md-block d-lg-none">
+        --}}
+        <picture>
+            <source media="(max-width: 767px)" srcset="{{ asset('assets/img/programmes/MBA-in-Agribusiness-mobile.jpg') }}">
+            <source media="(max-width: 991px)" srcset="{{ asset('assets/img/programmes/Agri-business-mba-tablet.jpg') }}">
+            <img src="{{ asset('assets/img/programmes/Online-MBA-Agri-Business-desktop.jpg') }}" alt="Online MBA in Agri-Business Banner" fetchpriority="high" decoding="async" class="w-100">
+        </picture>
         <div class="banner-title">
             <p>Online MBA in <br> <span>Agri-Business</span></p>
             <p class="d-none d-lg-block">Build leadership and management expertise for the agricultural sector with TMU’s

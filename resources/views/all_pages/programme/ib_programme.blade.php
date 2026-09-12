@@ -6,9 +6,16 @@
 
     <link rel="stylesheet" href="{{ asset('/assets/css/programme.css') }}">
     <div class="programme-banner">
+        {{-- Separate img tags commented out for LCP performance
         <img src="{{ asset('assets/img/programmes/hr-banner.webp') }}" alt="Programme Banner" class="d-none d-lg-block">
         <img src="{{ asset('assets/img/programmes/mobile-banner.webp') }}" alt="Programme Banner" class="d-block d-md-none">
         <img src="{{ asset('assets/img/programmes/tab-banner.webp') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
+        --}}
+        <picture>
+            <source media="(max-width: 767px)" srcset="{{ asset('assets/img/programmes/mobile-banner.webp') }}">
+            <source media="(max-width: 991px)" srcset="{{ asset('assets/img/programmes/tab-banner.webp') }}">
+            <img src="{{ asset('assets/img/programmes/hr-banner.webp') }}" alt="Online MBA in International Business Banner" fetchpriority="high" decoding="async" class="w-100">
+        </picture>
         <div class="banner-title">
             <p>Online MBA <br> <span>International Business</span></p>
             <p class="d-none d-lg-block">Enroll in an Online MBA in International Business to gain global leadership skills, master international trade, and advance your career in multinational companies.</p>

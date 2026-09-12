@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="{{ asset('/assets/css/programme.css') }}">
     <!-- breadcrumb start -->
     <div class="programme-banner">
+        {{-- Separate img tags commented out for LCP performance
         <img src="{{ asset('assets/img/programmes/digital_marketing_desktop.jpg') }}" alt="Programme Banner" class="d-none d-lg-block">
         <img src="{{ asset('assets/img/programmes/digitial_markiting_mobile.jpg') }}" alt="Programme Banner" class="d-block d-md-none">
         <img src="{{ asset('assets/img/programmes/digital_markiting_tablet.jpg') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
+        --}}
+        <picture>
+            <source media="(max-width: 767px)" srcset="{{ asset('assets/img/programmes/digitial_markiting_mobile.jpg') }}">
+            <source media="(max-width: 991px)" srcset="{{ asset('assets/img/programmes/digital_markiting_tablet.jpg') }}">
+            <img src="{{ asset('assets/img/programmes/digital_marketing_desktop.jpg') }}" alt="Online MBA in Digital Marketing Banner" fetchpriority="high" decoding="async" class="w-100">
+        </picture>
         <div class="banner-title">
             <p>Online MBA in<br> <span>Digital Marketing</span></p>
             <p class="d-none d-lg-block">Develop expertise in modern marketing strategies, online branding, performance<br>
