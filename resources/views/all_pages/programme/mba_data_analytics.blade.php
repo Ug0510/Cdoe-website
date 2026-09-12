@@ -8,14 +8,14 @@
     <!-- breadcrumb start -->
     <div class="programme-banner">
         {{-- Separate img tags commented out for LCP performance
-        <img src="{{ asset('assets/img/programmes/finance-banner.webp') }}" alt="Programme Banner" class="d-none d-lg-block">
-        <img src="{{ asset('assets/img/programmes/mobile-banner.webp') }}" alt="Programme Banner" class="d-block d-md-none">
-        <img src="{{ asset('assets/img/programmes/tab-banner.webp') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
+        <img src="{{ asset('assets/img/programmes/mba-dataanalytics-desktop.webp') }}" alt="Programme Banner" class="d-none d-lg-block">
+        <img src="{{ asset('assets/img/programmes/mba-dataanalytics-mobile.webp') }}" alt="Programme Banner" class="d-block d-md-none">
+        <img src="{{ asset('assets/img/programmes/mba-dataanalytics-tablet.webp') }}" alt="Programme Banner" class="d-none d-md-block d-lg-none">
         --}}
         <picture>
-            <source media="(max-width: 767px)" srcset="{{ asset('assets/img/programmes/mobile-banner.webp') }}">
-            <source media="(max-width: 991px)" srcset="{{ asset('assets/img/programmes/tab-banner.webp') }}">
-            <img src="{{ asset('assets/img/programmes/finance-banner.webp') }}" alt="Online MBA in Data Analytics Banner" fetchpriority="high" decoding="async" class="w-100">
+            <source media="(max-width: 767px)" srcset="{{ asset('assets/img/programmes/mba-dataanalytics-mobile.webp') }}">
+            <source media="(max-width: 991px)" srcset="{{ asset('assets/img/programmes/mba-dataanalytics-tablet.webp') }}">
+            <img src="{{ asset('assets/img/programmes/mba-dataanalytics-desktop.webp') }}" alt="Online MBA in Data Analytics Banner" fetchpriority="high" decoding="async" class="w-100">
         </picture>
         <div class="banner-title">
             <p>Online MBA in<br> <span>Data Analytics</span></p>
