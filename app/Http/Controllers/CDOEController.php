@@ -309,6 +309,21 @@ class CDOEController extends Controller
         return view('all_pages.programme.mba_data_analytics');
     }
 
+    public function hospital_healthcare_programme()
+    {
+        return view('all_pages.programme.mba_hospital_healthcare');
+    }
+
+    public function operations_strategy_programme()
+    {
+        return view('all_pages.programme.mba_operations_strategy');
+    }
+
+    public function banking_fintech_ai_programme()
+    {
+        return view('all_pages.programme.mba_banking_fintech_ai');
+    }
+
     public function mandatory_disclosure()
     {
         return view('all_pages.mandatory_disclosure');
@@ -340,6 +355,9 @@ class CDOEController extends Controller
             'MBA in Logistics & Supply Chain',
             'MBA in Data Analytics',
             'MBA in Agri Business',
+            'MBA Hospital & Healthcare Management',
+            'MBA Operations Strategy & Project Management',
+            'MBA in Banking, Fintech & AI',
             'Online BBA',
             'Online BCA',
         ];

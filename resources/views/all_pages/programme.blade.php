@@ -497,10 +497,10 @@
                 <!-- Filter Tabs Only -->
                 <div class="filter-tabs-group">
                     <button class="tab-btn active" data-filter="all">
-                        All <span class="tab-count">10</span>
+                        All <span class="tab-count">13</span>
                     </button>
                     <button class="tab-btn" data-filter="pg">
-                        Postgraduate <span class="tab-count">8</span>
+                        Postgraduate <span class="tab-count">11</span>
                     </button>
                     <button class="tab-btn" data-filter="ug">
                         Undergraduate <span class="tab-count">2</span>
@@ -512,7 +512,7 @@
         <!-- Meta Results Header -->
         <div class="programmes-meta-header">
             <h2 class="meta-title">
-                Showing <span id="activeCountDisplay">10</span> <span id="activeLabelDisplay">Online</span> Programmes
+                Showing <span id="activeCountDisplay">13</span> <span id="activeLabelDisplay">Online</span> Programmes
             </h2>
         </div>
 
@@ -735,7 +735,88 @@
                 </div>
             </div>
 
-            <!-- 9. Online BBA -->
+            <!-- 9. MBA Hospital & Healthcare Management -->
+            <div class="col-lg-4 col-md-6 col-sm-12 card-column" data-level="pg">
+                <div class="tmu-prog-card">
+                    <div class="tmu-card-media">
+                        <span class="tmu-badge pg">Postgraduate</span>
+                        <img src="{{ asset('assets/img/programmes/online_mba_healthcare.jpg') }}" alt="MBA Hospital & Healthcare Management" loading="lazy">
+                        <div class="media-overlay"></div>
+                    </div>
+                    <div class="tmu-card-body">
+                        <div>
+                            <div class="tmu-card-meta">
+                                <span class="meta-item"><i class="bi bi-clock"></i> 2 Years</span>
+                                <span class="meta-item"><i class="bi bi-mortarboard"></i> Master's Degree</span>
+                            </div>
+                            <h3 class="tmu-card-title">MBA Hospital & Healthcare Management</h3>
+                            <p class="tmu-card-desc">Healthcare administration, hospital operations, patient care systems, and health informatics.</p>
+                        </div>
+                        <div class="tmu-card-footer">
+                            <a href="#" class="tmu-btn-explore">
+                                <span>Explore Programme</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. MBA Operations Strategy & Project Management -->
+            <div class="col-lg-4 col-md-6 col-sm-12 card-column" data-level="pg">
+                <div class="tmu-prog-card">
+                    <div class="tmu-card-media">
+                        <span class="tmu-badge pg">Postgraduate</span>
+                        <img src="{{ asset('assets/img/programmes/online_mba_operations.jpg') }}" alt="MBA Operations Strategy & Project Management" loading="lazy">
+                        <div class="media-overlay"></div>
+                    </div>
+                    <div class="tmu-card-body">
+                        <div>
+                            <div class="tmu-card-meta">
+                                <span class="meta-item"><i class="bi bi-clock"></i> 2 Years</span>
+                                <span class="meta-item"><i class="bi bi-mortarboard"></i> Master's Degree</span>
+                            </div>
+                            <h3 class="tmu-card-title">MBA Operations Strategy & Project Management</h3>
+                            <p class="tmu-card-desc">Process optimization, agile project execution, strategic operations, and risk management.</p>
+                        </div>
+                        <div class="tmu-card-footer">
+                            <a href="#" class="tmu-btn-explore">
+                                <span>Explore Programme</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. MBA in Banking, Fintech & AI -->
+            <div class="col-lg-4 col-md-6 col-sm-12 card-column" data-level="pg">
+                <div class="tmu-prog-card">
+                    <div class="tmu-card-media">
+                        <span class="tmu-badge pg">Postgraduate</span>
+                        <img src="{{ asset('assets/img/programmes/online_mba_fintech.jpg') }}" alt="MBA in Banking, Fintech & AI" loading="lazy">
+                        <div class="media-overlay"></div>
+                    </div>
+                    <div class="tmu-card-body">
+                        <div>
+                            <div class="tmu-card-meta">
+                                <span class="meta-item"><i class="bi bi-clock"></i> 2 Years</span>
+                                <span class="meta-item"><i class="bi bi-mortarboard"></i> Master's Degree</span>
+                            </div>
+                            <h3 class="tmu-card-title">MBA in Banking, Fintech & AI</h3>
+                            <p class="tmu-card-desc">Digital banking ecosystems, AI in algorithmic finance, blockchain, and automated risk analytics.</p>
+                        </div>
+                        <div class="tmu-card-footer">
+                            <a href="#" class="tmu-btn-explore">
+                                <span>Explore Programme</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. Online BBA -->
             <div class="col-lg-4 col-md-6 col-sm-12 card-column" data-level="ug">
                 <div class="tmu-prog-card">
                     <div class="tmu-card-media">
@@ -762,7 +843,7 @@
                 </div>
             </div>
 
-            <!-- 10. Online BCA -->
+            <!-- 13. Online BCA -->
             <div class="col-lg-4 col-md-6 col-sm-12 card-column" data-level="ug">
                 <div class="tmu-prog-card">
                     <div class="tmu-card-media">
